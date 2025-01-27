@@ -1,0 +1,96 @@
+<!-- Hero Slider -->
+<div id="heroSlider" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="2"></button>
+  </div>
+  
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="assets/home/slider_2.jpeg" class="d-block w-100" alt="Sustainable Farming">
+      <div class="carousel-caption">
+        <h2>Sustainable Farming Solutions</h2>
+        <p>Empowering farmers with eco-friendly agricultural products</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="assets/home/slider_4.jpeg" class="d-block w-100" alt="Quality Products">
+      <div class="carousel-caption">
+        <h2>Premium Quality Products</h2>
+        <p>Advanced formulations for better crop yield</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="assets/home/slider_6.jpeg" class="d-block w-100" alt="Research">
+      <div class="carousel-caption">
+        <h2>Research-Driven Innovation</h2>
+        <p>Cutting-edge solutions for modern agriculture</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- What We Do Section -->
+<section class="what-we-do">
+  <div class="container">
+    <h2 class="section-title">What We Do</h2>
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="content">
+          <h3>Leading Agricultural Solutions Provider</h3>
+          <p>At Harishree Crop Science, we are committed to revolutionizing agriculture through sustainable and innovative solutions. Our range of products helps farmers maximize their yield while maintaining ecological balance.</p>
+          <p>With over decades of experience, we combine traditional wisdom with modern technology to create products that make a difference.</p>
+          <a routerLink="/about" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <img src="assets/home/product_2.jpeg" alt="About Us" class="img-fluid rounded shadow">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Key Features -->
+<section class="key-features bg-primary-lightest">
+  <div class="container">
+    <h2 class="section-title">Key Features</h2>
+    <div class="row">
+      <div class="col-lg-3 col-md-6">
+        <div class="feature-card">
+          <div class="icon">
+            <svg><!-- Quality icon SVG --></svg>
+          </div>
+          <h3>Quality Products</h3>
+          <p>Premium grade agricultural solutions tested for effectiveness</p>
+        </div>
+      </div>
+      <!-- Add 3 more feature cards with different icons -->
+    </div>
+  </div>
+</section>
+
+<!-- Premium Products -->
+<section class="premium-products">
+  <div class="container">
+    <h2 class="section-title">Our Premium Products</h2>
+    <div class="row">
+      <ng-container *ngFor="let product of products">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="product-card">
+            <div class="product-image">
+              <img [src]="product.image" [alt]="product.name">
+            </div>
+            <div class="product-content">
+              <h3>{{product.name}}</h3>
+              <p>{{product.description}}</p>
+              <div class="product-footer">
+                <button class="btn btn-primary btn-sm">View Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</section> 
