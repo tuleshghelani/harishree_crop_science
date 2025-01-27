@@ -1,5 +1,5 @@
 <!-- Hero Slider -->
-<div id="heroSlider" class="carousel slide" data-bs-ride="carousel">
+<div id="heroSlider" class="carousel slide" data-bs-ride="carousel" data-aos="fade-up">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="0" class="active"></button>
     <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="1"></button>
@@ -34,9 +34,9 @@
 <!-- What We Do Section -->
 <section class="what-we-do">
   <div class="container">
-    <h2 class="section-title">What We Do</h2>
+    <h2 class="section-title" data-aos="fade-up">What We Do</h2>
     <div class="row align-items-center">
-      <div class="col-lg-6">
+      <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
         <div class="content">
           <h3>Leading Agricultural Solutions Provider</h3>
           <p>At Harishree Crop Science, we are committed to revolutionizing agriculture through sustainable and innovative solutions. Our range of products helps farmers maximize their yield while maintaining ecological balance.</p>
@@ -44,7 +44,7 @@
           <a routerLink="/about" class="btn btn-primary">Learn More</a>
         </div>
       </div>
-      <div class="col-lg-6">
+      <div class="col-lg-6" data-aos="fade-left" data-aos-delay="400">
         <img src="assets/home/product_2.jpeg" alt="About Us" class="img-fluid rounded shadow">
       </div>
     </div>
@@ -54,10 +54,10 @@
 <!-- Key Features -->
 <section class="key-features bg-primary-lightest">
   <div class="container">
-    <h2 class="section-title">Key Features</h2>
+    <h2 class="section-title" data-aos="fade-up">Key Features</h2>
     <div class="row">
       <!-- Quality Products -->
-      <div class="col-lg-3 col-md-6">
+      <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
         <div class="feature-card">
           <div class="icon">
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -70,7 +70,7 @@
       </div>
 
       <!-- R&D -->
-      <div class="col-lg-3 col-md-6">
+      <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
         <div class="feature-card">
           <div class="icon">
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -84,7 +84,7 @@
       </div>
 
       <!-- Sustainable Solutions -->
-      <div class="col-lg-3 col-md-6">
+      <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
         <div class="feature-card">
           <div class="icon">
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -98,7 +98,7 @@
       </div>
 
       <!-- Customer Support -->
-      <div class="col-lg-3 col-md-6">
+      <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
         <div class="feature-card">
           <div class="icon">
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -117,10 +117,10 @@
 <!-- Premium Products -->
 <section class="premium-products">
   <div class="container">
-    <h2 class="section-title">Our Premium Products</h2>
+    <h2 class="section-title" data-aos="fade-up">Our Premium Products</h2>
     <div class="row">
-      <ng-container *ngFor="let product of products">
-        <div class="col-lg-3 col-md-6 col-sm-12">
+      <ng-container *ngFor="let product of products; let i = index">
+        <div class="col-lg-3 col-md-6 col-sm-12" [attr.data-aos]="'fade-up'" [attr.data-aos-delay]="i * 100">
           <div class="product-card">
             <div class="product-image">
               <img [src]="product.image" [alt]="product.name">

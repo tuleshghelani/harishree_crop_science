@@ -178,4 +178,23 @@
       margin-bottom: 2rem;
     }
   }
+}
+
+// Add to your existing styles
+[data-aos] {
+  opacity: 0;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform, opacity;
+  
+  &.aos-animate {
+    opacity: 1;
+  }
+}
+
+// Optimize performance for mobile
+@media (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0s !important;
+  }
 } 
