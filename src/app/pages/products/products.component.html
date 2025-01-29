@@ -16,41 +16,42 @@
 
   <!-- Products Section -->
   <section class="products-section">
-    <div class="container">
-      <!-- Category Navigation -->
-      <div class="category-nav" data-aos="fade-up">
-        <div class="nav-scroll">
-          <button 
-            *ngFor="let category of categories"
-            [class.active]="activeCategory === category.name"
-            (click)="setActiveCategory(category.name)"
-            class="category-btn">
-            {{category.name}}
-          </button>
+    <div class="container-wrapper">
+      <div class="container-fluid px-4">
+        <!-- Category Navigation -->
+        <div class="category-nav" data-aos="fade-up">
+          <div class="nav-scroll">
+            <button 
+              *ngFor="let category of categories"
+              [class.active]="activeCategory === category.name"
+              (click)="setActiveCategory(category.name)"
+              class="category-btn">
+              {{category.name}}
+            </button>
+          </div>
         </div>
-      </div>
 
-      <!-- Products Grid -->
-      <div class="row">
-        <ng-container *ngFor="let category of categories">
-          <div class="products-grid" *ngIf="activeCategory === category.name">
-            <div class="row">
-              <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let product of category.products; let i = index" 
-                   [attr.data-aos]="'fade-up'" [attr.data-aos-delay]="i * 100">
-                <div class="product-card">
-                  <div class="product-image">
-                    <img [src]="product.image" [alt]="product.name" loading="lazy">
-                  </div>
-                  <div class="product-content">
-                    <h3>{{product.name}}</h3>
-                    <p>{{product.description}}</p>
-                    <!-- <button class="btn btn-primary btn-sm">View Details</button> -->
+        <!-- Products Grid -->
+        <div class="row g-4">
+          <ng-container *ngFor="let category of categories">
+            <div class="products-grid w-100" *ngIf="activeCategory === category.name">
+              <div class="row g-4">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12" *ngFor="let product of category.products; let i = index" 
+                     [attr.data-aos]="'fade-up'" [attr.data-aos-delay]="i * 100">
+                  <div class="product-card">
+                    <div class="product-image">
+                      <img [src]="product.image" [alt]="product.name" loading="lazy">
+                    </div>
+                    <div class="product-content">
+                      <h3>{{product.name}}</h3>
+                      <p>{{product.description}}</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </ng-container>
+          </ng-container>
+        </div>
       </div>
     </div>
   </section>

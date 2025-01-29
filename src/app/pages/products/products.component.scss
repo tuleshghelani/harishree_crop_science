@@ -70,13 +70,17 @@
 .products-section {
   padding: 5rem 0;
   background-color: var(--light);
+  overflow-x: hidden;
+
+  .container-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
 
   .row {
-    margin: -1.5rem;  // Negative margin to counteract padding
-    
-    [class*="col-"] {
-      padding: 1.5rem;  // Add padding around each column
-    }
+    margin-right: 0;
+    margin-left: 0;
   }
 
   .category-nav {
@@ -119,6 +123,8 @@
   }
 
   .product-card {
+    margin: 0 auto;
+    max-width: 100%;
     background: white;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -127,7 +133,6 @@
     transition: all 0.4s ease;
     position: relative;
     border: 1px solid rgba(0, 0, 0, 0.05);
-    margin: 0;  // Reset margin since we're using padding on columns
 
     &:hover {
       transform: translateY(-5px);
@@ -201,6 +206,14 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .products-section {
+    .container-wrapper {
+      max-width: 100%;
+    }
+  }
+}
+
 @media (max-width: 576px) {
   .products-hero {
     .hero-content {
@@ -210,6 +223,33 @@
       
       p {
         font-size: 1rem;
+      }
+    }
+  }
+
+  .products-section {
+    padding: 2rem 0;
+
+    .container-fluid {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+
+    .product-card {
+      .product-image {
+        height: 200px;
+      }
+
+      .product-content {
+        padding: 1rem;
+        
+        h3 {
+          font-size: 1.1rem;
+        }
+        
+        p {
+          font-size: 0.9rem;
+        }
       }
     }
   }
