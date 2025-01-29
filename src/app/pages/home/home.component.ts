@@ -14,22 +14,22 @@ export class HomeComponent implements OnInit {
   products = [
     {
       name: 'Bio Fertilizer',
-      image: 'assets/home/product_1.jpeg',
+      image: 'assets/products/Buldozer.png',
       description: 'Organic bio-fertilizer for enhanced crop growth'
     },
     {
       name: 'Growth Promoter',
-      image: 'assets/home/product_2.jpeg',
+      image: 'assets/products/CHEMISTRY.png',
       description: 'Natural growth promoter for healthy plants'
     },
     {
       name: 'Organic Pesticide',
-      image: 'assets/home/product_3.jpeg',
+      image: 'assets/products/GREEN OUT.png',
       description: 'Safe and effective organic pest control'
     },
     {
       name: 'Soil Conditioner',
-      image: 'assets/home/product_4.jpeg',
+      image: 'assets/products/kavach.png',
       description: 'Premium soil conditioning solution'
     }
   ];
