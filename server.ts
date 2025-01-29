@@ -1,56 +1,88 @@
 import { APP_BASE_HREF } from '@angular/common';
 import { CommonEngine } from '@angular/ssr';
-import express from 'express';
+import express, { Request, Response, NextFunction } from 'express';
+import compression from 'compression';
+import helmet from 'helmet';
 import { fileURLToPath } from 'node:url';
 import { dirname, join, resolve } from 'node:path';
 import bootstrap from './src/main.server';
 
-// The Express app is exported so that it can be used by serverless Functions.
-export function app(): express.Express {
-  const server = express();
-  const serverDistFolder = dirname(fileURLToPath(import.meta.url));
-  const browserDistFolder = resolve(serverDistFolder, '../browser');
-  const indexHtml = join(serverDistFolder, 'index.server.html');
+const server = express();
+const serverDistFolder = dirname(fileURLToPath(import.meta.url));
+const browserDistFolder = resolve(serverDistFolder, '../browser');
+const indexHtml = join(serverDistFolder, 'index.server.html');
 
-  const commonEngine = new CommonEngine();
+const commonEngine = new CommonEngine();
 
-  server.set('view engine', 'html');
-  server.set('views', browserDistFolder);
+// ✅ Use compression for GZIP/Brotli support (Improves load time)
+server.use(compression());
 
-  // Example Express Rest API endpoints
-  // server.get('/api/**', (req, res) => { });
-  // Serve static files from /browser
-  server.get('*.*', express.static(browserDistFolder, {
-    maxAge: '1y'
-  }));
+// ✅ Security best practices (Prevents vulnerabilities)
+server.use(
+  helmet({
+    contentSecurityPolicy: false, // Adjust if needed
+  })
+);
 
-  // All regular routes use the Angular engine
-  server.get('*', (req, res, next) => {
-    const { protocol, originalUrl, baseUrl, headers } = req;
+// ✅ Serve static files efficiently
+server.use(
+  express.static(browserDistFolder, {
+    maxAge: '1y',
+    setHeaders: (res, path) => {
+      if (path.endsWith('.html')) {
+        res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+      } else {
+        res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+      }
+    },
+  })
+);
 
-    commonEngine
-      .render({
-        bootstrap,
-        documentFilePath: indexHtml,
-        url: `${protocol}://${headers.host}${originalUrl}`,
-        publicPath: browserDistFolder,
-        providers: [{ provide: APP_BASE_HREF, useValue: baseUrl }],
-      })
-      .then((html) => res.send(html))
-      .catch((err) => next(err));
-  });
+// ✅ Serve robots.txt
+server.get('/robots.txt', (req, res) => {
+  res.type('text/plain').send(
+    `User-agent: *\nAllow: /\nSitemap: ${req.protocol}://${req.get('host')}/sitemap.xml`
+  );
+});
 
-  return server;
-}
+// ✅ Serve sitemap.xml
+server.get('/sitemap.xml', (req, res) => {
+  res.type('application/xml');
+  res.send(`<?xml version="1.0" encoding="UTF-8"?>
+  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+      <loc>${req.protocol}://${req.get('host')}/</loc>
+      <lastmod>${new Date().toISOString()}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  </urlset>`);
+});
 
-function run(): void {
-  const port = process.env['PORT'] || 4000;
+// ✅ Handle all other routes via Angular Universal
+server.get('*', (req: Request, res: Response, next: NextFunction) => {
+  const url = `${req.protocol}://${req.get('host')}${req.originalUrl}`;
 
-  // Start up the Node server
-  const server = app();
-  server.listen(port, () => {
-    console.log(`Node Express server listening on http://localhost:${port}`);
-  });
-}
+  commonEngine
+    .render({
+      bootstrap,
+      documentFilePath: indexHtml,
+      url,
+      publicPath: browserDistFolder,
+      providers: [{ provide: APP_BASE_HREF, useValue: req.baseUrl }],
+    })
+    .then((html) => res.send(html))
+    .catch((err) => next(err));
+});
 
-run();
+// ✅ Global Error Handling (Prevents SEO index issues)
+server.use((err: any, req: Request, res: Response, next: NextFunction) => {
+  console.error('Server Error:', err);
+  res.status(500).send('<h1>500 - Server Error</h1><p>Something went wrong.</p>');
+});
+
+// ✅ Start the server
+const port = process.env['PORT'] || 4000;
+server.listen(port, () => {
+  console.log(`✅ Server running at: http://localhost:${port}`);
+});

@@ -1,8 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { Meta, Title } from '@angular/platform-browser';
+import { Meta, MetaDefinition, Title } from '@angular/platform-browser';
 import AOS from 'aos';
+import { TransferState, makeStateKey } from '@angular/platform-browser';
+import { environment } from '../../../environments/environment';
+
+const META_KEY = makeStateKey<boolean>('meta-data');
+const STRUCTURED_DATA_KEY = makeStateKey<string>('structured-data');
 
 @Component({
   selector: 'app-home',
@@ -11,10 +16,13 @@ import AOS from 'aos';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
+  private readonly baseUrl = environment.baseUrl;
+
   constructor(
     private meta: Meta,
-    private title: Title
+    private title: Title,
+    private transferState: TransferState
   ) {}
 
   products = [
@@ -41,25 +49,9 @@ export class HomeComponent implements OnInit {
   ];
 
   ngOnInit() {
-    // Set title and meta tags for SEO
-    this.title.setTitle('Harishree Crop Science | Sustainable Agricultural Solutions India');
+    this.setMetaData();
+    this.setStructuredData();
     
-    this.meta.addTags([
-      { name: 'description', content: 'Harishree Crop Science provides innovative agricultural solutions, organic fertilizers, and eco-friendly farming products. Leading provider of sustainable agricultural technology in India.' },
-      { name: 'keywords', content: 'agricultural solutions, organic fertilizers, sustainable farming, crop protection, bio fertilizers, agricultural products, farming technology, eco-friendly agriculture, Indian agriculture company, Harishree Crop Science' },
-      { property: 'og:title', content: 'Harishree Crop Science | Sustainable Agricultural Solutions India' },
-      { property: 'og:description', content: 'Leading provider of sustainable agricultural solutions, organic fertilizers, and innovative farming products in India.' },
-      { property: 'og:type', content: 'website' },
-      { property: 'og:image', content: 'assets/logo/HARISHREE.png' },
-      { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'robots', content: 'index, follow' },
-      { name: 'author', content: 'Harishree Crop Science' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' }
-    ]);
-
-    this.addStructuredData();
-    
-    // Initialize AOS
     AOS.init({
       duration: 1000,
       easing: 'ease-in-out',
@@ -69,26 +61,58 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  private addStructuredData() {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify({
-      "@context": "http://schema.org",
+  ngOnDestroy() {
+    this.transferState.remove(META_KEY);
+    this.transferState.remove(STRUCTURED_DATA_KEY);
+  }
+
+  private setMetaData() {
+    if (this.transferState.hasKey(META_KEY)) {
+      return;
+    }
+
+    this.title.setTitle(environment.metaDefaults.title);
+    
+    const metaTags = [
+      { name: 'description', content: environment.metaDefaults.description },
+      { name: 'keywords', content: environment.metaDefaults.keywords },
+      { property: 'og:title', content: environment.metaDefaults.title },
+      { property: 'og:description', content: environment.metaDefaults.description },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:image', content: `${this.baseUrl}/assets/logo/HARISHREE.png` },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'robots', content: 'index, follow' },
+      { name: 'author', content: environment.metaDefaults.author }
+    ];
+
+    metaTags.forEach(tag => this.meta.updateTag(tag as MetaDefinition));
+    this.transferState.set(META_KEY, true);
+  }
+
+  private setStructuredData() {
+    if (this.transferState.hasKey(STRUCTURED_DATA_KEY)) {
+      return;
+    }
+
+    const structuredData = {
+      "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Harishree Crop Science",
-      "description": "Leading provider of sustainable agricultural solutions and eco-friendly farming products",
-      "url": "https://harishreecropscience.com",
-      "logo": "assets/logo/HARISHREE.png",
-      "sameAs": [
-        // "https://facebook.com/harishreecropscience",
-        // "https://linkedin.com/company/harishree-crop-science"
-      ],
+      "description": environment.metaDefaults.description,
+      "url": this.baseUrl,
+      "logo": `${this.baseUrl}/assets/logo/HARISHREE.png`,
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+91-XXXXXXXXXX",
+        "telephone": environment.contactPhone,
         "contactType": "customer service"
       }
-    });
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(structuredData);
     document.head.appendChild(script);
+
+    this.transferState.set(STRUCTURED_DATA_KEY, JSON.stringify(structuredData));
   }
 } 

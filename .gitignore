@@ -70,8 +70,8 @@ replay_pid*
 # Angular
 .angular/
 
-environments/
-src/environments/environment.ts
+# environments/
+# src/environments/environment.ts
 
 
 # Miscellaneous
