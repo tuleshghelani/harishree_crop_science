@@ -1,0 +1,124 @@
+<!-- Hero Section -->
+<section class="about-hero">
+  <div class="hero-content">
+    <h1 data-aos="fade-up">About Harishree Crop Science</h1>
+    <p data-aos="fade-up" data-aos-delay="200">Leading the way in sustainable agricultural solutions</p>
+  </div>
+  <div class="hero-bg">
+    <!-- Custom SVG Background -->
+    <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
+      <path fill="var(--primary-lightest)" d="M0,48L48,56C96,64,192,80,288,80C384,80,480,64,576,56C672,48,768,48,864,56C960,64,1056,80,1152,80C1248,80,1344,64,1392,56L1440,48L1440,160L1392,160C1344,160,1248,160,1152,160C1056,160,960,160,864,160C768,160,672,160,576,160C480,160,384,160,288,160C192,160,96,160,48,160L0,160Z"></path>
+    </svg>
+  </div>
+</section>
+
+<!-- Vision & Mission -->
+<section class="vision-mission">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6" data-aos="fade-right">
+        <div class="content-box">
+          <h2>Our Vision</h2>
+          <p>To be the global leader in sustainable agricultural solutions, empowering farmers with innovative products that enhance crop yield while preserving our environment.</p>
+        </div>
+      </div>
+      <div class="col-md-6" data-aos="fade-left">
+        <div class="content-box">
+          <h2>Our Mission</h2>
+          <p>To develop and deliver high-quality, eco-friendly agricultural products through continuous research and innovation, ensuring food security and farmer prosperity.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Company Story -->
+<!-- <section class="company-story bg-primary-lightest">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">Our Journey</h2>
+    <div class="timeline">
+      <ng-container *ngFor="let milestone of milestones; let i = index">
+        <div class="timeline-item" [attr.data-aos]="i % 2 === 0 ? 'fade-right' : 'fade-left'">
+          <div class="year">{{milestone.year}}</div>
+          <div class="content">
+            <h3>{{milestone.title}}</h3>
+            <p>{{milestone.description}}</p>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</section> -->
+
+
+<!-- Values Section -->
+<section class="our-values bg-primary-lightest">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Our Values</h2>
+      <div class="row">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="value-card">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M7.5 12L10.5 15L16.5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Innovation</h3>
+            <p>Continuously developing cutting-edge solutions for modern agriculture</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="value-card">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M8 14C8 14 9.5 16 12 16C14.5 16 16 14 16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M9 9H9.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M15 9H15.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Sustainability</h3>
+            <p>Committed to environmental stewardship and sustainable practices</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="value-card">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 16V12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M12 8H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Excellence</h3>
+            <p>Maintaining highest standards in product quality and service</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Leadership Team -->
+<section class="leadership-team">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">Our Leadership</h2>
+    <div class="row">
+      <ng-container *ngFor="let member of team; let i = index">
+        <div class="col-lg-4 col-md-6" [attr.data-aos]="'fade-up'" [attr.data-aos-delay]="i * 100">
+          <div class="team-card">
+            <div class="member-image">
+              <img [src]="member.image" [alt]="member.name">
+            </div>
+            <div class="member-info">
+              <h3>{{member.name}}</h3>
+              <h4>{{member.position}}</h4>
+              <p>{{member.description}}</p>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</section>
+

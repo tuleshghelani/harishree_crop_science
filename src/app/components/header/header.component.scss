@@ -12,8 +12,9 @@
 
     .navbar-brand {
       .logo {
-        height: 50px;
-        width: auto;
+        height: 75px;
+        width: 120px;
+        // width: auto;
       }
     }
 
@@ -21,7 +22,7 @@
       color: var(--gray-700);
       font-family: var(--font-primary);
       font-weight: var(--font-medium);
-      font-size: var(--text-sm);
+      font-size: var(--text-base);
       padding: 0.5rem 1rem;
       transition: color 0.3s ease;
 
