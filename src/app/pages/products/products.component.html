@@ -1,1 +1,57 @@
-<p>products works!</p>
+<main class="products-page">
+  <!-- Hero Section -->
+  <section class="products-hero">
+    <div class="hero-content">
+      <h1 data-aos="fade-up">Our Products</h1>
+      <p data-aos="fade-up" data-aos-delay="200">
+        Discover our comprehensive range of agricultural solutions
+      </p>
+    </div>
+    <div class="hero-bg">
+      <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
+        <path fill="var(--primary-lightest)" d="M0,48L48,56C96,64,192,80,288,80C384,80,480,64,576,56C672,48,768,48,864,56C960,64,1056,80,1152,80C1248,80,1344,64,1392,56L1440,48L1440,160L1392,160C1344,160,1248,160,1152,160C1056,160,960,160,864,160C768,160,672,160,576,160C480,160,384,160,288,160C192,160,96,160,48,160L0,160Z"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products-section">
+    <div class="container">
+      <!-- Category Navigation -->
+      <div class="category-nav" data-aos="fade-up">
+        <div class="nav-scroll">
+          <button 
+            *ngFor="let category of categories"
+            [class.active]="activeCategory === category.name"
+            (click)="setActiveCategory(category.name)"
+            class="category-btn">
+            {{category.name}}
+          </button>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="row">
+        <ng-container *ngFor="let category of categories">
+          <div class="products-grid" *ngIf="activeCategory === category.name">
+            <div class="row">
+              <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let product of category.products; let i = index" 
+                   [attr.data-aos]="'fade-up'" [attr.data-aos-delay]="i * 100">
+                <div class="product-card">
+                  <div class="product-image">
+                    <img [src]="product.image" [alt]="product.name" loading="lazy">
+                  </div>
+                  <div class="product-content">
+                    <h3>{{product.name}}</h3>
+                    <p>{{product.description}}</p>
+                    <!-- <button class="btn btn-primary btn-sm">View Details</button> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </section>
+</main>
