@@ -71,6 +71,14 @@
   padding: 5rem 0;
   background-color: var(--light);
 
+  .row {
+    margin: -1.5rem;  // Negative margin to counteract padding
+    
+    [class*="col-"] {
+      padding: 1.5rem;  // Add padding around each column
+    }
+  }
+
   .category-nav {
     margin-bottom: 3rem;
     
@@ -112,12 +120,14 @@
 
   .product-card {
     background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     overflow: hidden;
-    margin-bottom: 2rem;
     height: 100%;
-    transition: transform 0.3s ease;
+    transition: all 0.4s ease;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    margin: 0;  // Reset margin since we're using padding on columns
 
     &:hover {
       transform: translateY(-5px);
