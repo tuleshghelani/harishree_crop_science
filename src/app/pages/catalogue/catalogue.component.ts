@@ -20,7 +20,7 @@ const STRUCTURED_DATA_KEY = makeStateKey<string>('catalogue_structured_data');
   styleUrl: './catalogue.component.scss'
 })
 export class CatalogueComponent implements OnInit, OnDestroy {
-  pdfSrc = './assets/catalogue/HARISHREE_CROP_SCIENCE.pdf';
+  pdfSrc = '/assets/catalogue/HARISHREE_CROP_SCIENCE.pdf';
   pdfLoading = true;
   pdfLoadError = false;
   private readonly baseUrl = environment.baseUrl;
@@ -30,6 +30,20 @@ export class CatalogueComponent implements OnInit, OnDestroy {
   currentPage = 1;
   totalPages = 0;
   pdfLoaded = false;
+
+  public pdfViewerConfig = {
+    cMapUrl: 'assets/cmaps/',
+    cMapPacked: true,
+    enableXfa: true,
+    defaultViewport: {
+      width: 595.28,
+      height: 841.89
+    },
+    spread: true,
+    spreadMode: 2, // even pages on the left
+    scrollMode: 0, // vertical scrolling
+    pageViewMode: 'book'
+  };
 
   constructor(
     private meta: Meta,
@@ -46,6 +60,9 @@ export class CatalogueComponent implements OnInit, OnDestroy {
     console.error('PDF Error:', error);
     this.pdfLoadError = true;
     this.pdfLoading = false;
+    setTimeout(() => {
+      this.pdfSrc = this.pdfSrc + '?t=' + new Date().getTime();
+    }, 1000);
   }
 
   handleDocumentLoad() {
@@ -120,15 +137,29 @@ export class CatalogueComponent implements OnInit, OnDestroy {
   }
 
   checkMobile() {
-    this.isMobile = window.innerWidth <= 768;
+    if (this.isPlatformBrowser(this.platformId)) {
+      this.isMobile = window.innerWidth <= 768;
+      if (this.pdfViewer) {
+        this.pdfViewer.pageViewMode = this.isMobile ? 'single' : 'book';
+        this.pdfViewer.zoom = this.isMobile ? 'page-width' : 'page-fit';
+        // this.pdfViewer.spread = !this.isMobile;
+      }
+    }
   }
 
   ngAfterViewInit() {
-    // Remove this entire method as we're setting src via template
+    if (this.isPlatformBrowser(this.platformId)) {
+      this.checkMobile();
+      fromEvent(window, 'resize')
+        .pipe(debounceTime(200))
+        .subscribe(() => this.checkMobile());
+    }
   }
 
-  onPdfLoadComplete(pdf: PDFDocumentProxy): void {
-    this.totalPages = pdf.numPages;
+  onPdfLoadComplete(event: Event | PDFDocumentProxy): void {
+    if ('numPages' in event) {
+      this.totalPages = event.numPages;
+    }
     this.pdfLoaded = true;
     this.pdfLoading = false;
   }
