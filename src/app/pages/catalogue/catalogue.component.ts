@@ -60,9 +60,6 @@ export class CatalogueComponent implements OnInit, OnDestroy {
     console.error('PDF Error:', error);
     this.pdfLoadError = true;
     this.pdfLoading = false;
-    setTimeout(() => {
-      this.pdfSrc = this.pdfSrc + '?t=' + new Date().getTime();
-    }, 1000);
   }
 
   handleDocumentLoad() {
@@ -150,9 +147,9 @@ export class CatalogueComponent implements OnInit, OnDestroy {
   ngAfterViewInit() {
     if (this.isPlatformBrowser(this.platformId)) {
       this.checkMobile();
-      fromEvent(window, 'resize')
-        .pipe(debounceTime(200))
-        .subscribe(() => this.checkMobile());
+      setTimeout(() => {
+        this.pdfLoading = false;
+      }, 1000);
     }
   }
 
@@ -165,6 +162,7 @@ export class CatalogueComponent implements OnInit, OnDestroy {
   }
 
   onPdfLoaded(event: any): void {
+    console.log('PDF Loaded:', event);
     this.pdfLoaded = true;
     this.pdfLoading = false;
   }
