@@ -20,7 +20,7 @@ const STRUCTURED_DATA_KEY = makeStateKey<string>('catalogue_structured_data');
   styleUrl: './catalogue.component.scss'
 })
 export class CatalogueComponent implements OnInit, OnDestroy {
-  pdfSrc = '/assets/catalogue/HARISHREE_CROP_SCIENCE.pdf';
+  pdfSrc = 'assets/catalogue/HARISHREE_CROP_SCIENCE.pdf';
   pdfLoading = true;
   pdfLoadError = false;
   private readonly baseUrl = environment.baseUrl;
