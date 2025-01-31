@@ -40,9 +40,12 @@ server.use(
 
 // ✅ Serve robots.txt
 server.get('/robots.txt', (req, res) => {
-  res.type('text/plain').send(
-    `User-agent: *\nAllow: /\nSitemap: ${req.protocol}://${req.get('host')}/sitemap.xml`
-  );
+  res.sendFile(join(browserDistFolder, 'assets', 'robots.txt'));
+});
+
+// ✅ Serve sitemap_index.xml
+server.get('/sitemap_index.xml', (req, res) => {
+  res.sendFile(join(browserDistFolder, 'assets', 'sitemap_index.xml'));
 });
 
 // ✅ Serve sitemap.xml
@@ -55,6 +58,42 @@ server.get('/sitemap.xml', (req, res) => {
       <lastmod>${new Date().toISOString()}</lastmod>
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
+    </url>
+    <url>
+      <loc>${req.protocol}://${req.get('host')}/about-us</loc>
+      <lastmod>${new Date().toISOString()}</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+    </url>
+    <url>
+      <loc>${req.protocol}://${req.get('host')}/products</loc>
+      <lastmod>${new Date().toISOString()}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+    <url>
+      <loc>${req.protocol}://${req.get('host')}/catalogue</loc>
+      <lastmod>${new Date().toISOString()}</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+    </url>
+    <url>
+      <loc>${req.protocol}://${req.get('host')}/research</loc>
+      <lastmod>${new Date().toISOString()}</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+    </url>
+    <url>
+      <loc>${req.protocol}://${req.get('host')}/quality-assurance</loc>
+      <lastmod>${new Date().toISOString()}</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+    </url>
+    <url>
+      <loc>${req.protocol}://${req.get('host')}/contact-us</loc>
+      <lastmod>${new Date().toISOString()}</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
     </url>
   </urlset>`);
 });
