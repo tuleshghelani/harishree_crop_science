@@ -1,23 +1,23 @@
-import { Component, OnInit, OnDestroy, makeStateKey } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
+import { Meta, Title, MetaDefinition } from '@angular/platform-browser';
+import { TransferState, makeStateKey } from '@angular/platform-browser';
 import { environment } from '../../../environments/environment';
-import * as AOS from 'aos';
 import { SvgIconsService } from '../../shared/services/svg-icons.service';
 import { SafeHtmlPipe } from '../../shared/pipes/safe-html.pipe';
+import * as AOS from 'aos';
 
-const META_KEY = makeStateKey<boolean>('research_meta');
-const STRUCTURED_DATA_KEY = makeStateKey<string>('research_structured_data');
+const META_KEY = makeStateKey<boolean>('quality_meta');
+const STRUCTURED_DATA_KEY = makeStateKey<string>('quality_structured_data');
 
 @Component({
-  selector: 'app-research',
+  selector: 'app-quality-assurance',
   standalone: true,
   imports: [CommonModule, SafeHtmlPipe],
-  templateUrl: './research.component.html',
-  styleUrl: './research.component.scss'
+  templateUrl: './quality-assurance.component.html',
+  styleUrl: './quality-assurance.component.scss'
 })
-export class ResearchComponent implements OnInit, OnDestroy {
+export class QualityAssuranceComponent implements OnInit, OnDestroy {
   private baseUrl = environment.baseUrl;
   public svgIcons: SvgIconsService;
 
@@ -49,13 +49,13 @@ export class ResearchComponent implements OnInit, OnDestroy {
   private setMetaData() {
     if (this.transferState.hasKey(META_KEY)) return;
 
-    this.title.setTitle('Research & Development | Harishree Crop Science');
+    this.title.setTitle('Quality Assurance | Harishree Crop Science');
     
     const metaTags = [
-      { name: 'description', content: 'Discover our state-of-the-art R&D facilities and innovative agricultural research. Leading the way in sustainable farming solutions.' },
-      { name: 'keywords', content: 'agricultural research, R&D, crop science research, sustainable farming research, agricultural innovation' },
-      { property: 'og:title', content: 'Research & Development | Harishree Crop Science' },
-      { property: 'og:description', content: 'Explore our cutting-edge research and development in sustainable agricultural solutions.' },
+      { name: 'description', content: 'Discover our rigorous quality assurance processes ensuring the highest standards in agricultural products. Leading the way in quality control and testing.' },
+      { name: 'keywords', content: 'quality assurance, quality control, testing standards, agricultural quality, product testing, certification' },
+      { property: 'og:title', content: 'Quality Assurance | Harishree Crop Science' },
+      { property: 'og:description', content: 'Experience excellence through our comprehensive quality assurance processes and standards.' },
       { property: 'og:type', content: 'website' },
       { name: 'robots', content: 'index, follow' }
     ];
@@ -69,14 +69,14 @@ export class ResearchComponent implements OnInit, OnDestroy {
 
     const structuredData = {
       "@context": "https://schema.org",
-      "@type": "ResearchOrganization",
-      "name": "Harishree Crop Science Research & Development",
-      "description": "Leading research facility in sustainable agricultural solutions",
-      "url": `${this.baseUrl}/research`,
-      "parentOrganization": {
+      "@type": "Service",
+      "name": "Quality Assurance at Harishree Crop Science",
+      "description": "Comprehensive quality assurance and testing services for agricultural products",
+      "provider": {
         "@type": "Organization",
         "name": "Harishree Crop Science"
-      }
+      },
+      "url": `${this.baseUrl}/quality-assurance`
     };
 
     const script = document.createElement('script');

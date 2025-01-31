@@ -112,6 +112,14 @@
 .research-areas {
   padding: 6rem 0;
 
+  .row {
+    margin: -1.5rem;
+    
+    [class*="col-"] {
+      padding: 1.5rem;
+    }
+  }
+
   .research-card {
     background: white;
     padding: 2.5rem 2rem;
@@ -120,8 +128,7 @@
     height: 100%;
     transition: all 0.3s ease;
     border: 2px solid transparent;
-    margin-bottom: 2rem;
-    margin: 1rem;
+    margin: 0;
     
     &:hover {
       transform: translateY(-5px);
@@ -132,14 +139,14 @@
     .icon {
       width: 64px;
       height: 64px;
-      margin: 0 auto 1.5rem;
+      margin: 0 auto 2rem;
       color: var(--primary);
       transition: color 0.3s ease;
     }
 
     h3 {
       color: var(--primary);
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       text-align: center;
       transition: color 0.3s ease;
     }
@@ -168,20 +175,23 @@
 .research-overview,
 .research-capabilities,
 .research-areas {
-  padding: 6rem 0;  // Increased padding for better spacing
+  padding: 8rem 0;
   
-  // Add bottom margin to all sections except the last one
   &:not(:last-child) {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
   }
 }
 
 // Responsive styles
 @media (max-width: 991px) {
-  .research-overview {
-    .content {
-      margin-bottom: 2rem;
-      text-align: center;
+  .research-hero,
+  .research-overview,
+  .research-capabilities,
+  .research-areas {
+    padding: 6rem 0;
+    
+    &:not(:last-child) {
+      margin-bottom: 3rem;
     }
   }
 }
@@ -191,7 +201,21 @@
   .research-overview,
   .research-capabilities,
   .research-areas {
-    padding: 4rem 0;  // Slightly less padding on mobile
+    padding: 4rem 0;
+    
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+  
+  .research-areas {
+    .row {
+      margin: -1rem;
+      
+      [class*="col-"] {
+        padding: 1rem;
+      }
+    }
   }
   
   .research-hero {
