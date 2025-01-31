@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://harishreecropscience.com/sitemap.xml
+Sitemap: https://harishreecropscience.com/sitemap_index.xml 
