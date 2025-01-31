@@ -2,9 +2,11 @@
   "name": "harishree-crop-science",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "build": "ng build && ng run harishree_crop_science:server",
-    "start": "node dist/harishree_crop_science/server/main.js",
+    "ng": "ng",    
+    "start": "ng serve",
+    "build": "ng build",
+    // "build": "ng build && ng run harishree_crop_science:server",
+    // "start": "node dist/harishree_crop_science/server/main.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:harishree_crop_science": "node dist/harishree_crop_science/server/server.mjs"
