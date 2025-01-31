@@ -68,7 +68,7 @@
 }
 
 .research-overview {
-  padding: 5rem 0;
+  padding: 6rem 0;
   
   .content {
     h2 {
@@ -85,7 +85,7 @@
 
   .research-image {
     img {
-      width: 100%;
+      width: 550px;
       height: auto;
       object-fit: cover;
       border-radius: 8px;
@@ -95,7 +95,7 @@
 }
 
 .research-capabilities {
-  padding: 5rem 0;
+  padding: 6rem 0;
   background-color: var(--primary-lightest);
 
   .capabilities-diagram {
@@ -110,18 +110,23 @@
 }
 
 .research-areas {
-  padding: 5rem 0;
+  padding: 6rem 0;
 
   .research-card {
     background: white;
-    padding: 2rem;
+    padding: 2.5rem 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     height: 100%;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    margin-bottom: 2rem;
+    margin: 1rem;
     
     &:hover {
       transform: translateY(-5px);
+      border-color: var(--secondary);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
     }
 
     .icon {
@@ -129,19 +134,45 @@
       height: 64px;
       margin: 0 auto 1.5rem;
       color: var(--primary);
+      transition: color 0.3s ease;
     }
 
     h3 {
       color: var(--primary);
       margin-bottom: 1rem;
       text-align: center;
+      transition: color 0.3s ease;
     }
 
     p {
       color: var(--gray-700);
       text-align: center;
       margin: 0;
+      line-height: 1.6;
     }
+
+    &:hover {
+      .icon {
+        color: var(--secondary);
+      }
+      
+      h3 {
+        color: var(--secondary);
+      }
+    }
+  }
+}
+
+// Section spacing
+.research-hero,
+.research-overview,
+.research-capabilities,
+.research-areas {
+  padding: 6rem 0;  // Increased padding for better spacing
+  
+  // Add bottom margin to all sections except the last one
+  &:not(:last-child) {
+    margin-bottom: 2rem;
   }
 }
 
@@ -156,11 +187,22 @@
 }
 
 @media (max-width: 768px) {
+  .research-hero,
+  .research-overview,
+  .research-capabilities,
+  .research-areas {
+    padding: 4rem 0;  // Slightly less padding on mobile
+  }
+  
   .research-hero {
     .hero-content {
       h1 {
         font-size: 2.5rem;
       }
     }
+  }
+  
+  .research-card {
+    margin-bottom: 1.5rem;
   }
 }
