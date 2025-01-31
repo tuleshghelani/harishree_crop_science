@@ -5,42 +5,7 @@ import compression from 'compression';
 import helmet from 'helmet';
 import { fileURLToPath } from 'node:url';
 import { dirname, join, resolve } from 'node:path';
-import * as fs from 'fs';
 import bootstrap from './src/main.server';
-
-// Generate robots.txt
-const generateRobotsTxt = (baseUrl: string) => {
-  const robotsTxt = `User-agent: *
-Allow: /
-Sitemap: ${baseUrl}/sitemap.xml`;
-
-  fs.writeFileSync('dist/browser/robots.txt', robotsTxt);
-};
-
-// Generate sitemap.xml
-const generateSitemapXml = (baseUrl: string) => {
-  const pages = [
-    '',
-    '/about',
-    '/products',
-    '/quality-assurance',
-    '/research',
-    '/contact-us'
-  ];
-
-  const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  ${pages.map(page => `
-  <url>
-    <loc>${baseUrl}${page}</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>${page === '' ? '1.0' : '0.8'}</priority>
-  </url>`).join('')}
-</urlset>`;
-
-  fs.writeFileSync('dist/browser/sitemap.xml', sitemapContent);
-};
 
 const server = express();
 const serverDistFolder = dirname(fileURLToPath(import.meta.url));
