@@ -37,7 +37,7 @@
             <div class="products-grid w-100" *ngIf="activeCategory === category.name">
               <div class="row g-4">
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12" *ngFor="let product of category.products; let i = index" 
-                     [attr.data-aos]="'fade-up'" [attr.data-aos-delay]="i * 100">
+                     [attr.data-aos]="'fade-up'" [attr.data-aos-delay]="100">
                   <div class="product-card">
                     <div class="product-image">
                       <img [src]="product.image" [alt]="product.name" loading="lazy">
@@ -47,7 +47,7 @@
                       <p>{{product.description}}</p>
                     </div>
                     <div class="product-footer">
-                      <button class="btn btn-primary btn-sm" >View Details</button>
+                      <button class="btn btn-primary btn-sm" (click)="openProductDialog(product.name)">View Details</button>
                     </div>
                   </div>
                 </div>
