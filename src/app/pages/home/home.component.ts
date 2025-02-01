@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { Meta, MetaDefinition, Title } from '@angular/platform-browser';
 import AOS from 'aos';
 import { TransferState, makeStateKey } from '@angular/platform-browser';
@@ -22,7 +22,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   constructor(
     private meta: Meta,
     private title: Title,
-    private transferState: TransferState
+    private transferState: TransferState,
+    private router: Router
   ) {}
 
   products = [
@@ -114,5 +115,9 @@ export class HomeComponent implements OnInit, OnDestroy {
     document.head.appendChild(script);
 
     this.transferState.set(STRUCTURED_DATA_KEY, JSON.stringify(structuredData));
+  }
+
+  navigateToProductDetails() {
+    this.router.navigate(['/products']);
   }
 } 
