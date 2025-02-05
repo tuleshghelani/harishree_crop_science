@@ -183,13 +183,13 @@
   }
 }
 
+
+.contact-info .row > div {
+  padding: 1rem;
+}
 @media (max-width: 576px) {
   .contact-hero h1 {
     font-size: 2rem;
-  }
-
-  .contact-info .row > div {
-    padding: 1rem;
   }
   
   .social-links {
