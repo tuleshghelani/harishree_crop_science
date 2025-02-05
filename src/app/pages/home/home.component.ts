@@ -68,17 +68,15 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   private setMetaData() {
-    if (this.transferState.hasKey(META_KEY)) {
-      return;
-    }
+    if (this.transferState.hasKey(META_KEY)) return;
 
-    this.title.setTitle(environment.metaDefaults.title);
+    this.title.setTitle('Harishree Crop Science | Premium Agricultural Solutions Provider');
     
     const metaTags = [
-      { name: 'description', content: environment.metaDefaults.description },
-      { name: 'keywords', content: environment.metaDefaults.keywords },
-      { property: 'og:title', content: environment.metaDefaults.title },
-      { property: 'og:description', content: environment.metaDefaults.description },
+      { name: 'description', content: 'Leading manufacturer and supplier of premium agricultural solutions including organic pesticides, bio-fertilizers, and eco-friendly crop protection products. Trusted by farmers across India for sustainable farming solutions.' },
+      { name: 'keywords', content: 'agricultural solutions, organic pesticides, bio fertilizers, crop protection products, agricultural chemicals, sustainable farming, organic farming products' },
+      { property: 'og:title', content: 'Premium Agricultural Solutions | Harishree Crop Science' },
+      { property: 'og:description', content: 'Discover our comprehensive range of organic pesticides, bio-fertilizers, and eco-friendly crop protection solutions for sustainable agriculture.' },
       { property: 'og:type', content: 'website' },
       { property: 'og:image', content: `${this.baseUrl}/assets/logo/HARISHREE.png` },
       { name: 'twitter:card', content: 'summary_large_image' },
@@ -91,22 +89,46 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   private setStructuredData() {
-    if (this.transferState.hasKey(STRUCTURED_DATA_KEY)) {
-      return;
-    }
+    if (this.transferState.hasKey(STRUCTURED_DATA_KEY)) return;
 
     const structuredData = {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Harishree Crop Science",
-      "description": environment.metaDefaults.description,
+      "description": "Leading manufacturer and supplier of premium agricultural solutions including organic pesticides, bio-fertilizers, and eco-friendly crop protection products.",
       "url": this.baseUrl,
       "logo": `${this.baseUrl}/assets/logo/HARISHREE.png`,
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": environment.contactPhone,
         "contactType": "customer service"
-      }
+      },
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Organic Pesticides",
+            "description": "Premium organic pesticides for sustainable crop protection"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Bio Fertilizers",
+            "description": "Natural bio-fertilizers for enhanced crop yield"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Crop Protection Solutions",
+            "description": "Comprehensive crop protection products for modern agriculture"
+          }
+        }
+      ]
     };
 
     const script = document.createElement('script');

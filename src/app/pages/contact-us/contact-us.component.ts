@@ -89,8 +89,8 @@ export class ContactUsComponent implements OnInit, OnDestroy {
           "postalCode": "360110",
           "addressCountry": "India"
         },
-        "telephone": "+911234567890",
-        "email": "info@harishreecrop.com"
+        "telephone": "+919898197196",
+        "email": "harishreecropscience@gmail.com"
       }
     };
 

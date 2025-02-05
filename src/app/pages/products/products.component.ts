@@ -71,14 +71,14 @@ export class ProductsComponent implements OnInit, OnDestroy {
     this.title.setTitle('Agricultural Products | Harishree Crop Science');
     
     const metaTags = [
-      { name: 'description', content: 'Explore our comprehensive range of agricultural products including insecticides, fungicides, herbicides, and PGRs. Premium quality solutions for modern farming.' },
-      { name: 'keywords', content: 'agricultural products, insecticides, fungicides, herbicides, PGR, crop protection, farming solutions' },
-      { property: 'og:title', content: 'Agricultural Products | Harishree Crop Science' },
-      { property: 'og:description', content: 'Discover our complete range of agricultural solutions for modern farming needs.' },
+      { name: 'description', content: 'Discover our premium range of organic pesticides, bio-fertilizers, and eco-friendly crop protection solutions. Trusted by farmers for sustainable agriculture and enhanced crop yield.' },
+      { name: 'keywords', content: 'organic pesticides, bio fertilizers, crop protection solutions, agricultural products, sustainable farming products, organic farming solutions, agricultural chemicals india' },
+      { property: 'og:title', content: 'Agricultural Products | Organic Pesticides & Bio Fertilizers' },
+      { property: 'og:description', content: 'Premium agricultural solutions including organic pesticides, bio-fertilizers, and crop protection products for sustainable farming.' },
       { property: 'og:type', content: 'website' },
       { property: 'og:image', content: `${this.baseUrl}/assets/logo/HARISHREE.png` },
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'robots', content: 'index, follow' }
+      { name: 'robots', content: 'index, follow, max-image-preview:large' }
     ];
 
     metaTags.forEach(tag => this.meta.updateTag(tag as MetaDefinition));
@@ -90,20 +90,33 @@ export class ProductsComponent implements OnInit, OnDestroy {
 
     const structuredData = {
       "@context": "https://schema.org",
-      "@type": "ItemList",
-      "itemListElement": this.categories.map((category, index) => ({
-        "@type": "ListItem",
-        "position": index + 1,
-        "name": category.name,
-        "description": `${category.name} products from Harishree Crop Science`,
-        "numberOfItems": category.products.length,
-        "itemListElement": category.products.map(product => ({
-          "@type": "Product",
-          "name": product.name,
-          "description": product.description,
-          "image": `${this.baseUrl}/${product.image}`
-        }))
-      }))
+      "@type": "WebSite",
+      "url": "https://harishreecropscience.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://harishreecropscience.com/products?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "hasPart": [
+        {
+          "@type": "WebPage",
+          "name": "Insecticides",
+          "description": "High-quality insecticides for crop protection",
+          "url": "https://harishreecropscience.com/products#insecticide"
+        },
+        {
+          "@type": "WebPage",
+          "name": "Fungicides",
+          "description": "Effective fungicides for plant disease control",
+          "url": "https://harishreecropscience.com/products#fungicide"
+        },
+        {
+          "@type": "WebPage",
+          "name": "Herbicides",
+          "description": "Selective herbicides for weed control",
+          "url": "https://harishreecropscience.com/products#herbicide"
+        }
+      ]
     };
 
     const script = document.createElement('script');

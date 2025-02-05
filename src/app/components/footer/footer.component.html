@@ -27,10 +27,11 @@
       <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
         <h5>Featured Products</h5>
         <ul class="footer-links">
-          <li><a href="#">Bio Fertilizers</a></li>
-          <li><a href="#">Organic Pesticides</a></li>
-          <li><a href="#">Growth Promoters</a></li>
-          <li><a href="#">Soil Conditioners</a></li>
+          <li *ngFor="let product of featuredProducts">
+            <a [routerLink]="['/products']" [fragment]="product.name.toLowerCase()">
+              {{ product.name }}
+            </a>
+          </li>
         </ul>
       </div>
 
@@ -44,14 +45,15 @@
           </li>
           <li>
             <i class="fas fa-phone"></i>
-            <a href="tel:+911234567890">+91 123 456 7890</a>
+            <a href="tel:+919898197196">+91 9898197196</a>
           </li>
           <li>
             <i class="fas fa-envelope"></i>
-            <a href="mailto:info@harishreecrop.com">info&#64;harishreecrop.com</a>
+            <a href="mailto:harishreecropscience@gmail.com">harishreecropscience&#64;gmail.com</a>
           </li>
         </ul>
       </div>
+
     </div>
 
     <div class="footer-bottom">

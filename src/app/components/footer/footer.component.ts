@@ -1,14 +1,31 @@
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
+import { ProductService } from '../../shared/services/product.service';
+import { Product } from '../../shared/interfaces/product.interface';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [RouterLink, CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })
-export class FooterComponent {
+export class FooterComponent implements OnInit {
   currentYear = new Date().getFullYear();
+  featuredProducts: Product[] = [];
+
+  constructor(private productService: ProductService) {}
+
+  ngOnInit() {
+    this.productService.getAllProducts().subscribe(products => {
+      this.featuredProducts = [
+        products.find(p => p.name === 'Proceed'),
+        products.find(p => p.name === 'C-Pro'),
+        products.find(p => p.name === 'Laser'),
+        products.find(p => p.name === 'Black gold'),
+        products.find(p => p.name === 'Star Super')
+      ].filter(Boolean) as Product[];
+    });
+  }
 } 
