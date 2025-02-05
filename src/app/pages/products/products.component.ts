@@ -9,6 +9,7 @@ import { ProductCategory, Product } from '../../shared/interfaces/product.interf
 import { Location } from '@angular/common';
 import { ProductDialogComponent } from '../../shared/components/product-dialog/product-dialog.component';
 import { DialogService } from '../../shared/services/dialog.service';
+import { ActivatedRoute } from '@angular/router';
 
 const META_KEY = makeStateKey<boolean>('products-meta-data');
 const STRUCTURED_DATA_KEY = makeStateKey<string>('products-structured-data');
@@ -32,7 +33,8 @@ export class ProductsComponent implements OnInit, OnDestroy {
     private productService: ProductService,
     private location: Location,
     private dialogService: DialogService,
-    private viewContainerRef: ViewContainerRef
+    private viewContainerRef: ViewContainerRef,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit() {
@@ -47,7 +49,12 @@ export class ProductsComponent implements OnInit, OnDestroy {
       once: true,
       mirror: false
     });
-    this.checkUrlHash();
+
+    this.route.params.subscribe(params => {
+      if (params['productName']) {
+        this.openProductDialog(params['productName']);
+      }
+    });
   }
 
   ngOnDestroy() {
@@ -127,19 +134,12 @@ export class ProductsComponent implements OnInit, OnDestroy {
     this.transferState.set(STRUCTURED_DATA_KEY, JSON.stringify(structuredData));
   }
 
-  private checkUrlHash(): void {
-    const hash = decodeURIComponent(window.location.hash.slice(1));
-    if (hash) {
-      this.openProductDialog(hash);
-    }
-  }
-
   openProductDialog(productName: string): void {
     const product = this.findProductByName(productName);
     if (!product) return;
 
     this.dialogService.open(ProductDialogComponent, { product });
-    this.location.replaceState(`/products#${encodeURIComponent(productName)}`);
+    this.location.replaceState(`/products/${encodeURIComponent(productName)}`);
 
     this.dialogService.onClose$.subscribe(() => {
       this.location.replaceState('/products');

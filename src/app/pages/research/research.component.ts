@@ -31,6 +31,19 @@ export class ResearchComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+    // Preload images
+    const images = [
+      'assets/research/1.jpeg',
+      'assets/research/2.jpeg',
+      'assets/research/3.jpeg',
+      'assets/research/4.jpeg'
+    ];
+    
+    images.forEach(src => {
+      const img = new Image();
+      img.src = src;
+    });
+
     this.setMetaData();
     this.setStructuredData();
     

@@ -12,6 +12,7 @@ export const routes: Routes = [
   { path: 'about-us', component: AboutComponent },
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'products', component: ProductsComponent },
+  { path: 'products/:productName', component: ProductsComponent },
   { path: 'catalogue', component: CatalogueComponent },
   { path: 'research', component: ResearchComponent },
   { path: 'quality-assurance', component: QualityAssuranceComponent },

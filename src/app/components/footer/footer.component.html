@@ -28,7 +28,7 @@
         <h5>Featured Products</h5>
         <ul class="footer-links">
           <li *ngFor="let product of featuredProducts">
-            <a [routerLink]="['/products']" [fragment]="product.name.toLowerCase()">
+            <a [routerLink]="['/products/', product.name]" >
               {{ product.name }}
             </a>
           </li>
