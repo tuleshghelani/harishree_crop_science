@@ -24,7 +24,7 @@ export class FooterComponent implements OnInit {
         products.find(p => p.name === 'X-Pro'),
         products.find(p => p.name === 'Laser'),
         products.find(p => p.name === 'Black gold'),
-        products.find(p => p.name === 'Star Super')
+        products.find(p => p.name === 'Mpire 404')
       ].filter(Boolean) as Product[];
     });
   }
