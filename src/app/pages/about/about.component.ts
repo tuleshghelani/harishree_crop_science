@@ -52,15 +52,20 @@ export class AboutComponent implements OnInit, OnDestroy {
     {
       name: 'Vishal Dobariya',
       position: 'Founder',
-      image: 'assets/logo/HARISHREE.png',
-      description: 'With over 5 years of experience in agricultural science'
+      image: 'assets/about-us/Vishal Dobariya.jpg',
+      description: 'A visionary leader with over 10 years of expertise in agricultural science and sustainable farming solutions. Pioneering innovative approaches in eco-friendly crop protection and organic agricultural products.'
     },
     {
-      name: 'Sagar Patel',
+      name: 'Sagar Pambhar',
       position: 'Director',
-      image: 'assets/logo/HARISHREE.png',
-      description: 'Leading innovation in sustainable farming solutions'
-
+      image: 'assets/about-us/Sagar Pambhar.jpg',
+      description: 'Expert in agricultural innovation with extensive experience in developing premium bio-fertilizers and sustainable farming technologies. Driving research and development in organic crop protection solutions.'
+    },
+    {
+      name: 'Nilesh Dobariya',
+      position: 'Director',
+      image: 'assets/about-us/Nilesh Dobariya.jpg',
+      description: 'Specialized in agricultural product development and quality assurance. Leading strategic initiatives in eco-friendly pesticides and innovative crop protection solutions for enhanced farm productivity.'
     }
   ];
 
@@ -117,12 +122,43 @@ export class AboutComponent implements OnInit, OnDestroy {
       "foundingDate": "2010",
       "founder": {
         "@type": "Person",
-        "name": "Vishal Dobariya"
+        "name": "Vishal Dobariya",
+        "jobTitle": "Founder",
+        "description": "A visionary leader with over 10 years of expertise in agricultural science and sustainable farming solutions. Pioneering innovative approaches in eco-friendly crop protection and organic agricultural products.",
+        "image": `${this.baseUrl}/assets/about-us/Vishal Dobariya.jpg`,
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Harishree Crop Science"
+        }
       },
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "India"
-      }
+      },
+      "employee": [
+        {
+          "@type": "Person",
+          "name": "Sagar Pambhar",
+          "jobTitle": "Director",
+          "description": "Expert in agricultural innovation with extensive experience in developing premium bio-fertilizers and sustainable farming technologies. Driving research and development in organic crop protection solutions.",
+          "image": `${this.baseUrl}/assets/about-us/Sagar Pambhar.jpg`,
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Harishree Crop Science"
+          }
+        },
+        {
+          "@type": "Person",
+          "name": "Nilesh Dobariya",
+          "jobTitle": "Director",
+          "description": "Specialized in agricultural product development and quality assurance. Leading strategic initiatives in eco-friendly pesticides and innovative crop protection solutions for enhanced farm productivity.",
+          "image": `${this.baseUrl}/assets/about-us/Nilesh Dobariya.jpg`,
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Harishree Crop Science"
+          }
+        }
+      ]
     };
 
     const script = document.createElement('script');

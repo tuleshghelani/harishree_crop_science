@@ -21,7 +21,7 @@ export class FooterComponent implements OnInit {
     this.productService.getAllProducts().subscribe(products => {
       this.featuredProducts = [
         products.find(p => p.name === 'Proceed'),
-        products.find(p => p.name === 'C-Pro'),
+        products.find(p => p.name === 'X-Pro'),
         products.find(p => p.name === 'Laser'),
         products.find(p => p.name === 'Black gold'),
         products.find(p => p.name === 'Star Super')

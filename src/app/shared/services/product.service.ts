@@ -87,7 +87,7 @@ export class ProductService {
     {
       name: 'Fungicide',
       products: [
-        { name: 'C-Pro', image: 'assets/products/C-Pro.png', description: 'Professional fungus control' },
+        { name: 'X-Pro', image: 'assets/products/X-PRO.png', description: 'Professional fungus control' },
         { name: 'Confer Plus', image: 'assets/products/confer plus.png', description: 'Enhanced fungal protection' },
         { name: 'Tej-65', image: 'assets/products/TEJ 65.png', description: 'Rapid fungicide action' },
         { name: 'Chemistry', image: 'assets/products/CHEMISTRY.png', description: 'Scientific fungal control' },
@@ -124,7 +124,7 @@ export class ProductService {
         { name: 'Husi', image: 'assets/products/HUSI.png', description: 'Advanced plant growth' },
         { name: 'H Pro', image: 'assets/products/H PRO.png', description: 'Professional PGR solution' },
         { name: 'HC-Gold', image: 'assets/products/HC-GOLD.png', description: 'Superior growth control' },
-        { name: 'Spreader Activator', image: 'assets/products/Spreader Activator.png', description: 'Enhanced absorption' }
+        { name: 'Dhani Wet', image: 'assets/products/DHANI WET.png', description: 'Enhanced absorption' }
       ]
     }
   ];
