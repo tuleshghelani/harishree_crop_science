@@ -43,7 +43,7 @@ export class ProductService {
             fullDescription: 'Kavach creates a powerful protective shield against destructive insect pests. This innovative formulation provides both contact and residual activity, ensuring comprehensive crop protection. Its unique shield technology ensures better adherence to plant surfaces and resistance to environmental factors.'
           },
           { name: 'Pride-H', 
-            image: 'assets/products/PRIDE-H.png', 
+            image: 'assets/products/PRIDE-H_2.png', 
             description: 'Professional pest control',
             fullDescription: 'Pride-H represents professional-grade pest management technology. This advanced formulation combines rapid knockdown with long-lasting protection, making it ideal for commercial farming operations. Its balanced composition ensures optimal performance across various crop stages and conditions.'
           },
@@ -95,7 +95,7 @@ export class ProductService {
         { name: 'Saf-63', image: 'assets/products/SAF-63.png', description: 'Safe and effective' },
         { name: 'Milet Gold', image: 'assets/products/MILET GOLD.png', description: 'Premium fungal protection' },
         { name: 'HTM', image: 'assets/products/HTM.png', description: 'Advanced fungicide formula' },
-        { name: 'King', image: 'assets/products/KING.png', description: 'Superior fungal control' },
+        { name: 'King', image: 'assets/products/KING_2.png', description: 'Superior fungal control' },
         { name: 'Captop', image: 'assets/products/CAPTOP.png', description: 'Complete fungal protection' },
         { name: 'Tebuja', image: 'assets/products/TEBUJA.png', description: 'Specialized fungicide' },
         { name: 'Haristin', image: 'assets/products/HARISTIN.png', description: 'Professional fungicide' },
@@ -107,11 +107,11 @@ export class ProductService {
       name: 'Herbicide',
       products: [
         { name: 'Laser', image: 'assets/products/LASER.png', description: 'Precise weed control' },
-        { name: 'Paddy', image: 'assets/products/paddy.png', description: 'Rice crop protection' },
+        { name: 'Paddy', image: 'assets/products/PADDY_3.png', description: 'Rice crop protection' },
         { name: 'Oxy Green', image: 'assets/products/OXY GREEN.png', description: 'Eco-friendly herbicide' },
         { name: 'H-Round', image: 'assets/products/H ROUND.png', description: 'Complete weed management' },
         { name: 'Green Out', image: 'assets/products/GREEN OUT.png', description: 'Effective weed control' },
-        { name: 'Glufo13', image: 'assets/products/GLUFO 13.png', description: 'Professional herbicide' },
+        { name: 'Glufo13', image: 'assets/products/GLUFO13.png', description: 'Professional herbicide' },
         { name: 'Hera-71', image: 'assets/products/HERA-71.png', description: 'Advanced weed solution' },
         { name: 'T-Super', image: 'assets/products/T-SUPER.png', description: 'Superior weed control' },
         { name: 'Imaza 10', image: 'assets/products/IMAZA 10.png', description: 'Specialized herbicide' }
@@ -120,11 +120,14 @@ export class ProductService {
     {
       name: 'PGR',
       products: [
-        { name: 'Black gold', image: 'assets/products/BLACK GOLD.png', description: 'Premium growth regulator' },
+        { name: 'Black Gold', image: 'assets/products/BLACK GOLD.png', description: 'Premium growth regulator' },
         { name: 'Husi', image: 'assets/products/HUSI.png', description: 'Advanced plant growth' },
         { name: 'H Pro', image: 'assets/products/H PRO.png', description: 'Professional PGR solution' },
         { name: 'HC-Gold', image: 'assets/products/HC-GOLD.png', description: 'Superior growth control' },
-        { name: 'Dhani Wet', image: 'assets/products/DHANI WET.png', description: 'Enhanced absorption' }
+        { name: 'Dhani Wet', image: 'assets/products/DHANI WET.png', description: 'Enhanced absorption' },        
+        { name: 'Black Diamond', image: 'assets/products/BLACK DIAMOND.png', description: 'Premium growth regulator' },
+        { name: 'Black Gold', image: 'assets/products/BLACK GOLD.png', description: 'Premium growth regulator' },
+        { name: 'Super FS', image: 'assets/products/SUPER FS.png', description: 'Premium growth regulator' },
       ]
     }
   ];
