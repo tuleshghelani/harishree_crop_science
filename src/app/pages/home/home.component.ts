@@ -49,6 +49,27 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
   ];
 
+  testimonials = [
+    {
+      name: 'Sudhir Dattartay Sawant',
+      location: 'Solapur, Maharashtra',
+      rating: 5,
+      review: 'Excellent quality products that have significantly improved our crop yield. The bio-fertilizers are highly effective and the customer support is outstanding.'
+    },
+    {
+      name: 'Makwana Mansing',
+      location: 'Kodinar, Gujarat',
+      rating: 5,
+      review: 'Very satisfied with their organic pesticides. The products are effective and eco-friendly. Great service and timely delivery.'
+    },
+    {
+      name: 'Akram',
+      location: 'Kheri, Uttar Pradesh',
+      rating: 5,
+      review: 'Best agricultural solutions provider. Their products have helped us achieve better results while maintaining soil health. Highly recommended!'
+    }
+  ];
+
   ngOnInit() {
     this.setMetaData();
     this.setStructuredData();

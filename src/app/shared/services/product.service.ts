@@ -16,7 +16,7 @@ export class ProductService {
         { name: 'Thio-h', image: 'assets/products/THIO-H.png', description: 'Effective pest management',
             fullDescription: 'Thio-h represents the latest in systemic insecticide technology. This powerful formulation penetrates plant tissues to provide protection from within, effectively controlling both sucking and chewing pests. Its balanced composition ensures crop safety while delivering outstanding pest control performance across various agricultural applications.'
          },
-        { name: 'Super FS', image: 'assets/products/Super FS.png', description: 'Premium insect protection',
+        { name: 'Super FS', image: 'assets/products/SUPER FS.png', description: 'Premium insect protection',
             fullDescription: 'Super FS is our premium grade insecticide offering superior protection against multiple pest species. Its advanced formula combines fast action with extended protection periods, making it an excellent choice for high-value crops. The product features enhanced stability under various weather conditions and minimal impact on beneficial insects.'
          },
         { name: 'Mpire 404', image: 'assets/products/MPIRE-404.png', description: 'Complete pest control',
