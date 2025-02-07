@@ -52,19 +52,19 @@ export class AboutComponent implements OnInit, OnDestroy {
     {
       name: 'Vishal Dobariya',
       position: 'Founder',
-      image: 'assets/about-us/Vishal Dobariya.jpg',
+      image: 'assets/about-us/Vishal Dobariya.png',
       description: 'A visionary leader with over 10 years of expertise in agricultural science and sustainable farming solutions. Pioneering innovative approaches in eco-friendly crop protection and organic agricultural products.'
     },
     {
       name: 'Sagar Pambhar',
       position: 'Director',
-      image: 'assets/about-us/Sagar Pambhar.jpg',
+      image: 'assets/about-us/Sagar Pambhar.png',
       description: 'Expert in agricultural innovation with extensive experience in developing premium bio-fertilizers and sustainable farming technologies. Driving research and development in organic crop protection solutions.'
     },
     {
       name: 'Nilesh Dobariya',
       position: 'Director',
-      image: 'assets/about-us/Nilesh Dobariya.jpg',
+      image: 'assets/about-us/Nilesh Dobariya.png',
       description: 'Specialized in agricultural product development and quality assurance. Leading strategic initiatives in eco-friendly pesticides and innovative crop protection solutions for enhanced farm productivity.'
     }
   ];
