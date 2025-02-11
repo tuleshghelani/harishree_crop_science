@@ -130,10 +130,17 @@ export class HomeComponent implements OnInit, OnDestroy {
           "itemOffered": {
             "@type": "Product",
             "name": "Bulldozer",
+            "image": `${this.baseUrl}/assets/products/Buldozer.png`,
             "description": "Bulldozer provides long duration control by which frequent application is not required",
             "offers": {
               "@type": "Offer",
-              "availability": "https://schema.org/InStock"
+              "availability": "https://schema.org/InStock",
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "minPrice": "300",
+                "maxPrice": "1000",
+                "priceCurrency": "INR"
+              },
             },
             "review": {
               "@type": "Review",
@@ -159,10 +166,17 @@ export class HomeComponent implements OnInit, OnDestroy {
           "itemOffered": {
             "@type": "Product",
             "name": "Chemistry",
+            "image": `${this.baseUrl}/assets/products/CHEMISTRY.png`,
             "description": "Chemistry in agriculture enhances crop yield through fertilizers and pesticides, while in medicine, it enables drug formulation for disease treatment.",
             "offers": {
               "@type": "Offer",
-              "availability": "https://schema.org/InStock"
+              "availability": "https://schema.org/InStock",
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "minPrice": "300",
+                "maxPrice": "1000",
+                "priceCurrency": "INR"
+              },
             },
             "review": {
               "@type": "Review",
@@ -188,10 +202,17 @@ export class HomeComponent implements OnInit, OnDestroy {
           "itemOffered": {
             "@type": "Product",
             "name": "Green Out",
+            "image": `${this.baseUrl}/assets/products/GREEN OUT.png`,
             "description": "Green Out offers advanced agricultural medicines designed to protect crops from pests and diseases, ensuring higher yields. Our eco-friendly solutions promote sustainable farming with effective pest control.",
             "offers": {
               "@type": "Offer",
-              "availability": "https://schema.org/InStock"
+                "availability": "https://schema.org/InStock",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "minPrice": "300",
+                  "maxPrice": "1000",
+                  "priceCurrency": "INR"
+                },
             },
             "review": {
               "@type": "Review",
@@ -217,10 +238,17 @@ export class HomeComponent implements OnInit, OnDestroy {
           "itemOffered": {
             "@type": "Product",
             "name": "Kavach",
+            "image": `${this.baseUrl}/assets/products/kavach.png`,
             "description": "Kavach is a highly effective fungicide used in agriculture to protect crops from fungal diseases. It ensures healthier yields by preventing infections and enhancing plant immunity.",
             "offers": {
               "@type": "Offer",
-              "availability": "https://schema.org/InStock"
+              "availability": "https://schema.org/InStock",
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "minPrice": "300",
+                "maxPrice": "1000",
+                "priceCurrency": "INR"
+              },
             },
             "review": {
               "@type": "Review",
