@@ -35,17 +35,17 @@ export class HomeComponent implements OnInit, OnDestroy {
     {
       name: 'Chemistry',
       image: 'assets/products/CHEMISTRY.png',
-      description: 'Chemistry in agriculture enhances crop yield through fertilizers and pesticides, while in medicine, it enables drug formulation for disease treatment.'
+      description: 'Chemistry in agriculture enhances crop yield through fertilizers and pesticides.'
     },
     {
       name: 'Green Out',
       image: 'assets/products/GREEN OUT.png',
-      description: 'Green Out offers advanced agricultural medicines designed to protect crops from pests and diseases, ensuring higher yields. Our eco-friendly solutions promote sustainable farming with effective pest control.'
+      description: 'Green Out offers advanced agricultural medicines designed to protect crops from pests and diseases, ensuring higher yields.'
     },
     {
       name: 'Kavach',
       image: 'assets/products/kavach.png',
-      description: 'Kavach is a highly effective fungicide used in agriculture to protect crops from fungal diseases. It ensures healthier yields by preventing infections and enhancing plant immunity.'
+      description: 'Kavach is a highly effective fungicide used in agriculture to protect crops from fungal diseases.'
     }
   ];
 
