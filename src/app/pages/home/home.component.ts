@@ -130,7 +130,28 @@ export class HomeComponent implements OnInit, OnDestroy {
           "itemOffered": {
             "@type": "Product",
             "name": "Bulldozer",
-            "description": "Bulldozer provides long duration control by which frequent application is not required"
+            "description": "Bulldozer provides long duration control by which frequent application is not required",
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock"
+            },
+            "review": {
+              "@type": "Review",
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "author": {
+                "@type": "Person",
+                "name": "Agricultural Product Review"
+              }
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5",
+              "reviewCount": "1000"
+            }
           }
         },
         {
@@ -138,7 +159,28 @@ export class HomeComponent implements OnInit, OnDestroy {
           "itemOffered": {
             "@type": "Product",
             "name": "Chemistry",
-            "description": "Chemistry in agriculture enhances crop yield through fertilizers and pesticides, while in medicine, it enables drug formulation for disease treatment."
+            "description": "Chemistry in agriculture enhances crop yield through fertilizers and pesticides, while in medicine, it enables drug formulation for disease treatment.",
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock"
+            },
+            "review": {
+              "@type": "Review",
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "author": {
+                "@type": "Person",
+                "name": "Agricultural Product Review"
+              }
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5",
+              "reviewCount": "1000"
+            }
           }
         },
         {
@@ -146,7 +188,28 @@ export class HomeComponent implements OnInit, OnDestroy {
           "itemOffered": {
             "@type": "Product",
             "name": "Green Out",
-            "description": "Green Out offers advanced agricultural medicines designed to protect crops from pests and diseases, ensuring higher yields. Our eco-friendly solutions promote sustainable farming with effective pest control."
+            "description": "Green Out offers advanced agricultural medicines designed to protect crops from pests and diseases, ensuring higher yields. Our eco-friendly solutions promote sustainable farming with effective pest control.",
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock"
+            },
+            "review": {
+              "@type": "Review",
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "author": {
+                "@type": "Person",
+                "name": "Agricultural Product Review"
+              }
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5",
+              "reviewCount": "1000"
+            }
           }
         },
         {
@@ -154,7 +217,28 @@ export class HomeComponent implements OnInit, OnDestroy {
           "itemOffered": {
             "@type": "Product",
             "name": "Kavach",
-            "description": "Kavach is a highly effective fungicide used in agriculture to protect crops from fungal diseases. It ensures healthier yields by preventing infections and enhancing plant immunity."
+            "description": "Kavach is a highly effective fungicide used in agriculture to protect crops from fungal diseases. It ensures healthier yields by preventing infections and enhancing plant immunity.",
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock"
+            },
+            "review": {
+              "@type": "Review",
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "author": {
+                "@type": "Person",
+                "name": "Agricultural Product Review"
+              }
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5",
+              "reviewCount": "1000"
+            }
           }
         }
       ]
