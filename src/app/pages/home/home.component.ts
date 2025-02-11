@@ -28,24 +28,24 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   products = [
     {
-      name: 'Bio Fertilizer',
+      name: 'Bulldozer',
       image: 'assets/products/Buldozer.png',
-      description: 'Organic bio-fertilizer for enhanced crop growth'
+      description: 'Bulldozer provides long duration control by which frequent application is not required'
     },
     {
-      name: 'Growth Promoter',
+      name: 'Chemistry',
       image: 'assets/products/CHEMISTRY.png',
-      description: 'Natural growth promoter for healthy plants'
+      description: 'Chemistry in agriculture enhances crop yield through fertilizers and pesticides, while in medicine, it enables drug formulation for disease treatment.'
     },
     {
-      name: 'Organic Pesticide',
+      name: 'Green Out',
       image: 'assets/products/GREEN OUT.png',
-      description: 'Safe and effective organic pest control'
+      description: 'Green Out offers advanced agricultural medicines designed to protect crops from pests and diseases, ensuring higher yields. Our eco-friendly solutions promote sustainable farming with effective pest control.'
     },
     {
-      name: 'Soil Conditioner',
+      name: 'Kavach',
       image: 'assets/products/kavach.png',
-      description: 'Premium soil conditioning solution'
+      description: 'Kavach is a highly effective fungicide used in agriculture to protect crops from fungal diseases. It ensures healthier yields by preventing infections and enhancing plant immunity.'
     }
   ];
 
@@ -121,7 +121,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       "logo": `${this.baseUrl}/assets/logo/HARISHREE.png`,
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": environment.contactPhone,
+        "telephone": "+919898197196",
         "contactType": "customer service"
       },
       "makesOffer": [
@@ -129,24 +129,32 @@ export class HomeComponent implements OnInit, OnDestroy {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Product",
-            "name": "Organic Pesticides",
-            "description": "Premium organic pesticides for sustainable crop protection"
+            "name": "Bulldozer",
+            "description": "Bulldozer provides long duration control by which frequent application is not required"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Product",
-            "name": "Bio Fertilizers",
-            "description": "Natural bio-fertilizers for enhanced crop yield"
+            "name": "Chemistry",
+            "description": "Chemistry in agriculture enhances crop yield through fertilizers and pesticides, while in medicine, it enables drug formulation for disease treatment."
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Product",
-            "name": "Crop Protection Solutions",
-            "description": "Comprehensive crop protection products for modern agriculture"
+            "name": "Green Out",
+            "description": "Green Out offers advanced agricultural medicines designed to protect crops from pests and diseases, ensuring higher yields. Our eco-friendly solutions promote sustainable farming with effective pest control."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Kavach",
+            "description": "Kavach is a highly effective fungicide used in agriculture to protect crops from fungal diseases. It ensures healthier yields by preventing infections and enhancing plant immunity."
           }
         }
       ]
