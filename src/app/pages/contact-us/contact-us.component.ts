@@ -20,8 +20,8 @@ export class ContactUsComponent implements OnInit, OnDestroy {
 
   socialLinks = [
     { icon: 'fab fa-twitter', url: 'https://twitter.com/harishreecrop', label: 'Twitter' },
-    { icon: 'fab fa-facebook', url: 'https://facebook.com/harishreecropscience', label: 'Facebook' },
-    { icon: 'fab fa-instagram', url: 'https://instagram.com/harishreecropscience', label: 'Instagram' },
+    { icon: 'fab fa-facebook', url: 'https://www.facebook.com/profile.php?id=61573857659074', label: 'Facebook' },
+    { icon: 'fab fa-instagram', url: 'https://instagram.com/harishree_crop_science', label: 'Instagram' },
     { icon: 'fab fa-linkedin', url: 'https://linkedin.com/company/harishree-crop-science', label: 'LinkedIn' }
   ];
 
