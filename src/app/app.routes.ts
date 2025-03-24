@@ -6,6 +6,7 @@ import { ProductsComponent } from './pages/products/products.component';
 import { CatalogueComponent } from './pages/catalogue/catalogue.component';
 import { ResearchComponent } from './pages/research/research.component';
 import { QualityAssuranceComponent } from './pages/quality-assurance/quality-assurance.component';
+import { ProceedComponent } from './pages/all-products/proceed/proceed.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -16,4 +17,5 @@ export const routes: Routes = [
   { path: 'catalogue', component: CatalogueComponent },
   { path: 'research', component: ResearchComponent },
   { path: 'quality-assurance', component: QualityAssuranceComponent },
+  { path: 'product/proceed', component: ProceedComponent },
 ];

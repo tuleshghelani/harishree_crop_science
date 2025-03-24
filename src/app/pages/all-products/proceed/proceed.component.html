@@ -1,0 +1,140 @@
+<main class="product-page">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h1 class="product-title" data-aos="fade-right">{{product.name}}</h1>
+          <p class="product-tagline" data-aos="fade-right" data-aos-delay="100">Advanced Insect Control Solution</p>
+          <div class="product-description" data-aos="fade-right" data-aos-delay="200">
+            <p>Proceed is our advanced insecticide formulation designed for comprehensive pest management. It offers rapid knockdown and long-lasting residual control against a broad spectrum of agricultural pests.</p>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center">
+          <div class="product-image-container" data-aos="zoom-in">
+            <img src="assets/products/PROCEED.png" alt="Proceed Insecticide" class="product-image border-0">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Benefits Section -->
+  <section class="benefits-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Key Benefits</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <ul class="benefits-list">
+            <li data-aos="fade-up" data-aos-delay="100">
+              <span class="benefit-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                </svg>
+              </span>
+              <div class="benefit-content">
+                <h3>Rapid Knockdown Effect</h3>
+                <p>Quick action against target pests for immediate results</p>
+              </div>
+            </li>
+            <li data-aos="fade-up" data-aos-delay="200">
+              <span class="benefit-icon"><i class="fas fa-shield-alt"></i></span>
+              <div class="benefit-content">
+                <h3>Long-lasting Residual Control</h3>
+                <p>Extended protection that reduces the need for frequent applications</p>
+              </div>
+            </li>
+            <li data-aos="fade-up" data-aos-delay="300">
+              <span class="benefit-icon"><i class="fas fa-spray-can"></i></span>
+              <div class="benefit-content">
+                <h3>Better Crop Coverage</h3>
+                <p>Advanced formulation ensures thorough coverage of plant surfaces</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul class="benefits-list">
+            <li data-aos="fade-up" data-aos-delay="400">
+              <span class="benefit-icon"><i class="fas fa-tint-slash"></i></span>
+              <div class="benefit-content">
+                <h3>Enhanced Resistance to Wash-off</h3>
+                <p>Remains effective even after irrigation or light rainfall</p>
+              </div>
+            </li>
+            <li data-aos="fade-up" data-aos-delay="500">
+              <span class="benefit-icon"><i class="fas fa-bugs"></i></span>
+              <div class="benefit-content">
+                <h3>Broad Spectrum Pest Control</h3>
+                <p>Effective against multiple pest species with a single application</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Target Pests Section -->
+  <section class="pests-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Target Pests</h2>
+      <div class="pest-cards">
+        <div class="row">
+          <div *ngFor="let pest of targetPests; let i = index" class="col-md-4">
+            <div class="pest-card" data-aos="flip-up" [attr.data-aos-delay]="100 * i">
+              <div class="pest-icon">
+                <i class="fas fa-bug"></i>
+              </div>
+              <h3>{{pest.name}}</h3>
+              <p>{{pest.description}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Application Details Section -->
+  <section class="application-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Application Details</h2>
+      <div class="row">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="application-info">
+            <h3>Recommended Dosage</h3>
+            <p>150-200 ml per acre, depending on pest pressure and crop type</p>
+            
+            <h3>Application Method</h3>
+            <p>Foliar spray using standard spray equipment</p>
+            
+            <h3>Timing</h3>
+            <p>Apply at first sign of pest infestation for optimal results</p>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="safety-info">
+            <h3>Safety Precautions</h3>
+            <ul>
+              <li>Always wear protective equipment during handling and application</li>
+              <li>Avoid contact with eyes and skin</li>
+              <li>Store in original container away from direct sunlight</li>
+              <li>Keep out of reach of children and pets</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-container" data-aos="zoom-in">
+        <h2>Ready to enhance your crop protection?</h2>
+        <p>Contact us today to learn more about Proceed and our other premium agricultural solutions.</p>
+        <a routerLink="/contact-us" class="cta-button">Contact Us</a>
+      </div>
+    </div>
+  </section>
+</main>
