@@ -1,13 +1,14 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
 import { Meta, MetaDefinition, Title } from '@angular/platform-browser';
 import AOS from 'aos';
 import { TransferState, makeStateKey } from '@angular/platform-browser';
 import { environment } from '../../../environments/environment';
+import { isPlatformBrowser } from '@angular/common';
 
-const META_KEY = makeStateKey<boolean>('meta-data');
-const STRUCTURED_DATA_KEY = makeStateKey<string>('structured-data');
+const META_KEY = makeStateKey<boolean>('HOME_META');
+const STRUCTURED_DATA_KEY = makeStateKey<string>('HOME_STRUCTURED_DATA');
 
 @Component({
   selector: 'app-home',
@@ -23,7 +24,8 @@ export class HomeComponent implements OnInit, OnDestroy {
     private meta: Meta,
     private title: Title,
     private transferState: TransferState,
-    private router: Router
+    private router: Router,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
   products = [
@@ -74,13 +76,15 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.setMetaData();
     this.setStructuredData();
     
-    AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false,
-      offset: 50
-    });
+    if (isPlatformBrowser(this.platformId)) {
+      AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false,
+        offset: 50
+      });
+    }
   }
 
   ngOnDestroy() {
@@ -272,12 +276,14 @@ export class HomeComponent implements OnInit, OnDestroy {
       ]
     };
 
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify(structuredData);
-    document.head.appendChild(script);
-
     this.transferState.set(STRUCTURED_DATA_KEY, JSON.stringify(structuredData));
+
+    if (isPlatformBrowser(this.platformId)) {
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.text = JSON.stringify(structuredData);
+      document.head.appendChild(script);
+    }
   }
 
   navigateToProductDetails() {
