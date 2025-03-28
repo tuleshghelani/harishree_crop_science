@@ -334,6 +334,215 @@
   }
 }
 
+// Technical Specifications Section
+.tech-specs-section {
+  padding: 5rem 0;
+  background-color: white;
+  
+  .specs-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    height: 100%;
+    transition: all 0.3s ease;
+    border: 1px solid var(--primary-lightest);
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+      border-color: var(--primary-light);
+    }
+    
+    .specs-header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: white;
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      
+      .specs-icon {
+        font-size: 2rem;
+        margin-right: 1rem;
+      }
+      
+      h3 {
+        color: white;
+        margin: 0;
+        font-size: var(--text-xl);
+        font-weight: var(--font-semibold);
+      }
+    }
+    
+    .specs-content {
+      padding: 1.5rem;
+      
+      .spec-item {
+        display: flex;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--primary-lightest);
+        
+        &:last-child {
+          margin-bottom: 0;
+          padding-bottom: 0;
+          border-bottom: none;
+        }
+        
+        .spec-label {
+          flex: 0 0 40%;
+          font-weight: var(--font-semibold);
+          color: var(--primary);
+        }
+        
+        .spec-value {
+          flex: 0 0 60%;
+          color: var(--gray-700);
+        }
+      }
+    }
+  }
+}
+
+// FAQ Section
+.faq-section {
+  padding: 5rem 0;
+  background-color: var(--primary-lightest);
+  
+  .faq-accordion {
+    margin-top: 2rem;
+    
+    .accordion-item {
+      border: none;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    
+    .accordion-button {
+      padding: 1.5rem;
+      font-weight: var(--font-semibold);
+      color: var(--primary);
+      background-color: white;
+      box-shadow: none;
+      
+      &:not(.collapsed) {
+        color: var(--secondary);
+        background-color: white;
+        box-shadow: none;
+      }
+      
+      &::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23009846'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        transition: transform 0.3s ease;
+      }
+      
+      &:not(.collapsed)::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23529433'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+      }
+    }
+    
+    .accordion-body {
+      padding: 0.5rem 1.5rem 1.5rem;
+      background-color: white;
+      
+      p {
+        color: var(--text);
+        line-height: 1.7;
+        margin-bottom: 0;
+        
+        strong {
+          color: var(--secondary);
+          font-weight: var(--font-semibold);
+        }
+      }
+    }
+  }
+}
+
+// Testimonials Section
+.testimonials-section {
+  padding: 5rem 0;
+  background-color: white;
+  
+  .testimonial-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    height: 100%;
+    transition: all 0.3s ease;
+    border: 1px solid var(--primary-lightest);
+    position: relative;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+      border-color: var(--accent);
+    }
+    
+    .testimonial-quote {
+      color: var(--accent);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    .testimonial-text {
+      color: var(--text);
+      font-size: var(--text-base);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+      min-height: 120px;
+    }
+    
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      
+      .author-img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 1rem;
+        border: 2px solid var(--primary);
+        
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      
+      .author-info {
+        h4 {
+          color: var(--primary);
+          font-size: var(--text-base);
+          margin-bottom: 0.25rem;
+          font-weight: var(--font-semibold);
+        }
+        
+        p {
+          color: var(--gray-700);
+          font-size: var(--text-sm);
+          margin-bottom: 0.5rem;
+        }
+        
+        .rating {
+          color: var(--accent);
+          font-size: var(--text-sm);
+        }
+      }
+    }
+  }
+}
+
 // Responsive Styles
 @media (max-width: 991px) {
   .hero-section {
@@ -362,6 +571,28 @@
         height: 50px;
         font-size: 1.3rem;
       }
+    }
+  }
+  
+  .tech-specs-section {
+    .specs-card {
+      margin-bottom: 2rem;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  
+  .testimonial-card {
+    margin-bottom: 2rem;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    .testimonial-text {
+      min-height: auto;
     }
   }
 }
@@ -414,6 +645,46 @@
         font-size: var(--text-2xl);
       }
     }
+  }
+  
+  .tech-specs-section,
+  .faq-section,
+  .testimonials-section {
+    padding: 3rem 0;
+  }
+  
+  .specs-card {
+    .specs-header {
+      padding: 1.2rem;
+      
+      .specs-icon {
+        font-size: 1.5rem;
+      }
+      
+      h3 {
+        font-size: var(--text-lg);
+      }
+    }
+    
+    .specs-content {
+      padding: 1.2rem;
+      
+      .spec-item {
+        flex-direction: column;
+        
+        .spec-label, .spec-value {
+          flex: 0 0 100%;
+        }
+        
+        .spec-label {
+          margin-bottom: 0.3rem;
+        }
+      }
+    }
+  }
+  
+  .testimonial-card {
+    padding: 1.5rem;
   }
 }
 

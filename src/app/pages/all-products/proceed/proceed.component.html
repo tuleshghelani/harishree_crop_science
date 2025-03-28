@@ -1,19 +1,19 @@
-<main class="product-page">
+<main class="product-page" itemscope itemtype="https://schema.org/Product">
   <!-- Hero Section -->
   <section class="hero-section">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6">
-          <h1 class="product-title" data-aos="fade-right">{{product.name}}</h1>
+          <h1 class="product-title" data-aos="fade-right" itemprop="name">{{product.name}}</h1>
           <p class="product-tagline" data-aos="fade-right" data-aos-delay="100">Advanced Insect Control Solution</p>
           <div class="product-description" data-aos="fade-right" data-aos-delay="200">
-            <p>Proceed is our advanced insecticide formulation designed for comprehensive pest management. It offers rapid knockdown and long-lasting residual control against a broad spectrum of agricultural pests.</p>
+            <p itemprop="description"><strong>Proceed</strong> is our advanced insecticide formulation designed for comprehensive pest management. It offers <strong>rapid knockdown</strong> and <strong>long-lasting residual control</strong> against a broad spectrum of agricultural pests.</p>
           </div>
         </div>
         <div class="col-lg-6 text-center">
           <div class="product-image-container" data-aos="zoom-in">
             <div class="product-image-inner">
-              <img src="assets/products/PROCEED.png" alt="Proceed Insecticide" class="product-image">
+              <img src="assets/products/PROCEED.png" alt="Proceed Insecticide Product Bottle" class="product-image" itemprop="image">
             </div>
           </div>
         </div>
@@ -97,6 +97,75 @@
     </div>
   </section>
 
+  <!-- NEW SECTION: Technical Specifications Section -->
+  <section class="tech-specs-section" id="specifications">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Technical Specifications</h2>
+      <div class="row" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-6">
+          <div class="specs-card">
+            <div class="specs-header">
+              <i class="fas fa-flask specs-icon"></i>
+              <h3>Product Information</h3>
+            </div>
+            <div class="specs-content">
+              <div class="spec-item">
+                <span class="spec-label">Active Ingredient:</span>
+                <span class="spec-value">Chlorpyrifos 50% + Cypermethrin 5% EC</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Formulation Type:</span>
+                <span class="spec-value">Emulsifiable Concentrate (EC)</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Mode of Action:</span>
+                <span class="spec-value">Contact, Stomach, and Respiratory</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Contents:</span>
+                <span class="spec-value">250ml, 500ml, 1L bottle</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Shelf Life:</span>
+                <span class="spec-value">2 years from date of manufacture</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="specs-card">
+            <div class="specs-header">
+              <i class="fas fa-seedling specs-icon"></i>
+              <h3>Application Details</h3>
+            </div>
+            <div class="specs-content">
+              <div class="spec-item">
+                <span class="spec-label">Recommended Crops:</span>
+                <span class="spec-value">Cotton, Rice, Vegetables, Fruits, Pulses</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Application Rate:</span>
+                <span class="spec-value">150-200 ml per acre</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Water Requirement:</span>
+                <span class="spec-value">200-250 liters per acre</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Pre-Harvest Interval:</span>
+                <span class="spec-value">14-21 days (crop dependent)</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Re-Entry Period:</span>
+                <span class="spec-value">24 hours after application</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Application Details Section -->
   <section class="application-section">
     <div class="container">
@@ -123,6 +192,145 @@
               <li>Store in original container away from direct sunlight</li>
               <li>Keep out of reach of children and pets</li>
             </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW SECTION: FAQ Section -->
+  <section class="faq-section" id="faqs">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Frequently Asked Questions</h2>
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+          <div class="accordion faq-accordion" id="faqAccordion" data-aos="fade-up" data-aos-delay="100">
+            <!-- FAQ Item 1 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  How soon after application can I see results?
+                </button>
+              </h3>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p><strong>Proceed</strong> provides a rapid knockdown effect, with results visible within <strong>6-24 hours</strong> after application, depending on the target pest species and environmental conditions. You'll notice decreased pest activity shortly after application, with maximum efficacy reached within 48 hours.</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- FAQ Item 2 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Is Proceed safe to use on all crops?
+                </button>
+              </h3>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p><strong>Proceed</strong> is suitable for use on a wide range of crops including cotton, rice, vegetables, fruits, and pulses. However, we recommend conducting a small-scale trial on new or sensitive crop varieties before full-scale application. Always adhere to recommended dosage rates for each specific crop type.</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- FAQ Item 3 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  How long does Proceed remain effective after application?
+                </button>
+              </h3>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>Under normal field conditions, <strong>Proceed</strong> provides effective pest control for <strong>14-21 days</strong> after application. The residual activity period may vary depending on environmental factors such as rainfall, temperature, and crop growth rate. Our advanced formulation includes technology that enhances resistance to wash-off, maintaining effectiveness even after light rainfall or irrigation.</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- FAQ Item 4 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  What is the best time of day to apply Proceed?
+                </button>
+              </h3>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>For optimal results, apply <strong>Proceed</strong> during early morning or late afternoon when pest activity is typically higher and environmental conditions are more favorable. Avoid application during the hottest part of the day or when rain is expected within 4-6 hours of application. This timing ensures maximum contact with target pests and allows sufficient time for the product to dry on plant surfaces.</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- FAQ Item 5 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  Can Proceed be mixed with other agricultural products?
+                </button>
+              </h3>
+              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p><strong>Proceed</strong> is compatible with most commonly used pesticides, fungicides, and foliar fertilizers. However, we recommend conducting a small compatibility test before mixing with other products. Always add Proceed to the spray tank first, followed by other products. Do not mix with strongly alkaline products, as this may reduce effectiveness.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW SECTION: Testimonials Section -->
+  <section class="testimonials-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Farmer Testimonials</h2>
+      <div class="row">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="testimonial-card">
+            <div class="testimonial-quote">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <p class="testimonial-text">
+              After struggling with resistant pests in my cotton fields, Proceed provided excellent control where other products had failed. Saw visible results within a day and crop yield increased significantly.
+            </p>
+            <!-- <div class="testimonial-author">
+              <div class="author-img">
+                <img src="assets/testimonials/farmer1.jpg" alt="Farmer portrait">
+              </div>
+              <div class="author-info">
+                <h4>Ramesh Patel</h4>
+                <p>Cotton Farmer, Gujarat</p>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+        
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="testimonial-card">
+            <div class="testimonial-quote">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <p class="testimonial-text">
+              Proceed's residual effect is impressive. One application protected my vegetable crops for nearly three weeks, even during the rainy season. This has reduced my overall pesticide costs.
+            </p>
+          </div>
+        </div>
+        
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="testimonial-card">
+            <div class="testimonial-quote">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <p class="testimonial-text">
+              I've been using Proceed for two seasons now on my rice paddies. The broad-spectrum control is remarkable - handles multiple pest issues with a single application, saving time and money.
+            </p>
           </div>
         </div>
       </div>
