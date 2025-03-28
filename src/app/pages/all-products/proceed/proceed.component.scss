@@ -196,7 +196,7 @@
       border-radius: 10px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      height: 100%;
+      // height: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -237,50 +237,206 @@
   }
 }
 
-// Application Section
-.application-section {
+// Usage & Safety Guidelines Section
+.usage-safety-section {
   padding: 5rem 0;
-  background-color: var(--secondary-lightest);
+  background-color: rgba(var(--primary-rgb), 0.03);
+  position: relative;
   
-  .application-info, .safety-info {
-    background-color: white;
-    padding: 2.5rem;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
+    background-image: url('/assets/images/pattern-light.png');
+    background-repeat: repeat;
+    opacity: 0.1;
+    z-index: 0;
+  }
+  
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .section-subtitle {
+    color: var(--gray-600);
+    font-size: var(--text-lg);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+  }
+  
+  // Card Styling for Usage & Safety
+  .usage-card, .safety-card {
+    height: 100%;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+    }
+  }
+  
+  .usage-card-header, .safety-card-header {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    
+    .icon-container {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
     
     h3 {
-      color: var(--secondary);
+      margin: 0;
       font-size: var(--text-xl);
-      margin-bottom: 1rem;
       font-weight: var(--font-semibold);
-      border-bottom: 2px solid var(--accent-lightest);
-      padding-bottom: 0.5rem;
+    }
+  }
+  
+  .usage-card-header {
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+    color: white;
+    
+    .icon-container {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
+    }
+  }
+  
+  .safety-card-header {
+    background: linear-gradient(135deg, var(--secondary-light) 0%, var(--secondary) 100%);
+    color: white;
+    
+    .icon-container {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
+    }
+  }
+  
+  .usage-card-body, .safety-card-body {
+    padding: 1.5rem;
+  }
+  
+  // Item Styling
+  .usage-item, .safety-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    
+    &:last-child {
+      margin-bottom: 0;
     }
     
-    p {
-      color: var(--text);
-      font-size: var(--text-base);
-      margin-bottom: 1.5rem;
-      line-height: 1.6;
+    .usage-icon, .safety-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
     }
     
-    ul {
-      padding-left: 1.5rem;
+    .usage-content, .safety-content {
+      flex: 1;
       
-      li {
-        margin-bottom: 0.75rem;
-        color: var(--text);
-        position: relative;
-        
-        &::before {
-          content: "•";
-          color: var(--accent);
-          font-weight: bold;
-          display: inline-block;
-          width: 1em;
-          margin-left: -1em;
-        }
+      h4 {
+        font-size: var(--text-base);
+        font-weight: var(--font-semibold);
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+      }
+      
+      p {
+        margin: 0;
+        color: var(--gray-600);
+      }
+    }
+  }
+  
+  .usage-item .usage-icon {
+    background-color: rgba(var(--primary-rgb), 0.1);
+    color: var(--primary);
+  }
+  
+  .safety-item .safety-icon {
+    background-color: rgba(var(--secondary-rgb), 0.1);
+    color: var(--secondary);
+  }
+  
+  // Disclaimer Box
+  .disclaimer-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background-color: rgba(var(--accent-rgb), 0.1);
+    border: 1px solid var(--accent);
+    border-radius: 12px;
+    padding: 1.25rem;
+    
+    .disclaimer-icon {
+      font-size: 1.5rem;
+      color: var(--accent);
+      flex-shrink: 0;
+      margin-top: 0.25rem;
+    }
+    
+    .disclaimer-content {
+      h4 {
+        font-size: var(--text-lg);
+        font-weight: var(--font-semibold);
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        color: var(--gray-800);
+      }
+      
+      p {
+        margin: 0;
+        color: var(--gray-600);
+      }
+    }
+  }
+  
+  // Responsive Styling
+  @media (max-width: 991px) {
+    .usage-card, .safety-card {
+      margin-bottom: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .usage-item, .safety-item {
+      flex-direction: column;
+      gap: 0.75rem;
+      
+      .usage-icon, .safety-icon {
+        width: 35px;
+        height: 35px;
+      }
+    }
+    
+    .disclaimer-box {
+      flex-direction: column;
+      
+      .disclaimer-icon {
+        margin-bottom: 0.5rem;
       }
     }
   }
@@ -475,10 +631,11 @@
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     padding: 2rem;
-    height: 100%;
+    // height: 100%;
     transition: all 0.3s ease;
     border: 1px solid var(--primary-lightest);
     position: relative;
+    margin-top: 1rem;
     
     &:hover {
       transform: translateY(-5px);
@@ -633,7 +790,7 @@
     font-size: var(--text-3xl) !important;
   }
   
-  .benefits-section, .pests-section, .application-section {
+  .benefits-section, .pests-section, .usage-safety-section {
     padding: 3rem 0;
   }
   
@@ -693,6 +850,63 @@
     .product-image-container {
       .product-image {
         max-width: 240px;
+      }
+    }
+  }
+}
+
+.product-description {
+  p {
+    font-size: var(--text-lg);
+    line-height: 1.7;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+  }
+  
+  .usps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    
+    .usp-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background-color: rgba(var(--primary-rgb), 0.1);
+      color: var(--primary);
+      border-radius: 50px;
+      font-size: var(--text-sm);
+      font-weight: var(--font-medium);
+      transition: all 0.3s ease;
+      
+      i {
+        color: var(--primary);
+      }
+      
+      &:hover {
+        background-color: var(--primary);
+        color: white;
+        
+        i {
+          color: white;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    p {
+      font-size: var(--text-base);
+    }
+    
+    .usps {
+      gap: 0.75rem;
+      
+      .usp-tag {
+        padding: 0.4rem 0.8rem;
+        font-size: var(--text-xs);
       }
     }
   }
