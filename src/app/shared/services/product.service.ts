@@ -10,11 +10,15 @@ export class ProductService {
     {
       name: 'Insecticide',
       products: [
-        { name: 'Proceed', image: 'assets/products/PROCEED.png', description: 'Advanced insect control solution',
-            fullDescription: 'Proceed is our advanced insecticide formulation designed for comprehensive pest management. It offers rapid knockdown and long-lasting residual control against a broad spectrum of agricultural pests. The unique formulation ensures better crop coverage and enhanced resistance to wash-off, making it ideal for professional farmers seeking reliable pest control solutions.'
+        { name: 'Proceed', 
+          image: 'assets/products/PROCEED.png', 
+          description: 'Advanced insect control solution',
+          fullDescription: 'Proceed is our advanced insecticide formulation designed for comprehensive pest management. It offers rapid knockdown and long-lasting residual control against a broad spectrum of agricultural pests. The unique formulation ensures better crop coverage and enhanced resistance to wash-off, making it ideal for professional farmers seeking reliable pest control solutions.',
+          url: 'product/proceed'
          },
         { name: 'Thio-h', image: 'assets/products/THIO-H.png', description: 'Effective pest management',
-            fullDescription: 'Thio-h represents the latest in systemic insecticide technology. This powerful formulation penetrates plant tissues to provide protection from within, effectively controlling both sucking and chewing pests. Its balanced composition ensures crop safety while delivering outstanding pest control performance across various agricultural applications.'
+            fullDescription: 'Thio-h represents the latest in systemic insecticide technology. This powerful formulation penetrates plant tissues to provide protection from within, effectively controlling both sucking and chewing pests. Its balanced composition ensures crop safety while delivering outstanding pest control performance across various agricultural applications.',
+            url: 'product/thio-h'
          },
         { name: 'Super FS', image: 'assets/products/SUPER FS.png', description: 'Premium insect protection',
             fullDescription: 'Super FS is our premium grade insecticide offering superior protection against multiple pest species. Its advanced formula combines fast action with extended protection periods, making it an excellent choice for high-value crops. The product features enhanced stability under various weather conditions and minimal impact on beneficial insects.'

@@ -3,6 +3,7 @@ export interface Product {
   image: string;
   description: string;
   fullDescription?: string;
+  url?: string;
 }
 
 export interface ProductCategory {

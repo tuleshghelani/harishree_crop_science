@@ -10,6 +10,7 @@ import { Location } from '@angular/common';
 import { ProductDialogComponent } from '../../shared/components/product-dialog/product-dialog.component';
 import { DialogService } from '../../shared/services/dialog.service';
 import { ActivatedRoute } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 const META_KEY = makeStateKey<boolean>('products-meta-data');
 const STRUCTURED_DATA_KEY = makeStateKey<string>('products-structured-data');
@@ -17,7 +18,7 @@ const STRUCTURED_DATA_KEY = makeStateKey<string>('products-structured-data');
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [CommonModule, ProductDialogComponent],
+  imports: [CommonModule, ProductDialogComponent, RouterModule],
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss'
 })
