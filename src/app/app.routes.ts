@@ -8,6 +8,7 @@ import { ResearchComponent } from './pages/research/research.component';
 import { QualityAssuranceComponent } from './pages/quality-assurance/quality-assurance.component';
 import { ProceedComponent } from './pages/all-products/proceed/proceed.component';
 import { ThioHComponent } from './pages/all-products/thio-h/thio-h.component';
+import { SuperFsComponent } from './pages/all-products/super-fs/super-fs.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -20,4 +21,5 @@ export const routes: Routes = [
   { path: 'quality-assurance', component: QualityAssuranceComponent },
   { path: 'product/proceed', component: ProceedComponent },
   { path: 'product/thio-h', component: ThioHComponent },
+  { path: 'product/super-fs', component: SuperFsComponent },
 ];
