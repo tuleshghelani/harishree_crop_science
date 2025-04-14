@@ -25,12 +25,14 @@ export class ProductService {
             url: 'product/super-fs'
          },
         { name: 'Mpire 404', image: 'assets/products/MPIRE-404.png', description: 'Complete pest control',
-            fullDescription: 'Mpire 404 delivers comprehensive pest management through its innovative dual-action formula. This professional-grade solution provides both contact and systemic activity, ensuring thorough pest elimination at all life stages. Its unique composition offers excellent crop safety while maintaining high efficacy against resistant pest populations.'
+            fullDescription: 'Mpire 404 delivers comprehensive pest management through its innovative dual-action formula. This professional-grade solution provides both contact and systemic activity, ensuring thorough pest elimination at all life stages. Its unique composition offers excellent crop safety while maintaining high efficacy against resistant pest populations.',
+            url: 'product/mpire-404'
          },
          { name: 'H Fun', 
             image: 'assets/products/H FUN.png', 
             description: 'Specialized insecticide',
-            fullDescription: 'H Fun is a specialized insecticide formulation engineered for targeted pest control. Its unique composition ensures rapid absorption and distribution throughout the plant system, providing comprehensive protection against a wide range of harmful insects while being gentle on beneficial organisms.'
+            fullDescription: 'H Fun is a specialized insecticide formulation engineered for targeted pest control. Its unique composition ensures rapid absorption and distribution throughout the plant system, providing comprehensive protection against a wide range of harmful insects while being gentle on beneficial organisms.',
+            url: 'product/h-fun'
           },
           { name: 'Neem Pro', 
             image: 'assets/products/NEEM PRO.png', 

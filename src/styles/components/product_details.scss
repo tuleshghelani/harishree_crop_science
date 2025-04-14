@@ -9,26 +9,26 @@
 // Hero Section
 .hero-section {
   padding: 3rem 0;
-  
   .product-title {
-    font-size: 3.5rem;
-    color: var(--primary);
-    font-weight: var(--font-bold);
-    margin-bottom: 0.5rem;
+    // Simplified gradient effect for title that doesn't use darken()
+    background: linear-gradient(90deg, var(--primary) 0%, var(--primary) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    font-weight: 800;
   }
   
   .product-tagline {
-    font-size: 1.5rem;
     color: var(--accent);
-    margin-bottom: 1.5rem;
-    font-weight: var(--font-medium);
+    letter-spacing: 0.5px;
   }
   
   .product-description {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: var(--text);
-    margin-bottom: 2rem;
+    strong {
+      color: var(--primary);
+      font-weight: var(--font-bold);
+    }
   }
   
   .product-image-container {
@@ -750,6 +750,23 @@
     
     .testimonial-text {
       min-height: auto;
+    }
+  }
+}
+// Target Pests Section
+.pests-section {
+  .pest-card {
+    border-left: 4px solid var(--primary);
+    
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      
+      .pest-icon {
+        background-color: var(--primary);
+        color: white;
+        transform: rotate(15deg);
+      }
     }
   }
 }

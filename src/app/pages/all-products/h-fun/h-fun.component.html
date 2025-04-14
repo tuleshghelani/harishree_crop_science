@@ -1,0 +1,363 @@
+<main class="product-page" itemscope itemtype="https://schema.org/Product">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h1 class="product-title" data-aos="fade-right" itemprop="name">{{product.name}}</h1>
+          <p class="product-tagline" data-aos="fade-right" data-aos-delay="100">Premium Agricultural Insecticide for Comprehensive Pest Management</p>
+          <div class="product-description" data-aos="fade-right" data-aos-delay="200">
+            <p itemprop="description"><strong>H-Fun</strong> is our specialized insecticide formulation engineered for targeted agricultural pest control. Trusted by professional farmers across India, it delivers <strong>exceptional control of sucking pests</strong> including aphids, whiteflies, and thrips with its advanced Imidacloprid 17.8% SL formulation. H-Fun provides <strong>rapid systemic action</strong> with visible results within 24-48 hours and offers <strong>prolonged protection</strong> for up to 14-21 days. With its superior translaminar movement, it effectively penetrates plant tissues to reach hidden pests, maximizing crop protection and yield potential across a wide range of crops.</p>
+            
+            <div class="usps" data-aos="fade-right" data-aos-delay="250">
+              <span class="usp-tag"><i class="fas fa-check-circle"></i> Systemic Protection</span>
+              <span class="usp-tag"><i class="fas fa-check-circle"></i> Rapid Absorption</span>
+              <span class="usp-tag"><i class="fas fa-check-circle"></i> Complete Crop Coverage</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center">
+          <div class="product-image-container" data-aos="zoom-in">
+            <div class="product-image-inner">
+              <img src="assets/products/H FUN.png" alt="H-Fun Agricultural Insecticide Product Package" class="product-image" itemprop="image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Benefits Section -->
+  <section class="benefits-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Key Benefits of H-Fun Insecticide</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <ul class="benefits-list">
+            <li data-aos="fade-up" data-aos-delay="100">
+              <span class="benefit-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                </svg>
+              </span>
+              <div class="benefit-content">
+                <h3>Superior Systemic Action</h3>
+                <p>Rapidly absorbed and distributed throughout the plant for complete protection</p>
+              </div>
+            </li>
+            <li data-aos="fade-up" data-aos-delay="200">
+              <span class="benefit-icon"><i class="fas fa-shield-alt"></i></span>
+              <div class="benefit-content">
+                <h3>Long-lasting Protection</h3>
+                <p>Provides effective pest control for up to 14-21 days after application</p>
+              </div>
+            </li>
+            <li data-aos="fade-up" data-aos-delay="300">
+              <span class="benefit-icon"><i class="fas fa-tint-slash"></i></span>
+              <div class="benefit-content">
+                <h3>Rainfast Technology</h3>
+                <p>Maintains efficacy even after irrigation or rainfall for reliable protection</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul class="benefits-list">
+            <li data-aos="fade-up" data-aos-delay="400">
+              <span class="benefit-icon"><i class="fas fa-leaf"></i></span>
+              <div class="benefit-content">
+                <h3>Translaminar Movement</h3>
+                <p>Penetrates leaf tissues to reach pests hiding on undersides of leaves</p>
+              </div>
+            </li>
+            <li data-aos="fade-up" data-aos-delay="500">
+              <span class="benefit-icon"><i class="fas fa-bug"></i></span>
+              <div class="benefit-content">
+                <h3>Broad-Spectrum Control</h3>
+                <p>Effective against multiple insect pest species across various crops</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Target Pests Section -->
+  <section class="pests-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Agricultural Pests Controlled by H-Fun</h2>
+      <div class="pest-cards">
+        <div class="row">
+          <div *ngFor="let pest of targetPests; let i = index" class="col-md-4">
+            <div class="pest-card" data-aos="flip-up" [attr.data-aos-delay]="100 * i">
+              <div class="pest-icon">
+                <i class="fas fa-bug"></i>
+              </div>
+              <h3>{{pest.name}}</h3>
+              <p>{{pest.description}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Crops & Applications Section -->
+  <section class="crops-section" id="applications">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Recommended Crops & Applications for H-Fun</h2>
+      <p class="section-subtitle text-center" data-aos="fade-up" data-aos-delay="50">H-Fun insecticide is specifically formulated for these high-value crops</p>
+      
+      <div class="row g-4 mt-4">
+        <div *ngFor="let crop of recommendedCrops; let i = index" class="col-md-4" data-aos="fade-up" [attr.data-aos-delay]="100 * i">
+          <div class="crop-card">
+            <div class="crop-content">
+              <h3>{{crop.name}}</h3>
+              <div class="crop-badge">Recommended</div>
+              <div class="crop-icon">
+                <i class="fas fa-seedling"></i>
+              </div>
+              <p>{{crop.description}}</p>
+              <div class="crop-details">
+                <div class="crop-detail">
+                  <div class="detail-icon">
+                    <i class="fas fa-flask"></i>
+                  </div>
+                  <div class="detail-content">
+                    <span class="detail-label">Dosage:</span>
+                    <span class="detail-value">{{crop.dosage}}</span>
+                  </div>
+                </div>
+                <div class="crop-detail">
+                  <div class="detail-icon">
+                    <i class="fas fa-bug"></i>
+                  </div>
+                  <div class="detail-content">
+                    <span class="detail-label">Target Pests:</span>
+                    <span class="detail-value">{{crop.targetPests}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Specifications Section -->
+  <section class="tech-specs-section" id="specifications">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">H-Fun Technical Specifications</h2>
+      <div class="row" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-12">
+          <div class="specs-card">
+            <div class="specs-header">
+              <i class="fas fa-flask specs-icon"></i>
+              <h3>Product Information</h3>
+            </div>
+            <div class="specs-content">
+              <div class="spec-item">
+                <span class="spec-label">Active Ingredient:</span>
+                <span class="spec-value">Imidacloprid 17.8% SL</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Formulation Type:</span>
+                <span class="spec-value">Soluble Liquid (SL)</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Mode of Action:</span>
+                <span class="spec-value">Systemic with contact and stomach action</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Contents:</span>
+                <span class="spec-value">100ml, 250ml, 500ml, 1L bottle</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Shelf Life:</span>
+                <span class="spec-value">2 years from date of manufacture</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Usage & Safety Guidelines Section -->
+  <section class="usage-safety-section">
+    <div class="container">
+      <h2 class="section-title text-center" data-aos="fade-up">H-Fun Usage & Safety Guidelines</h2>
+      <p class="section-subtitle text-center" data-aos="fade-up" data-aos-delay="50">Follow these professional recommendations for optimal results and safe handling</p>
+      
+      <div class="row g-4 mt-3">
+        <!-- Application Cards -->
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="usage-card">
+            <div class="usage-card-header">
+              <div class="icon-container">
+                <i class="fas fa-spray-can"></i>
+              </div>
+              <h3>Application Guidelines</h3>
+            </div>
+            <div class="usage-card-body">
+              <div class="usage-item">
+                <div class="usage-icon">
+                  <i class="fas fa-flask"></i>
+                </div>
+                <div class="usage-content">
+                  <h4>Recommended Dosage</h4>
+                  <p>125-150 ml per acre, depending on pest pressure and crop type</p>
+                </div>
+              </div>
+              
+              <div class="usage-item">
+                <div class="usage-icon">
+                  <i class="fas fa-hand-holding-water"></i>
+                </div>
+                <div class="usage-content">
+                  <h4>Dilution Rate</h4>
+                  <p>Mix with 200-250 liters of water per acre for optimal coverage</p>
+                </div>
+              </div>
+              
+              <div class="usage-item">
+                <div class="usage-icon">
+                  <i class="fas fa-shower"></i>
+                </div>
+                <div class="usage-content">
+                  <h4>Application Method</h4>
+                  <p>Foliar spray using standard spray equipment with complete coverage</p>
+                </div>
+              </div>
+              
+              <div class="usage-item">
+                <div class="usage-icon">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="usage-content">
+                  <h4>Timing & Frequency</h4>
+                  <p>Apply at first sign of pest infestation or as preventive measure. Repeat if necessary after 14-21 days.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Safety Precautions Card -->
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="safety-card">
+            <div class="safety-card-header">
+              <div class="icon-container">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3>Safety Precautions</h3>
+            </div>
+            <div class="safety-card-body">
+              <div class="safety-item" *ngFor="let precaution of safetyPrecautions">
+                <div class="safety-icon">
+                  <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div class="safety-content">
+                  <p>{{precaution}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+      
+        <div class="row mt-4">
+            <div class="col-12" data-aos="fade-up" data-aos-delay="300">
+            <div class="disclaimer-box">
+                <div class="disclaimer-icon">
+                <i class="fas fa-info-circle"></i>
+                </div>
+                <div class="disclaimer-content">
+                <h4>Important Notice</h4>
+                <p>Always read the product label and follow instructions carefully. The information provided here is general guidance. For specific crops and local conditions, consult with your agricultural advisor. Optimal application methods may vary by region and crop.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs Section -->
+  <section class="faqs-section" id="faqs">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Frequently Asked Questions about H-Fun</h2>
+      <div class="accordion faq-accordion" id="faqAccordion">
+        <div class="row">
+          <div class="col-lg-12">
+            <div *ngFor="let faq of faqs; let i = index" class="accordion-item" data-aos="fade-up" [attr.data-aos-delay]="100 * i">
+              <h3 class="accordion-header" [id]="'faqHeading' + i">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#faqCollapse' + i" [attr.aria-expanded]="false" [attr.aria-controls]="'faqCollapse' + i">
+                  {{faq.question}}
+                </button>
+              </h3>
+              <div [id]="'faqCollapse' + i" class="accordion-collapse collapse" [attr.aria-labelledby]="'faqHeading' + i" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" [innerHTML]="faq.answer"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Recommendations Section -->
+  <section class="recommendations-section">
+    <div class="container">
+      <h2 class="section-title text-center" data-aos="fade-up">Best Practices for Optimal Results</h2>
+      <div class="row g-4 mt-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="recommendation-card">
+            <div class="recommendation-icon">
+              <i class="fas fa-sun"></i>
+            </div>
+            <h3>Application Timing</h3>
+            <p>Apply H-Fun during early morning or late evening to minimize evaporation and maximize absorption. Avoid application during the hottest part of the day or when rain is expected within 6 hours.</p>
+          </div>
+        </div>
+        
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="recommendation-card">
+            <div class="recommendation-icon">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h3>Equipment Calibration</h3>
+            <p>Ensure spray equipment is properly calibrated before application to achieve uniform coverage. Use appropriate nozzles that provide medium droplet size for optimal results.</p>
+          </div>
+        </div>
+        
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="recommendation-card">
+            <div class="recommendation-icon">
+              <i class="fas fa-seedling"></i>
+            </div>
+            <h3>Crop Monitoring</h3>
+            <p>Regularly monitor crops for early signs of pest infestation. Early application at the first sign of pests ensures more effective control and prevents population buildup.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content" data-aos="fade-up">
+        <h2>Ready to Enhance Your Crop Protection?</h2>
+        <p>Contact your local Harishree Crop Science representative to learn more about H-Fun and our complete range of agricultural solutions</p>
+        <div class="cta-buttons">
+          <a routerLink="/contact-us" class="btn btn-primary">Contact Us</a>
+          <a routerLink="/products" class="btn btn-outline">View All Products</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

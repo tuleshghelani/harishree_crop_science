@@ -1,0 +1,494 @@
+@import '../../../../styles/components/product_details.scss';
+
+// Custom styles for H-Fun component
+$primary-color: var(--primary);
+$secondary-color: var(--secondary);
+$accent-color: var(--accent);
+$text-color: var(--text);
+
+// Enhanced Hero Section
+.hero-section {
+  position: relative;
+  
+  // Custom background pattern for H-Fun
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background-image: radial-gradient(rgba($primary-color, 0.1) 2px, transparent 2px);
+    background-size: 20px 20px;
+    z-index: -1;
+    opacity: 0.5;
+  }
+  
+  .product-title {
+    font-size: calc(2rem + 1vw);
+    margin-bottom: 1.2rem;
+    
+    @media (max-width: 768px) {
+      font-size: calc(1.8rem + 0.5vw);
+    }
+  }
+  
+  .product-description {
+    p {
+      font-size: 1.1rem;
+      letter-spacing: 0.01rem;
+    }
+    
+    .usps {
+      margin-top: 1.5rem;
+      
+      .usp-tag {
+        border: 1px solid rgba($primary-color, 0.2);
+        
+        &:hover {
+          transform: translateY(-3px);
+        }
+      }
+    }
+  }
+  
+  // Custom styling for product image container
+  .product-image-container {
+    &::before {
+      background: rgba(255, 255, 255, 0.95);
+    }
+    
+    .product-image {
+      transform: scale(1.8);
+      
+      @media (max-width: 768px) {
+        transform: scale(1.6);
+      }
+    }
+  }
+}
+
+// Enhanced Benefits Section
+.benefits-section {
+  .benefits-list {
+    li {
+      .benefit-icon {
+        position: relative;
+        overflow: hidden;
+        
+        &::after {
+          content: '';
+          position: absolute;
+          top: -50%;
+          left: -50%;
+          width: 200%;
+          height: 200%;
+          background: radial-gradient(
+            circle at center,
+            rgba(255, 255, 255, 0.2) 0%,
+            transparent 70%
+          );
+          animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+          0% {
+            transform: scale(0.8);
+            opacity: 0.8;
+          }
+          50% {
+            transform: scale(1.2);
+            opacity: 0.2;
+          }
+          100% {
+            transform: scale(0.8);
+            opacity: 0.8;
+          }
+        }
+      }
+      
+      // Apply hover effect to benefit items
+      &:hover {
+        .benefit-content {
+          h3 {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Enhanced Pest Cards
+.pests-section {
+  .pest-card {
+    border-left: 4px solid $primary-color;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .pest-icon {
+      position: relative;
+      
+      &::before {
+        content: '';
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        bottom: -5px;
+        left: -5px;
+        background: rgba($primary-color, 0.05);
+        border-radius: 50%;
+        z-index: -1;
+      }
+      
+      i {
+        animation: bugMove 5s infinite alternate ease-in-out;
+      }
+      
+      @keyframes bugMove {
+        0% {
+          transform: translateX(-3px);
+        }
+        100% {
+          transform: translateX(3px);
+        }
+      }
+    }
+  }
+}
+
+// Enhanced Crops & Applications Section
+.crops-section {
+  .crop-card {
+    position: relative;
+    
+    .crop-badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: $accent-color;
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .crop-icon {
+      color: $primary-color;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    
+    .crop-details {
+      .crop-detail {
+        margin-bottom: 0.8rem;
+        
+        .detail-icon {
+          width: 24px;
+          height: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: $primary-color;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+// Enhanced Specifications Section
+.tech-specs-section {
+  .specs-card {
+    background: linear-gradient(145deg, #ffffff, #f5f7fa);
+    
+    .specs-header {
+      background: $primary-color;
+      
+      .specs-icon {
+        font-size: 1.5rem;
+      }
+    }
+    
+    .specs-content {
+      .spec-item {
+        transition: background-color 0.3s ease;
+        
+        &:hover {
+          background-color: rgba($primary-color, 0.03);
+        }
+      }
+    }
+  }
+}
+
+// Enhanced Usage & Safety Guidelines
+.usage-safety-section {
+  .usage-card, .safety-card {
+    height: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    background-color: white;
+    overflow: hidden;
+    
+    &-header {
+      padding: 1.5rem;
+      background: linear-gradient(45deg, $primary-color, rgba(0, 77, 64, 0.9));
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      
+      .icon-container {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        font-size: 1.3rem;
+      }
+      
+      h3 {
+        margin: 0;
+        font-size: 1.3rem;
+      }
+    }
+    
+    &-body {
+      padding: 1.5rem;
+    }
+  }
+  
+  .usage-item, .safety-item {
+    display: flex;
+    margin-bottom: 1.5rem;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    .usage-icon, .safety-icon {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba($primary-color, 0.1);
+      border-radius: 50%;
+      color: $primary-color;
+      margin-right: 1rem;
+      flex-shrink: 0;
+    }
+    
+    .usage-content, .safety-content {
+      h4 {
+        color: $secondary-color;
+        margin-bottom: 0.3rem;
+        font-size: 1.1rem;
+      }
+      
+      p {
+        margin: 0;
+        color: $text-color;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+// Enhanced FAQs Section
+.faqs-section {
+  .accordion-item {
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border: 1px solid rgba($primary-color, 0.1);
+    
+    .accordion-header {
+      margin: 0;
+      
+      .accordion-button {
+        background-color: white;
+        color: $primary-color;
+        font-weight: 600;
+        padding: 1.2rem;
+        transition: all 0.3s ease;
+        
+        &:not(.collapsed) {
+          background-color: rgba($primary-color, 0.05);
+        }
+        
+        &:focus {
+          box-shadow: none;
+          border-color: rgba($primary-color, 0.3);
+        }
+      }
+    }
+    
+    .accordion-body {
+      padding: 1.2rem;
+      background-color: white;
+      color: $text-color;
+      line-height: 1.6;
+      
+      strong {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+// Enhanced Recommendations Section
+.recommendations-section {
+  background-color: rgba($primary-color, 0.03);
+  
+  .recommendation-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    height: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    }
+    
+    .recommendation-icon {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba($primary-color, 0.1);
+      border-radius: 50%;
+      color: $primary-color;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    h3 {
+      color: $secondary-color;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    
+    p {
+      color: $text-color;
+      margin: 0;
+      line-height: 1.6;
+    }
+  }
+}
+
+// Enhanced CTA Section
+.cta-section {
+  background: linear-gradient(135deg, $primary-color, #004d40);
+  padding: 4rem 0;
+  margin-top: 3rem;
+  
+  .cta-content {
+    color: white;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+    
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      
+      .btn {
+        padding: 0.8rem 2rem;
+        font-weight: 600;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        
+        &-primary {
+          background-color: white;
+          color: $primary-color;
+          
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+          }
+        }
+        
+        &-outline {
+          background-color: transparent;
+          color: white;
+          border: 2px solid rgba(255, 255, 255, 0.6);
+          
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: white;
+            transform: translateY(-3px);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 991px) {
+  .hero-section {
+    .product-image-container {
+      width: 320px;
+      height: 320px;
+      margin: 2rem auto 0;
+    }
+  }
+  
+  .usage-safety-section {
+    .usage-card {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .product-title {
+    font-size: 1.8rem !important;
+    text-align: center;
+  }
+  
+  .product-tagline {
+    text-align: center;
+  }
+  
+  .product-description {
+    text-align: center;
+    
+    .usps {
+      justify-content: center;
+    }
+  }
+  
+  .pest-card, .crop-card, .recommendation-card {
+    margin-bottom: 1.5rem;
+  }
+}
