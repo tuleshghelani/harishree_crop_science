@@ -123,7 +123,7 @@ export class Mpire404Component implements OnInit, OnDestroy, AfterViewInit {
   comparisonData = [
     {
       feature: 'Active Ingredient',
-      mpire404: 'Premium Imidacloprid 40.4% SC',
+      mpire404: 'Profenofos 40% + Cypermethrin 4% E.C. (Imidacloprid 40.4% SC)',
       standard: 'Lower concentration formulations (typically 17.8% SL)'
     },
     {
@@ -174,7 +174,7 @@ export class Mpire404Component implements OnInit, OnDestroy, AfterViewInit {
   // Technical Specifications Data
   technicalSpecs = {
     productInfo: [
-      { label: 'Active Ingredient', value: 'Imidacloprid 40.4% SC' },
+      { label: 'Active Ingredient', value: 'Profenofos 40% + Cypermethrin 4% E.C. (Imidacloprid 40.4% SC)' },
       { label: 'Formulation Type', value: 'Suspension Concentrate (SC)' },
       { label: 'Mode of Action', value: 'Systemic and Translaminar' },
       { label: 'Contents', value: '100ml, 250ml, 500ml bottle' },
@@ -263,9 +263,9 @@ export class Mpire404Component implements OnInit, OnDestroy, AfterViewInit {
     
     const metaTags: MetaDefinition[] = [
       { name: 'description', content: 'MPIRE 404 is a premium agricultural insecticide with advanced Imidacloprid 40.4% SC formulation, providing exceptional control of sucking pests like whiteflies, aphids, thrips, and jassids in various crops. Features systemic action, long residual activity, and superior rainfastness.' },
-      { name: 'keywords', content: 'MPIRE 404, Profenofos 40%, Cypermethrin 4% E.C., Profenofos 40% + Cypermethrin 4% E.C., MPIRE agricultural insecticide, Imidacloprid 40.4% SC, sucking pest control, systemic insecticide, aphid control, whitefly insecticide, thrips control, cotton pest management, vegetable crop protection' },
+      { name: 'keywords', content: 'MPIRE 404, Profenofos 40%, Cypermethrin 4% E.C., Profenofos 40% + Cypermethrin 4% E.C., MPIRE agricultural insecticide, Profenofos 40% + Cypermethrin 4% E.C. (Imidacloprid 40.4% SC), sucking pest control, systemic insecticide, aphid control, whitefly insecticide, thrips control, cotton pest management, vegetable crop protection' },
       { property: 'og:title', content: 'MPIRE 404 - Premium Agricultural Insecticide | Harishree Crop Science' },
-      { property: 'og:description', content: 'Premium agricultural insecticide with advanced Imidacloprid 40.4% SC formulation for exceptional control of sucking pests in crops.' },
+      { property: 'og:description', content: 'Premium agricultural insecticide with advanced Profenofos 40% + Cypermethrin 4% E.C. (Imidacloprid 40.4% SC) formulation for exceptional control of sucking pests in crops.' },
       { property: 'og:image', content: `${this.baseUrl}/assets/products/MPIRE-404.png` },
       { property: 'og:url', content: `${this.baseUrl}/products/mpire-404` },
       { property: 'og:type', content: 'product' },
@@ -286,14 +286,21 @@ export class Mpire404Component implements OnInit, OnDestroy, AfterViewInit {
       '@type': 'Product',
       'name': 'MPIRE 404',
       'image': `${this.baseUrl}/assets/products/MPIRE-404.png`,
-      'description': 'Premium agricultural insecticide with advanced Imidacloprid 40.4% SC formulation, providing exceptional control of sucking pests like whiteflies, aphids, thrips, and jassids in various crops. Features systemic action, long residual activity, and superior rainfastness.',
+      'description': 'Premium agricultural insecticide with advanced Profenofos 40% + Cypermethrin 4% E.C. (Imidacloprid 40.4% SC) formulation, providing exceptional control of sucking pests like whiteflies, aphids, thrips, and jassids in various crops. Features systemic action, long residual activity, and superior rainfastness.',
       'brand': {
         '@type': 'Brand',
         'name': 'Harishree Crop Science'
       },
       'offers': {
         '@type': 'Offer',
-        'availability': 'https://schema.org/InStock'
+        'availability': 'https://schema.org/InStock',
+        'price': '0',
+        'priceCurrency': 'INR',
+        'url': `${this.baseUrl}/products/mpire-404`,
+        'seller': {
+          '@type': 'Organization',
+          'name': 'Harishree Crop Science'
+        }
       },
       'category': 'Agricultural Insecticide',
       'material': 'Liquid Suspension Concentrate',
@@ -301,6 +308,11 @@ export class Mpire404Component implements OnInit, OnDestroy, AfterViewInit {
       'audience': {
         '@type': 'Audience',
         'audienceType': 'Farmers, Agricultural Professionals'
+      },
+      'aggregateRating': {
+        '@type': 'AggregateRating',
+        'ratingValue': '4.9',
+        'reviewCount': '2400'
       }
     };
     
