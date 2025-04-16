@@ -9,4 +9,4 @@ Allow: /contact-us
 
 # Sitemaps
 Sitemap: https://harishreecropscience.com/sitemap.xml
-Sitemap: https://harishreecropscience.com/sitemap_index.xml 
+Sitemap: https://harishreecropscience.com/sitemap_products.xml
