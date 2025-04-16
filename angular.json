@@ -44,6 +44,11 @@
                 "output": "/"
               },
               {
+                "glob": "sitemap_products.xml",
+                "input": "src/assets",
+                "output": "/"
+              },
+              {
                 "glob": "**/*",
                 "input": "node_modules/ngx-extended-pdf-viewer/assets/",
                 "output": "/assets/"

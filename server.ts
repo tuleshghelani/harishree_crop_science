@@ -48,6 +48,11 @@ server.get('/sitemap_index.xml', (req, res) => {
   res.sendFile(join(browserDistFolder, 'assets', 'sitemap_index.xml'));
 });
 
+// ✅ Serve sitemap_products.xml
+server.get('/sitemap_products.xml', (req, res) => {
+  res.sendFile(join(browserDistFolder, 'assets', 'sitemap_products.xml'));
+});
+
 // ✅ Serve sitemap.xml
 server.get('/sitemap.xml', (req, res) => {
   res.type('application/xml');
