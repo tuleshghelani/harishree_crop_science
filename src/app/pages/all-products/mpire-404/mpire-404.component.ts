@@ -263,7 +263,7 @@ export class Mpire404Component implements OnInit, OnDestroy, AfterViewInit {
     
     const metaTags: MetaDefinition[] = [
       { name: 'description', content: 'MPIRE 404 is a premium agricultural insecticide with advanced Imidacloprid 40.4% SC formulation, providing exceptional control of sucking pests like whiteflies, aphids, thrips, and jassids in various crops. Features systemic action, long residual activity, and superior rainfastness.' },
-      { name: 'keywords', content: 'MPIRE 404, MPIRE agricultural insecticide, Imidacloprid 40.4% SC, sucking pest control, systemic insecticide, aphid control, whitefly insecticide, thrips control, cotton pest management, vegetable crop protection' },
+      { name: 'keywords', content: 'MPIRE 404, Profenofos 40%, Cypermethrin 4% E.C., Profenofos 40% + Cypermethrin 4% E.C., MPIRE agricultural insecticide, Imidacloprid 40.4% SC, sucking pest control, systemic insecticide, aphid control, whitefly insecticide, thrips control, cotton pest management, vegetable crop protection' },
       { property: 'og:title', content: 'MPIRE 404 - Premium Agricultural Insecticide | Harishree Crop Science' },
       { property: 'og:description', content: 'Premium agricultural insecticide with advanced Imidacloprid 40.4% SC formulation for exceptional control of sucking pests in crops.' },
       { property: 'og:image', content: `${this.baseUrl}/assets/products/MPIRE-404.png` },
