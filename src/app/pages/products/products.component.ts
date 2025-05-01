@@ -85,6 +85,10 @@ export class ProductsComponent implements OnInit, OnDestroy {
       { property: 'og:description', content: 'Premium agricultural solutions including organic pesticides, bio-fertilizers, and crop protection products for sustainable farming.' },
       { property: 'og:type', content: 'website' },
       { property: 'og:image', content: `${this.baseUrl}/assets/logo/HARISHREE.png` },
+      { name: 'canonical', content: `${this.baseUrl}/products` },
+      { property: 'og:url', content: `${this.baseUrl}/products` },
+      { property: 'og:type', content: 'website' },
+      { property: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'robots', content: 'index, follow, max-image-preview:large' }
     ];

@@ -60,6 +60,10 @@ export class ContactUsComponent implements OnInit, OnDestroy {
       { property: 'og:type', content: 'website' },
       { property: 'og:image', content: `${this.baseUrl}/assets/logo/HARISHREE.png` },
       { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'canonical', content: `${this.baseUrl}/contact-us` },
+      { property: 'og:url', content: `${this.baseUrl}/contact-us` },
+      { property: 'og:type', content: 'website' },
+      { property: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'robots', content: 'index, follow' },
       { name: 'author', content: environment.metaDefaults.author }
     ];

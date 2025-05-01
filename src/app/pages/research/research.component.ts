@@ -70,6 +70,10 @@ export class ResearchComponent implements OnInit, OnDestroy {
       { property: 'og:title', content: 'Research & Development | Harishree Crop Science' },
       { property: 'og:description', content: 'Explore our cutting-edge research and development in sustainable agricultural solutions.' },
       { property: 'og:type', content: 'website' },
+      { name: 'canonical', content: `${this.baseUrl}/research` },
+      { property: 'og:url', content: `${this.baseUrl}/research` },
+      { property: 'og:type', content: 'website' },
+      { property: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'robots', content: 'index, follow' }
     ];
 

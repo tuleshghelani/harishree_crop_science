@@ -104,6 +104,10 @@ export class HomeComponent implements OnInit, OnDestroy {
       { property: 'og:description', content: 'Discover our comprehensive range of organic pesticides, bio-fertilizers, and eco-friendly crop protection solutions for sustainable agriculture.' },
       { property: 'og:type', content: 'website' },
       { property: 'og:image', content: `${this.baseUrl}/assets/logo/HARISHREE.png` },
+      { name: 'canonical', content: `${this.baseUrl}` },
+      { property: 'og:url', content: `${this.baseUrl}` },
+      { property: 'og:type', content: 'website' },
+      { property: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'robots', content: 'index, follow' },
       { name: 'author', content: environment.metaDefaults.author }
