@@ -107,7 +107,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       { name: 'canonical', content: `${this.baseUrl}` },
       { property: 'og:url', content: `${this.baseUrl}` },
       { property: 'og:type', content: 'website' },
-      { property: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'robots', content: 'index, follow' },
       { name: 'author', content: environment.metaDefaults.author }

@@ -102,7 +102,7 @@ export class CatalogueComponent implements OnInit, OnDestroy {
       { name: 'canonical', content: `${this.baseUrl}/catalogue` },
       { property: 'og:url', content: `${this.baseUrl}/catalogue` },
       { property: 'og:type', content: 'website' },
-      { property: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'robots', content: 'index, follow' }
     ];
 

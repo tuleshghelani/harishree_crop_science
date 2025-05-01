@@ -73,7 +73,7 @@ export class ResearchComponent implements OnInit, OnDestroy {
       { name: 'canonical', content: `${this.baseUrl}/research` },
       { property: 'og:url', content: `${this.baseUrl}/research` },
       { property: 'og:type', content: 'website' },
-      { property: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'robots', content: 'index, follow' }
     ];
 

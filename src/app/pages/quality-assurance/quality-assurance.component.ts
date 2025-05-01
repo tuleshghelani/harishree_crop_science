@@ -59,7 +59,7 @@ export class QualityAssuranceComponent implements OnInit, OnDestroy {
       { name: 'canonical', content: `${this.baseUrl}/quality-assurance` },
       { property: 'og:url', content: `${this.baseUrl}/quality-assurance` },
       { property: 'og:type', content: 'website' },
-      { property: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { property: 'og:type', content: 'website' },
       { name: 'robots', content: 'index, follow' }
     ];
