@@ -103,7 +103,8 @@ export class CatalogueComponent implements OnInit, OnDestroy {
       { property: 'og:url', content: `${this.baseUrl}/catalogue` },
       { property: 'og:type', content: 'website' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'robots', content: 'index, follow' }
+      { name: 'robots', content: 'index, follow' },
+      { name: 'author', content: 'Harishree Crop Science' }
     ];
 
     metaTags.forEach(tag => this.meta.updateTag(tag as MetaDefinition));

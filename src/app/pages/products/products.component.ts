@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, ViewContainerRef } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewContainerRef, contentChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Meta, MetaDefinition, Title } from '@angular/platform-browser';
 import { TransferState, makeStateKey } from '@angular/platform-browser';
@@ -90,7 +90,8 @@ export class ProductsComponent implements OnInit, OnDestroy {
       { property: 'og:type', content: 'website' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'robots', content: 'index, follow, max-image-preview:large' }
+      { name: 'robots', content: 'index, follow, max-image-preview:large' },
+      { name: 'author', content: 'Harishree Crop Science' }
     ];
 
     metaTags.forEach(tag => this.meta.updateTag(tag as MetaDefinition));
