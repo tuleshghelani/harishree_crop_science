@@ -100,7 +100,7 @@ export class AboutComponent implements OnInit, OnDestroy {
       { property: 'og:type', content: 'website' },
       { property: 'og:image', content: `${this.baseUrl}/assets/logo/HARISHREE.png` },
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'canonical', content: `${this.baseUrl}/about-us` },
+      // { name: 'canonical', content: `${this.baseUrl}/about-us` },
       { property: 'og:url', content: `${this.baseUrl}/about-us` },
       { property: 'og:type', content: 'website' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

@@ -274,7 +274,7 @@ export class Mpire404Component implements OnInit, OnDestroy, AfterViewInit {
       { name: 'twitter:description', content: 'Advanced Imidacloprid formulation for exceptional control of sucking pests in crops.' },
       { name: 'twitter:image', content: `${this.baseUrl}/assets/products/MPIRE-404.png` },
       { name: 'robots', content: 'index, follow' },
-      { name: 'canonical', content: `${this.baseUrl}/products/mpire-404` }
+      // { name: 'canonical', content: `${this.baseUrl}/products/mpire-404` }
     ];
     
     metaTags.forEach(tag => this.meta.updateTag(tag));

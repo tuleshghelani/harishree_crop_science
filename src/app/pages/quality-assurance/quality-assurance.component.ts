@@ -56,7 +56,7 @@ export class QualityAssuranceComponent implements OnInit, OnDestroy {
       { name: 'keywords', content: 'quality assurance, quality control, testing standards, agricultural quality, product testing, certification' },
       { property: 'og:title', content: 'Quality Assurance | Harishree Crop Science' },
       { property: 'og:description', content: 'Experience excellence through our comprehensive quality assurance processes and standards.' },
-      { name: 'canonical', content: `${this.baseUrl}/quality-assurance` },
+      // { name: 'canonical', content: `${this.baseUrl}/quality-assurance` },
       { property: 'og:url', content: `${this.baseUrl}/quality-assurance` },
       { property: 'og:type', content: 'website' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
