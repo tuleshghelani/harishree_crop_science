@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     },
     {
       name: 'Chemistry',
-      image: 'assets/products/CHEMISTRY.png',
+      image: 'assets/products/CHEMISTRY.jpg',
       description: 'Chemistry in agriculture enhances crop yield through fertilizers and pesticides.'
     },
     {
@@ -174,7 +174,7 @@ export class HomeComponent implements OnInit, OnDestroy {
           "itemOffered": {
             "@type": "Product",
             "name": "Chemistry",
-            "image": `${this.baseUrl}/assets/products/CHEMISTRY.png`,
+            "image": `${this.baseUrl}/assets/products/CHEMISTRY.jpg`,
             "description": "Chemistry in agriculture enhances crop yield through fertilizers and pesticides, while in medicine, it enables drug formulation for disease treatment.",
             "offers": {
               "@type": "Offer",

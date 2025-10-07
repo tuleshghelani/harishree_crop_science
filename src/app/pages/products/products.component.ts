@@ -1,5 +1,5 @@
-import { Component, OnInit, OnDestroy, ViewContainerRef, contentChild } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, OnInit, OnDestroy, ViewContainerRef, contentChild, Inject, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Meta, MetaDefinition, Title } from '@angular/platform-browser';
 import { TransferState, makeStateKey } from '@angular/platform-browser';
 import { environment } from '../../../environments/environment';
@@ -35,7 +35,8 @@ export class ProductsComponent implements OnInit, OnDestroy {
     private location: Location,
     private dialogService: DialogService,
     private viewContainerRef: ViewContainerRef,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
   ngOnInit() {
@@ -44,12 +45,14 @@ export class ProductsComponent implements OnInit, OnDestroy {
     this.setStructuredData();
     this.dialogService.setContainer(this.viewContainerRef);
     
-    AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    });
+    if (isPlatformBrowser(this.platformId)) {
+      AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+      });
+    }
 
     this.route.params.subscribe(params => {
       if (params['productName']) {
@@ -99,7 +102,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
   }
 
   private setStructuredData() {
-    if (this.transferState.hasKey(STRUCTURED_DATA_KEY)) return;
+    if (this.transferState.hasKey(STRUCTURED_DATA_KEY) || !isPlatformBrowser(this.platformId)) return;
 
     const structuredData = {
       "@context": "https://schema.org",

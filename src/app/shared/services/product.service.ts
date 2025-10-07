@@ -40,7 +40,7 @@ export class ProductService {
             fullDescription: 'Neem Pro harnesses the power of natural neem extracts enhanced with advanced formulation technology. This eco-friendly solution provides effective control against multiple pest species while being safe for the environment. Its botanical origin ensures minimal residue concerns and better acceptance in organic farming.'
           },
           { name: 'Mission', 
-            image: 'assets/products/MISSION.png', 
+            image: 'assets/products/MISSION.jpg', 
             description: 'Target-specific insecticide',
             fullDescription: 'Mission is a precision-engineered insecticide designed for specific pest targets. Its selective action ensures maximum effectiveness against target pests while minimizing impact on non-target organisms. The advanced formulation provides excellent rainfastness and extended protection periods.'
           },
@@ -75,7 +75,7 @@ export class ProductService {
             fullDescription: 'Combi 505 combines multiple active ingredients for enhanced pest control. This unique combination provides broader spectrum activity and better resistance management. The synergistic action of its components ensures superior control of various pest complexes.'
           },
           { name: 'Cora-5', 
-            image: 'assets/products/CORA-5.png', 
+            image: 'assets/products/CORA-5.jpg', 
             description: 'Comprehensive protection',
             fullDescription: 'Cora-5 provides comprehensive protection through its advanced formulation technology. This versatile product offers excellent control over multiple pest species while being safe for crops. Its unique composition ensures better coverage and longer-lasting protection.'
           },
@@ -97,16 +97,16 @@ export class ProductService {
         { name: 'X-Pro', image: 'assets/products/X-PRO.png', description: 'Professional fungus control' },
         { name: 'Confer Plus', image: 'assets/products/confer plus.png', description: 'Enhanced fungal protection' },
         { name: 'Tej-65', image: 'assets/products/TEJ 65.png', description: 'Rapid fungicide action' },
-        { name: 'Chemistry', image: 'assets/products/CHEMISTRY.png', description: 'Scientific fungal control' },
+        { name: 'Chemistry', image: 'assets/products/CHEMISTRY.jpg', description: 'Scientific fungal control' },
         { name: 'Sulf Green', image: 'assets/products/SULF GREEN.png', description: 'Eco-friendly fungicide' },
         { name: 'Saf-63', image: 'assets/products/SAF-63.png', description: 'Safe and effective' },
         { name: 'Milet Gold', image: 'assets/products/MILET GOLD.png', description: 'Premium fungal protection' },
         { name: 'HTM', image: 'assets/products/HTM.png', description: 'Advanced fungicide formula' },
         { name: 'King', image: 'assets/products/KING_2.png', description: 'Superior fungal control' },
-        { name: 'Captop', image: 'assets/products/CAPTOP.png', description: 'Complete fungal protection' },
+        { name: 'Captop', image: 'assets/products/CAPTOP.jpg', description: 'Complete fungal protection' },
         { name: 'Tebuja', image: 'assets/products/TEBUJA.png', description: 'Specialized fungicide' },
         { name: 'Haristin', image: 'assets/products/HARISTIN.png', description: 'Professional fungicide' },
-        { name: 'Hari 45', image: 'assets/products/HARI-45.png', description: 'Effective fungal control' },
+        { name: 'Hari 45', image: 'assets/products/HARI-45.jpg', description: 'Effective fungal control' },
         { name: 'Hatayu', image: 'assets/products/HATAYU.png', description: 'Long-lasting protection' }
       ]
     },
