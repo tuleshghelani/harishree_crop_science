@@ -95,19 +95,51 @@ export class ProductService {
       name: 'Fungicide',
       products: [
         { name: 'X-Pro', image: 'assets/products/X-PRO.png', description: 'Professional fungus control' },
-        { name: 'Confer Plus', image: 'assets/products/confer plus.png', description: 'Enhanced fungal protection' },
+        {
+          name: 'Confer Plus',
+          image: 'assets/products/fungicide/confer-plus.jpg',
+          description: 'Hexaconazole 5% SC systemic fungicide',
+          fullDescription: 'Confer Plus (Hexaconazole 5% SC) is a premium, broad-spectrum systemic fungicide engineered for modern farming. Its advanced triazole chemistry moves rapidly within plant tissues to stop fungal growth at multiple stages, delivering fast-acting, long-lasting protection. Ideal for crops such as cereals, fruits and vegetables, it effectively controls diseases like powdery mildew, sheath blight and leaf spots. The optimized suspension concentrate ensures superior leaf coverage, rainfastness and excellent tank-mix compatibility. Designed for professional use, Confer Plus supports higher yield quality with reliable performance across climates and application methods while maintaining a strong safety profile when used as directed.'
+        },
         { name: 'Tej-65', image: 'assets/products/TEJ 65.png', description: 'Rapid fungicide action' },
         { name: 'Chemistry', image: 'assets/products/CHEMISTRY.jpg', description: 'Scientific fungal control' },
         { name: 'Sulf Green', image: 'assets/products/SULF GREEN.png', description: 'Eco-friendly fungicide' },
         { name: 'Saf-63', image: 'assets/products/SAF-63.png', description: 'Safe and effective' },
-        { name: 'Milet Gold', image: 'assets/products/MILET GOLD.png', description: 'Premium fungal protection' },
+        {
+          name: 'Milet Gold',
+          image: 'assets/products/fungicide/milet-gold.jpg',
+          description: 'Metalaxyl 8% + Mancozeb 64% WP dual-action',
+          fullDescription: 'Milet Gold combines Metalaxyl 8% with Mancozeb 64% WP to deliver a powerful dual-action shield against both systemic and contact fungal pathogens. The Metalaxyl component targets oomycete diseases from within the plant, while Mancozeb forms a protective barrier on the leaf surface for extended coverage. This synergy provides dependable control of late blight, downy mildew and seedling diseases in potatoes, grapes, vegetables and oilseeds. With excellent dispersibility, uniform coverage and strong resistance-management value, Milet Gold is a professional choice for preventive and early curative programs that protect yield and quality.'
+        },
         { name: 'HTM', image: 'assets/products/HTM.png', description: 'Advanced fungicide formula' },
         { name: 'King', image: 'assets/products/KING_2.png', description: 'Superior fungal control' },
         { name: 'Captop', image: 'assets/products/CAPTOP.jpg', description: 'Complete fungal protection' },
         { name: 'Tebuja', image: 'assets/products/TEBUJA.png', description: 'Specialized fungicide' },
         { name: 'Haristin', image: 'assets/products/HARISTIN.png', description: 'Professional fungicide' },
-        { name: 'Hari 45', image: 'assets/products/HARI-45.jpg', description: 'Effective fungal control' },
-        { name: 'Hatayu', image: 'assets/products/HATAYU.png', description: 'Long-lasting protection' }
+        {
+          name: 'Hari 45',
+          image: 'assets/products/fungicide/hari-45.jpg',
+          description: 'Mancozeb 75% WP contact fungicide',
+          fullDescription: 'Hari-45 (Mancozeb 75% WP) is a trusted, multi-site contact fungicide that delivers reliable protection against a broad spectrum of foliar diseases. Its multi-mode activity minimizes resistance risk while safeguarding tender growth, canopy health and photosynthetic efficiency. Suitable for potatoes, pulses, fruits and vegetables, Hari-45 prevents early and late blights, leaf spots and rusts when applied preventively. The premium wettable powder mixes easily, spreads uniformly and adheres well for consistent coverage, making it a practical, performance-driven choice for growers seeking dependable disease control and market-ready produce.'
+        },
+        {
+          name: 'Hatayu',
+          image: 'assets/products/fungicide/hatayu.jpg',
+          description: 'Chlorothalonil 75% WP durable barrier',
+          fullDescription: 'Hatayu (Chlorothalonil 75% WP) is a high-performance, contact fungicide known for its durable protective barrier and excellent residual action. It works on multiple sites of the pathogen, helping delay resistance while providing broad-spectrum control of early blight, fruit rots and leaf spots across vegetables, fruit crops and ornamentals. The fine, free-flowing WP formulation disperses quickly in water, ensuring even coverage and dependable performance under varied field conditions. Use Hatayu as a preventive spray or within a rotation program to keep foliage clean, healthy and productive throughout the season.'
+        },
+        {
+          name: 'Magic',
+          image: 'assets/products/fungicide/magic.jpg',
+          description: 'Validamycin 3% L specialized systemic',
+          fullDescription: 'Magic (Validamycin 3% L) is a specialized systemic antibiotic fungicide highly effective against sheath blight and other diseases caused by Rhizoctonia spp. The liquid formulation absorbs readily and translocates within plant tissues to stop disease development quickly while remaining gentle on crops. Magic fits seamlessly into integrated disease management programs with strong efficacy in paddy and horticultural crops. Its targeted mode of action, rainfastness and ease of use make it a professional solution that helps preserve crop quality and maximize yields with fewer application rounds.'
+        },
+        {
+          name: 'H-Tilt',
+          image: 'assets/products/fungicide/h-tilt.jpg',
+          description: 'Propiconazole 25% EC systemic triazole',
+          fullDescription: 'H-Tilt (Propiconazole 25% EC) is a premium systemic triazole fungicide formulated for rapid absorption and deep movement within the plant. It inhibits ergosterol biosynthesis, halting fungal growth and ensuring strong curative and protective action. Highly effective on rusts, leaf spots and sheath blight in cereals, oilseeds and horticultural crops, H-Tilt offers excellent rainfastness and crop safety when used as directed. The emulsifiable concentrate delivers consistent performance in both solo and tank-mix programs, supporting healthier canopies, longer green leaf area duration and superior harvest quality.'
+        }
       ]
     },
     {
