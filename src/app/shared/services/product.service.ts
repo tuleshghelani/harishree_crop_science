@@ -171,15 +171,83 @@ export class ProductService {
     {
       name: 'Herbicide',
       products: [
-        { name: 'Laser', image: 'assets/products/LASER.png', description: 'Precise weed control' },
-        { name: 'Paddy', image: 'assets/products/PADDY_3.png', description: 'Rice crop protection' },
-        { name: 'Oxy Green', image: 'assets/products/OXY GREEN.png', description: 'Eco-friendly herbicide' },
-        { name: 'H-Round', image: 'assets/products/H ROUND.png', description: 'Complete weed management' },
-        { name: 'Green Out', image: 'assets/products/GREEN OUT.png', description: 'Effective weed control' },
-        { name: 'Glufo13', image: 'assets/products/GLUFO13.png', description: 'Professional herbicide' },
-        { name: 'Hera-71', image: 'assets/products/HERA-71.png', description: 'Advanced weed solution' },
-        { name: 'T-Super', image: 'assets/products/T-SUPER.png', description: 'Superior weed control' },
-        { name: 'Imaza 10', image: 'assets/products/IMAZA 10.png', description: 'Specialized herbicide' }
+        { 
+          name: 'Laser', 
+          image: 'assets/products/herbicide/laser.jpg', 
+          description: 'Precise weed control',
+          fullDescription: 'Laser (Quizalofop-p-ethyl 5% EC) is a selective post-emergence herbicide designed for superior grass weed control in broadleaf crops. This advanced emulsifiable concentrate rapidly penetrates leaf tissues and translocates to growing points, effectively inhibiting fatty acid synthesis and halting weed growth. Laser provides exceptional control of annual and perennial grass weeds in soybeans, cotton, pulses, oilseeds, and vegetables, while maintaining excellent crop safety. The optimized formulation ensures quick absorption, rainfastness, and extended residual activity, making it an essential component of integrated weed management programs for commercial growers seeking reliable performance and superior harvest quality.',
+          url: 'product/laser'
+        },
+        { 
+          name: 'Paddy', 
+          image: 'assets/products/herbicide/paddy.jpg', 
+          description: 'Rice crop protection',
+          fullDescription: 'Paddy (Pretilachlor 50% EC) is a premium pre-emergence herbicide specifically formulated for rice cultivation. This professional-grade emulsifiable concentrate creates a powerful soil barrier that prevents weed seed germination and early seedling growth. With its selective action, Paddy effectively controls annual grasses, sedges, and certain broadleaf weeds while maintaining excellent crop safety in transplanted and direct-seeded rice. The advanced formulation ensures optimal soil binding, extended residual activity, and consistent performance even under varying soil moisture conditions. Trusted by commercial rice growers, Paddy supports higher yield potential by eliminating early weed competition during the critical crop establishment phase.',
+          url: 'product/paddy'
+        },
+        { 
+          name: 'Oxy Green', 
+          image: 'assets/products/herbicide/oxy-green.jpg', 
+          description: 'Eco-friendly herbicide',
+          fullDescription: 'Oxy Green (Oxyfluorfen 23.5% EC) is a versatile contact herbicide with residual activity, designed for pre-emergence and early post-emergence weed control. This premium emulsifiable concentrate creates a soil barrier that prevents weed emergence while also controlling small emerged weeds through contact action. Highly effective against annual broadleaf weeds and grasses in vegetables, fruit crops, plantation crops, and ornamentals, Oxy Green provides long-lasting protection with minimal soil mobility. The optimized formulation ensures excellent soil binding, UV stability, and consistent performance across various soil types and environmental conditions. As an essential component of integrated weed management programs, Oxy Green supports cleaner fields and optimized yields with its reliable performance and excellent crop safety profile when used as directed.',
+          url: 'product/oxy-green'
+        },
+        { 
+          name: 'Round', 
+          image: 'assets/products/herbicide/round.jpg', 
+          description: 'Complete weed management',
+          fullDescription: 'Round (Glyphosate 41% SL) is a professional-grade, non-selective systemic herbicide formulated for comprehensive weed management. This soluble liquid concentrate is rapidly absorbed through foliage and translocated throughout the plant, including roots and rhizomes, for complete control of annual and perennial weeds, grasses, and woody brush. With its unique mode of action inhibiting the EPSP synthase enzyme, Round effectively eliminates even the most stubborn weeds while breaking down into natural soil components. The advanced formulation includes premium surfactants for enhanced absorption, rainfastness, and consistent performance across various environmental conditions. Ideal for pre-planting field preparation, non-crop areas, and directed applications in plantation crops, Round delivers reliable results for commercial growers and land managers seeking effective vegetation control.',
+          url: 'product/round'
+        },
+        { 
+          name: 'Green Out', 
+          image: 'assets/products/GREEN OUT.png', 
+          description: 'Effective weed control',
+          fullDescription: 'Green Out (Paraquat Dichloride 24% SL) is a fast-acting, non-selective contact herbicide designed for rapid vegetation control. This professional-grade soluble liquid concentrate delivers visible results within hours of application by disrupting photosynthesis and causing rapid desiccation of green plant tissues. Highly effective against a broad spectrum of annual grasses and broadleaf weeds, Green Out becomes inactive upon soil contact, allowing for immediate planting in conservation tillage systems. The optimized formulation ensures excellent coverage, rapid absorption, and reliable performance even under challenging weather conditions. As an essential tool for pre-plant burndown, inter-row weed control, and harvest aid applications, Green Out supports efficient field operations and weed management strategies for commercial growers seeking quick, dependable results.',
+          url: 'product/green-out'
+        },
+        { 
+          name: 'Glufo13', 
+          image: 'assets/products/herbicide/gluf013.jpg', 
+          description: 'Professional herbicide',
+          fullDescription: 'Glufo13 (Glufosinate ammonium 13.5% SL) is a broad-spectrum, non-selective contact herbicide with limited systemic activity. This premium soluble liquid formulation disrupts glutamine synthesis in plants, causing rapid ammonia accumulation and cell destruction. Highly effective against a wide range of annual and perennial grasses and broadleaf weeds, including those resistant to glyphosate, Glufo13 provides quick visible results while breaking down readily in the environment. The advanced formulation ensures excellent coverage, rapid absorption, and reliable performance across various environmental conditions. Ideal for directed applications in orchards, vineyards, plantation crops, and non-crop areas, Glufo13 delivers dependable weed control for commercial growers seeking an alternative mode of action in their resistance management programs.',
+          url: 'product/gluf013'
+        },
+        { 
+          name: 'H-Man', 
+          image: 'assets/products/herbicide/h-man.jpg', 
+          description: 'Advanced weed solution',
+          fullDescription: 'H-Man (2,4-D Amine Salt 58% SL) is a selective systemic herbicide specifically formulated for broadleaf weed control. This professional-grade soluble liquid concentrate is rapidly absorbed through foliage and roots, translocating throughout the plant to disrupt normal growth processes through auxin-like activity. Highly effective against a wide range of annual and perennial broadleaf weeds in cereals, maize, sugarcane, and non-crop areas, H-Man provides economical and reliable control while preserving grass species. The advanced formulation ensures excellent coverage, quick absorption, and consistent performance across various environmental conditions. As an essential component of integrated weed management programs, H-Man supports cleaner fields and optimized yields with its proven performance and excellent crop safety profile when used as directed.',
+          url: 'product/h-man'
+        },
+        { 
+          name: 'Pendi-Pro', 
+          image: 'assets/products/herbicide/pendi-pro.jpg', 
+          description: 'Premium pre-emergence control',
+          fullDescription: 'Pendi-Pro (Pendimethalin 30% EC) is a premium pre-emergence herbicide designed for residual weed control in multiple crops. This professional-grade emulsifiable concentrate creates a powerful soil barrier that prevents weed seed germination and early root development. Highly effective against annual grasses and certain broadleaf weeds in cereals, pulses, oilseeds, vegetables, and plantation crops, Pendi-Pro provides extended protection during the critical crop establishment phase. The optimized formulation ensures excellent soil binding, UV stability, and consistent performance across various soil types and environmental conditions. With its distinctive mode of action inhibiting cell division in meristematic tissues, Pendi-Pro serves as an essential resistance management tool while supporting cleaner fields and reduced weed competition for commercial growers seeking reliable, long-lasting weed control.',
+          url: 'product/pendi-pro'
+        },
+        { 
+          name: 'T-10', 
+          image: 'assets/products/herbicide/t-10.jpg', 
+          description: 'Targeted weed elimination',
+          fullDescription: 'T-10 (Metribuzin 70% WP) is a versatile selective herbicide with both contact and residual activity. This premium wettable powder formulation is absorbed by roots and foliage, inhibiting photosynthesis in susceptible weed species while maintaining safety in labeled crops. Highly effective against annual broadleaf weeds and certain grasses in potatoes, soybeans, tomatoes, and other vegetables, T-10 provides flexible application timing from pre-plant to early post-emergence. The advanced formulation ensures uniform distribution, excellent soil activity, and consistent performance across various soil types and environmental conditions. With its unique mode of action, T-10 serves as a valuable resistance management tool while supporting cleaner fields and optimized crop development for commercial growers seeking reliable, broad-spectrum weed control.',
+          url: 'product/t-10'
+        },
+        { 
+          name: 'T-Super', 
+          image: 'assets/products/herbicide/t-super.jpg', 
+          description: 'Superior weed control',
+          fullDescription: 'T-Super (Sulfosulfuron 75% WG) is a premium selective herbicide specifically formulated for post-emergence grass and broadleaf weed control in wheat. This advanced water-dispersible granule is rapidly absorbed through foliage and roots, inhibiting the ALS enzyme and halting amino acid synthesis in susceptible weed species. Highly effective against problematic weeds including Phalaris minor and broadleaf species, T-Super provides exceptional crop safety in wheat when used as directed. The optimized formulation ensures excellent dispersion, rapid absorption, and consistent performance across various environmental conditions. With its low use rate and extended soil activity, T-Super delivers cost-effective, reliable weed control while serving as an important component of resistance management programs for commercial wheat growers seeking to maximize yield potential.',
+          url: 'product/t-super'
+        },
+        { 
+          name: 'Imaza 10', 
+          image: 'assets/products/herbicide/imaza10.jpg', 
+          description: 'Specialized herbicide',
+          fullDescription: 'Imaza 10 (Imazethapyr 10% SL) is a selective systemic herbicide designed for pre and post-emergence weed control in legume crops. This advanced soluble liquid formulation is absorbed by roots and foliage, translocating throughout the plant to inhibit the ALS enzyme and halt amino acid synthesis in susceptible weed species. Highly effective against a broad spectrum of annual grasses and broadleaf weeds in soybeans, groundnuts, and other pulses, Imaza 10 provides extended residual activity for season-long protection. The optimized formulation ensures rapid absorption, excellent translocation, and consistent performance across various soil types and environmental conditions. With its unique mode of action, Imaza 10 serves as a valuable resistance management tool while supporting cleaner fields and optimized crop development for commercial growers seeking reliable, broad-spectrum weed control with excellent crop safety.',
+          url: 'product/imaza10'
+        }
       ]
     },
     {
