@@ -103,7 +103,20 @@ export class ProductService {
         },
         { name: 'Tej-65', image: 'assets/products/TEJ 65.png', description: 'Rapid fungicide action' },
         { name: 'Chemistry', image: 'assets/products/CHEMISTRY.jpg', description: 'Scientific fungal control' },
-        { name: 'Sulf Green', image: 'assets/products/SULF GREEN.png', description: 'Eco-friendly fungicide' },
+        {
+          name: 'N-Tracol',
+          image: 'assets/products/fungicide/n-tracol.jpg',
+          description: 'Propineb 70% WP contact fungicide',
+          fullDescription: 'N-Tracol (Propineb 70% WP) is a premium contact fungicide formulated for exceptional disease control across a wide range of crops. This professional-grade solution creates a powerful protective barrier that prevents fungal spore germination and inhibits mycelial growth. With its multi-site mode of action, N-Tracol effectively manages resistance development while providing outstanding control of downy mildew, early and late blights, and various leaf spots. The advanced wettable powder formulation ensures superior coverage, excellent rainfastness, and optimal adhesion to plant surfaces, delivering consistent protection even under challenging weather conditions. Trusted by commercial growers, N-Tracol safeguards crop quality and yield potential with its reliable performance and excellent crop safety profile.',
+          url: 'product/n-tracol'
+        },
+        {
+          name: 'Sulf Green',
+          image: 'assets/products/fungicide/sulf-green.jpg',
+          description: 'Sulphur 80% WDG versatile fungicide',
+          fullDescription: 'Sulf Green (Sulphur 80% WDG) is a versatile, high-performance fungicide and acaricide formulated for modern agriculture. This water-dispersible granule delivers exceptional control of powdery mildew, rust diseases, and mite infestations across fruits, vegetables, and field crops. The premium-grade elemental sulphur provides both preventive and curative action through multiple biochemical pathways, effectively disrupting fungal respiration while maintaining excellent crop safety. Sulf Green\'s advanced formulation technology ensures quick dispersion, uniform coverage, and enhanced adhesion to plant surfaces, resulting in superior disease control even under variable weather conditions. With its eco-friendly profile and minimal residue concerns, Sulf Green integrates seamlessly into sustainable pest management programs, supporting healthier crops and optimized yields for professional growers.',
+          url: 'product/sulf-green'
+        },
         { name: 'Saf-63', image: 'assets/products/SAF-63.png', description: 'Safe and effective' },
         {
           name: 'Milet Gold',
@@ -114,7 +127,13 @@ export class ProductService {
         { name: 'HTM', image: 'assets/products/HTM.png', description: 'Advanced fungicide formula' },
         { name: 'King', image: 'assets/products/KING_2.png', description: 'Superior fungal control' },
         { name: 'Captop', image: 'assets/products/CAPTOP.jpg', description: 'Complete fungal protection' },
-        { name: 'Tebuja', image: 'assets/products/TEBUJA.png', description: 'Specialized fungicide' },
+        {
+          name: 'Tebuja',
+          image: 'assets/products/fungicide/tebuja.jpg',
+          description: 'Tebuconazole 25.9% EC systemic fungicide',
+          fullDescription: 'Tebuja (Tebuconazole 25.9% EC) is a premium systemic fungicide engineered for exceptional disease control across diverse crops. This professional-grade emulsifiable concentrate rapidly penetrates plant tissues and translocates throughout the vascular system, providing both protective and curative action against a broad spectrum of fungal pathogens. Tebuja\'s advanced triazole chemistry disrupts ergosterol biosynthesis, effectively halting fungal cell membrane formation and growth. Highly effective against powdery mildew, rusts, leaf spots, and blights in cereals, fruits, vegetables, and ornamentals, Tebuja delivers long-lasting protection with excellent rainfastness. The optimized formulation ensures superior coverage, enhanced absorption, and extended residual activity, making it an essential component of integrated disease management programs for commercial growers seeking reliable performance and superior harvest quality.',
+          url: 'product/tebuja'
+        },
         { name: 'Haristin', image: 'assets/products/HARISTIN.png', description: 'Professional fungicide' },
         {
           name: 'Hari 45',
@@ -133,6 +152,13 @@ export class ProductService {
           image: 'assets/products/fungicide/magic.jpg',
           description: 'Validamycin 3% L specialized systemic',
           fullDescription: 'Magic (Validamycin 3% L) is a specialized systemic antibiotic fungicide highly effective against sheath blight and other diseases caused by Rhizoctonia spp. The liquid formulation absorbs readily and translocates within plant tissues to stop disease development quickly while remaining gentle on crops. Magic fits seamlessly into integrated disease management programs with strong efficacy in paddy and horticultural crops. Its targeted mode of action, rainfastness and ease of use make it a professional solution that helps preserve crop quality and maximize yields with fewer application rounds.'
+        },
+        {
+          name: 'Super COC',
+          image: 'assets/products/fungicide/super-coc.jpg',
+          description: 'Copper Oxychloride 50% WP broad-spectrum',
+          fullDescription: 'Super COC (Copper Oxychloride containing copper content 50% WP) is a professional-grade, broad-spectrum fungicide and bactericide formulated for superior disease control. This premium wettable powder creates a protective barrier on plant surfaces that disrupts multiple cellular processes in pathogenic organisms. With its multi-site mode of action, Super COC effectively manages resistance development while providing outstanding control of downy mildew, blights, anthracnose, bacterial spots, and various fungal diseases across fruits, vegetables, and plantation crops. The optimized particle size ensures excellent suspension stability, uniform coverage, and enhanced adhesion to plant surfaces, delivering consistent protection even under challenging weather conditions. As an essential component of integrated disease management programs, Super COC supports healthier crops and optimized yields with its reliable performance and excellent crop safety profile.',
+          url: 'product/super-coc'
         },
         {
           name: 'H-Tilt',
@@ -203,4 +229,4 @@ export class ProductService {
     }, [] as Product[]);
     return of(matchingProducts);
   }
-} 
+}
