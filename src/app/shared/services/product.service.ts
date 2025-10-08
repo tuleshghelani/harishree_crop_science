@@ -259,7 +259,48 @@ export class ProductService {
         { name: 'HC-Gold', image: 'assets/products/HC-GOLD.png', description: 'Superior growth control' },
         { name: 'Dhani Wet', image: 'assets/products/DHANI WET.png', description: 'Enhanced absorption' },        
         { name: 'Black Diamond', image: 'assets/products/BLACK DIAMOND.png', description: 'Premium growth regulator' },
-        { name: 'Black Gold', image: 'assets/products/BLACK GOLD.png', description: 'Premium growth regulator' },
+        { 
+          name: 'Advocate', 
+          image: 'assets/products/PGR/advocate.jpg', 
+          description: 'Advanced amino acid & vitamins bio stimulant',
+          fullDescription: 'Advocate is a premium bio stimulant formulation containing essential amino acids and vitamins that enhance plant metabolism and growth. This advanced solution promotes stronger root development, improves nutrient uptake, and increases crop resilience against environmental stressors. Regular application results in healthier plants with improved yield potential and quality.',
+          url: 'product/advocate'
+        },
+        { 
+          name: 'Black Diamond', 
+          image: 'assets/products/PGR/black-diamond.jpg', 
+          description: 'Premium humic acid 98% soil conditioner',
+          fullDescription: 'Black Diamond contains 98% humic acid, making it an exceptional soil conditioner for stronger, longer, and healthier roots and plants. This premium formulation improves soil structure, enhances nutrient availability, and stimulates beneficial microbial activity. Black Diamond increases water retention capacity, reduces fertilizer requirements, and promotes sustainable agricultural practices for optimal plant growth and development.',
+          url: 'product/black-diamond'
+        },
+        { 
+          name: 'Bonus Plus', 
+          image: 'assets/products/PGR/bonus-plus.jpg', 
+          description: 'Professional plant growth promoter',
+          fullDescription: 'Bonus Plus is a specialized plant growth promoter designed to enhance overall plant development and productivity. This scientifically formulated solution stimulates cell division and elongation, resulting in improved vegetative growth and reproductive development. Regular application leads to stronger plants with enhanced flowering, fruiting, and yield potential while promoting natural resistance to environmental stresses.',
+          url: 'product/bonus-plus'
+        },
+        { 
+          name: 'Dr.Root', 
+          image: 'assets/products/PGR/dr.root.jpg', 
+          description: 'Specialized organic root development supplement',
+          fullDescription: 'Dr.Root is an organic plant supplement specifically formulated to enhance root development and function. This premium product stimulates root initiation, elongation, and branching, creating a stronger foundation for plant growth. The organic formulation improves nutrient absorption efficiency, enhances drought tolerance, and promotes beneficial soil microorganism activity for sustainable agricultural practices and optimal plant performance.',
+          url: 'product/dr-root'
+        },
+        { 
+          name: 'Nutri Power Gold', 
+          image: 'assets/products/PGR/nutri-power-gold.jpg', 
+          description: 'Premium potassium humate with organic carbon',
+          fullDescription: 'Nutri Power Gold combines 98% potassium humate with 2% organic carbon to create a powerful soil amendment and plant growth enhancer. This premium formulation improves soil structure, increases cation exchange capacity, and enhances nutrient availability. Regular application results in better water retention, reduced fertilizer requirements, and improved overall soil health, leading to stronger plants with higher yield potential and quality.',
+          url: 'product/nutri-power-gold'
+        },
+        { 
+          name: 'Silva', 
+          image: 'assets/products/PGR/silva.jpg', 
+          description: 'Advanced spreader activator for enhanced absorption',
+          fullDescription: 'Silva is a professional-grade spreader activator designed to maximize the effectiveness of agricultural sprays. This advanced formulation reduces surface tension, improves spray coverage, and enhances absorption of nutrients and crop protection products. Silva ensures uniform distribution on plant surfaces, increases rainfastness, and optimizes the performance of tank-mixed products for more efficient and economical crop management.',
+          url: 'product/silva'
+        }
       ]
     }
   ];
