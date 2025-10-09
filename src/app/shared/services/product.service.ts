@@ -55,9 +55,9 @@ export class ProductService {
             fullDescription: 'Pride-H represents professional-grade pest management technology. This advanced formulation combines rapid knockdown with long-lasting protection, making it ideal for commercial farming operations. Its balanced composition ensures optimal performance across various crop stages and conditions.'
           },
           { name: 'Hmida', 
-            image: 'assets/products/insecticide/Hmida.jpg', 
-            description: 'Imidacloprid 30.5% SC systemic insecticide',
-            fullDescription: 'Hmida (Imidacloprid 30.5% SC) is a premium, systemic neonicotinoid formulated for fast knockdown and long-lasting control of sucking pests such as aphids, whiteflies, jassids and thrips. The advanced SC formulation offers superior uptake, even distribution within plant tissues and excellent rainfastness. Safe on labeled crops when used as directed, Hmida supports healthier foliage, improved crop vigor and higher marketable yield with reliable, professional performance.'
+            image: 'assets/products/H MIDA.png', 
+            description: 'Advanced insect management',
+            fullDescription: 'Hmida delivers cutting-edge insect management through its innovative systemic action. The product provides comprehensive protection by controlling pests at multiple life stages. Its advanced formulation ensures quick absorption and uniform distribution throughout the plant system.'
           },
           { name: 'Dr. Supreme', 
             image: 'assets/products/DR.SUPREME.png', 
