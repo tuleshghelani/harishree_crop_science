@@ -1,9 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Meta, MetaDefinition, Title } from '@angular/platform-browser';
 import { TransferState, makeStateKey } from '@angular/platform-browser';
 import { environment } from '../../../environments/environment';
-import AOS from 'aos';
+import { Inject, PLATFORM_ID } from '@angular/core';
 
 const META_KEY = makeStateKey<boolean>('contact-meta-data');
 const STRUCTURED_DATA_KEY = makeStateKey<string>('contact-structured-data');
@@ -28,18 +28,13 @@ export class ContactUsComponent implements OnInit, OnDestroy {
   constructor(
     private meta: Meta,
     private title: Title,
-    private transferState: TransferState
+    private transferState: TransferState,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
   ngOnInit() {
     this.setMetaData();
     this.setStructuredData();
-    
-    AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out',
-      once: true
-    });
   }
 
   ngOnDestroy() {
@@ -98,10 +93,12 @@ export class ContactUsComponent implements OnInit, OnDestroy {
       }
     };
 
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify(structuredData);
-    document.head.appendChild(script);
+    if (isPlatformBrowser(this.platformId)) {
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.text = JSON.stringify(structuredData);
+      document.head.appendChild(script);
+    }
 
     this.transferState.set(STRUCTURED_DATA_KEY, JSON.stringify(structuredData));
   }

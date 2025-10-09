@@ -5,7 +5,6 @@ import { TransferState, makeStateKey } from '@angular/platform-browser';
 import { environment } from '../../../environments/environment';
 import { SvgIconsService } from '../../shared/services/svg-icons.service';
 import { SafeHtmlPipe } from '../../shared/pipes/safe-html.pipe';
-import * as AOS from 'aos';
 
 const META_KEY = makeStateKey<boolean>('quality_meta');
 const STRUCTURED_DATA_KEY = makeStateKey<string>('quality_structured_data');
@@ -33,12 +32,6 @@ export class QualityAssuranceComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.setMetaData();
     this.setStructuredData();
-    
-    AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out',
-      once: true
-    });
   }
 
   ngOnDestroy() {

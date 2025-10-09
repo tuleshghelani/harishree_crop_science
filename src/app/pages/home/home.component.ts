@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
 import { Meta, MetaDefinition, Title } from '@angular/platform-browser';
@@ -15,7 +15,8 @@ const STRUCTURED_DATA_KEY = makeStateKey<string>('HOME_STRUCTURED_DATA');
   standalone: true,
   imports: [CommonModule, RouterLink],
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent implements OnInit, OnDestroy {
   private readonly baseUrl = environment.baseUrl;
@@ -75,16 +76,6 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.setMetaData();
     this.setStructuredData();
-    
-    if (isPlatformBrowser(this.platformId)) {
-      AOS.init({
-        duration: 1000,
-        easing: 'ease-in-out',
-        once: true,
-        mirror: false,
-        offset: 50
-      });
-    }
   }
 
   ngOnDestroy() {
@@ -293,4 +284,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   navigateToProductDetails() {
     this.router.navigate(['/products']);
   }
+
+  trackByProduct = (_: number, item: { name: string }) => item.name;
+  trackByTestimonial = (_: number, item: { name: string }) => item.name;
 } 

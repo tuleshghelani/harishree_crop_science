@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, ViewContainerRef, contentChild, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewContainerRef, contentChild, Inject, PLATFORM_ID, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Meta, MetaDefinition, Title } from '@angular/platform-browser';
 import { TransferState, makeStateKey } from '@angular/platform-browser';
@@ -20,7 +20,8 @@ const STRUCTURED_DATA_KEY = makeStateKey<string>('products-structured-data');
   standalone: true,
   imports: [CommonModule, ProductDialogComponent, RouterModule],
   templateUrl: './products.component.html',
-  styleUrl: './products.component.scss'
+  styleUrl: './products.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProductsComponent implements OnInit, OnDestroy {
   private readonly baseUrl = environment.baseUrl;
@@ -45,14 +46,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
     this.setStructuredData();
     this.dialogService.setContainer(this.viewContainerRef);
     
-    if (isPlatformBrowser(this.platformId)) {
-      AOS.init({
-        duration: 1000,
-        easing: 'ease-in-out',
-        once: true,
-        mirror: false
-      });
-    }
+    // AOS is initialized globally in AppComponent
 
     this.route.params.subscribe(params => {
       if (params['productName']) {
@@ -160,4 +154,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
       .flatMap(category => category.products)
       .find(product => product.name === name);
   }
+
+  trackByCategory = (_: number, item: ProductCategory) => item.name;
+  trackByProduct = (_: number, item: Product) => item.name;
 }

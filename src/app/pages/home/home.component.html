@@ -8,21 +8,21 @@
   
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="assets/home/slider_2.jpeg" class="d-block w-100" alt="Sustainable Farming">
+      <img src="assets/home/slider_2.jpeg" class="d-block w-100" alt="Sustainable Farming" loading="eager" fetchpriority="high" decoding="async">
       <div class="carousel-caption">
         <h1 itemprop="name"><strong>Sustainable Farming Solutions</strong></h1>
         <p itemprop="description"><strong>Empowering farmers</strong> with eco-friendly agricultural products</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="assets/home/slider_4.jpeg" class="d-block w-100" alt="Quality Products">
+      <img src="assets/home/slider_4.jpeg" class="d-block w-100" alt="Quality Products" loading="lazy" decoding="async">
       <div class="carousel-caption">
         <h2>Premium Quality Products</h2>
         <p>Advanced formulations for better crop yield</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="assets/home/slider_6.jpeg" class="d-block w-100" alt="Research">
+      <img src="assets/home/slider_6.jpeg" class="d-block w-100" alt="Research" loading="lazy" decoding="async">
       <div class="carousel-caption">
         <h2>Research-Driven Innovation</h2>
         <p>Cutting-edge solutions for modern agriculture</p>
@@ -45,7 +45,7 @@
         </div>
       </div>
       <div class="col-lg-6" data-aos="fade-left" data-aos-delay="400">
-        <img src="assets/home/about.jpeg" alt="About Us" class="img-fluid rounded shadow">
+        <img src="assets/home/about.jpeg" alt="About Us" class="img-fluid rounded shadow" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
@@ -119,11 +119,11 @@
   <div class="container">
     <h2 class="section-title" data-aos="fade-up">Our Premium Products</h2>
     <div class="row">
-      <ng-container *ngFor="let product of products; let i = index">
+      <ng-container *ngFor="let product of products; let i = index; trackBy: trackByProduct">
         <div class="col-lg-3 col-md-6 col-sm-12" [attr.data-aos]="'fade-up'" [attr.data-aos-delay]="i * 100">
           <div class="product-card">
             <div class="product-image">
-              <img [src]="product.image" [alt]="product.name">
+              <img [src]="product.image" [alt]="product.name" loading="lazy" decoding="async" referrerpolicy="no-referrer">
             </div>
             <div class="product-content">
               <h3>{{product.name}}</h3>
@@ -144,7 +144,7 @@
   <div class="container">
     <h2 class="section-title" data-aos="fade-up">Customer Testimonials</h2>
     <div class="row">
-      <div class="col-lg-4 col-md-6" *ngFor="let testimonial of testimonials; let i = index" [attr.data-aos]="'fade-up'" [attr.data-aos-delay]="i * 100">
+      <div class="col-lg-4 col-md-6" *ngFor="let testimonial of testimonials; let i = index; trackBy: trackByTestimonial" [attr.data-aos]="'fade-up'" [attr.data-aos-delay]="i * 100">
         <div class="testimonial-card">
           <div class="rating">
             <ng-container *ngFor="let star of [1,2,3,4,5]">

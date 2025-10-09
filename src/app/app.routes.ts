@@ -1,29 +1,17 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { AboutComponent } from './pages/about/about.component';
-import { ContactUsComponent } from './pages/contact-us/contact-us.component';
-import { ProductsComponent } from './pages/products/products.component';
-import { CatalogueComponent } from './pages/catalogue/catalogue.component';
-import { ResearchComponent } from './pages/research/research.component';
-import { QualityAssuranceComponent } from './pages/quality-assurance/quality-assurance.component';
-import { ProceedComponent } from './pages/all-products/proceed/proceed.component';
-import { ThioHComponent } from './pages/all-products/thio-h/thio-h.component';
-import { SuperFsComponent } from './pages/all-products/super-fs/super-fs.component';
-import { Mpire404Component } from './pages/all-products/mpire-404/mpire-404.component';
-import { HFunComponent } from './pages/all-products/h-fun/h-fun.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'about-us', component: AboutComponent },
-  { path: 'contact-us', component: ContactUsComponent },
-  { path: 'products', component: ProductsComponent },
-  { path: 'products/:productName', component: ProductsComponent },
-  { path: 'catalogue', component: CatalogueComponent },
-  { path: 'research', component: ResearchComponent },
-  { path: 'quality-assurance', component: QualityAssuranceComponent },
-  { path: 'product/proceed', component: ProceedComponent },
-  { path: 'product/thio-h', component: ThioHComponent },
-  { path: 'product/super-fs', component: SuperFsComponent },
-  { path: 'product/mpire-404', component: Mpire404Component },
-  { path: 'product/h-fun', component: HFunComponent },
+  { path: '', loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent) },
+  { path: 'about-us', loadComponent: () => import('./pages/about/about.component').then(m => m.AboutComponent) },
+  { path: 'contact-us', loadComponent: () => import('./pages/contact-us/contact-us.component').then(m => m.ContactUsComponent) },
+  { path: 'products', loadComponent: () => import('./pages/products/products.component').then(m => m.ProductsComponent) },
+  { path: 'products/:productName', loadComponent: () => import('./pages/products/products.component').then(m => m.ProductsComponent) },
+  { path: 'catalogue', loadComponent: () => import('./pages/catalogue/catalogue.component').then(m => m.CatalogueComponent) },
+  { path: 'research', loadComponent: () => import('./pages/research/research.component').then(m => m.ResearchComponent) },
+  { path: 'quality-assurance', loadComponent: () => import('./pages/quality-assurance/quality-assurance.component').then(m => m.QualityAssuranceComponent) },
+  { path: 'product/proceed', loadComponent: () => import('./pages/all-products/proceed/proceed.component').then(m => m.ProceedComponent) },
+  { path: 'product/thio-h', loadComponent: () => import('./pages/all-products/thio-h/thio-h.component').then(m => m.ThioHComponent) },
+  { path: 'product/super-fs', loadComponent: () => import('./pages/all-products/super-fs/super-fs.component').then(m => m.SuperFsComponent) },
+  { path: 'product/mpire-404', loadComponent: () => import('./pages/all-products/mpire-404/mpire-404.component').then(m => m.Mpire404Component) },
+  { path: 'product/h-fun', loadComponent: () => import('./pages/all-products/h-fun/h-fun.component').then(m => m.HFunComponent) },
 ];

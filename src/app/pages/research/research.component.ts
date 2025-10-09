@@ -1,11 +1,11 @@
 import { Component, OnInit, OnDestroy, makeStateKey } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
 import { TransferState } from '@angular/platform-browser';
 import { environment } from '../../../environments/environment';
-import * as AOS from 'aos';
 import { SvgIconsService } from '../../shared/services/svg-icons.service';
 import { SafeHtmlPipe } from '../../shared/pipes/safe-html.pipe';
+import { Inject, PLATFORM_ID } from '@angular/core';
 
 const META_KEY = makeStateKey<boolean>('research_meta');
 const STRUCTURED_DATA_KEY = makeStateKey<string>('research_structured_data');
@@ -25,33 +25,29 @@ export class ResearchComponent implements OnInit, OnDestroy {
     private title: Title,
     private meta: Meta,
     private transferState: TransferState,
-    svgIconsService: SvgIconsService
+    svgIconsService: SvgIconsService,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {
     this.svgIcons = svgIconsService;
   }
 
   ngOnInit() {
-    // Preload images
-    const images = [
-      'assets/research/1.jpeg',
-      'assets/research/2.jpeg',
-      'assets/research/3.jpeg',
-      'assets/research/4.jpeg'
-    ];
-    
-    images.forEach(src => {
-      const img = new Image();
-      img.src = src;
-    });
+    // Preload images (browser only)
+    if (isPlatformBrowser(this.platformId)) {
+      const images = [
+        'assets/research/1.jpeg',
+        'assets/research/2.jpeg',
+        'assets/research/3.jpeg',
+        'assets/research/4.jpeg'
+      ];
+      images.forEach(src => {
+        const img = new Image();
+        img.src = src;
+      });
+    }
 
     this.setMetaData();
     this.setStructuredData();
-    
-    AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out',
-      once: true
-    });
   }
 
   ngOnDestroy() {
@@ -97,10 +93,12 @@ export class ResearchComponent implements OnInit, OnDestroy {
       }
     };
 
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify(structuredData);
-    document.head.appendChild(script);
+    if (isPlatformBrowser(this.platformId)) {
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.text = JSON.stringify(structuredData);
+      document.head.appendChild(script);
+    }
 
     this.transferState.set(STRUCTURED_DATA_KEY, JSON.stringify(structuredData));
   }

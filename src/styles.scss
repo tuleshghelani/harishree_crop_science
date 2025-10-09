@@ -98,6 +98,20 @@ body {
   color: var(--gray-700);
 }
 
+// Performance: only render content once visible
+// Applies to large sections and containers to reduce layout/paint during scroll
+.catalogue-page, .products-page, .premium-products, .what-we-do, .key-features, .testimonials {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 1000px; // estimated height to prevent jank
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  // Hint browser for better decoding and memory usage
+  image-rendering: -webkit-optimize-contrast;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-secondary);
   font-weight: var(--font-semibold);
