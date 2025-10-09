@@ -55,9 +55,9 @@ export class ProductService {
             fullDescription: 'Pride-H represents professional-grade pest management technology. This advanced formulation combines rapid knockdown with long-lasting protection, making it ideal for commercial farming operations. Its balanced composition ensures optimal performance across various crop stages and conditions.'
           },
           { name: 'Hmida', 
-            image: 'assets/products/H MIDA.png', 
-            description: 'Advanced insect management',
-            fullDescription: 'Hmida delivers cutting-edge insect management through its innovative systemic action. The product provides comprehensive protection by controlling pests at multiple life stages. Its advanced formulation ensures quick absorption and uniform distribution throughout the plant system.'
+            image: 'assets/products/insecticide/Hmida.jpg', 
+            description: 'Imidacloprid 30.5% SC systemic insecticide',
+            fullDescription: 'Hmida (Imidacloprid 30.5% SC) is a premium, systemic neonicotinoid formulated for fast knockdown and long-lasting control of sucking pests such as aphids, whiteflies, jassids and thrips. The advanced SC formulation offers superior uptake, even distribution within plant tissues and excellent rainfastness. Safe on labeled crops when used as directed, Hmida supports healthier foliage, improved crop vigor and higher marketable yield with reliable, professional performance.'
           },
           { name: 'Dr. Supreme', 
             image: 'assets/products/DR.SUPREME.png', 
@@ -80,14 +80,64 @@ export class ProductService {
             fullDescription: 'Cora-5 provides comprehensive protection through its advanced formulation technology. This versatile product offers excellent control over multiple pest species while being safe for crops. Its unique composition ensures better coverage and longer-lasting protection.'
           },
           { name: 'FI 40', 
-            image: 'assets/products/FI 40.png', 
-            description: 'Fast-acting insecticide',
-            fullDescription: 'FI 40 is engineered for rapid pest control action. Its quick-penetrating formula ensures immediate results while maintaining residual activity. The product\'s balanced composition provides excellent crop safety while delivering powerful pest control performance.'
+            image: 'assets/products/insecticide/FI-40.jpg', 
+            description: 'Fipronil 40% + Imidacloprid 40% WG dual-action',
+            fullDescription: 'FI 40 (Fipronil 40% + Imidacloprid 40% WG) combines two proven actives to deliver both contact and systemic action against tough pest complexes. The water-dispersible granule ensures quick dispersion, uniform spray coverage and strong residual control on key crops. Designed for professional growers, FI 40 provides rapid knockdown of chewing and sucking insects while promoting excellent crop safety and resistance-management value.'
+          },
+          { name: 'Hilthene', 
+            image: 'assets/products/insecticide/hilthene.jpg', 
+            description: 'Acephate 75% SP broad-spectrum control',
+            fullDescription: 'Hilthene (Acephate 75% SP) is a professional, systemic and contact insecticide that provides quick knockdown and dependable control of caterpillars, aphids and other economic pests. The high-quality SP formulation dissolves rapidly, offering consistent performance, excellent leaf coverage and strong compatibility in tank mixes. Trusted by growers for its reliability and value across vegetables, cotton and other labeled crops.'
+          },
+          { name: 'Chilli H', 
+            image: 'assets/products/insecticide/chilli-h.jpg', 
+            description: 'Fipronil 2.92% EC contact and stomach action',
+            fullDescription: 'Chilli H (Fipronil 2.92% EC) is engineered for fast, decisive control of thrips, mites and other hard-to-manage pests in chilli and vegetable crops. Its advanced EC base ensures superior penetration and persistent residual activity, helping reduce re-infestation. With excellent rainfastness and leaf adherence, Chilli H delivers premium protection while supporting clean, market-ready produce.'
+          },
+          { name: 'Chloro Shield 20', 
+            image: 'assets/products/insecticide/chloro-shield-20.jpg', 
+            description: 'Chlorpyriphos 20% EC reliable broad-spectrum',
+            fullDescription: 'Chloro Shield 20 (Chlorpyriphos 20% EC) is a robust organophosphate insecticide offering dependable contact, stomach and fumigant action. Ideal for soil and foliar insect management, it effectively controls termites, borers and sucking pests across multiple crops. The optimized EC formulation ensures strong knockdown, lasting field performance and flexible application options for professional programs.'
+          },
+          { name: 'Cloro GR', 
+            image: 'assets/products/insecticide/cloro-gr.jpg', 
+            description: 'Chlorpyriphos 10% GR soil insecticide',
+            fullDescription: 'Cloro GR (Chlorpyriphos 10% GR) provides targeted, season-long protection from soil-dwelling insects including termites and root grubs. The granular formulation enables convenient basal application and uniform distribution in the root zone, safeguarding emerging seedlings and establishing crops. Designed for reliability and ease of use in nursery and field situations.'
+          },
+          { name: 'DR. Delta', 
+            image: 'assets/products/insecticide/dr-delta.jpg', 
+            description: 'Deltamethrin 2.8% EC fast knockdown pyrethroid',
+            fullDescription: 'DR. Delta (Deltamethrin 2.8% EC) is a premium pyrethroid delivering lightning-fast knockdown and excellent residual control of lepidopteran and sucking pests. Its advanced solvent system improves spread, coverage and rainfastness while remaining gentle on crops when used as directed. A go-to choice for quick, visible results in vegetables, cotton and other labeled crops.'
+          },
+          { name: 'Eclipse', 
+            image: 'assets/products/insecticide/eclipse.jpg', 
+            description: 'Ethion 40% + Cypermethrin 5% EC synergy mix',
+            fullDescription: 'Eclipse (Ethion 40% + Cypermethrin 5% EC) combines organophosphate and pyrethroid chemistries for broad-spectrum, dual-mode action. The formulation delivers rapid knockdown with strong residual effect, controlling both chewing and sucking pests over extended periods. Optimized for tank-mix compatibility and consistent performance across climates.'
+          },
+          { name: 'Extra Mida 70', 
+            image: 'assets/products/insecticide/extra-mida-70.jpg', 
+            description: 'Imidacloprid 70% WG high-load systemic',
+            fullDescription: 'Extra Mida 70 (Imidacloprid 70% WG) is a high-load neonicotinoid that provides powerful systemic control of aphids, whiteflies and jassids at low use rates. The premium WG granules disperse instantly in water, offering excellent spray stability, superior leaf coverage and long-lasting protection for professional, residue-conscious programs.'
+          },
+          { name: 'Extra Profex', 
+            image: 'assets/products/insecticide/extra-profex.jpg', 
+            description: 'Profenophos 50% EC contact and stomach poison',
+            fullDescription: 'Extra Profex (Profenophos 50% EC) is a trusted broad-spectrum insecticide providing strong contact and stomach action against bollworms, mites and other persistent pests. Its optimized EC technology ensures deep canopy reach, superior coverage and dependable field performance while fitting well into rotation strategies.'
+          },
+          { name: 'H Cyper 25', 
+            image: 'assets/products/insecticide/h-cyper-25.jpg', 
+            description: 'Cypermethrin 25% EC versatile pyrethroid',
+            fullDescription: 'H Cyper 25 (Cypermethrin 25% EC) offers rapid knockdown and residual control of a wide spectrum of chewing and sucking insects. The robust pyrethroid formulation delivers reliable performance under varied field conditions, making it a practical, economical choice for vegetables, pulses and fiber crops.'
           },
           { name: 'Hil Thene', 
             image: 'assets/products/HILTHENE.png', 
             description: 'Long-lasting protection',
             fullDescription: 'Hil Thene offers extended protection against various insect pests. Its innovative slow-release technology ensures consistent pest control over longer periods. The product\'s unique formulation provides excellent stability under various environmental conditions.'
+          },
+          { name: 'H Gor', 
+            image: 'assets/products/insecticide/h-gor.jpg', 
+            description: 'Dimethoate 30% EC systemic and contact',
+            fullDescription: 'H Gor (Dimethoate 30% EC) is a systemic and contact organophosphate effective against aphids, thrips and jassids. It moves within plant tissues to protect new growth while providing strong contact action on exposed pests. The formulation balances efficacy with crop safety for dependable, professional results.'
           }
       ]
     },
