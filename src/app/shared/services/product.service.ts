@@ -129,6 +129,56 @@ export class ProductService {
             description: 'Cypermethrin 25% EC versatile pyrethroid',
             fullDescription: 'H Cyper 25 (Cypermethrin 25% EC) offers rapid knockdown and residual control of a wide spectrum of chewing and sucking insects. The robust pyrethroid formulation delivers reliable performance under varied field conditions, making it a practical, economical choice for vegetables, pulses and fiber crops.'
           },
+          { name: 'Kavach Plus',
+            image: 'assets/products/insecticide/kavach-plus.jpg',
+            description: 'Premium multi-crop insect shield',
+            fullDescription: 'Kavach Plus is a premium, next-generation insect shield formulated for consistent performance across vegetables, cotton and other commercial crops. Its optimized chemistry ensures quick knockdown with dependable residual action, superior leaf adherence and strong rainfastness for season-long protection in professional programs.'
+          },
+          { name: 'Lanser Gold',
+            image: 'assets/products/insecticide/Lanser-gold.jpg',
+            description: 'Acephate 50% + Imidacloprid 1.8% SP dual-mode',
+            fullDescription: 'Lanser Gold (Acephate 50% + Imidacloprid 1.8% SP) delivers a powerful combination of contact and systemic action for fast control of sucking and chewing pests. The soluble powder technology disperses quickly, offers excellent tank-mix compatibility and supports resistance management with two proven modes of action.'
+          },
+          { name: 'Mite',
+            image: 'assets/products/insecticide/mite.jpg',
+            description: 'Propargite 57% EC dedicated acaricide',
+            fullDescription: 'Mite (Propargite 57% EC) is a specialist acaricide engineered to knock down and control red spider mites and other damaging mite species. Its contact action provides quick results while the advanced EC system improves spread and coverage over dense canopies for dependable field performance.'
+          },
+          { name: 'Oscar',
+            image: 'assets/products/insecticide/oscar.jpg',
+            description: 'Reliable broad-spectrum insecticide',
+            fullDescription: 'Oscar is a reliable, grower-friendly insecticide designed for consistent control of key sucking and chewing pests. The formulation focuses on superior coverage, quick uptake and strong adherence to plant surfaces, supporting clean foliage and market-ready produce with minimal sprays.'
+          },
+          { name: 'Pilot',
+            image: 'assets/products/insecticide/pilot.jpg',
+            description: 'Pyriproxyfen 8% + Dinotefuran 5% + Diafenthiuron 18% SC',
+            fullDescription: 'Pilot combines Pyriproxyfen 8%, Dinotefuran 5% and Diafenthiuron 18% SC to deliver a modern, three-way assault on resistant pest populations. The unique blend targets multiple life stages, providing rapid knockdown, strong systemic movement and lasting residual control with excellent crop safety.'
+          },
+          { name: 'Pro 5G',
+            image: 'assets/products/insecticide/pro-5g.jpg',
+            description: 'Emamectin benzoate 1.5% + Fipronil 3.5% SC synergy',
+            fullDescription: 'Pro 5G unites Emamectin benzoate 1.5% with Fipronil 3.5% SC for superior, synergistic control of tough caterpillars and sucking pests. The premium SC formulation mixes easily, offers excellent spray stability and ensures uniform leaf deposition for dependable, long-lasting protection.'
+          },
+          { name: 'Thio H 75',
+            image: 'assets/products/insecticide/thio-h-75.jpg',
+            description: 'Thiamethoxam 75% SG systemic shield',
+            fullDescription: 'Thio H 75 (Thiamethoxam 75% SG) is a high-strength neonicotinoid that moves quickly within plant tissues to protect new growth from aphids, jassids, whiteflies and more. The water-soluble granule disperses instantly for hassle-free mixing, excellent coverage and season-ready performance.'
+          },
+          { name: 'Topaz',
+            image: 'assets/products/insecticide/topaz.jpg',
+            description: 'Buprofezin 15% + Acephate 35% WP combination',
+            fullDescription: 'Topaz (Buprofezin 15% + Acephate 35% WP) provides complementary action against planthoppers, whiteflies and a range of sucking pests. The wettable powder ensures strong suspension, uniform coverage and dependable efficacy, supporting resistance management and crop quality targets.'
+          },
+          { name: 'Turbo',
+            image: 'assets/products/insecticide/turbo.jpg',
+            description: 'Novaluron 5.25% + Indoxacarb 4.5% SC dual-action',
+            fullDescription: 'Turbo (Novaluron 5.25% + Indoxacarb 4.5% SC) pairs an insect growth regulator with a modern oxadiazine for powerful control of lepidopteran larvae. The advanced SC base delivers excellent spreading and leaf coverage, providing quick suppression and extended protection of valuable foliage.'
+          },
+          { name: 'Yoddha',
+            image: 'assets/products/insecticide/yoddha.jpg',
+            description: 'Flufenzin 20% SC insecticide/acaricide',
+            fullDescription: 'Yoddha (Flufenzin 20% SC) is a specialized insecticide/acaricide designed to control stubborn mite and sucking pest populations. The stable suspension concentrate ensures even distribution and strong persistence, helping maintain clean canopies and healthier, high-yielding crops.'
+          },
           { name: 'Hil Thene', 
             image: 'assets/products/HILTHENE.png', 
             description: 'Long-lasting protection',
