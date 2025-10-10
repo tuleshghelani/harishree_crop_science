@@ -1,6 +1,6 @@
-import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 import { Meta, MetaDefinition, Title } from '@angular/platform-browser';
 import AOS from 'aos';
 import { TransferState, makeStateKey } from '@angular/platform-browser';
@@ -13,7 +13,7 @@ const STRUCTURED_DATA_KEY = makeStateKey<string>('HOME_STRUCTURED_DATA');
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -26,7 +26,8 @@ export class HomeComponent implements OnInit, OnDestroy {
     private title: Title,
     private transferState: TransferState,
     private router: Router,
-    @Inject(PLATFORM_ID) private platformId: Object
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private cdr: ChangeDetectorRef
   ) {}
 
   products = [
@@ -73,14 +74,49 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
   ];
 
+  // Slider state
+  slides = [
+    {
+      src: 'assets/home/slider-image-01.jpg',
+      alt: 'Sustainable Farming',
+      h1: 'Sustainable Farming Solutions',
+      h2: '',
+      p: 'Empowering farmers with eco-friendly agricultural products'
+    },
+    {
+      src: 'assets/home/slider-image-02.jpg',
+      alt: 'Premium Quality Products',
+      h1: '',
+      h2: 'Premium Quality Products',
+      p: 'Advanced formulations for better crop yield'
+    },
+    {
+      src: 'assets/home/slider-image-03.jpg',
+      alt: 'Research-Driven Innovation',
+      h1: '',
+      h2: 'Research-Driven Innovation',
+      p: 'Cutting-edge solutions for modern agriculture'
+    }
+  ];
+
+  currentSlideIndex = 0;
+  private autoplayIntervalMs = 5000;
+  private autoplayTimer: any = null;
+  private prefersReducedMotion = false;
+  private touchStartX: number | null = null;
+  private touchDeltaX = 0;
+
   ngOnInit() {
     this.setMetaData();
     this.setStructuredData();
+    this.setupReducedMotion();
+    this.startAutoplay();
   }
 
   ngOnDestroy() {
     this.transferState.remove(META_KEY);
     this.transferState.remove(STRUCTURED_DATA_KEY);
+    this.clearAutoplay();
   }
 
   private setMetaData() {
@@ -287,4 +323,101 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   trackByProduct = (_: number, item: { name: string }) => item.name;
   trackByTestimonial = (_: number, item: { name: string }) => item.name;
+  trackBySlide = (index: number) => index;
+
+  // Slider controls
+  nextSlide() {
+    this.currentSlideIndex = (this.currentSlideIndex + 1) % this.slides.length;
+    this.cdr.markForCheck();
+  }
+
+  prevSlide() {
+    this.currentSlideIndex = (this.currentSlideIndex - 1 + this.slides.length) % this.slides.length;
+    this.cdr.markForCheck();
+  }
+
+  goToSlide(index: number) {
+    if (index < 0 || index >= this.slides.length) return;
+    this.currentSlideIndex = index;
+    this.cdr.markForCheck();
+  }
+
+  onKeydown(event: KeyboardEvent) {
+    if (event.key === 'ArrowRight') {
+      this.nextSlide();
+    } else if (event.key === 'ArrowLeft') {
+      this.prevSlide();
+    }
+  }
+
+  // Autoplay with reduced motion consideration
+  private setupReducedMotion() {
+    if (!isPlatformBrowser(this.platformId)) return;
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    this.prefersReducedMotion = mediaQuery.matches;
+    const listener = () => {
+      this.prefersReducedMotion = mediaQuery.matches;
+      if (this.prefersReducedMotion) {
+        this.clearAutoplay();
+      } else {
+        this.startAutoplay();
+      }
+    };
+    try {
+      mediaQuery.addEventListener('change', listener);
+    } catch {
+      // Safari fallback
+      // @ts-ignore
+      mediaQuery.addListener(listener);
+    }
+  }
+
+  private startAutoplay() {
+    if (!isPlatformBrowser(this.platformId) || this.prefersReducedMotion) return;
+    this.clearAutoplay();
+    this.autoplayTimer = window.setInterval(() => {
+      this.nextSlide();
+    }, this.autoplayIntervalMs);
+  }
+
+  private clearAutoplay() {
+    if (this.autoplayTimer) {
+      clearInterval(this.autoplayTimer);
+      this.autoplayTimer = null;
+    }
+  }
+
+  pauseAutoplay() {
+    this.clearAutoplay();
+  }
+
+  resumeAutoplay() {
+    this.startAutoplay();
+  }
+
+  // Touch swipe support
+  onTouchStart(event: TouchEvent) {
+    if (!event.touches || event.touches.length !== 1) return;
+    this.touchStartX = event.touches[0].clientX;
+    this.touchDeltaX = 0;
+    this.pauseAutoplay();
+  }
+
+  onTouchMove(event: TouchEvent) {
+    if (this.touchStartX == null) return;
+    this.touchDeltaX = event.touches[0].clientX - this.touchStartX;
+  }
+
+  onTouchEnd() {
+    if (this.touchStartX == null) return;
+    const threshold = 50;
+    if (this.touchDeltaX > threshold) {
+      this.prevSlide();
+    } else if (this.touchDeltaX < -threshold) {
+      this.nextSlide();
+    }
+    this.touchStartX = null;
+    this.touchDeltaX = 0;
+    this.resumeAutoplay();
+  }
 } 
