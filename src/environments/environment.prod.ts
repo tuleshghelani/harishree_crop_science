@@ -3,9 +3,9 @@ export const environment = {
   baseUrl: 'https://harishreecropscience.com', // production domain
   apiUrl: 'https://harishreecropscience.com/api', // Production API URL
   metaDefaults: {
-    title: 'Harishree Crop Science | Premium Agricultural Solutions Provider',
-    description: 'Leading manufacturer and supplier of premium agricultural solutions including organic pesticides, bio-fertilizers, and eco-friendly crop protection products. Trusted by farmers across India for sustainable farming solutions.',
-    keywords: 'agricultural solutions, organic pesticides, bio fertilizers, crop protection products, agricultural chemicals, sustainable farming, organic farming products, agricultural insecticides, agricultural fungicides, agricultural herbicides, plant growth regulators, farm solutions india',
+    title: 'Harishree Crop Science | Agriculture – Fertilizers, Pesticides & Crop Protection India',
+    description: 'Leading supplier of fertilizers, pesticides and crop protection for agriculture. Organic farming solutions, bio fertilizers and sustainable agriculture. Trusted across India.',
+    keywords: 'agriculture, farming, fertilizer, pesticides, organic farming, crop protection, sustainable agriculture, bio fertilizers, organic pesticides, crop yield, soil health, plant protection, agricultural products India, sustainable farming, weed control, agricultural solutions, eco-friendly farming',
     author: 'Harishree Crop Science'
   },
   contactPhone: '+919898197196'

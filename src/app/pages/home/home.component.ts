@@ -2,13 +2,14 @@ import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID, ChangeDetectionStrat
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { Meta, MetaDefinition, Title } from '@angular/platform-browser';
-import AOS from 'aos';
 import { TransferState, makeStateKey } from '@angular/platform-browser';
 import { environment } from '../../../environments/environment';
 import { isPlatformBrowser } from '@angular/common';
 
 const META_KEY = makeStateKey<boolean>('HOME_META');
 const STRUCTURED_DATA_KEY = makeStateKey<string>('HOME_STRUCTURED_DATA');
+
+/** SEO: Primary keywords – agriculture, farming, fertilizer, pesticides, organic farming, crop protection, sustainable agriculture. Secondary – bio fertilizers, organic pesticides, crop yield, soil health, plant protection, agricultural products India, sustainable farming, weed control, agricultural solutions, eco-friendly farming. */
 
 @Component({
   selector: 'app-home',
@@ -34,22 +35,22 @@ export class HomeComponent implements OnInit, OnDestroy {
     {
       name: 'Bulldozer',
       image: 'assets/products/Buldozer.png',
-      description: 'Bulldozer provides long duration control by which frequent application is not required'
+      description: 'Long-lasting crop protection with fewer applications. Trusted by farmers for effective pest and weed control in sustainable agriculture.'
     },
     {
       name: 'Chemistry',
       image: 'assets/products/CHEMISTRY.jpg',
-      description: 'Chemistry in agriculture enhances crop yield through fertilizers and pesticides.'
+      description: 'Fertilizers and pesticides that boost crop yield and plant health. Formulations designed for modern farming and soil health.'
     },
     {
       name: 'Green Out',
       image: 'assets/products/GREEN OUT.png',
-      description: 'Green Out offers advanced agricultural medicines designed to protect crops from pests and diseases, ensuring higher yields.'
+      description: 'Organic pesticides and plant protection for healthier crops. Eco-friendly solutions that support sustainable farming and higher yields.'
     },
     {
       name: 'Kavach',
       image: 'assets/products/kavach.png',
-      description: 'Kavach is a highly effective fungicide used in agriculture to protect crops from fungal diseases.'
+      description: 'Effective fungicide for crop protection against fungal diseases. Helps improve crop yield and plant protection across key crops.'
     }
   ];
 
@@ -58,44 +59,44 @@ export class HomeComponent implements OnInit, OnDestroy {
       name: 'Sudhir Dattartay Sawant',
       location: 'Solapur, Maharashtra',
       rating: 5,
-      review: 'Excellent quality products that have significantly improved our crop yield. The bio-fertilizers are highly effective and the customer support is outstanding.'
+      review: 'Harishree Crop Science fertilizers and bio-fertilizers have significantly improved our crop yield. Quality agricultural products and outstanding support.'
     },
     {
       name: 'Makwana Mansing',
       location: 'Kodinar, Gujarat',
       rating: 5,
-      review: 'Very satisfied with their organic pesticides. The products are effective and eco-friendly. Great service and timely delivery.'
+      review: 'Very satisfied with their organic pesticides and crop protection range. Effective, eco-friendly farming solutions and timely delivery.'
     },
     {
       name: 'Akram',
       location: 'Kheri, Uttar Pradesh',
       rating: 5,
-      review: 'Best agricultural solutions provider. Their products have helped us achieve better results while maintaining soil health. Highly recommended!'
+      review: 'Best agricultural solutions for farming in India. Their pesticides and fertilizers helped us get better results while maintaining soil health. Highly recommended.'
     }
   ];
 
-  // Slider state
+  // Slider state – first slide carries the single H1 (primary keywords)
   slides = [
     {
       src: 'assets/home/slider-image-01.jpg',
-      alt: 'Sustainable Farming',
-      h1: 'Sustainable Farming Solutions',
+      alt: 'Sustainable agriculture and crop protection – fertilizers and pesticides for farming',
+      h1: 'Fertilizers, Pesticides & Crop Protection for Modern Agriculture',
       h2: '',
-      p: 'Empowering farmers with eco-friendly agricultural products'
+      p: 'Organic farming solutions, bio fertilizers and sustainable agriculture. Trusted by farmers across India.'
     },
     {
       src: 'assets/home/slider-image-02.jpg',
-      alt: 'Premium Quality Products',
+      alt: 'Premium fertilizers and pesticides for higher crop yield',
       h1: '',
-      h2: 'Premium Quality Products',
-      p: 'Advanced formulations for better crop yield'
+      h2: 'Premium Fertilizers & Pesticides for Better Crop Yield',
+      p: 'Plant protection and soil health solutions for sustainable farming.'
     },
     {
       src: 'assets/home/slider-image-03.jpg',
-      alt: 'Research-Driven Innovation',
+      alt: 'Agricultural research and crop protection innovation',
       h1: '',
-      h2: 'Research-Driven Innovation',
-      p: 'Cutting-edge solutions for modern agriculture'
+      h2: 'Research-Driven Crop Protection & Agricultural Solutions',
+      p: 'Eco-friendly farming products for crop yield and weed control.'
     }
   ];
 
@@ -122,194 +123,76 @@ export class HomeComponent implements OnInit, OnDestroy {
   private setMetaData() {
     if (this.transferState.hasKey(META_KEY)) return;
 
-    this.title.setTitle('Harishree Crop Science | Premium Agricultural Solutions Provider');
-    
-    const metaTags = [
-      { name: 'description', content: 'Leading manufacturer and supplier of premium agricultural solutions including organic pesticides, bio-fertilizers, and eco-friendly crop protection products. Trusted by farmers across India for sustainable farming solutions.' },
-      { name: 'keywords', content: 'agricultural solutions, organic pesticides, bio fertilizers, crop protection products, agricultural chemicals, sustainable farming, organic farming products' },
-      { property: 'og:title', content: 'Premium Agricultural Solutions | Harishree Crop Science' },
-      { property: 'og:description', content: 'Discover our comprehensive range of organic pesticides, bio-fertilizers, and eco-friendly crop protection solutions for sustainable agriculture.' },
+    const pageTitle = 'Harishree Crop Science | Agriculture – Fertilizers, Pesticides & Crop Protection India';
+    const pageDescription = 'Leading supplier of fertilizers, pesticides and crop protection for agriculture. Organic farming solutions, bio fertilizers and sustainable agriculture. Trusted across India.';
+    const pageKeywords = 'agriculture, farming, fertilizer, pesticides, organic farming, crop protection, sustainable agriculture, bio fertilizers, organic pesticides, crop yield, soil health, plant protection, agricultural products India, sustainable farming, weed control, agricultural solutions, eco-friendly farming';
+
+    this.title.setTitle(pageTitle);
+
+    const metaTags: MetaDefinition[] = [
+      { name: 'description', content: pageDescription },
+      { name: 'keywords', content: pageKeywords },
+      { property: 'og:title', content: pageTitle },
+      { property: 'og:description', content: pageDescription },
       { property: 'og:type', content: 'website' },
       { property: 'og:image', content: `${this.baseUrl}/assets/logo/HARISHREE.png` },
-      // { name: 'canonical', content: `${this.baseUrl}` },
       { property: 'og:url', content: `${this.baseUrl}` },
-      { property: 'og:type', content: 'website' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { property: 'og:site_name', content: 'Harishree Crop Science' },
       { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:title', content: pageTitle },
+      { name: 'twitter:description', content: pageDescription },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'robots', content: 'index, follow' },
       { name: 'author', content: environment.metaDefaults.author }
     ];
 
-    metaTags.forEach(tag => this.meta.updateTag(tag as MetaDefinition));
+    metaTags.forEach(tag => this.meta.updateTag(tag));
     this.transferState.set(META_KEY, true);
   }
 
   private setStructuredData() {
     if (this.transferState.hasKey(STRUCTURED_DATA_KEY)) return;
 
-    const structuredData = {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Harishree Crop Science",
-      "description": "Leading manufacturer and supplier of premium agricultural solutions including organic pesticides, bio-fertilizers, and eco-friendly crop protection products.",
-      "url": this.baseUrl,
-      "logo": `${this.baseUrl}/assets/logo/HARISHREE.png`,
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+919898197196",
-        "contactType": "customer service"
+    const organizationId = `${this.baseUrl}/#organization`;
+    const organization = {
+      '@type': 'Organization',
+      '@id': organizationId,
+      name: 'Harishree Crop Science',
+      description: 'Leading supplier of fertilizers, pesticides and crop protection for agriculture in India. Organic farming solutions, bio fertilizers and sustainable agriculture.',
+      url: this.baseUrl,
+      logo: `${this.baseUrl}/assets/logo/HARISHREE.png`,
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+919898197196',
+        contactType: 'customer service',
+        areaServed: 'IN'
       },
-      "makesOffer": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Product",
-            "name": "Bulldozer",
-            "image": `${this.baseUrl}/assets/products/Buldozer.png`,
-            "description": "Bulldozer provides long duration control by which frequent application is not required",
-            "offers": {
-              "@type": "Offer",
-              "availability": "https://schema.org/InStock",
-              "priceSpecification": {
-                "@type": "PriceSpecification",
-                "minPrice": "300",
-                "maxPrice": "1000",
-                "priceCurrency": "INR"
-              },
-            },
-            "review": {
-              "@type": "Review",
-              "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": "5",
-                "bestRating": "5"
-              },
-              "author": {
-                "@type": "Person",
-                "name": "Agricultural Product Review"
-              }
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "5",
-              "reviewCount": "1000"
-            }
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Product",
-            "name": "Chemistry",
-            "image": `${this.baseUrl}/assets/products/CHEMISTRY.jpg`,
-            "description": "Chemistry in agriculture enhances crop yield through fertilizers and pesticides, while in medicine, it enables drug formulation for disease treatment.",
-            "offers": {
-              "@type": "Offer",
-              "availability": "https://schema.org/InStock",
-              "priceSpecification": {
-                "@type": "PriceSpecification",
-                "minPrice": "300",
-                "maxPrice": "1000",
-                "priceCurrency": "INR"
-              },
-            },
-            "review": {
-              "@type": "Review",
-              "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": "5",
-                "bestRating": "5"
-              },
-              "author": {
-                "@type": "Person",
-                "name": "Agricultural Product Review"
-              }
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "5",
-              "reviewCount": "1000"
-            }
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Product",
-            "name": "Green Out",
-            "image": `${this.baseUrl}/assets/products/GREEN OUT.png`,
-            "description": "Green Out offers advanced agricultural medicines designed to protect crops from pests and diseases, ensuring higher yields. Our eco-friendly solutions promote sustainable farming with effective pest control.",
-            "offers": {
-              "@type": "Offer",
-                "availability": "https://schema.org/InStock",
-                "priceSpecification": {
-                  "@type": "PriceSpecification",
-                  "minPrice": "300",
-                  "maxPrice": "1000",
-                  "priceCurrency": "INR"
-                },
-            },
-            "review": {
-              "@type": "Review",
-              "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": "5",
-                "bestRating": "5"
-              },
-              "author": {
-                "@type": "Person",
-                "name": "Agricultural Product Review"
-              }
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "5",
-              "reviewCount": "1000"
-            }
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Product",
-            "name": "Kavach",
-            "image": `${this.baseUrl}/assets/products/kavach.png`,
-            "description": "Kavach is a highly effective fungicide used in agriculture to protect crops from fungal diseases. It ensures healthier yields by preventing infections and enhancing plant immunity.",
-            "offers": {
-              "@type": "Offer",
-              "availability": "https://schema.org/InStock",
-              "priceSpecification": {
-                "@type": "PriceSpecification",
-                "minPrice": "300",
-                "maxPrice": "1000",
-                "priceCurrency": "INR"
-              },
-            },
-            "review": {
-              "@type": "Review",
-              "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": "5",
-                "bestRating": "5"
-              },
-              "author": {
-                "@type": "Person",
-                "name": "Agricultural Product Review"
-              }
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "5",
-              "reviewCount": "1000"
-            }
-          }
+      makesOffer: this.products.map((prod, idx) => ({
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Product',
+          name: prod.name,
+          image: prod.image.startsWith('http') ? prod.image : `${this.baseUrl}/${prod.image}`,
+          description: prod.description
         }
-      ]
+      }))
     };
+
+    const webSite = {
+      '@type': 'WebSite',
+      '@id': `${this.baseUrl}/#website`,
+      url: this.baseUrl,
+      name: 'Harishree Crop Science',
+      description: 'Agriculture – Fertilizers, Pesticides & Crop Protection India. Organic farming, crop protection and sustainable agriculture solutions.',
+      publisher: { '@id': organizationId }
+    };
+
+    const graph = [organization, webSite];
+    const structuredData = { '@context': 'https://schema.org', '@graph': graph };
 
     this.transferState.set(STRUCTURED_DATA_KEY, JSON.stringify(structuredData));
 
-    if (isPlatformBrowser(this.platformId)) {
+    if (isPlatformBrowser(this.platformId) && typeof document !== 'undefined') {
       const script = document.createElement('script');
       script.type = 'application/ld+json';
       script.text = JSON.stringify(structuredData);
