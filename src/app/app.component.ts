@@ -16,12 +16,10 @@ export class AppComponent {
   title = 'harishree_crop_science';
   constructor(private router: Router, @Inject(PLATFORM_ID) private platformId: Object) {
     if (isPlatformBrowser(this.platformId)) {
-      // Initialize AOS once and refresh on navigation to avoid multiple listeners
-      AOS.init({ duration: 800, easing: 'ease-out', once: true });
+      AOS.init({ duration: 600, easing: 'ease-out', once: true, offset: 60 });
       this.router.events.subscribe((event) => {
         if (event instanceof NavigationEnd) {
-          // Using setTimeout to let view render before AOS refresh
-          setTimeout(() => AOS.refreshHard(), 0);
+          setTimeout(() => AOS.refresh(), 50);
         }
       });
     }

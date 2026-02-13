@@ -1,36 +1,38 @@
 <header class="main-header">
   <nav class="navbar navbar-expand-lg">
     <div class="container">
-      <a class="navbar-brand" href="/">
+      <a class="navbar-brand" routerLink="/" aria-label="Harishree Crop Science Home">
         <img src="assets/logo/HARISHREE.png" alt="Harishree Crop Science" class="logo">
       </a>
-      
-      <button class="navbar-toggler" type="button" (click)="toggleMenu()">
+
+      <button class="navbar-toggler" type="button" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen" aria-label="Toggle menu" touch-action="manipulation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" [class.show]="isMenuOpen">
+      <div class="nav-overlay" [class.show]="isMenuOpen" (click)="closeMenu()" role="presentation" aria-hidden="true"></div>
+
+      <div class="collapse navbar-collapse" [class.show]="isMenuOpen" id="navbarMenu">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+            <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/products" routerLinkActive="active">Products</a>
+            <a class="nav-link" routerLink="/products" routerLinkActive="active" (click)="closeMenu()">Products</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/research" routerLinkActive="active">Research</a>
+            <a class="nav-link" routerLink="/research" routerLinkActive="active" (click)="closeMenu()">Research</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/quality-assurance" routerLinkActive="active">Quality Assurance</a>
+            <a class="nav-link" routerLink="/quality-assurance" routerLinkActive="active" (click)="closeMenu()">Quality Assurance</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/catalogue" routerLinkActive="active">Catalogue</a>
+            <a class="nav-link" routerLink="/catalogue" routerLinkActive="active" (click)="closeMenu()">Catalogue</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/about-us" routerLinkActive="active">About</a>
+            <a class="nav-link" routerLink="/about-us" routerLinkActive="active" (click)="closeMenu()">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/contact-us" routerLinkActive="active">Contact</a>
+            <a class="nav-link" routerLink="/contact-us" routerLinkActive="active" (click)="closeMenu()">Contact</a>
           </li>
         </ul>
       </div>

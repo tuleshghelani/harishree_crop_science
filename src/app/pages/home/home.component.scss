@@ -4,7 +4,8 @@
 .btn-primary {
   background-color: var(--primary);
   border-color: var(--primary);
-  
+  touch-action: manipulation;
+
   &:hover, &:focus {
     background-color: var(--secondary);
     border-color: var(--secondary);
@@ -146,6 +147,78 @@
   max-width: 640px;
   margin-left: auto;
   margin-right: auto;
+}
+
+// Crop protection categories (Insecticide, Fungicide, Herbicide, PGR)
+.crop-categories {
+  padding: clamp(3rem, 6vw, 5rem) 0;
+  background: #fff;
+
+  .category-card {
+    display: block;
+    padding: 1.75rem 1.5rem;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid rgba(var(--primary-rgb), 0.12);
+    box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.06);
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+    touch-action: manipulation;
+
+    &:hover, &:focus {
+      border-color: var(--primary);
+      box-shadow: 0 8px 20px rgba(var(--primary-rgb), 0.12);
+      transform: translateY(-4px);
+    }
+
+    .category-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--primary-lightest);
+      color: var(--primary);
+      margin-bottom: 1rem;
+
+      i {
+        font-size: 1.35rem;
+      }
+    }
+
+    h3 {
+      color: var(--primary);
+      font-size: var(--text-xl);
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: var(--text-sm);
+      line-height: 1.55;
+      color: var(--gray-700);
+      margin-bottom: 1rem;
+    }
+
+    .category-link {
+      font-size: var(--text-sm);
+      font-weight: var(--font-semibold);
+      color: var(--secondary);
+
+      i {
+        margin-left: 0.35rem;
+        font-size: 0.75rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .crop-categories .category-card {
+    padding: 1.25rem 1rem;
+  }
 }
 
 // What We Do Section
@@ -553,24 +626,7 @@
   }
 }
 
-// Add to your existing styles
-[data-aos] {
-  opacity: 0;
-  transform: translateZ(0);
-  backface-visibility: hidden;
-  will-change: transform, opacity;
-  
-  &.aos-animate {
-    opacity: 1;
-  }
-}
-
-// Optimize performance for mobile
-@media (max-width: 768px) {
-  [data-aos-delay] {
-    transition-delay: 0s !important;
-  }
-}
+// No AOS on home to avoid scroll jank; sections use content-visibility in styles.scss
 
 // Testimonials Section
 .testimonials {

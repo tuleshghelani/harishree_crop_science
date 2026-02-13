@@ -11,6 +11,7 @@ import { ProductDialogComponent } from '../../shared/components/product-dialog/p
 import { DialogService } from '../../shared/services/dialog.service';
 import { ActivatedRoute } from '@angular/router';
 import { RouterModule } from '@angular/router';
+import { take } from 'rxjs/operators';
 
 const META_KEY = makeStateKey<boolean>('products-meta-data');
 const STRUCTURED_DATA_KEY = makeStateKey<string>('products-structured-data');
@@ -61,8 +62,12 @@ export class ProductsComponent implements OnInit, OnDestroy {
   }
 
   private loadCategories() {
+    const catFromUrl = this.route.snapshot.queryParams['category'];
     this.productService.getAllCategories().subscribe(categories => {
       this.categories = categories;
+      if (catFromUrl && categories.some(c => c.name === catFromUrl)) {
+        this.activeCategory = catFromUrl;
+      }
     });
   }
 

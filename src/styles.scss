@@ -18,10 +18,10 @@
   --accent-lighter: #fee172;
   --accent-lightest: #fff9e6;
 
-  // Font Family Variables
-  --font-primary: 'Montserrat', sans-serif;
-  --font-secondary: 'Lora', serif;
-  --font-accent: 'Nunito', sans-serif;
+  // Font Family Variables – premium, professional, agricultural feel
+  --font-primary: 'DM Sans', sans-serif;
+  --font-secondary: 'Libre Baskerville', serif;
+  --font-accent: 'Manrope', sans-serif;
 
   // Font Weights
   --font-regular: 400;
@@ -96,13 +96,14 @@ body {
   font-size: var(--text-base);
   line-height: 1.5;
   color: var(--gray-700);
+  touch-action: manipulation;
 }
 
 // Performance: only render content once visible
 // Applies to large sections and containers to reduce layout/paint during scroll
-.catalogue-page, .products-page, .premium-products, .what-we-do, .key-features, .testimonials {
+.catalogue-page, .products-page, .premium-products, .what-we-do, .key-features, .testimonials, .crop-categories {
   content-visibility: auto;
-  contain-intrinsic-size: 1px 1000px; // estimated height to prevent jank
+  contain-intrinsic-size: 1px 800px;
 }
 
 img {
