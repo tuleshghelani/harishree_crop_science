@@ -60,25 +60,25 @@ $accent-light: var(--accent-light);
 $accent-lighter: var(--accent-lighter);
 $accent-lightest: var(--accent-lightest);
 
-// Additional utility classes
-.bg-primary { background-color: $primary; }
-.bg-primary-light { background-color: $primary-light; }
-.bg-primary-lighter { background-color: $primary-lighter; }
-.bg-primary-lightest { background-color: $primary-lightest; }
+// Additional utility classes - Using !important to override Bootstrap defaults
+.bg-primary { background-color: $primary !important; }
+.bg-primary-light { background-color: $primary-light !important; }
+.bg-primary-lighter { background-color: $primary-lighter !important; }
+.bg-primary-lightest { background-color: $primary-lightest !important; }
 
-.bg-secondary { background-color: $secondary; }
-.bg-secondary-light { background-color: $secondary-light; }
-.bg-secondary-lighter { background-color: $secondary-lighter; }
-.bg-secondary-lightest { background-color: $secondary-lightest; }
+.bg-secondary { background-color: $secondary !important; }
+.bg-secondary-light { background-color: $secondary-light !important; }
+.bg-secondary-lighter { background-color: $secondary-lighter !important; }
+.bg-secondary-lightest { background-color: $secondary-lightest !important; }
 
-.bg-accent { background-color: $accent; }
-.bg-accent-light { background-color: $accent-light; }
-.bg-accent-lighter { background-color: $accent-lighter; }
-.bg-accent-lightest { background-color: $accent-lightest; }
+.bg-accent { background-color: $accent !important; }
+.bg-accent-light { background-color: $accent-light !important; }
+.bg-accent-lighter { background-color: $accent-lighter !important; }
+.bg-accent-lightest { background-color: $accent-lightest !important; }
 
-.text-primary { color: $primary; }
-.text-secondary { color: $secondary; }
-.text-accent { color: $accent; }
+.text-primary { color: $primary !important; }
+.text-secondary { color: $secondary !important; }
+.text-accent { color: $accent !important; }
 
 // Typography Utility Classes
 .font-primary { font-family: var(--font-primary); }
@@ -101,7 +101,7 @@ body {
 
 // Performance: only render content once visible
 // Applies to large sections and containers to reduce layout/paint during scroll
-.catalogue-page, .products-page, .premium-products, .what-we-do, .key-features, .testimonials, .crop-categories {
+.catalogue-page, .products-page, .premium-products, .what-we-do, .key-features, .testimonials, .crop-categories, .about-page {
   content-visibility: auto;
   contain-intrinsic-size: 1px 800px;
 }
