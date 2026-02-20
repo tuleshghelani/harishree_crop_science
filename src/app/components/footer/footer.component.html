@@ -1,100 +1,116 @@
 <footer class="main-footer">
   <div class="container">
-    <div class="row">
+    <div class="row g-4">
       <!-- Company Info -->
-      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-        <img src="assets/logo/HARISHREE.png" alt="Harishree Crop Science" class="footer-logo mb-3">
-        <p class="company-description">
-          Leading manufacturer of agricultural products committed to sustainable farming solutions and environmental stewardship.
-        </p>
-        <div class="col-lg-12" data-aos="fade-up" data-aos-delay="400">
-          <div class="info-card">
-            <div class="icon">
-              <i class="fas fa-share-alt"></i>
-            </div>
-            <h3>Connect With Us</h3>
-            <div class="social-links">
-              <ng-container *ngFor="let social of socialLinks">
-                <a [href]="social.url" target="_blank" rel="noopener" [attr.aria-label]="social.label">
-                  <i [class]="social.icon"></i>
-                </a>
-              </ng-container>
-            </div>
+      <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+        <div class="footer-brand">
+          <img src="assets/logo/HARISHREE.png" alt="Harishree Crop Science Logo" class="footer-logo mb-3" width="150" height="85">
+          <p class="company-description">
+            Leading manufacturer of agricultural products committed to sustainable farming solutions and environmental stewardship. Empowering farmers with quality inputs for a better harvest.
+          </p>
+        </div>
+        
+        <div class="social-connect mt-4">
+          <h6 class="text-uppercase mb-3">Follow Us</h6>
+          <div class="social-links">
+            <ng-container *ngFor="let social of socialLinks">
+              <a [href]="social.url" target="_blank" rel="noopener noreferrer" [attr.aria-label]="social.label" class="social-btn">
+                <i [class]="social.icon"></i>
+              </a>
+            </ng-container>
           </div>
         </div>
       </div>
 
       <!-- Quick Links -->
-      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-        <h5>Quick Links</h5>
-        <ul class="footer-links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/products">Products</a></li>
-          <li><a href="/research">Research</a></li>
-          <li><a href="/quality-assurance">Quality Assurance</a></li>
-          <li><a href="/catalogue">Catalogue</a></li>
-        </ul>
+      <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+        <h5 class="footer-heading">Quick Links</h5>
+        <nav aria-label="Footer Navigation">
+          <ul class="footer-links">
+            <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+            <li><a routerLink="/about" routerLinkActive="active">About Us</a></li>
+            <li><a routerLink="/contact" routerLinkActive="active">Contact Us</a></li>
+            <li><a routerLink="/research" routerLinkActive="active">R&amp;D</a></li>
+            <li><a routerLink="/quality-assurance" routerLinkActive="active">Quality</a></li>
+            <li><a routerLink="/catalogue" routerLinkActive="active">Catalogue</a></li>
+          </ul>
+        </nav>
       </div>
 
       <!-- Products -->
       <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-        <h5>Featured Products</h5>
-        <ul class="footer-links">
-          <li *ngFor="let product of featuredProducts">
-            <a [routerLink]="['/products/', product.name]" >
-              {{ product.name }}
-            </a>
-          </li>
-        </ul>
+        <h5 class="footer-heading">Our Products</h5>
+        <nav aria-label="Product Navigation">
+          <ul class="footer-links">
+            <li><a routerLink="/products" routerLinkActive="active">All Products</a></li>
+            <li *ngFor="let product of featuredProducts">
+              <a [routerLink]="['/products/', product.name]" routerLinkActive="active">
+                {{ product.name }}
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
 
       <!-- Contact Info -->
       <div class="col-lg-3 col-md-6">
-        <h5>Our Locations</h5>
-        <ul class="contact-info">
-          <li>
-            <div class="address-block">
-              <h6><i class="fas fa-industry"></i> Manufacturing Unit</h6>
+        <h5 class="footer-heading">Get in Touch</h5>
+        <address class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt icon"></i>
+            <div class="details">
+              <h6>Corporate Office</h6>
               <p>
-                Plot No.57, Survey No.751<br>
-                Palki 2 Harsiddhi Park-1<br>
-                Near Jawahar Navoday Vidhyalay<br>
-                Jamnagar Road, Targhari<br>
-                Gujarat-360110
+                G-11, Saikruti Complex,<br>
+                Gotri Road, Vadodara,<br>
+                Gujarat-390021, India
               </p>
             </div>
-          </li>
-          <li>
-            <div class="address-block">
-              <h6><i class="fas fa-building"></i> Corporate Office</h6>
+          </div>
+          
+          <div class="contact-item">
+            <i class="fas fa-industry icon"></i>
+            <div class="details">
+              <h6>Manufacturing Unit</h6>
               <p>
-                Survey No.753, Plot No. 16 and 18<br>
-                G-11, Ground Floor, Saikruti Complex<br>
-                Harinagar Char Rasta, Gotri Road<br>
-                Gotri, Vadodara<br>
-                Gujarat-390021
+                Survey No.751, Targhari,<br>
+                Jamnagar Road,<br>
+                Gujarat-360110, India
               </p>
             </div>
-          </li>
-          <li>
-            <i class="fas fa-phone"></i>
-            <a href="tel:+919898197196">+91 9898197196</a>
-          </li>
-          <li>
-            <i class="fas fa-envelope"></i>
-            <a href="mailto:harishreecropscience@gmail.com">harishreecropscience&#64;gmail.com</a>
-          </li>
-        </ul>
-      </div>
+          </div>
 
+          <div class="contact-item">
+            <i class="fas fa-phone-alt icon"></i>
+            <div class="details">
+              <h6>Phone</h6>
+              <a href="tel:+919898197196" class="contact-link">+91 9898197196</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <i class="fas fa-envelope icon"></i>
+            <div class="details">
+              <h6>Email</h6>
+              <a href="mailto:harishreecropscience@gmail.com" class="contact-link">harishreecropscience&#64;gmail.com</a>
+            </div>
+          </div>
+        </address>
+      </div>
     </div>
 
+    <!-- Footer Bottom -->
     <div class="footer-bottom">
-      <div class="row">
-        <div class="col-12 text-center">
-          <p class="copyright-text">&copy; {{currentYear}} Harishree Crop Science. All rights reserved. Managed by <a href="https://www.linkedin.com/in/tuleshghelani/" target="_blank">Tulesh Ghelani</a></p>
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <p class="copyright-text">
+            &copy; {{currentYear}} <strong>Harishree Crop Science</strong>. All rights reserved.
+          </p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <p class="developer-text">
+            Managed by <a href="https://www.linkedin.com/in/tuleshghelani/" target="_blank" rel="noopener noreferrer" class="dev-link">Tulesh Ghelani</a>
+          </p>
         </div>
       </div>
     </div>
