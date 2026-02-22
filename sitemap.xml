@@ -7,7 +7,7 @@
   <!-- Home Page -->
   <url>
     <loc>https://harishreecropscience.com/</loc>
-    <lastmod>2025-01-31T12:05:03+00:00</lastmod>
+    <lastmod>2026-02-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.00</priority>
   </url>
@@ -15,7 +15,7 @@
   <!-- Products Section -->
   <url>
     <loc>https://harishreecropscience.com/products</loc>
-    <lastmod>2025-01-31T12:05:03+00:00</lastmod>
+    <lastmod>2026-02-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
@@ -47,7 +47,7 @@
   <!-- About Us -->
   <url>
     <loc>https://harishreecropscience.com/about-us</loc>
-    <lastmod>2025-01-31T12:05:03+00:00</lastmod>
+    <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
