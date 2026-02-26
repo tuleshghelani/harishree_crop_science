@@ -1,0 +1,16 @@
+{
+  "routes": [
+    "/",
+    "/about-us",
+    "/catalogue",
+    "/contact-us",
+    "/product/h-fun",
+    "/product/mpire-404",
+    "/product/proceed",
+    "/product/super-fs",
+    "/product/thio-h",
+    "/products",
+    "/quality-assurance",
+    "/research"
+  ]
+}
