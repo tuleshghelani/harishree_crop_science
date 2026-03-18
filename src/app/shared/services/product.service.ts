@@ -271,13 +271,13 @@ export class ProductService {
     {
       name: 'Herbicide',
       products: [
-        { 
-          name: 'Laser', 
-          image: 'assets/products/herbicide/laser.jpg', 
-          description: 'Precise weed control',
-          fullDescription: 'Laser (Quizalofop-p-ethyl 5% EC) is a selective post-emergence herbicide designed for superior grass weed control in broadleaf crops. This advanced emulsifiable concentrate rapidly penetrates leaf tissues and translocates to growing points, effectively inhibiting fatty acid synthesis and halting weed growth. Laser provides exceptional control of annual and perennial grass weeds in soybeans, cotton, pulses, oilseeds, and vegetables, while maintaining excellent crop safety. The optimized formulation ensures quick absorption, rainfastness, and extended residual activity, making it an essential component of integrated weed management programs for commercial growers seeking reliable performance and superior harvest quality.',
-          url: 'product/laser'
-        },
+        // { 
+        //   name: 'Laser', 
+        //   image: 'assets/products/herbicide/laser.jpg', 
+        //   description: 'Precise weed control',
+        //   fullDescription: 'Laser (Quizalofop-p-ethyl 5% EC) is a selective post-emergence herbicide designed for superior grass weed control in broadleaf crops. This advanced emulsifiable concentrate rapidly penetrates leaf tissues and translocates to growing points, effectively inhibiting fatty acid synthesis and halting weed growth. Laser provides exceptional control of annual and perennial grass weeds in soybeans, cotton, pulses, oilseeds, and vegetables, while maintaining excellent crop safety. The optimized formulation ensures quick absorption, rainfastness, and extended residual activity, making it an essential component of integrated weed management programs for commercial growers seeking reliable performance and superior harvest quality.',
+        //   url: 'product/laser'
+        // },
         { 
           name: 'Paddy', 
           image: 'assets/products/herbicide/paddy.jpg', 
@@ -313,13 +313,13 @@ export class ProductService {
           fullDescription: 'Glufo13 (Glufosinate ammonium 13.5% SL) is a broad-spectrum, non-selective contact herbicide with limited systemic activity. This premium soluble liquid formulation disrupts glutamine synthesis in plants, causing rapid ammonia accumulation and cell destruction. Highly effective against a wide range of annual and perennial grasses and broadleaf weeds, including those resistant to glyphosate, Glufo13 provides quick visible results while breaking down readily in the environment. The advanced formulation ensures excellent coverage, rapid absorption, and reliable performance across various environmental conditions. Ideal for directed applications in orchards, vineyards, plantation crops, and non-crop areas, Glufo13 delivers dependable weed control for commercial growers seeking an alternative mode of action in their resistance management programs.',
           url: 'product/gluf013'
         },
-        { 
-          name: 'H-Man', 
-          image: 'assets/products/herbicide/h-man.jpg', 
-          description: 'Advanced weed solution',
-          fullDescription: 'H-Man (2,4-D Amine Salt 58% SL) is a selective systemic herbicide specifically formulated for broadleaf weed control. This professional-grade soluble liquid concentrate is rapidly absorbed through foliage and roots, translocating throughout the plant to disrupt normal growth processes through auxin-like activity. Highly effective against a wide range of annual and perennial broadleaf weeds in cereals, maize, sugarcane, and non-crop areas, H-Man provides economical and reliable control while preserving grass species. The advanced formulation ensures excellent coverage, quick absorption, and consistent performance across various environmental conditions. As an essential component of integrated weed management programs, H-Man supports cleaner fields and optimized yields with its proven performance and excellent crop safety profile when used as directed.',
-          url: 'product/h-man'
-        },
+        // { 
+        //   name: 'H-Man', 
+        //   image: 'assets/products/herbicide/h-man.jpg', 
+        //   description: 'Advanced weed solution',
+        //   fullDescription: 'H-Man (2,4-D Amine Salt 58% SL) is a selective systemic herbicide specifically formulated for broadleaf weed control. This professional-grade soluble liquid concentrate is rapidly absorbed through foliage and roots, translocating throughout the plant to disrupt normal growth processes through auxin-like activity. Highly effective against a wide range of annual and perennial broadleaf weeds in cereals, maize, sugarcane, and non-crop areas, H-Man provides economical and reliable control while preserving grass species. The advanced formulation ensures excellent coverage, quick absorption, and consistent performance across various environmental conditions. As an essential component of integrated weed management programs, H-Man supports cleaner fields and optimized yields with its proven performance and excellent crop safety profile when used as directed.',
+        //   url: 'product/h-man'
+        // },
         { 
           name: 'Pendi-Pro', 
           image: 'assets/products/herbicide/pendi-pro.jpg', 
