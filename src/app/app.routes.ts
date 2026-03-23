@@ -14,4 +14,6 @@ export const routes: Routes = [
   { path: 'product/super-fs', loadComponent: () => import('./pages/all-products/super-fs/super-fs.component').then(m => m.SuperFsComponent) },
   { path: 'product/mpire-404', loadComponent: () => import('./pages/all-products/mpire-404/mpire-404.component').then(m => m.Mpire404Component) },
   { path: 'product/h-fun', loadComponent: () => import('./pages/all-products/h-fun/h-fun.component').then(m => m.HFunComponent) },
+  { path: 'product/glyphosate-41-sl', loadComponent: () => import('./pages/all-products/glyphosate-41-sl/glyphosate-41-sl.component').then(m => m.Glyphosate41SlComponent) },
+  { path: 'product/round', redirectTo: 'product/glyphosate-41-sl', pathMatch: 'full' },
 ];

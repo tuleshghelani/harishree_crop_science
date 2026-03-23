@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/environments/environment.ts"],
+  "sourcesContent": ["export const environment = {\r\n  production: false,\r\n  baseUrl: 'http://localhost:4200', // Development URL\r\n  apiUrl: 'http://localhost:4200/api', // API\r\n  metaDefaults: {\r\n    title: 'Harishree Crop Science | Agriculture – Fertilizers, Pesticides & Crop Protection India',\r\n    description: 'Leading supplier of fertilizers, pesticides and crop protection for agriculture. Organic farming solutions, bio fertilizers and sustainable agriculture. Trusted across India.',\r\n    keywords: 'agriculture, farming, fertilizer, pesticides, organic farming, crop protection, sustainable agriculture, bio fertilizers, organic pesticides, crop yield, soil health, plant protection, agricultural products India, sustainable farming, weed control, agricultural solutions, eco-friendly farming',\r\n    author: 'Harishree Crop Science'\r\n  },\r\n  contactPhone: '+91 12345 67890'\r\n}; "],
+  "mappings": ";AAAO,IAAM,cAAc;EACzB,YAAY;EACZ,SAAS;;EACT,QAAQ;;EACR,cAAc;IACZ,OAAO;IACP,aAAa;IACb,UAAU;IACV,QAAQ;;EAEV,cAAc;;",
+  "names": []
+}

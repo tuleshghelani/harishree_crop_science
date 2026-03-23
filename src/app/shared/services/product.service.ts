@@ -293,11 +293,11 @@ export class ProductService {
           url: 'product/oxy-green'
         },
         { 
-          name: 'Round', 
-          image: 'assets/products/herbicide/round.jpg', 
+          name: 'Glyphosate 41% SL (H ROUND)', 
+          image: 'assets/products/herbicide/glyphosate-41-sl.jpg', 
           description: 'Complete weed management',
-          fullDescription: 'Round (Glyphosate 41% SL) is a professional-grade, non-selective systemic herbicide formulated for comprehensive weed management. This soluble liquid concentrate is rapidly absorbed through foliage and translocated throughout the plant, including roots and rhizomes, for complete control of annual and perennial weeds, grasses, and woody brush. With its unique mode of action inhibiting the EPSP synthase enzyme, Round effectively eliminates even the most stubborn weeds while breaking down into natural soil components. The advanced formulation includes premium surfactants for enhanced absorption, rainfastness, and consistent performance across various environmental conditions. Ideal for pre-planting field preparation, non-crop areas, and directed applications in plantation crops, Round delivers reliable results for commercial growers and land managers seeking effective vegetation control.',
-          url: 'product/round'
+          fullDescription: 'Glyphosate 41% SL(H ROUND) is a professional-grade, non-selective systemic herbicide formulated for comprehensive weed management. This soluble liquid concentrate is rapidly absorbed through foliage and translocated throughout the plant, including roots and rhizomes, for complete control of annual and perennial weeds, grasses, and woody brush. With its unique mode of action inhibiting the EPSP synthase enzyme, Glyphosate 41% SL effectively eliminates even the most stubborn weeds while breaking down into natural soil components. The advanced formulation includes premium surfactants for enhanced absorption, rainfastness, and consistent performance across various environmental conditions. Ideal for pre-planting field preparation, non-crop areas, and directed applications in plantation crops, Glyphosate 41% SL delivers reliable results for commercial growers and land managers seeking effective vegetation control.',
+          url: 'product/glyphosate-41-sl'
         },
         { 
           name: 'Green Out', 
