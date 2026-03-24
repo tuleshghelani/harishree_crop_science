@@ -129,11 +129,11 @@ export class ProductService {
             description: 'Cypermethrin 25% EC versatile pyrethroid',
             fullDescription: 'H Cyper 25 (Cypermethrin 25% EC) offers rapid knockdown and residual control of a wide spectrum of chewing and sucking insects. The robust pyrethroid formulation delivers reliable performance under varied field conditions, making it a practical, economical choice for vegetables, pulses and fiber crops.'
           },
-          { name: 'Kavach Plus',
-            image: 'assets/products/insecticide/kavach-plus.jpg',
-            description: 'Premium multi-crop insect shield',
-            fullDescription: 'Kavach Plus is a premium, next-generation insect shield formulated for consistent performance across vegetables, cotton and other commercial crops. Its optimized chemistry ensures quick knockdown with dependable residual action, superior leaf adherence and strong rainfastness for season-long protection in professional programs.'
-          },
+          // { name: 'Kavach Plus',
+          //   image: 'assets/products/insecticide/kavach-plus.jpg',
+          //   description: 'Premium multi-crop insect shield',
+          //   fullDescription: 'Kavach Plus is a premium, next-generation insect shield formulated for consistent performance across vegetables, cotton and other commercial crops. Its optimized chemistry ensures quick knockdown with dependable residual action, superior leaf adherence and strong rainfastness for season-long protection in professional programs.'
+          // },
           { name: 'Lanser Gold',
             image: 'assets/products/insecticide/Lanser-gold.jpg',
             description: 'Acephate 50% + Imidacloprid 1.8% SP dual-mode',
@@ -149,11 +149,11 @@ export class ProductService {
             description: 'Reliable broad-spectrum insecticide',
             fullDescription: 'Oscar is a reliable, grower-friendly insecticide designed for consistent control of key sucking and chewing pests. The formulation focuses on superior coverage, quick uptake and strong adherence to plant surfaces, supporting clean foliage and market-ready produce with minimal sprays.'
           },
-          { name: 'Pilot',
-            image: 'assets/products/insecticide/pilot.jpg',
-            description: 'Pyriproxyfen 8% + Dinotefuran 5% + Diafenthiuron 18% SC',
-            fullDescription: 'Pilot combines Pyriproxyfen 8%, Dinotefuran 5% and Diafenthiuron 18% SC to deliver a modern, three-way assault on resistant pest populations. The unique blend targets multiple life stages, providing rapid knockdown, strong systemic movement and lasting residual control with excellent crop safety.'
-          },
+          // { name: 'Pilot',
+          //   image: 'assets/products/insecticide/pilot.jpg',
+          //   description: 'Pyriproxyfen 8% + Dinotefuran 5% + Diafenthiuron 18% SC',
+          //   fullDescription: 'Pilot combines Pyriproxyfen 8%, Dinotefuran 5% and Diafenthiuron 18% SC to deliver a modern, three-way assault on resistant pest populations. The unique blend targets multiple life stages, providing rapid knockdown, strong systemic movement and lasting residual control with excellent crop safety.'
+          // },
           { name: 'Pro 5G',
             image: 'assets/products/insecticide/pro-5g.jpg',
             description: 'Emamectin benzoate 1.5% + Fipronil 3.5% SC synergy',

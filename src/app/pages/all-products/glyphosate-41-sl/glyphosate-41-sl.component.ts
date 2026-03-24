@@ -36,10 +36,9 @@ export class Glyphosate41SlComponent implements OnInit, OnDestroy, AfterViewInit
   };
 
   packSizes = [
-    { volume: '500 ml', price: 140, featured: false, sku: 'HROUND-500ML' },
-    { volume: '1 litre', price: 250, featured: true, sku: 'HROUND-1L' },
-    { volume: '5 litre', price: 900, featured: false, sku: 'HROUND-5L' },
-    { volume: '20 litre', price: 2500, featured: false, sku: 'HROUND-20L' }
+    { volume: '500 ml', price: 177, featured: false, sku: 'HROUND-500ML' },
+    { volume: '1 litre', price: 330, featured: true, sku: 'HROUND-1L' },
+    { volume: '5 litre', price: 1617, featured: false, sku: 'HROUND-5L' },
   ];
 
   keyBenefits = [
