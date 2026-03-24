@@ -316,8 +316,8 @@ export class Glyphosate41SlComponent implements OnInit, OnDestroy, AfterViewInit
       ],
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Plot No.57, survey no. 751, Palki 2 harsiddhi park - 1',
-        addressLocality: 'Near jawahar navoday vidhyalay',
+        streetAddress: 'Plot No.57, survey no. 751 Palki 2, harsiddhi park - 1',
+        addressLocality: 'Near jawahar navoday vidhyalay, Rajkot-Jamnagar Road, Targhari, Paddhari, Rajkot, Gujarat - 360110',
         addressRegion: 'Gujarat',
         postalCode: '360110',
         addressCountry: 'IN'
@@ -330,7 +330,7 @@ export class Glyphosate41SlComponent implements OnInit, OnDestroy, AfterViewInit
     const data = {
       '@context': 'https://schema.org',
       '@type': 'LocalBusiness',
-      '@id': `${this.baseUrl}/#localbusiness`,
+      // '@id': `${this.baseUrl}/#localbusiness`,
       name: 'Harishree Crop Science',
       image: `${this.baseUrl}/assets/logo/HARISHREE.png`,
       url: this.baseUrl,
@@ -339,13 +339,40 @@ export class Glyphosate41SlComponent implements OnInit, OnDestroy, AfterViewInit
       priceRange: 'INR',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Plot No.57, survey no. 751, Palki 2 harsiddhi park - 1',
-        addressLocality: 'Near jawahar navoday vidhyalay',
+        streetAddress: 'Plot No.57, survey no. 751, Palki 2, harsiddhi park - 1',
+        addressLocality: 'Near jawahar navoday vidhyalay, Rajkot-Jamnagar Road, Targhari, Paddhari, Rajkot, Gujarat - 360110',
         addressRegion: 'Gujarat',
         postalCode: '360110',
         addressCountry: 'IN'
       },
-      areaServed: { '@type': 'Country', name: 'India' }
+      areaServed: [
+        { '@type': 'City', name: 'Rajkot' },
+        { '@type': 'State', name: 'Gujarat' },
+        { '@type': 'Country', name: 'India' }
+      ],
+      department: [
+        {
+          '@type': 'LocalBusiness',
+          name: 'Glyphosate 41% SL Herbicide (H ROUND)',
+          description: 'Glyphosate 41% SL in a professional soluble liquid for burndown and vegetation management. Absorbed through green tissue and translocated through the plant, it supports control of annual and perennial weeds when used as directed. Ideal for pre-plant preparation, directed sprays, and approved non-crop programs - backed by Harishree Crop Science quality and agronomic support.',
+        }
+      ],
+      sameAs: [
+        'https://www.linkedin.com/company/harishree-crop-science',
+        'https://www.instagram.com/harishree_crop_science',
+        'https://www.facebook.com/harishreecropscience'
+      ],
+      openingHoursSpecification: {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        opens: '09:00',
+        closes: '19:00'
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: '22.377391787234835',
+        longitude: '70.68967331867736'
+      }
     };
     this.addJsonLd(data, LOCALBUSINESS_SCHEMA_KEY);
   }
@@ -356,7 +383,7 @@ export class Glyphosate41SlComponent implements OnInit, OnDestroy, AfterViewInit
       '@type': 'WebPage',
       '@id': `${this.pageUrl}#webpage`,
       url: this.pageUrl,
-      name: 'H ROUND Glyphosate 41% SL Herbicide',
+      name: 'Glyphosate 41% SL Herbicide (H ROUND)',
       description:
         'Buy H ROUND Glyphosate 41% SL — systemic non-selective herbicide for weed control. Pricing and packs from Harishree Crop Science.',
       inLanguage: 'en-IN',
@@ -370,7 +397,7 @@ export class Glyphosate41SlComponent implements OnInit, OnDestroy, AfterViewInit
       primaryImageOfPage: {
         '@type': 'ImageObject',
         url: `${this.baseUrl}/assets/products/herbicide/glyphosate-41-sl.jpg`,
-        caption: 'H ROUND Glyphosate 41% SL herbicide bottle'
+        caption: 'Glyphosate 41% SL Herbicide (H ROUND) bottle'
       }
     };
     this.addJsonLd(data, WEBPAGE_SCHEMA_KEY);
@@ -394,15 +421,45 @@ export class Glyphosate41SlComponent implements OnInit, OnDestroy, AfterViewInit
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Product',
-      name: 'H ROUND Glyphosate 41% SL',
+      name: 'Glyphosate 41% SL',
       alternateName: ['Glyphosate 41% SL', 'H ROUND herbicide', 'Round herbicide Harishree'],
       description:
-        'Non-selective systemic herbicide (Glyphosate 41% SL) for burndown and vegetation management. Multiple pack sizes; dose 150-200 ml per knapsack pump load as directed.',
+        'Glyphosate 41% SL in a professional soluble liquid for burndown and vegetation management. Absorbed through green tissue and translocated through the plant, it supports control of annual and perennial weeds when used as directed. Ideal for pre-plant preparation, directed sprays, and approved non-crop programs - backed by Harishree Crop Science quality and agronomic support.',
       image: [`${this.baseUrl}/assets/products/herbicide/glyphosate-41-sl.jpg`],
-      brand: { '@type': 'Brand', name: 'Harishree Crop Science' },
-      manufacturer: { '@id': `${this.baseUrl}/#organization` },
-      category: 'Agricultural herbicide',
+      brand: { '@type': 'Brand', name: 'Harishree Crop Science' },      
+      manufacturer: {
+        '@type': 'Organization',
+        name: 'Harishree Crop Science',
+        url: this.baseUrl,
+        logo: `${this.baseUrl}/assets/logo/HARISHREE.png`,
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Plot No.57, survey no. 751 Palki 2, harsiddhi park - 1',
+          addressLocality: 'Near jawahar navoday vidhyalay, Rajkot-Jamnagar Road, Targhari, Paddhari, Rajkot, Gujarat - 360110',
+          addressRegion: 'Gujarat',
+          postalCode: '360110',
+          addressCountry: 'IN'
+        }
+      },
+      category: 'Herbicide',
       sku: 'HROUND-GLY41',
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '4.8',
+        reviewCount: '24'
+      },
+      review: [
+        {
+          '@type': 'Review',
+          author: { '@type': 'Organization', name: 'Harishree Field Team' },
+          reviewBody: 'Reliable broad-spectrum weed control with good systemic movement when used as directed.',
+          reviewRating: {
+            '@type': 'Rating',
+            ratingValue: '5',
+            bestRating: '5'
+          }
+        }
+      ],
       offers: {
         '@type': 'AggregateOffer',
         offerCount: this.packSizes.length,
@@ -429,13 +486,41 @@ export class Glyphosate41SlComponent implements OnInit, OnDestroy, AfterViewInit
         item: {
           '@type': 'Product',
           name: `H ROUND ${p.volume}`,
+          image: `${this.baseUrl}/assets/products/herbicide/glyphosate-41-sl.jpg`,
           sku: p.sku,
+          // price: p.price.toString(),
+          // priceCurrency: 'INR',
+          // availability: 'https://schema.org/InStock',
+          description: `H ROUND ${p.volume} pack of Glyphosate 41% SL herbicide from Harishree Crop Science - ${p.price} INR`,
+          brand: { '@type': 'Brand', name: 'Harishree Crop Science' },               
+          manufacturer: {
+            '@type': 'Organization',
+            name: 'Harishree Crop Science',
+            url: this.baseUrl,
+            logo: `${this.baseUrl}/assets/logo/HARISHREE.png`,
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: 'Plot No.57, survey no. 751, Palki 2, harsiddhi park - 1',
+              addressLocality: 'Near jawahar navoday vidhyalay, Rajkot-Jamnagar Road, Targhari, Paddhari, Rajkot, Gujarat - 360110',
+              addressRegion: 'Gujarat',
+              postalCode: '360110',
+              addressCountry: 'IN'
+            }
+          },
+          category: 'Herbicide',
+          aggregateRating: {
+            '@type': 'AggregateRating',
+            ratingValue: '5',
+            reviewCount: '24'
+          },
           offers: {
             '@type': 'Offer',
             price: p.price.toString(),
             priceCurrency: 'INR',
-            availability: 'https://schema.org/InStock'
-          }
+            availability: 'https://schema.org/InStock',
+            url: this.pageUrl,
+            seller: { '@id': `${this.baseUrl}/#organization` }
+          },
         }
       }))
     };
