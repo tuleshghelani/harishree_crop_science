@@ -234,10 +234,10 @@ export class Glyphosate41SlComponent implements OnInit, OnDestroy, AfterViewInit
       return;
     }
 
-    this.title.setTitle('H ROUND Glyphosate 41% SL Herbicide | Harishree Crop Science');
+    this.title.setTitle('Glyphosate 41% SL Herbicide | H ROUND | Harishree Crop Science');
 
     const desc =
-      'H ROUND (Glyphosate 41% SL) systemic herbicide for burndown and weed control. Packs 500 ml-20 L, dose 150-200 ml per pump. Buy through Harishree Crop Science India.';
+      'Glyphosate 41% SL (H ROUND) systemic herbicide for burndown and weed control. Packs 500 ml-20 L, dose 150-200 ml per pump. Buy through Harishree Crop Science India.';
 
     const metaTags: MetaDefinition[] = [
       { name: 'description', content: desc },
@@ -249,14 +249,14 @@ export class Glyphosate41SlComponent implements OnInit, OnDestroy, AfterViewInit
       { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' },
       { name: 'author', content: environment.metaDefaults.author },
       { name: 'canonical', content: this.pageUrl },
-      { property: 'og:title', content: 'H ROUND | Glyphosate 41% SL Herbicide' },
+      { property: 'og:title', content: 'Glyphosate 41% SL Herbicide | H ROUND | Harishree Crop Science' },
       { property: 'og:description', content: desc },
       { property: 'og:type', content: 'product' },
       { property: 'og:url', content: this.pageUrl },
       { property: 'og:image', content: `${this.baseUrl}/assets/products/herbicide/glyphosate-41-sl.jpg` },
       { property: 'og:locale', content: 'en_IN' },
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:title', content: 'H ROUND Glyphosate 41% SL' },
+      { name: 'twitter:title', content: 'Glyphosate 41% SL Herbicide | H ROUND | Harishree Crop Science' },
       { name: 'twitter:description', content: desc },
       { name: 'twitter:image', content: `${this.baseUrl}/assets/products/herbicide/glyphosate-41-sl.jpg` }
     ];
@@ -352,7 +352,7 @@ export class Glyphosate41SlComponent implements OnInit, OnDestroy, AfterViewInit
       department: [
         {
           '@type': 'LocalBusiness',
-          name: 'Glyphosate 41% SL Herbicide (H ROUND)',
+          name: 'Glyphosate 41% SL (H ROUND)',
           description: 'Glyphosate 41% SL in a professional soluble liquid for burndown and vegetation management. Absorbed through green tissue and translocated through the plant, it supports control of annual and perennial weeds when used as directed. Ideal for pre-plant preparation, directed sprays, and approved non-crop programs - backed by Harishree Crop Science quality and agronomic support.',
         }
       ],
@@ -382,7 +382,7 @@ export class Glyphosate41SlComponent implements OnInit, OnDestroy, AfterViewInit
       '@type': 'WebPage',
       '@id': `${this.pageUrl}#webpage`,
       url: this.pageUrl,
-      name: 'Glyphosate 41% SL Herbicide (H ROUND)',
+      name: 'Glyphosate 41% SL (H ROUND)',
       description:
         'Buy H ROUND Glyphosate 41% SL — systemic non-selective herbicide for weed control. Pricing and packs from Harishree Crop Science.',
       inLanguage: 'en-IN',
@@ -396,7 +396,7 @@ export class Glyphosate41SlComponent implements OnInit, OnDestroy, AfterViewInit
       primaryImageOfPage: {
         '@type': 'ImageObject',
         url: `${this.baseUrl}/assets/products/herbicide/glyphosate-41-sl.jpg`,
-        caption: 'Glyphosate 41% SL Herbicide (H ROUND) bottle'
+        caption: 'Glyphosate 41% SL (H ROUND) bottle'
       }
     };
     this.addJsonLd(data, WEBPAGE_SCHEMA_KEY);
@@ -409,7 +409,7 @@ export class Glyphosate41SlComponent implements OnInit, OnDestroy, AfterViewInit
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: this.baseUrl },
         { '@type': 'ListItem', position: 2, name: 'Products', item: `${this.baseUrl}/products` },
-        { '@type': 'ListItem', position: 3, name: 'H ROUND Glyphosate 41% SL', item: this.pageUrl }
+        { '@type': 'ListItem', position: 3, name: 'Glyphosate 41% SL (H ROUND)', item: this.pageUrl }
       ]
     };
     this.addJsonLd(data, BREADCRUMB_SCHEMA_KEY);

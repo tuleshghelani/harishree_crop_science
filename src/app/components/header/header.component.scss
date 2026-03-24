@@ -42,6 +42,10 @@
 }
 
 @media (max-width: 991px) {
+  .navbar .container {
+    position: relative;
+  }
+
   .nav-overlay {
     display: none;
     position: fixed;
@@ -60,11 +64,15 @@
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-    margin-top: 1rem;
-    position: relative;
+    margin-top: 0;
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0.75rem;
+    right: 0.75rem;
     z-index: 1001;
     max-height: calc(100vh - 100px);
     overflow-y: auto;
+    overscroll-behavior: contain;
 
     .nav-link {
       padding: 0.75rem 1rem;

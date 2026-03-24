@@ -5,11 +5,18 @@
         <img src="assets/logo/HARISHREE.png" alt="Harishree Crop Science" class="logo">
       </a>
 
-      <button class="navbar-toggler" type="button" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen" aria-label="Toggle menu" touch-action="manipulation">
+      <button
+        class="navbar-toggler"
+        type="button"
+        (click)="toggleMenu()"
+        [attr.aria-expanded]="isMenuOpen"
+        aria-label="Toggle menu"
+        touch-action="manipulation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="nav-overlay" [class.show]="isMenuOpen" (click)="closeMenu()" role="presentation" aria-hidden="true"></div>
+      <div class="nav-overlay" [class.show]="isMenuOpen" (click)="closeMenu()" (touchstart)="closeMenu()" role="presentation" aria-hidden="true"></div>
 
       <div class="collapse navbar-collapse" [class.show]="isMenuOpen" id="navbarMenu">
         <ul class="navbar-nav ms-auto">

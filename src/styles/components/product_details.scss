@@ -586,6 +586,8 @@
       color: var(--primary);
       background-color: white;
       box-shadow: none;
+      touch-action: manipulation;
+      min-height: 44px;
       
       &:not(.collapsed) {
         color: var(--secondary);
@@ -950,7 +952,8 @@
   }
 
   .pack-card__cta,
-  .cta-section .cta-button {
+  .cta-section .cta-button,
+  .accordion-button {
     min-height: 44px;
     touch-action: manipulation;
   }

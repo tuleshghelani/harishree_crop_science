@@ -307,11 +307,11 @@ export class ProductService {
           url: 'product/green-out'
         },
         { 
-          name: 'Glufo13', 
-          image: 'assets/products/herbicide/gluf013.jpg', 
-          description: 'Professional herbicide',
-          fullDescription: 'Glufo13 (Glufosinate ammonium 13.5% SL) is a broad-spectrum, non-selective contact herbicide with limited systemic activity. This premium soluble liquid formulation disrupts glutamine synthesis in plants, causing rapid ammonia accumulation and cell destruction. Highly effective against a wide range of annual and perennial grasses and broadleaf weeds, including those resistant to glyphosate, Glufo13 provides quick visible results while breaking down readily in the environment. The advanced formulation ensures excellent coverage, rapid absorption, and reliable performance across various environmental conditions. Ideal for directed applications in orchards, vineyards, plantation crops, and non-crop areas, Glufo13 delivers dependable weed control for commercial growers seeking an alternative mode of action in their resistance management programs.',
-          url: 'product/gluf013'
+          name: 'Glufosinate ammonium 13.5% SL (GLUFO 13)', 
+          image: 'assets/products/glufosinate-ammonium-13-5-sl.png', 
+          description: 'Premium non-selective herbicide',
+          fullDescription: 'Glufosinate ammonium 13.5% SL (GLUFO 13) is a premium broad-spectrum non-selective herbicide for rapid post-emergence weed knockdown in orchards, plantations, and non-crop areas. This high-quality soluble liquid formulation works by inhibiting glutamine synthetase in susceptible weeds, causing ammonia accumulation and tissue collapse. GLUFO 13 delivers dependable control of annual grasses and broadleaf weeds, including difficult escapes in resistance-management programs. With practical pack sizes and field-ready mixing convenience, GLUFO 13 supports clean fields, efficient operations, and consistent agronomic outcomes when used as directed.',
+          url: 'product/glufosinate-ammonium-13-5-sl'
         },
         // { 
         //   name: 'H-Man', 

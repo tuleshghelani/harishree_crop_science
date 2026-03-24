@@ -99,6 +99,10 @@ body {
   touch-action: manipulation;
 }
 
+body.mobile-menu-open {
+  overflow: hidden;
+}
+
 // Performance: only render content once visible
 // Applies to large sections and containers to reduce layout/paint during scroll
 .catalogue-page, .products-page, .premium-products, .what-we-do, .key-features, .testimonials, .crop-categories, .about-page {

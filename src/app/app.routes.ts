@@ -15,5 +15,6 @@ export const routes: Routes = [
   { path: 'product/mpire-404', loadComponent: () => import('./pages/all-products/mpire-404/mpire-404.component').then(m => m.Mpire404Component) },
   { path: 'product/h-fun', loadComponent: () => import('./pages/all-products/h-fun/h-fun.component').then(m => m.HFunComponent) },
   { path: 'product/glyphosate-41-sl', loadComponent: () => import('./pages/all-products/glyphosate-41-sl/glyphosate-41-sl.component').then(m => m.Glyphosate41SlComponent) },
+  { path: 'product/glufosinate-ammonium-13-5-sl', loadComponent: () => import('./pages/all-products/glufosinate-ammonium-13-5-sl/glufosinate-ammonium-13-5-sl.component').then(m => m.GlufosinateAmmonium135SlComponent) },
   { path: 'product/round', redirectTo: 'product/glyphosate-41-sl', pathMatch: 'full' },
 ];
