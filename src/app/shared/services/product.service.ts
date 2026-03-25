@@ -328,8 +328,8 @@ export class ProductService {
           url: 'product/pendi-pro'
         },
         { 
-          name: 'T-10', 
-          image: 'assets/products/herbicide/t-10.jpg', 
+          name: 'Quizalofop Ethyl 10% EC (T-10)', 
+          image: 'assets/products/herbicide/quizalofop-ethyl-10-ec.jpg', 
           description: 'Targeted weed elimination',
           fullDescription: 'T-10 (Metribuzin 70% WP) is a versatile selective herbicide with both contact and residual activity. This premium wettable powder formulation is absorbed by roots and foliage, inhibiting photosynthesis in susceptible weed species while maintaining safety in labeled crops. Highly effective against annual broadleaf weeds and certain grasses in potatoes, soybeans, tomatoes, and other vegetables, T-10 provides flexible application timing from pre-plant to early post-emergence. The advanced formulation ensures uniform distribution, excellent soil activity, and consistent performance across various soil types and environmental conditions. With its unique mode of action, T-10 serves as a valuable resistance management tool while supporting cleaner fields and optimized crop development for commercial growers seeking reliable, broad-spectrum weed control.',
           url: 'product/t-10'
