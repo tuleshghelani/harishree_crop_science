@@ -279,11 +279,11 @@ export class ProductService {
         //   url: 'product/laser'
         // },
         { 
-          name: 'Paddy', 
-          image: 'assets/products/herbicide/paddy.jpg', 
-          description: 'Rice crop protection',
-          fullDescription: 'Paddy (Pretilachlor 50% EC) is a premium pre-emergence herbicide specifically formulated for rice cultivation. This professional-grade emulsifiable concentrate creates a powerful soil barrier that prevents weed seed germination and early seedling growth. With its selective action, Paddy effectively controls annual grasses, sedges, and certain broadleaf weeds while maintaining excellent crop safety in transplanted and direct-seeded rice. The advanced formulation ensures optimal soil binding, extended residual activity, and consistent performance even under varying soil moisture conditions. Trusted by commercial rice growers, Paddy supports higher yield potential by eliminating early weed competition during the critical crop establishment phase.',
-          url: 'product/paddy'
+          name: 'Pendimethalin 30% EC (Paddy)', 
+          image: 'assets/products/herbicide/pendimethalin-30-ec.jpg', 
+          description: 'Pendimethalin 30% EC (Paddy)',
+          fullDescription: 'Paddy, featuring Pendimethalin 30% EC, is a premium pre-emergence herbicide engineered for comprehensive weed control in paddy, wheat, soybean, and cotton. It forms a powerful soil barrier that prevents the emergence of grassy and broadleaf weeds by inhibiting cell division. Highly selective and crop-safe, it ensures clean fields and maximum yield potential.',
+          url: 'product/pendimethalin-30-ec'
         },
         { 
           name: 'Oxy Green', 
