@@ -321,11 +321,11 @@ export class ProductService {
         //   url: 'product/h-man'
         // },
         { 
-          name: 'Pendi-Pro', 
-          image: 'assets/products/herbicide/pendi-pro.jpg', 
-          description: 'Premium pre-emergence control',
-          fullDescription: 'Pendi-Pro (Pendimethalin 30% EC) is a premium pre-emergence herbicide designed for residual weed control in multiple crops. This professional-grade emulsifiable concentrate creates a powerful soil barrier that prevents weed seed germination and early root development. Highly effective against annual grasses and certain broadleaf weeds in cereals, pulses, oilseeds, vegetables, and plantation crops, Pendi-Pro provides extended protection during the critical crop establishment phase. The optimized formulation ensures excellent soil binding, UV stability, and consistent performance across various soil types and environmental conditions. With its distinctive mode of action inhibiting cell division in meristematic tissues, Pendi-Pro serves as an essential resistance management tool while supporting cleaner fields and reduced weed competition for commercial growers seeking reliable, long-lasting weed control.',
-          url: 'product/pendi-pro'
+          name: 'Paraquat Dichloride 24% SL (PENDI-PRO)', 
+          image: 'assets/products/herbicide/paraquat-dichloride-24-sl.jpg', 
+          description: 'Paraquat Dichloride 24% SL',
+          fullDescription: 'Pendi Pro (Paraquat Dichloride 24% SL) is a high-performance, rapid-action, non-selective contact herbicide offering unparalleled broad-spectrum weed control. It yields immediate desiccation and wilting of numerous annual grasses and broadleaf weeds. Rapidly inactivated on soil contact, providing safe sequential planting.',
+          url: 'product/paraquat-dichloride-24-sl'
         },
         { 
           name: 'Quizalofop Ethyl 10% EC (T-10)', 
