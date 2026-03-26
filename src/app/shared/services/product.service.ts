@@ -347,6 +347,13 @@ export class ProductService {
           description: 'Specialized herbicide',
           fullDescription: 'Imaza 10 (Imazethapyr 10% SL) is a selective systemic herbicide designed for pre and post-emergence weed control in legume crops. This advanced soluble liquid formulation is absorbed by roots and foliage, translocating throughout the plant to inhibit the ALS enzyme and halt amino acid synthesis in susceptible weed species. Highly effective against a broad spectrum of annual grasses and broadleaf weeds in soybeans, groundnuts, and other pulses, Imaza 10 provides extended residual activity for season-long protection. The optimized formulation ensures rapid absorption, excellent translocation, and consistent performance across various soil types and environmental conditions. With its unique mode of action, Imaza 10 serves as a valuable resistance management tool while supporting cleaner fields and optimized crop development for commercial growers seeking reliable, broad-spectrum weed control with excellent crop safety.',
           url: 'product/imaza10'
+        },
+        {
+          name: 'Tembotrione 34.4% w/w SC', 
+          image: 'assets/products/herbicide/tembotrione-34-4-w-w-sc.jpg', 
+          description: 'Tembotrione 34.4% w/w SC (Maize Herbicide)',
+          fullDescription: 'Tembo-H, featuring Tembotrione 34.4% w/w SC, is a premium early post-emergence herbicide engineered for comprehensive weed control in maize. It delivers powerful bleaching action through HPPD inhibition, providing exceptional broad-spectrum control over tough broadleaf and grassy weeds. With an optimized suspension concentrate formulation, it ensures rapid foliar absorption, excellent rainfastness, and dependable performance. Highly selective and safe for maize crops, Tembo-H offers an advanced, economical solution for professional growers seeking clean fields and maximum yield potential.',
+          url: 'product/tembotrione-34-4-w-w-sc'
         }
       ]
     },
