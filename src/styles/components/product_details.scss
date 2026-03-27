@@ -1317,8 +1317,103 @@
   border: 1px solid rgba(var(--primary-rgb), 0.12);
 }
 
+.product-official-specs {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.product-official-specs__card {
+  background: #fff;
+  border: 1px solid rgba(var(--primary-rgb), 0.14);
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.product-official-specs__head {
+  padding: 1.15rem 1.2rem;
+  border-bottom: 1px solid rgba(var(--primary-rgb), 0.12);
+  background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.08) 0%, rgba(var(--secondary-rgb), 0.04) 100%);
+
+  h3 {
+    margin: 0;
+    font-size: var(--text-xl);
+    color: var(--primary);
+  }
+
+  p {
+    margin: 0.45rem 0 0;
+    color: var(--gray-700);
+    font-size: var(--text-sm);
+    line-height: 1.6;
+  }
+}
+
+.product-official-specs__table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
+}
+
+.product-official-specs__table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+
+  thead th {
+    background: rgba(var(--primary-rgb), 0.1);
+    color: var(--primary);
+    font-size: var(--text-sm);
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    text-align: left;
+    padding: 0.8rem 0.9rem;
+    border-bottom: 1px solid rgba(var(--primary-rgb), 0.16);
+  }
+
+  tbody td {
+    padding: 0.72rem 0.9rem;
+    border-bottom: 1px solid rgba(var(--primary-rgb), 0.1);
+    font-size: var(--text-base);
+    color: var(--text);
+    vertical-align: top;
+    line-height: 1.55;
+  }
+
+  tbody td:first-child {
+    width: 32%;
+    font-weight: 700;
+    color: var(--secondary);
+    background: rgba(var(--primary-rgb), 0.04);
+  }
+
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+}
+
 @media (max-width: 576px) {
   .pack-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .product-official-specs__head {
+    padding: 1rem;
+
+    h3 {
+      font-size: var(--text-lg);
+    }
+  }
+
+  .product-official-specs__table {
+    min-width: 560px;
+
+    thead th,
+    tbody td {
+      padding: 0.65rem 0.75rem;
+      font-size: var(--text-sm);
+    }
   }
 }

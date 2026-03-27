@@ -22,5 +22,6 @@ export const routes: Routes = [
   { path: 'product/tembotrione-34-4-w-w-sc', loadComponent: () => import('./pages/all-products/tembotrione-34-4-w-w-sc/tembotrione-34-4-w-w-sc.component').then(m => m.Tembotrione344WwScComponent) },
   { path: 'product/paraquat-dichloride-24-sl', loadComponent: () => import('./pages/all-products/paraquat-dichloride-24-sl/paraquat-dichloride-24-sl.component').then(m => m.ParaquatDichloride24SlComponent) },
   { path: 'product/pendimethalin-30-ec', loadComponent: () => import('./pages/all-products/pendimethalin-30-ec/pendimethalin-30-ec.component').then(m => m.Pendimethalin30EcComponent) },
+  { path: 'product/emamectin-benzoate-1-9-ec', loadComponent: () => import('./pages/all-products/emamectin-benzoate-1-9-ec/emamectin-benzoate-1-9-ec.component').then(m => m.EmamectinBenzoate19EcComponent) },
   { path: 'product/round', redirectTo: 'product/glyphosate-41-sl', pathMatch: 'full' },
 ];

@@ -64,10 +64,11 @@ export class ProductService {
             description: 'Superior insect control',
             fullDescription: 'Dr. Supreme offers superior pest control through its advanced dual-mode action. This premium formulation provides both preventive and curative benefits, ensuring complete protection against various pest infestations. Its superior coverage and adherence properties enhance overall efficacy.'
           },
-          { name: 'Buldozer', 
+          { name: 'Emamectin Benzoate 1.9% EC (Buldozer)', 
             image: 'assets/products/Buldozer.png', 
-            description: 'Powerful pest elimination',
-            fullDescription: 'Buldozer is a powerful broad-spectrum insecticide designed for situations requiring robust pest control. Its concentrated formulation delivers quick knockdown and lasting residual action. The product\'s unique chemistry ensures effective control even against resistant pest populations.'
+            description: 'Emamectin Benzoate 1.9% EC — powerful pest elimination',
+            fullDescription: 'Buldozer (Emamectin Benzoate 1.9% EC) is a powerful emulsifiable concentrate insecticide designed for fast knockdown and translaminar control of caterpillars, leaf miners, borers and thrips. Its unique chloride-channel-activating mode of action (IRAC Group 6) ensures reliable efficacy even against resistant pest populations on cotton, vegetables, chilli, paddy and more.',
+            url: 'product/emamectin-benzoate-1-9-ec'
           },
           { name: 'Combi 505', 
             image: 'assets/products/COMBI 505.png', 

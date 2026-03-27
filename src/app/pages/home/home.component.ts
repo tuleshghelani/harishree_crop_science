@@ -9,7 +9,7 @@ import { isPlatformBrowser } from '@angular/common';
 const META_KEY = makeStateKey<boolean>('HOME_META');
 const STRUCTURED_DATA_KEY = makeStateKey<string>('HOME_STRUCTURED_DATA');
 
-/** SEO: Primary keywords – agriculture, farming, fertilizer, pesticides, organic farming, crop protection, sustainable agriculture. Secondary – bio fertilizers, organic pesticides, crop yield, soil health, plant protection, agricultural products India, sustainable farming, weed control, agricultural solutions, eco-friendly farming. */
+/** SEO: Primary keywords - agriculture, farming, fertilizer, pesticides, organic farming, crop protection, sustainable agriculture. Secondary - bio fertilizers, organic pesticides, crop yield, soil health, plant protection, agricultural products India, sustainable farming, weed control, agricultural solutions, eco-friendly farming. */
 
 @Component({
   selector: 'app-home',
@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     private cdr: ChangeDetectorRef
   ) {}
 
-  /** Crop protection categories – Insecticide, Fungicide, Herbicide, PGR (Plant Growth Regulator) */
+  /** Crop protection categories - Insecticide, Fungicide, Herbicide, PGR (Plant Growth Regulator) */
   cropCategories = [
     { name: 'Insecticide', slug: 'Insecticide', shortDesc: 'Control aphids, whitefly, bollworms and sucking pests. Our insecticides are used on cotton, vegetables and pulses across India.', icon: 'bug' },
     { name: 'Fungicide', slug: 'Fungicide', shortDesc: 'Fight blight, mildew and leaf spots. Reliable disease control for paddy, horticulture and field crops.', icon: 'leaf' },
@@ -54,7 +54,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   slides = [
     { src: 'assets/home/slider-image-01.jpg', alt: 'Farm and crop protection - insecticides, fungicides and herbicides', h1: 'Fertilizers, Pesticides & Crop Protection for Modern Agriculture', h2: '', p: 'Insecticide, fungicide, herbicide and PGR solutions. Trusted by farmers across India.' },
-    { src: 'assets/home/slider-image-02.jpg', alt: 'Quality pesticides for better crop yield', h1: '', h2: 'Quality You Can Rely On', p: 'From cotton and paddy to vegetables and pulses – we back every product with field experience and support.' },
+    { src: 'assets/home/slider-image-02.jpg', alt: 'Quality pesticides for better crop yield', h1: '', h2: 'Quality You Can Rely On', p: 'From cotton and paddy to vegetables and pulses - we back every product with field experience and support.' },
     { src: 'assets/home/slider-image-03.jpg', alt: 'Research and crop protection', h1: '', h2: 'Backed by Research', p: 'Our R&D focuses on formulations that work in real field conditions and fit into your spray schedule.' }
   ];
 
@@ -81,7 +81,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   private setMetaData() {
     if (this.transferState.hasKey(META_KEY)) return;
 
-    const pageTitle = 'Harishree Crop Science | Agriculture – Fertilizers, Pesticides & Crop Protection India';
+    const pageTitle = 'Harishree Crop Science | Agriculture - Fertilizers, Pesticides & Crop Protection India';
     const pageDescription = 'Leading supplier of fertilizers, pesticides and crop protection for agriculture. Organic farming solutions, bio fertilizers and sustainable agriculture. Trusted across India.';
     const pageKeywords = 'agriculture, farming, fertilizer, pesticides, organic farming, crop protection, sustainable agriculture, bio fertilizers, organic pesticides, crop yield, soil health, plant protection, agricultural products India, sustainable farming, weed control, agricultural solutions, eco-friendly farming';
 
@@ -141,7 +141,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       '@id': `${this.baseUrl}/#website`,
       url: this.baseUrl,
       name: 'Harishree Crop Science',
-      description: 'Agriculture – Fertilizers, Pesticides & Crop Protection India. Organic farming, crop protection and sustainable agriculture solutions.',
+      description: 'Agriculture - Fertilizers, Pesticides & Crop Protection India. Organic farming, crop protection and sustainable agriculture solutions.',
       publisher: { '@id': organizationId }
     };
 
