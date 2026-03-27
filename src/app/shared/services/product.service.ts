@@ -10,11 +10,11 @@ export class ProductService {
     {
       name: 'Insecticide',
       products: [
-        { name: 'Proceed', 
+        { name: 'Emamectin Benzoate 5% S G (Proceed)', 
           image: 'assets/products/PROCEED.png', 
-          description: 'Advanced insect control solution',
-          fullDescription: 'Proceed is our advanced insecticide formulation designed for comprehensive pest management. It offers rapid knockdown and long-lasting residual control against a broad spectrum of agricultural pests. The unique formulation ensures better crop coverage and enhanced resistance to wash-off, making it ideal for professional farmers seeking reliable pest control solutions.',
-          url: 'product/proceed'
+          description: 'Advanced water-soluble granular insecticide for caterpillar and pest control',
+          fullDescription: 'Emamectin Benzoate 5% S G (Proceed) is our advanced insecticide formulation designed for comprehensive pest management. It offers rapid knockdown and long-lasting residual control against a broad spectrum of agricultural pests, especially caterpillars. The unique soluble granule formulation ensures better crop coverage, perfect solubility, and enhanced resistance to wash-off, making it ideal for professional farmers seeking reliable pest control solutions.',
+          url: 'product/emamectin-benzoate-5-sg'
          },
         { name: 'Thio-h', image: 'assets/products/THIO-H.png', description: 'Effective pest management',
             fullDescription: 'Thio-h represents the latest in systemic insecticide technology. This powerful formulation penetrates plant tissues to provide protection from within, effectively controlling both sucking and chewing pests. Its balanced composition ensures crop safety while delivering outstanding pest control performance across various agricultural applications.',
