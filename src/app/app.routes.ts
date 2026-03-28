@@ -23,5 +23,7 @@ export const routes: Routes = [
   { path: 'product/paraquat-dichloride-24-sl', loadComponent: () => import('./pages/all-products/paraquat-dichloride-24-sl/paraquat-dichloride-24-sl.component').then(m => m.ParaquatDichloride24SlComponent) },
   { path: 'product/pendimethalin-30-ec', loadComponent: () => import('./pages/all-products/pendimethalin-30-ec/pendimethalin-30-ec.component').then(m => m.Pendimethalin30EcComponent) },
   { path: 'product/emamectin-benzoate-1-9-ec', loadComponent: () => import('./pages/all-products/emamectin-benzoate-1-9-ec/emamectin-benzoate-1-9-ec.component').then(m => m.EmamectinBenzoate19EcComponent) },
+  { path: 'product/abamectin-1-9-ec', loadComponent: () => import('./pages/all-products/abamectin-1-9-ec/abamectin-1-9-ec.component').then(m => m.Abamectin19EcComponent) },
+  { path: 'product/dr-supreme', redirectTo: 'product/abamectin-1-9-ec', pathMatch: 'full' },
   { path: 'product/round', redirectTo: 'product/glyphosate-41-sl', pathMatch: 'full' },
 ];

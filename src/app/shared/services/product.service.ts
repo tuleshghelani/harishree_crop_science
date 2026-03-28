@@ -59,10 +59,12 @@ export class ProductService {
             description: 'Advanced insect management',
             fullDescription: 'Hmida delivers cutting-edge insect management through its innovative systemic action. The product provides comprehensive protection by controlling pests at multiple life stages. Its advanced formulation ensures quick absorption and uniform distribution throughout the plant system.'
           },
-          { name: 'Dr. Supreme', 
-            image: 'assets/products/DR.SUPREME.png', 
-            description: 'Superior insect control',
-            fullDescription: 'Dr. Supreme offers superior pest control through its advanced dual-mode action. This premium formulation provides both preventive and curative benefits, ensuring complete protection against various pest infestations. Its superior coverage and adherence properties enhance overall efficacy.'
+          { name: 'Abamectin 1.9% EC (Dr. Supreme)',
+            image: 'assets/products/abamectin-1-9-ec.png',
+            description: 'EC insecticide and acaricide for mites, thrips and leaf miners',
+            fullDescription:
+              'Dr. Supreme (Abamectin 1.9% EC) is Harishree Crop Science\'s emulsifiable concentrate for mites, thrips, leaf miners and light caterpillar pressure. IRAC Group 6 (avermectin) chemistry with contact, stomach and translaminar activity—suited to chilli, tomato, brinjal, okra, cotton, tea, grapes, citrus and other label crops when used at the recommended dose and PHI.',
+            url: 'product/abamectin-1-9-ec'
           },
           { name: 'Emamectin Benzoate 1.9% EC (Buldozer)', 
             image: 'assets/products/Buldozer.png', 
