@@ -558,30 +558,19 @@ export class EmamectinBenzoate19EcComponent implements OnInit, OnDestroy, AfterV
         bestRating: '5',
         worstRating: '1'
       },
-      review: [
-        {
-          '@type': 'Review',
-          author: { '@type': 'Person', name: 'Ramesh Patel' },
-          reviewBody: 'Buldozer completely stopped fruit borer damage in my chilli crop within two days. Very effective at 10 ml per pump.',
-          reviewRating: {
-            '@type': 'Rating',
-            ratingValue: '5',
-            bestRating: '5'
-          },
-          datePublished: '2025-11-10'
+      review: this.testimonials.map((item) => ({
+        '@type': 'Review',
+        author: {
+          '@type': 'Person',
+          name: item.name
         },
-        {
-          '@type': 'Review',
-          author: { '@type': 'Person', name: 'Suresh Koli' },
-          reviewBody: 'Used Buldozer on cotton for bollworm control for two seasons — consistent knockdown results and fair pricing.',
-          reviewRating: {
-            '@type': 'Rating',
-            ratingValue: '5',
-            bestRating: '5'
-          },
-          datePublished: '2025-12-05'
+        reviewBody: item.text,
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: item.rating.toString(),
+          bestRating: '5'
         }
-      ],
+      })),
       offers: {
         '@type': 'AggregateOffer',
         offerCount: this.packSizes.length,
