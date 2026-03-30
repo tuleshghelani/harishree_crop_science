@@ -40,9 +40,10 @@ export class ProductService {
             fullDescription: 'Neem Pro harnesses the power of natural neem extracts enhanced with advanced formulation technology. This eco-friendly solution provides effective control against multiple pest species while being safe for the environment. Its botanical origin ensures minimal residue concerns and better acceptance in organic farming.'
           },
           { name: 'Mission', 
-            image: 'assets/products/MISSION.jpg', 
+            image: 'assets/products/thiamethoxam-12-6-lambda-cyhalothrin-9-5-zc.jpg', 
             description: 'Target-specific insecticide',
-            fullDescription: 'Mission is a precision-engineered insecticide designed for specific pest targets. Its selective action ensures maximum effectiveness against target pests while minimizing impact on non-target organisms. The advanced formulation provides excellent rainfastness and extended protection periods.'
+            fullDescription: 'Mission is a precision-engineered insecticide designed for specific pest targets. Its selective action ensures maximum effectiveness against target pests while minimizing impact on non-target organisms. The advanced formulation provides excellent rainfastness and extended protection periods.',
+            url: 'product/thiamethoxam-12-6-lambda-cyhalothrin-9-5-zc'
           },
           { name: 'Kavach', 
             image: 'assets/products/kavach.png', 

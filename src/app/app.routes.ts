@@ -12,6 +12,7 @@ export const routes: Routes = [
   { path: 'product/emamectin-benzoate-5-sg', loadComponent: () => import('./pages/all-products/emamectin-benzoate-5-sg/emamectin-benzoate-5-sg.component').then(m => m.EmamectinBenzoate5SgComponent) },
   { path: 'product/proceed', redirectTo: 'product/emamectin-benzoate-5-sg', pathMatch: 'full' },
   { path: 'product/thiamethoxam-75-sg', loadComponent: () => import('./pages/all-products/thiamethoxam-75-sg/thiamethoxam-75-sg.component').then(m => m.Thiamethoxam75SgComponent) },
+  { path: 'product/thiamethoxam-12-6-lambda-cyhalothrin-9-5-zc', loadComponent: () => import('./pages/all-products/thiamethoxam-12-6-lambda-cyhalothrin-9-5-zc/thiamethoxam-12-6-lambda-cyhalothrin-9-5-zc.component').then(m => m.Thiamethoxam12_6LambdaCyhalothrin9_5ZcComponent) },
   { path: 'product/thio-h', redirectTo: 'product/thiamethoxam-75-sg', pathMatch: 'full' },
   { path: 'product/super-fs', loadComponent: () => import('./pages/all-products/super-fs/super-fs.component').then(m => m.SuperFsComponent) },
   { path: 'product/mpire-404', loadComponent: () => import('./pages/all-products/mpire-404/mpire-404.component').then(m => m.Mpire404Component) },
