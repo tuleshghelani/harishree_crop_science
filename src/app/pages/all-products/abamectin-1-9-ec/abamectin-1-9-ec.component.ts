@@ -5,6 +5,11 @@ import { TransferState, makeStateKey } from '@angular/platform-browser';
 import { environment } from '../../../../environments/environment';
 import { RouterModule } from '@angular/router';
 import Aos from 'aos';
+import {
+  getOfferPriceValidUntil,
+  merchantReturnPolicySchema,
+  offerShippingDetailsSchema
+} from '../../../shared/schema/product-offer-jsonld';
 
 const META_KEY = makeStateKey<boolean>('ABAMECTIN_19_EC_META');
 const ORG_SCHEMA_KEY = makeStateKey<string>('ABAMECTIN_19_EC_ORG_SCHEMA');
@@ -702,6 +707,9 @@ export class Abamectin19EcComponent implements OnInit, OnDestroy, AfterViewInit 
         priceCurrency: 'INR',
         availability: 'https://schema.org/InStock',
         url: this.pageUrl,
+        priceValidUntil: getOfferPriceValidUntil(),
+        hasMerchantReturnPolicy: merchantReturnPolicySchema(),
+        shippingDetails: offerShippingDetailsSchema(),
         seller: { '@id': `${this.baseUrl}/#organization` }
       }
     };
@@ -758,7 +766,9 @@ export class Abamectin19EcComponent implements OnInit, OnDestroy, AfterViewInit 
             priceCurrency: 'INR',
             availability: 'https://schema.org/InStock',
             url: this.pageUrl,
-            priceValidUntil: '2026-12-31',
+            priceValidUntil: getOfferPriceValidUntil(),
+            hasMerchantReturnPolicy: merchantReturnPolicySchema(),
+            shippingDetails: offerShippingDetailsSchema(),
             seller: { '@id': `${this.baseUrl}/#organization` }
           }
         }

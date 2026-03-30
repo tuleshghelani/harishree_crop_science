@@ -5,6 +5,11 @@ import { TransferState, makeStateKey } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { environment } from '../../../../environments/environment';
 import Aos from 'aos';
+import {
+  getOfferPriceValidUntil,
+  merchantReturnPolicySchema,
+  offerShippingDetailsSchema
+} from '../../../shared/schema/product-offer-jsonld';
 
 const META_KEY = makeStateKey<boolean>('GLUFO_13_META');
 const ORG_SCHEMA_KEY = makeStateKey<string>('GLUFO13_ORG_SCHEMA');
@@ -354,6 +359,9 @@ export class GlufosinateAmmonium135SlComponent implements OnInit, OnDestroy {
         priceCurrency: 'INR',
         availability: 'https://schema.org/InStock',
         url: this.pageUrl,
+        priceValidUntil: getOfferPriceValidUntil(),
+        hasMerchantReturnPolicy: merchantReturnPolicySchema(),
+        shippingDetails: offerShippingDetailsSchema(),
         seller: { '@id': `${this.baseUrl}/#organization` }
       }
     };
@@ -381,7 +389,10 @@ export class GlufosinateAmmonium135SlComponent implements OnInit, OnDestroy {
             price: p.price.toString(),
             priceCurrency: 'INR',
             availability: 'https://schema.org/InStock',
-            url: this.pageUrl
+            url: this.pageUrl,
+            priceValidUntil: getOfferPriceValidUntil(),
+            hasMerchantReturnPolicy: merchantReturnPolicySchema(),
+            shippingDetails: offerShippingDetailsSchema()
           }
         }
       }))

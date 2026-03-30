@@ -5,6 +5,11 @@ import { TransferState, makeStateKey } from '@angular/platform-browser';
 import { environment } from '../../../../environments/environment';
 import { RouterModule } from '@angular/router';
 import Aos from 'aos';
+import {
+  getOfferPriceValidUntil,
+  merchantReturnPolicySchema,
+  offerShippingDetailsSchema
+} from '../../../shared/schema/product-offer-jsonld';
 
 const META_KEY = makeStateKey<boolean>('TOLPY_15_EC_META');
 const ORG_SCHEMA_KEY = makeStateKey<string>('TOLPY_15_EC_ORG_SCHEMA');
@@ -699,6 +704,9 @@ export class Tolfenpyrad15EcComponent implements OnInit, OnDestroy, AfterViewIni
         priceCurrency: 'INR',
         availability: 'https://schema.org/InStock',
         url: this.pageUrl,
+        priceValidUntil: getOfferPriceValidUntil(),
+        hasMerchantReturnPolicy: merchantReturnPolicySchema(),
+        shippingDetails: offerShippingDetailsSchema(),
         seller: { '@id': `${this.baseUrl}/#organization` }
       }
     };
@@ -709,7 +717,7 @@ export class Tolfenpyrad15EcComponent implements OnInit, OnDestroy, AfterViewIni
     const data = {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      name: 'Tolfenpyrad 15% EC — pack sizes (H Fun)',
+      name: 'Tolfenpyrad 15% EC — pack sizes',
       description:
         'Harishree Crop Science Tolfenpyrad 15% EC — bottle sizes with indicative GST-inclusive offer prices for schema.',
       numberOfItems: this.packSizes.length,
@@ -718,7 +726,7 @@ export class Tolfenpyrad15EcComponent implements OnInit, OnDestroy, AfterViewIni
         position: i + 1,
         item: {
           '@type': 'Product',
-          name: `Tolfenpyrad 15% EC — ${p.volume} (H Fun)`,
+          name: `Tolfenpyrad 15% EC — ${p.volume}`,
           image: this.bottleImageUrl,
           sku: p.sku,
           description: `Tolfenpyrad 15% EC ${p.volume} (H Fun) from Harishree Crop Science. EC insecticide.`,
@@ -755,7 +763,9 @@ export class Tolfenpyrad15EcComponent implements OnInit, OnDestroy, AfterViewIni
             priceCurrency: 'INR',
             availability: 'https://schema.org/InStock',
             url: this.pageUrl,
-            priceValidUntil: '2026-12-31',
+            priceValidUntil: getOfferPriceValidUntil(),
+            hasMerchantReturnPolicy: merchantReturnPolicySchema(),
+            shippingDetails: offerShippingDetailsSchema(),
             seller: { '@id': `${this.baseUrl}/#organization` }
           }
         }
