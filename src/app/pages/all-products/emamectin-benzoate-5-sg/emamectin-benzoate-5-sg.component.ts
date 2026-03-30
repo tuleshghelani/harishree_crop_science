@@ -35,7 +35,7 @@ export class EmamectinBenzoate5SgComponent implements OnInit, OnDestroy, AfterVi
 
   product = {
     name: 'Proceed',
-    subtitle: 'Emamectin Benzoate 5% S G',
+    subtitle: 'Emamectin Benzoate 5% SG',
     image: 'assets/products/PROCEED.png',
     description: 'Advanced water-soluble granular insecticide for robust caterpillar and pest control.'
   };
@@ -103,7 +103,7 @@ export class EmamectinBenzoate5SgComponent implements OnInit, OnDestroy, AfterVi
   technicalSpecs = {
     productInfo: [
       { label: 'Brand', value: 'Harishree Crop Science' },
-      { label: 'Product name', value: 'Proceed (Emamectin Benzoate 5% S G)' },
+      { label: 'Product name', value: 'Proceed (Emamectin Benzoate 5% SG)' },
       { label: 'Active ingredient', value: 'Emamectin Benzoate 5% SG' },
       { label: 'Formulation', value: 'Soluble Granules (SG)' },
       { label: 'Mode of action', value: 'Nerve and muscle action (Chloride channel activator)' },
@@ -153,17 +153,17 @@ export class EmamectinBenzoate5SgComponent implements OnInit, OnDestroy, AfterVi
 
   faqs = [
     {
-      question: 'What is Proceed Emamectin Benzoate 5% S G used for?',
-      answer: '<strong>Proceed</strong> is a highly effective insecticide containing Emamectin Benzoate 5% S G, primarily used for controlling caterpillars and borers like Helicoverpa and Spodoptera across multiple crops.',
-      answerPlain: 'Proceed is a highly effective insecticide containing Emamectin Benzoate 5% S G, primarily used for controlling caterpillars and borers like Helicoverpa and Spodoptera across multiple crops.'
+      question: 'What is Proceed Emamectin Benzoate 5% SG used for?',
+      answer: '<strong>Proceed</strong> is a highly effective insecticide containing Emamectin Benzoate 5% SG, primarily used for controlling caterpillars and borers like Helicoverpa and Spodoptera across multiple crops.',
+      answerPlain: 'Proceed is a highly effective insecticide containing Emamectin Benzoate 5% SG, primarily used for controlling caterpillars and borers like Helicoverpa and Spodoptera across multiple crops.'
     },
     {
-      question: 'What is the dosage of Emamectin Benzoate 5% S G per pump?',
+      question: 'What is the dosage of Emamectin Benzoate 5% SG per pump?',
       answer: 'The recommended dose is <strong>5 gm per pump</strong> (15-20 liters water). Adjust as per crop stage and local recommendations.',
       answerPlain: 'The recommended dose is 5 gm per pump (15-20 liters water). Adjust as per crop stage and local recommendations.'
     },
     {
-      question: 'What is the price of Emamectin Benzoate 5% S G?',
+      question: 'What is the price of Emamectin Benzoate 5% SG?',
       answer: 'Available pack sizes with GST are: 50gm (₹77), 100gm (₹142), 250gm (₹325), and 500gm (₹625). Main reference price is <strong>₹250</strong>.',
       answerPlain: 'Available pack sizes with GST are: 50gm (₹77), 100gm (₹142), 250gm (₹325), and 500gm (₹625). Main reference price is ₹250.'
     },
@@ -173,7 +173,7 @@ export class EmamectinBenzoate5SgComponent implements OnInit, OnDestroy, AfterVi
       answerPlain: 'Yes, Proceed is known for its excellent profile on beneficial arthropods and predators once the spray deposit has dried.'
     },
     {
-      question: 'How does Emamectin Benzoate 5% S G work?',
+      question: 'How does Emamectin Benzoate 5% SG work?',
       answer: 'It features a unique translaminar action, penetrating leaf tissues to create a reservoir of active ingredient, which targets hidden pests and remains rainfast.',
       answerPlain: 'It features a unique translaminar action, penetrating leaf tissues to create a reservoir of active ingredient, which targets hidden pests and remains rainfast.'
     }
@@ -186,7 +186,7 @@ export class EmamectinBenzoate5SgComponent implements OnInit, OnDestroy, AfterVi
   ];
 
   howToSteps = [
-    { name: 'Preparation', text: 'Wear protective gear. Measure out 5 gm of Emamectin Benzoate 5% S G for a standard pump.' },
+    { name: 'Preparation', text: 'Wear protective gear. Measure out 5 gm of Emamectin Benzoate 5% SG for a standard pump.' },
     { name: 'Pre-mixing', text: 'Dissolve the 5 gm in a small cup of clean water to make a slurry without lumps.' },
     { name: 'Tank Mixing', text: 'Fill the pump halfway with water, pour the slurry, and stir well.' },
     { name: 'Final Volume', text: 'Fill the remaining tank with water and agitate gently to ensure a uniform mix.' },
@@ -229,29 +229,29 @@ export class EmamectinBenzoate5SgComponent implements OnInit, OnDestroy, AfterVi
       return;
     }
 
-    this.title.setTitle('Emamectin Benzoate 5% S G | Proceed | Harishree Crop Science');
+    this.title.setTitle('Emamectin Benzoate 5% SG | Proceed | Harishree Crop Science');
 
     const desc =
-      'Buy Emamectin Benzoate 5% S G (Proceed) for superior caterpillar and borer control. Dose 5 gm per pump. High-quality SG formulation. Harishree Crop Science.';
+      'Buy Emamectin Benzoate 5% SG (Proceed) for superior caterpillar and borer control. Dose 5 gm per pump. High-quality SG formulation. Harishree Crop Science.';
 
     const metaTags: MetaDefinition[] = [
       { name: 'description', content: desc },
       {
         name: 'keywords',
         content:
-          'Emamectin Benzoate 5% S G, Proceed, Emamectin Benzoate, Proceed insecticide, Emamectin Benzoate 5 SG price, Emamectin Benzoate uses, caterpillar control, Harishree Crop Science'
+          'Emamectin Benzoate 5% SG, Proceed, Emamectin Benzoate, Proceed insecticide, Emamectin Benzoate 5 SG price, Emamectin Benzoate uses, caterpillar control, Harishree Crop Science'
       },
       { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' },
       { name: 'author', content: environment.metaDefaults.author },
       { name: 'canonical', content: this.pageUrl },
-      { property: 'og:title', content: 'Emamectin Benzoate 5% S G | Proceed | Harishree Crop Science' },
+      { property: 'og:title', content: 'Emamectin Benzoate 5% SG | Proceed | Harishree Crop Science' },
       { property: 'og:description', content: desc },
       { property: 'og:type', content: 'product' },
       { property: 'og:url', content: this.pageUrl },
       { property: 'og:image', content: `${this.baseUrl}/assets/products/PROCEED.png` },
       { property: 'og:locale', content: 'en_IN' },
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:title', content: 'Emamectin Benzoate 5% S G | Proceed | Harishree Crop Science' },
+      { name: 'twitter:title', content: 'Emamectin Benzoate 5% SG | Proceed | Harishree Crop Science' },
       { name: 'twitter:description', content: desc },
       { name: 'twitter:image', content: `${this.baseUrl}/assets/products/PROCEED.png` }
     ];
@@ -346,8 +346,8 @@ export class EmamectinBenzoate5SgComponent implements OnInit, OnDestroy, AfterVi
       department: [
         {
           '@type': 'LocalBusiness',
-          name: 'Emamectin Benzoate 5% S G (Proceed)',
-          description: 'Premium Emamectin Benzoate 5% S G formulation designed to control tough caterpillar pests. Ideal for cotton, vegetables and fruit crops.',
+          name: 'Emamectin Benzoate 5% SG (Proceed)',
+          description: 'Premium Emamectin Benzoate 5% SG formulation designed to control tough caterpillar pests. Ideal for cotton, vegetables and fruit crops.',
         }
       ],
       sameAs: [
@@ -376,9 +376,9 @@ export class EmamectinBenzoate5SgComponent implements OnInit, OnDestroy, AfterVi
       '@type': 'WebPage',
       '@id': `${this.pageUrl}#webpage`,
       url: this.pageUrl,
-      name: 'Emamectin Benzoate 5% S G (Proceed)',
+      name: 'Emamectin Benzoate 5% SG (Proceed)',
       description:
-        'Buy Emamectin Benzoate 5% S G (Proceed) — superior insecticide for caterpillar control. High efficacy and reliable performance from Harishree Crop Science.',
+        'Buy Emamectin Benzoate 5% SG (Proceed) — superior insecticide for caterpillar control. High efficacy and reliable performance from Harishree Crop Science.',
       inLanguage: 'en-IN',
       isPartOf: {
         '@type': 'WebSite',
@@ -390,7 +390,7 @@ export class EmamectinBenzoate5SgComponent implements OnInit, OnDestroy, AfterVi
       primaryImageOfPage: {
         '@type': 'ImageObject',
         url: `${this.baseUrl}/assets/products/PROCEED.png`,
-        caption: 'Emamectin Benzoate 5% S G (Proceed) pack'
+        caption: 'Emamectin Benzoate 5% SG (Proceed) pack'
       }
     };
     this.addJsonLd(data, WEBPAGE_SCHEMA_KEY);
@@ -403,7 +403,7 @@ export class EmamectinBenzoate5SgComponent implements OnInit, OnDestroy, AfterVi
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: this.baseUrl },
         { '@type': 'ListItem', position: 2, name: 'Products', item: `${this.baseUrl}/products` },
-        { '@type': 'ListItem', position: 3, name: 'Emamectin Benzoate 5% S G', item: this.pageUrl }
+        { '@type': 'ListItem', position: 3, name: 'Emamectin Benzoate 5% SG', item: this.pageUrl }
       ]
     };
     this.addJsonLd(data, BREADCRUMB_SCHEMA_KEY);
@@ -414,10 +414,10 @@ export class EmamectinBenzoate5SgComponent implements OnInit, OnDestroy, AfterVi
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Product',
-      name: 'Emamectin Benzoate 5% S G',
-      alternateName: ['Emamectin Benzoate 5% S G', 'Proceed insecticide', 'Proceed', 'Emamectin Benzoate'],
+      name: 'Emamectin Benzoate 5% SG',
+      alternateName: ['Emamectin Benzoate 5% SG', 'Proceed insecticide', 'Proceed', 'Emamectin Benzoate'],
       description:
-        'Proceed (Emamectin Benzoate 5% S G) is our advanced insecticide formulation designed for comprehensive pest management. It offers rapid knockdown and long-lasting residual control against a broad spectrum of agricultural pests, especially caterpillars. The unique soluble granule formulation ensures better crop coverage, perfect solubility, and enhanced resistance to wash-off, making it ideal for professional farmers seeking reliable pest control solutions.',
+        'Proceed (Emamectin Benzoate 5% SG) is our advanced insecticide formulation designed for comprehensive pest management. It offers rapid knockdown and long-lasting residual control against a broad spectrum of agricultural pests, especially caterpillars. The unique soluble granule formulation ensures better crop coverage, perfect solubility, and enhanced resistance to wash-off, making it ideal for professional farmers seeking reliable pest control solutions.',
       image: [`${this.baseUrl}/assets/products/PROCEED.png`],
       brand: { '@type': 'Brand', name: 'Harishree Crop Science' },      
       manufacturer: {
@@ -474,17 +474,17 @@ export class EmamectinBenzoate5SgComponent implements OnInit, OnDestroy, AfterVi
     const data = {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      name: 'Emamectin Benzoate 5% S G (Proceed) pack sizes',
+      name: 'Emamectin Benzoate 5% SG (Proceed) pack sizes',
       numberOfItems: this.packSizes.length,
       itemListElement: this.packSizes.map((p, i) => ({
         '@type': 'ListItem',
         position: i + 1,
         item: {
           '@type': 'Product',
-          name: `Emamectin Benzoate 5% S G (Proceed) ${p.volume}`,
+          name: `Emamectin Benzoate 5% SG (Proceed) ${p.volume}`,
           image: `${this.baseUrl}/assets/products/PROCEED.png`,
           sku: p.sku,
-          description: `Emamectin Benzoate 5% S G (Proceed) ${p.volume} pack from Harishree Crop Science - ${p.price} INR`,
+          description: `Emamectin Benzoate 5% SG (Proceed) ${p.volume} pack from Harishree Crop Science - ${p.price} INR`,
           brand: { '@type': 'Brand', name: 'Harishree Crop Science' },               
           manufacturer: {
             '@type': 'Organization',
@@ -543,11 +543,11 @@ export class EmamectinBenzoate5SgComponent implements OnInit, OnDestroy, AfterVi
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to apply Emamectin Benzoate 5% S G (Proceed)',
+      name: 'How to apply Emamectin Benzoate 5% SG (Proceed)',
       description: 'Effective application and mixing steps for Proceed insecticide.',
       image: `${this.baseUrl}/assets/products/PROCEED.png`,
       totalTime: 'PT15M',
-      supply: [{ '@type': 'HowToSupply', name: 'Proceed (Emamectin Benzoate 5% S G)' }, { '@type': 'HowToSupply', name: 'Clean water' }],
+      supply: [{ '@type': 'HowToSupply', name: 'Proceed (Emamectin Benzoate 5% SG)' }, { '@type': 'HowToSupply', name: 'Clean water' }],
       tool: [
         { '@type': 'HowToTool', name: 'Knapsack sprayer' },
         { '@type': 'HowToTool', name: 'Mixing cup' },

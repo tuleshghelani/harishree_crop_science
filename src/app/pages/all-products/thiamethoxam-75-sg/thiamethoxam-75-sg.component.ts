@@ -34,10 +34,10 @@ export class Thiamethoxam75SgComponent implements OnInit, OnDestroy {
   readonly pageUrl = `${this.baseUrl}${this.productPath}`;
 
   packSizes = [
-    { volume: '100 gm', price: 413, featured: false, sku: 'THIO-H-100GM' },
-    { volume: '250 gm', price: 1027, featured: true, sku: 'THIO-H-250GM' },
-    { volume: '500 gm', price: 2041, featured: false, sku: 'THIO-H-500GM' },
-    { volume: '1 Kg', price: 4059, featured: false, sku: 'THIO-H-1KG' }
+    { volume: '100 gm', price: 413, featured: false, sku: 'Thio-H 75-100GM' },
+    { volume: '250 gm', price: 1027, featured: true, sku: 'Thio-H 75-250GM' },
+    { volume: '500 gm', price: 2041, featured: false, sku: 'Thio-H 75-500GM' },
+    { volume: '1 Kg', price: 4059, featured: false, sku: 'Thio-H 75-1KG' }
   ];
 
   keyBenefits = [
@@ -82,7 +82,7 @@ export class Thiamethoxam75SgComponent implements OnInit, OnDestroy {
   ];
 
   technicalSpecs = [
-    { label: 'Brand Name', value: 'Thio-H' },
+    { label: 'Brand Name', value: 'Thio-H 75' },
     { label: 'Chemical Name', value: 'Thiamethoxam 75% SG' },
     { label: 'Chemical Group', value: 'Neonicotinoid Insecticide' },
     { label: 'Formulation', value: 'Soluble Granule (SG)' },
@@ -115,9 +115,9 @@ export class Thiamethoxam75SgComponent implements OnInit, OnDestroy {
 
   faqs = [
     {
-      question: 'What is Thiamethoxam 75% SG (Thio-H) used for?',
-      answer: '<strong>Thiamethoxam 75% SG</strong> (marketed as <strong>Thio-H</strong>) is a broad-spectrum, highly systemic neonicotinoid insecticide primarily used for controlling sucking pests like aphids, jassids, whiteflies, and hoppers in paddy, cotton, vegetables, and fruit crops.',
-      answerPlain: 'Thiamethoxam 75% SG (marketed as Thio-H) is a broad-spectrum, highly systemic neonicotinoid insecticide primarily used for controlling sucking pests like aphids, jassids, whiteflies, and hoppers in paddy, cotton, vegetables, and fruit crops.'
+      question: 'What is Thiamethoxam 75% SG (Thio-H 75) used for?',
+      answer: '<strong>Thiamethoxam 75% SG</strong> (marketed as <strong>Thio-H 75</strong>) is a broad-spectrum, highly systemic neonicotinoid insecticide primarily used for controlling sucking pests like aphids, jassids, whiteflies, and hoppers in paddy, cotton, vegetables, and fruit crops.',
+      answerPlain: 'Thiamethoxam 75% SG (marketed as Thio-H 75) is a broad-spectrum, highly systemic neonicotinoid insecticide primarily used for controlling sucking pests like aphids, jassids, whiteflies, and hoppers in paddy, cotton, vegetables, and fruit crops.'
     },
     {
       question: 'What is the recommended dose of Thiamethoxam 75% SG?',
@@ -130,9 +130,9 @@ export class Thiamethoxam75SgComponent implements OnInit, OnDestroy {
       answerPlain: 'Yes, when used at the recommended dosage. It actually exhibits a notable phytotonic effect, leading to visibly greener, healthier, and more vigorous plants.'
     },
     {
-      question: 'What pack sizes are available for Thio-H?',
-      answer: 'Thio-H (Thiamethoxam 75% SG) is available in multiple grower-friendly pack sizes: <strong>100gm, 250gm, 500gm, and 1Kg</strong>.',
-      answerPlain: 'Thio-H (Thiamethoxam 75% SG) is available in multiple grower-friendly pack sizes: 100gm, 250gm, 500gm, and 1Kg.'
+      question: 'What pack sizes are available for Thio-H 75?',
+      answer: 'Thio-H 75 (Thiamethoxam 75% SG) is available in multiple grower-friendly pack sizes: <strong>100gm, 250gm, 500gm, and 1Kg</strong>.',
+      answerPlain: 'Thio-H 75 (Thiamethoxam 75% SG) is available in multiple grower-friendly pack sizes: 100gm, 250gm, 500gm, and 1Kg.'
     },
     {
       question: 'How fast does Thiamethoxam 75% SG work?',
@@ -142,14 +142,14 @@ export class Thiamethoxam75SgComponent implements OnInit, OnDestroy {
   ];
 
   testimonials = [
-    { text: "Thio-H has been a game-changer for my paddy fields. The Brown Plant Hoppers were controlled instantly, and the crop stayed protected for a long time." },
+    { text: "Thio-H 75 has been a game-changer for my paddy fields. The Brown Plant Hoppers were controlled instantly, and the crop stayed protected for a long time." },
     { text: "Just 10 gm per pump is enough. The product dissolves completely without clogging my sprayer, and my cotton crop is safe from jassids and whiteflies." },
     { text: "I noticed my vegetable plants looking greener and healthier after spraying Thiamethoxam 75% SG. It effectively stopped the thrips attack." }
   ];
 
   howToSteps = [
     { name: 'Prepare the Sprayer', text: 'Ensure the knapsack sprayer is thoroughly cleaned and functioning properly.' },
-    { name: 'Measure', text: 'Accurately measure 10 gm of Thiamethoxam 75% SG (Thio-H) for a standard 15-litre pump.' },
+    { name: 'Measure', text: 'Accurately measure 10 gm of Thiamethoxam 75% SG (Thio-H 75) for a standard 15-litre pump.' },
     { name: 'Mixing Preparation', text: 'Half-fill the sprayer tank with clean water.' },
     { name: 'Add Product', text: 'Add the measured 10 gm of granules directly into the water. It will dissolve rapidly.' },
     { name: 'Top Up', text: 'Fill the rest of the tank with water and agitate slightly to ensure a uniform spray solution.' },
@@ -189,30 +189,30 @@ export class Thiamethoxam75SgComponent implements OnInit, OnDestroy {
       return;
     }
 
-    this.title.setTitle('Thiamethoxam 75% SG | Thio-H Systemic Insecticide | Harishree Crop Science');
+    this.title.setTitle('Thiamethoxam 75% SG | Thio-H 75 Systemic Insecticide | Harishree Crop Science');
     const desc =
-      'Buy Thiamethoxam 75% SG (Thio-H) systemic insecticide online. Highly effective for broad-spectrum sucking pest control in paddy, cotton & vegetables. Dose: 10 gm/pump.';
+      'Buy Thiamethoxam 75% SG (Thio-H 75) systemic insecticide online. Highly effective for broad-spectrum sucking pest control in paddy, cotton & vegetables. Dose: 10 gm/pump.';
 
     const metaTags: MetaDefinition[] = [
       { name: 'description', content: desc },
       {
         name: 'keywords',
         content:
-          'Thiamethoxam 75% SG, Thio-H, systemic insecticide, neonicotinoid, BPH control, aphid killer, whitefly control, Harishree Crop Science, agriculture insecticide'
+          'Thiamethoxam 75% SG, Thio-H 75, systemic insecticide, neonicotinoid, BPH control, aphid killer, whitefly control, Harishree Crop Science, agriculture insecticide'
       },
       { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' },
       { name: 'author', content: environment.metaDefaults.author },
       { name: 'canonical', content: this.pageUrl },
-      { property: 'og:title', content: 'Thiamethoxam 75% SG (Thio-H) | Ultimate Pest Control' },
+      { property: 'og:title', content: 'Thiamethoxam 75% SG (Thio-H 75) | Ultimate Pest Control' },
       { property: 'og:description', content: desc },
       { property: 'og:type', content: 'product' },
       { property: 'og:url', content: this.pageUrl },
-      { property: 'og:image', content: `${this.baseUrl}/assets/products/THIO-H.png` },
+      { property: 'og:image', content: `${this.baseUrl}/assets/products/insecticide/thiamethoxam-75-sg.jpg` },
       { property: 'og:locale', content: 'en_IN' },
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:title', content: 'Thiamethoxam 75% SG | Thio-H' },
+      { name: 'twitter:title', content: 'Thiamethoxam 75% SG | Thio-H 75' },
       { name: 'twitter:description', content: desc },
-      { name: 'twitter:image', content: `${this.baseUrl}/assets/products/THIO-H.png` }
+      { name: 'twitter:image', content: `${this.baseUrl}/assets/products/insecticide/thiamethoxam-75-sg.jpg` }
     ];
 
     metaTags.forEach((tag) => this.meta.updateTag(tag));
@@ -277,9 +277,9 @@ export class Thiamethoxam75SgComponent implements OnInit, OnDestroy {
       department: [
         {
           '@type': 'LocalBusiness',
-          name: 'Thiamethoxam 75% SG (Thio-H)',
+          name: 'Thiamethoxam 75% SG (Thio-H 75)',
           description:
-            'Thiamethoxam 75% SG (Thio-H) is a premium neonicotinoid systemic insecticide for powerful, long-lasting control of sucking pests.'
+            'Thiamethoxam 75% SG (Thio-H 75) is a premium neonicotinoid systemic insecticide for powerful, long-lasting control of sucking pests.'
         }
       ]
     };
@@ -292,9 +292,9 @@ export class Thiamethoxam75SgComponent implements OnInit, OnDestroy {
       '@type': 'WebPage',
       '@id': `${this.pageUrl}#webpage`,
       url: this.pageUrl,
-      name: 'Thiamethoxam 75% SG (Thio-H)',
+      name: 'Thiamethoxam 75% SG (Thio-H 75)',
       description:
-        'Thiamethoxam 75% SG (Thio-H) product page detailing usage, dosage, pricing, targets, and safety guidelines for comprehensive pest control.',
+        'Thiamethoxam 75% SG (Thio-H 75) product page detailing usage, dosage, pricing, targets, and safety guidelines for comprehensive pest control.',
       inLanguage: 'en-IN',
       isPartOf: {
         '@type': 'WebSite',
@@ -304,8 +304,8 @@ export class Thiamethoxam75SgComponent implements OnInit, OnDestroy {
       },
       primaryImageOfPage: {
         '@type': 'ImageObject',
-        url: `${this.baseUrl}/assets/products/THIO-H.png`,
-        caption: 'Thiamethoxam 75% SG (Thio-H) insecticide pack'
+        url: `${this.baseUrl}/assets/products/insecticide/thiamethoxam-75-sg.jpg`,
+        caption: 'Thiamethoxam 75% SG (Thio-H 75) insecticide pack'
       }
     };
     this.addJsonLd(data, WEBPAGE_SCHEMA_KEY);
@@ -318,7 +318,7 @@ export class Thiamethoxam75SgComponent implements OnInit, OnDestroy {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: this.baseUrl },
         { '@type': 'ListItem', position: 2, name: 'Products', item: `${this.baseUrl}/products` },
-        { '@type': 'ListItem', position: 3, name: 'Thiamethoxam 75% SG (Thio-H)', item: this.pageUrl }
+        { '@type': 'ListItem', position: 3, name: 'Thiamethoxam 75% SG (Thio-H 75)', item: this.pageUrl }
       ]
     };
     this.addJsonLd(data, BREADCRUMB_SCHEMA_KEY);
@@ -329,10 +329,10 @@ export class Thiamethoxam75SgComponent implements OnInit, OnDestroy {
       '@context': 'https://schema.org',
       '@type': 'Product',
       name: 'Thiamethoxam 75% SG',
-      alternateName: ['Thio-H', 'Thiamethoxam 75 SG Insecticide', 'Thiamethoxam SG'],
+      alternateName: ['Thio-H 75', 'Thiamethoxam 75 SG Insecticide', 'Thiamethoxam SG'],
       description:
-        'Thiamethoxam 75% SG (Thio-H) is a premium broad-spectrum systemic neonicotinoid insecticide designed to provide superior control against sucking pests like aphids, jassids, and whiteflies in multiple crops.',
-      image: [`${this.baseUrl}/assets/products/THIO-H.png`],
+        'Thiamethoxam 75% SG (Thio-H 75) is a premium broad-spectrum systemic neonicotinoid insecticide designed to provide superior control against sucking pests like aphids, jassids, and whiteflies in multiple crops.',
+      image: [`${this.baseUrl}/assets/products/insecticide/thiamethoxam-75-sg.jpg`],
       brand: { '@type': 'Brand', name: 'Harishree Crop Science' },
       manufacturer: {
         '@type': 'Organization',
@@ -368,17 +368,17 @@ export class Thiamethoxam75SgComponent implements OnInit, OnDestroy {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      name: 'Thiamethoxam 75% SG (Thio-H) pack sizes',
+      name: 'Thiamethoxam 75% SG (Thio-H 75) pack sizes',
       numberOfItems: this.packSizes.length,
       itemListElement: this.packSizes.map((p, i) => ({
         '@type': 'ListItem',
         position: i + 1,
         item: {
           '@type': 'Product',
-          name: `Thiamethoxam 75% SG (Thio-H) ${p.volume}`,
-          image: `${this.baseUrl}/assets/products/THIO-H.png`,
+          name: `Thiamethoxam 75% SG (Thio-H 75) ${p.volume}`,
+          image: `${this.baseUrl}/assets/products/insecticide/thiamethoxam-75-sg.jpg`,
           sku: p.sku,
-          description: `Thiamethoxam 75% SG (Thio-H) ${p.volume} pack - ${p.price} INR`,
+          description: `Thiamethoxam 75% SG (Thio-H 75) ${p.volume} pack - ${p.price} INR`,
           brand: { '@type': 'Brand', name: 'Harishree Crop Science' },
           offers: {
             '@type': 'Offer',
@@ -416,11 +416,11 @@ export class Thiamethoxam75SgComponent implements OnInit, OnDestroy {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to mix and apply Thiamethoxam 75% SG (Thio-H)',
+      name: 'How to mix and apply Thiamethoxam 75% SG (Thio-H 75)',
       description: 'Step-by-step guidance on safely preparing and applying Thiamethoxam 75% SG for optimal pest control.',
-      image: `${this.baseUrl}/assets/products/THIO-H.png`,
+      image: `${this.baseUrl}/assets/products/insecticide/thiamethoxam-75-sg.jpg`,
       totalTime: 'PT15M',
-      supply: [{ '@type': 'HowToSupply', name: 'Thiamethoxam 75% SG (Thio-H)' }, { '@type': 'HowToSupply', name: 'Clean water' }],
+      supply: [{ '@type': 'HowToSupply', name: 'Thiamethoxam 75% SG (Thio-H 75)' }, { '@type': 'HowToSupply', name: 'Clean water' }],
       tool: [
         { '@type': 'HowToTool', name: 'Knapsack sprayer (15 Litre)' },
         { '@type': 'HowToTool', name: 'Measuring spoon/scale' },

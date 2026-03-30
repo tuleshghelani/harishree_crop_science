@@ -16,7 +16,7 @@ export class ProductService {
           fullDescription: 'Emamectin Benzoate 5% S G (Proceed) is our advanced insecticide formulation designed for comprehensive pest management. It offers rapid knockdown and long-lasting residual control against a broad spectrum of agricultural pests, especially caterpillars. The unique soluble granule formulation ensures better crop coverage, perfect solubility, and enhanced resistance to wash-off, making it ideal for professional farmers seeking reliable pest control solutions.',
           url: 'product/emamectin-benzoate-5-sg'
          },
-        { name: 'Thiamethoxam 75% SG (Thio-H)', image: 'assets/products/THIO-H.png', description: 'Effective pest management',
+        { name: 'Thio-H', image: 'assets/products/THIO-H.png', description: 'Effective pest management',
             fullDescription: 'Thio-h represents the latest in systemic insecticide technology. This powerful formulation penetrates plant tissues to provide protection from within, effectively controlling both sucking and chewing pests. Its balanced composition ensures crop safety while delivering outstanding pest control performance across various agricultural applications.',
             url: 'product/thiamethoxam-75-sg'
          },
@@ -162,10 +162,10 @@ export class ProductService {
             description: 'Emamectin benzoate 1.5% + Fipronil 3.5% SC synergy',
             fullDescription: 'Pro 5G unites Emamectin benzoate 1.5% with Fipronil 3.5% SC for superior, synergistic control of tough caterpillars and sucking pests. The premium SC formulation mixes easily, offers excellent spray stability and ensures uniform leaf deposition for dependable, long-lasting protection.'
           },
-          { name: 'Thio H 75',
-            image: 'assets/products/insecticide/thio-h-75.jpg',
+          { name: 'Thiamethoxam 75% SG (Thio-H 75)',
+            image: 'assets/products/insecticide/thiamethoxam-75-sg.jpg',
             description: 'Thiamethoxam 75% SG systemic shield',
-            fullDescription: 'Thio H 75 (Thiamethoxam 75% SG) is a high-strength neonicotinoid that moves quickly within plant tissues to protect new growth from aphids, jassids, whiteflies and more. The water-soluble granule disperses instantly for hassle-free mixing, excellent coverage and season-ready performance.',
+            fullDescription: 'Thiamethoxam 75% SG (Thio-H 75) is a high-strength neonicotinoid that moves quickly within plant tissues to protect new growth from aphids, jassids, whiteflies and more. The water-soluble granule disperses instantly for hassle-free mixing, excellent coverage and season-ready performance.',
             url: 'product/thiamethoxam-75-sg'
           },
           { name: 'Topaz',
