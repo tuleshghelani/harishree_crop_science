@@ -29,7 +29,7 @@ export class ProductService {
             url: 'product/mpire-404'
          },
          { name: 'Tolfenpyrad 15% EC (H Fun)', 
-            image: 'assets/products/H FUN.png', 
+            image: 'assets/products/tolfenpyrad-15-ec.png', 
             description: 'EC insecticide for aphids, whiteflies, thrips, mites and young caterpillars',
             fullDescription: 'H Fun (Tolfenpyrad 15% EC) is Harishree Crop Science’s emulsifiable concentrate for sucking pests and early-instar caterpillars—contact and stomach action via IRAC Group 21A (mitochondrial Complex I). Field guidance: 30 ml per knapsack pump with ~200 L water per acre on cotton, chilli, tomato, brinjal, okra, groundnut, tea, paddy, soybean and other label crops when used with scouting and rotation.',
             url: 'product/tolfenpyrad-15-ec'

@@ -34,14 +34,14 @@ export class Tolfenpyrad15EcComponent implements OnInit, OnDestroy, AfterViewIni
     'https://www.indiamart.com/proddetail/h-fun-tolfenpyrad-15-ec-insecticide-2855027666830.html';
 
   /** Public URL for hero / OG (spaces encoded). */
-  readonly bottleImageUrl = `${this.baseUrl}/assets/products/${encodeURIComponent('H FUN.png')}`;
+  readonly bottleImageUrl = `${this.baseUrl}/assets/products/${encodeURIComponent('tolfenpyrad-15-ec.png')}`;
 
   product = {
-    name: 'H Fun',
+    name: 'Tolfenpyrad 15% EC (H Fun)',
     subtitle: 'Tolfenpyrad 15% EC',
-    image: 'assets/products/H FUN.png',
+    image: 'assets/products/tolfenpyrad-15-ec.png',
     description:
-      'Contact–stomach EC insecticide for aphids, whiteflies, thrips, mites and young caterpillars when you need a clean canopy without guesswork.'
+      'Contact-stomach EC insecticide for aphids, whiteflies, thrips, mites and young caterpillars when you need a clean canopy without guesswork.'
   };
 
   specFigureImage = 'assets/products/h-fun-indiamart-spec-reference.png';
@@ -179,9 +179,9 @@ export class Tolfenpyrad15EcComponent implements OnInit, OnDestroy, AfterViewIni
       { label: 'Water volume', value: 'About 200 litres per acre (adjust for canopy)' },
       { label: 'Application', value: 'Foliar spray — knapsack or power sprayer' },
       { label: 'Best timing', value: 'Early infestation or first clear pest appearance' },
-      { label: 'Rainfastness', value: 'Roughly 2–3 hours after application' },
+      { label: 'Rainfastness', value: 'Roughly 2-3 hours after application' },
       { label: 'Re-entry', value: '24 hours with proper PPE' },
-      { label: 'PHI', value: 'About 7–10 days depending on crop (label-specific)' }
+      { label: 'PHI', value: 'About 7-10 days depending on crop (label-specific)' }
     ]
   };
 
@@ -210,9 +210,9 @@ export class Tolfenpyrad15EcComponent implements OnInit, OnDestroy, AfterViewIni
     { label: 'Water volume', value: '200 litres per acre' },
     { label: 'Application method', value: 'Foliar spray' },
     { label: 'Application stage', value: 'Early infestation or pest appearance' },
-    { label: 'Rainfastness', value: '2–3 hours after application' },
+    { label: 'Rainfastness', value: '2-3 hours after application' },
     { label: 'Re-entry interval', value: '24 hours with PPE' },
-    { label: 'PHI (pre-harvest interval)', value: '7–10 days (varies by crop)' },
+    { label: 'PHI (pre-harvest interval)', value: '7-10 days (varies by crop)' },
     { label: 'Compatibility', value: 'Compatible with most insecticides/fungicides; avoid strong alkaline pH' },
     { label: 'Grade standard', value: 'Bio Tech Grade' },
     { label: 'Packaging', value: 'Bottle — 100 ml to 1 L' },
@@ -249,7 +249,7 @@ export class Tolfenpyrad15EcComponent implements OnInit, OnDestroy, AfterViewIni
       text: 'Chemical gloves, goggles, long sleeves and a fitted mask while measuring and spraying. Change out of work clothes before sitting in the cab.'
     },
     {
-      title: 'Mix H Fun like any serious EC',
+      title: 'Mix Tolfenpyrad 15% EC (H Fun) like any serious EC',
       text: 'Pre-mix the measured dose in a small volume of clean water, stir to a smooth emulsion, then pour into the tank while agitation is running.'
     },
     {
@@ -293,12 +293,12 @@ export class Tolfenpyrad15EcComponent implements OnInit, OnDestroy, AfterViewIni
     {
       question: 'What is Tolfenpyrad 15% EC used for?',
       answer:
-        '<strong>H Fun</strong> (<strong>Tolfenpyrad 15% EC</strong>) is a Harishree Crop Science insecticide aimed at <strong>aphids, whiteflies, thrips, mites and early-instar caterpillars</strong> on crops such as cotton, chilli, tomato, brinjal, okra, groundnut, tea, paddy and soybean where the registered label allows.',
+        '<strong>Tolfenpyrad 15% EC (H Fun)</strong> is a Harishree Crop Science insecticide aimed at <strong>aphids, whiteflies, thrips, mites and early-instar caterpillars</strong> on crops such as cotton, chilli, tomato, brinjal, okra, groundnut, tea, paddy and soybean where the registered label allows.',
       answerPlain:
         'H Fun (Tolfenpyrad 15% EC) is a Harishree Crop Science insecticide aimed at aphids, whiteflies, thrips, mites and early-instar caterpillars on crops such as cotton, chilli, tomato, brinjal, okra, groundnut, tea, paddy and soybean where the registered label allows.'
     },
     {
-      question: 'What dose of H Fun Tolfenpyrad 15% EC should I use per pump?',
+      question: 'What dose of Tolfenpyrad 15% EC (H Fun) should I use per pump?',
       answer:
         'We publish <strong>30 ml per knapsack pump</strong> with roughly <strong>200 litres of spray water per acre</strong> as field guidance. Always confirm against your printed label and district advisory before spraying.',
       answerPlain:
@@ -307,33 +307,33 @@ export class Tolfenpyrad15EcComponent implements OnInit, OnDestroy, AfterViewIni
     {
       question: 'How rainfast is Tolfenpyrad 15% EC?',
       answer:
-        'Under normal conditions, allow about <strong>2–3 hours</strong> on the foliage before expecting heavy rain. If a storm is imminent, postpone rather than gamble.',
+        'Under normal conditions, allow about <strong>2-3 hours</strong> on the foliage before expecting heavy rain. If a storm is imminent, postpone rather than gamble.',
       answerPlain:
-        'Under normal conditions, allow about 2–3 hours on the foliage before expecting heavy rain. If a storm is imminent, postpone rather than gamble.'
+        'Under normal conditions, allow about 2-3 hours on the foliage before expecting heavy rain. If a storm is imminent, postpone rather than gamble.'
     },
     {
-      question: 'What PHI and re-entry should I follow for H Fun?',
+      question: 'What PHI and re-entry should I follow for Tolfenpyrad 15% EC (H Fun)?',
       answer:
-        'Plan for roughly <strong>7–10 days pre-harvest</strong> depending on crop, and <strong>24 hours re-entry with full PPE</strong> unless your label states differently.',
+        'Plan for roughly <strong>7-10 days pre-harvest</strong> depending on crop, and <strong>24 hours re-entry with full PPE</strong> unless your label states differently.',
       answerPlain:
-        'Plan for roughly 7–10 days pre-harvest depending on crop, and 24 hours re-entry with full PPE unless your label states differently.'
+        'Plan for roughly 7-10 days pre-harvest depending on crop, and 24 hours re-entry with full PPE unless your label states differently.'
     },
     {
-      question: 'Can I mix H Fun with fungicides or other insecticides?',
+      question: 'Can I mix Tolfenpyrad 15% EC (H Fun) with fungicides or other insecticides?',
       answer:
         'It is broadly compatible with many partners, but <strong>steer clear of strongly alkaline tanks</strong>. Run a jar test with the exact products and water source you will use in the field.',
       answerPlain:
         'It is broadly compatible with many partners, but steer clear of strongly alkaline tanks. Run a jar test with the exact products and water source you will use in the field.'
     },
     {
-      question: 'Where can I buy H Fun or verify specs?',
+      question: 'Where can I buy Tolfenpyrad 15% EC (H Fun) or verify specs?',
       answer:
         'Speak to any <strong>Harishree Crop Science</strong> authorised dealer. You can also cross-check parameters on our official <strong>IndiaMART</strong> listing linked from this page.',
       answerPlain:
         'Speak to any Harishree Crop Science authorised dealer. You can also cross-check parameters on our official IndiaMART listing linked from this page.'
     },
     {
-      question: 'Is H Fun the same as other pyrazole insecticides?',
+      question: 'Is Tolfenpyrad 15% EC (H Fun) the same as other pyrazole insecticides?',
       answer:
         'Trade names differ. <strong>H Fun</strong> is our pack of <strong>Tolfenpyrad 15% EC</strong>; always match the active ingredient, dose and crop register to your requirement.',
       answerPlain:
@@ -345,7 +345,7 @@ export class Tolfenpyrad15EcComponent implements OnInit, OnDestroy, AfterViewIni
     {
       name: 'Jayesh',
       location: 'Rajkot district, Gujarat',
-      text: 'Whitefly was climbing on brinjal after a dry week. We ran H Fun at the 30 ml pump rate with full water—sticky leaves calmed down before the next picking.',
+      text: 'Whitefly was climbing on brinjal after a dry week. We ran Tolfenpyrad 15% EC (H Fun) at the 30 ml pump rate with full water—sticky leaves calmed down before the next picking.',
       rating: 5
     },
     {
@@ -366,7 +366,7 @@ export class Tolfenpyrad15EcComponent implements OnInit, OnDestroy, AfterViewIni
     { name: 'Suit up', text: 'Wear gloves, goggles, long sleeves and a mask before opening the bottle.' },
     {
       name: 'Measure 30 ml',
-      text: 'Draw thirty millilitres of H Fun (Tolfenpyrad 15% EC) with a graduated cylinder—keep cap threads clean.'
+      text: 'Draw thirty millilitres of Tolfenpyrad 15% EC (H Fun) with a graduated cylinder—keep cap threads clean.'
     },
     {
       name: 'Pre-mix',
@@ -421,17 +421,17 @@ export class Tolfenpyrad15EcComponent implements OnInit, OnDestroy, AfterViewIni
       return;
     }
 
-    this.title.setTitle('Tolfenpyrad 15% EC | H Fun | Harishree Crop Science');
+    this.title.setTitle('Tolfenpyrad 15% EC (H Fun) | Harishree Crop Science');
 
     const desc =
-      'H Fun Tolfenpyrad 15% EC — Harishree Crop Science contact–stomach insecticide for aphids, whiteflies, thrips & mites. 30 ml/pump field guide. Dealers across Gujarat & India.';
+      'Tolfenpyrad 15% EC (H Fun) — Harishree Crop Science contact-stomach insecticide for aphids, whiteflies, thrips & mites. 30 ml/pump field guide. Dealers across Gujarat & India.';
 
     const metaTags: MetaDefinition[] = [
       { name: 'description', content: desc },
       {
         name: 'keywords',
         content:
-          'Tolfenpyrad 15% EC, H Fun insecticide, Tolfenpyrad EC, pyrazole insecticide, Complex I insecticide, IRAC 21A, aphid spray India, whitefly control, thrips chilli, mite spray cotton, knapsack dose 30ml, Harishree Crop Science, Tolfenpyrad Gujarat, tolfenpyrad insecticide India, H Fun crop science'
+          'Tolfenpyrad 15% EC (H Fun), Tolfenpyrad 15% EC, Tolfenpyrad EC, pyrazole insecticide, Complex I insecticide, IRAC 21A, aphid spray India, whitefly control, thrips chilli, mite spray cotton, knapsack dose 30ml, Harishree Crop Science, Tolfenpyrad Gujarat, tolfenpyrad insecticide India, H Fun crop science'
       },
       { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' },
       { name: 'author', content: environment.metaDefaults.author },
@@ -709,19 +709,19 @@ export class Tolfenpyrad15EcComponent implements OnInit, OnDestroy, AfterViewIni
     const data = {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      name: 'H Fun Tolfenpyrad 15% EC — pack sizes',
+      name: 'Tolfenpyrad 15% EC — pack sizes (H Fun)',
       description:
-        'Harishree Crop Science H Fun Tolfenpyrad 15% EC — bottle sizes with indicative GST-inclusive offer prices for schema.',
+        'Harishree Crop Science Tolfenpyrad 15% EC — bottle sizes with indicative GST-inclusive offer prices for schema.',
       numberOfItems: this.packSizes.length,
       itemListElement: this.packSizes.map((p, i) => ({
         '@type': 'ListItem',
         position: i + 1,
         item: {
           '@type': 'Product',
-          name: `H Fun Tolfenpyrad 15% EC — ${p.volume}`,
+          name: `Tolfenpyrad 15% EC — ${p.volume} (H Fun)`,
           image: this.bottleImageUrl,
           sku: p.sku,
-          description: `H Fun Tolfenpyrad 15% EC ${p.volume} from Harishree Crop Science. EC insecticide.`,
+          description: `Tolfenpyrad 15% EC ${p.volume} (H Fun) from Harishree Crop Science. EC insecticide.`,
           brand: { '@type': 'Brand', name: 'Harishree Crop Science' },
           manufacturer: {
             '@type': 'Organization',
@@ -784,9 +784,9 @@ export class Tolfenpyrad15EcComponent implements OnInit, OnDestroy, AfterViewIni
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to mix and spray H Fun Tolfenpyrad 15% EC',
+      name: 'How to mix and spray Tolfenpyrad 15% EC (H Fun)',
       description:
-        'Field steps for preparing a knapsack tank of H Fun Tolfenpyrad 15% EC for foliar application.',
+        'Field steps for preparing a knapsack tank of Tolfenpyrad 15% EC (H Fun) for foliar application.',
       image: this.bottleImageUrl,
       totalTime: 'PT25M',
       estimatedCost: {
@@ -795,7 +795,7 @@ export class Tolfenpyrad15EcComponent implements OnInit, OnDestroy, AfterViewIni
         value: '324'
       },
       supply: [
-        { '@type': 'HowToSupply', name: 'H Fun (Tolfenpyrad 15% EC)' },
+        { '@type': 'HowToSupply', name: 'Tolfenpyrad 15% EC (H Fun)' },
         { '@type': 'HowToSupply', name: 'Clean water' }
       ],
       tool: [
