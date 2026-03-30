@@ -28,11 +28,11 @@ export class ProductService {
             fullDescription: 'Mpire 404 delivers comprehensive pest management through its innovative dual-action formula. This professional-grade solution provides both contact and systemic activity, ensuring thorough pest elimination at all life stages. Its unique composition offers excellent crop safety while maintaining high efficacy against resistant pest populations.',
             url: 'product/mpire-404'
          },
-         { name: 'H Fun', 
+         { name: 'Tolfenpyrad 15% EC (H Fun)', 
             image: 'assets/products/H FUN.png', 
-            description: 'Specialized insecticide',
-            fullDescription: 'H Fun is a specialized insecticide formulation engineered for targeted pest control. Its unique composition ensures rapid absorption and distribution throughout the plant system, providing comprehensive protection against a wide range of harmful insects while being gentle on beneficial organisms.',
-            url: 'product/h-fun'
+            description: 'EC insecticide for aphids, whiteflies, thrips, mites and young caterpillars',
+            fullDescription: 'H Fun (Tolfenpyrad 15% EC) is Harishree Crop Science’s emulsifiable concentrate for sucking pests and early-instar caterpillars—contact and stomach action via IRAC Group 21A (mitochondrial Complex I). Field guidance: 30 ml per knapsack pump with ~200 L water per acre on cotton, chilli, tomato, brinjal, okra, groundnut, tea, paddy, soybean and other label crops when used with scouting and rotation.',
+            url: 'product/tolfenpyrad-15-ec'
           },
           { name: 'Neem Pro', 
             image: 'assets/products/NEEM PRO.png', 
