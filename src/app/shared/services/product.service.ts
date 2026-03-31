@@ -74,9 +74,10 @@ export class ProductService {
             url: 'product/emamectin-benzoate-1-9-ec'
           },
           { name: 'Combi 505', 
-            image: 'assets/products/COMBI 505.png', 
-            description: 'Combination insecticide',
-            fullDescription: 'Combi 505 combines multiple active ingredients for enhanced pest control. This unique combination provides broader spectrum activity and better resistance management. The synergistic action of its components ensures superior control of various pest complexes.'
+            image: 'assets/products/chlorpyriphos-50-cypermethrin-5-ec.png', 
+            description: 'Chlorpyriphos 50% + Cypermethrin 5% EC broad-spectrum combination',
+            fullDescription: 'Combi 505 (Chlorpyriphos 50% + Cypermethrin 5% EC) is Harishree Crop Science\'s combination insecticide for practical field control of mixed pest pressure. The EC formulation supports fast knockdown and dependable follow-through with contact, stomach and fumigant action when used at 25 ml per pump as per crop label and local advisory.',
+            url: 'product/chlorpyriphos-50-cypermethrin-5-ec'
           },
           { name: 'Cora-5', 
             image: 'assets/products/CORA-5.jpg', 

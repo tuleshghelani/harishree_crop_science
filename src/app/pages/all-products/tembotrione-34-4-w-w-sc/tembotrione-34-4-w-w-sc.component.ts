@@ -151,8 +151,8 @@ export class Tembotrione344WwScComponent implements OnInit, OnDestroy, AfterView
     },
     {
       question: 'What are the pack sizes and prices for Tembo-H?',
-      answer: '<strong>Tembo-H</strong> is available in multiple pack sizes: <strong>250 ml (₹230)</strong>, <strong>500 ml (₹443)</strong>, <strong>1 liter (₹861)</strong>, and <strong>5 liter (₹2000)</strong> (prices include GST). The main item reference price is <strong>₹250</strong>.',
-      answerPlain: 'Tembo-H is available in multiple pack sizes: 250 ml (₹230), 500 ml (₹443), 1 liter (₹861), and 5 liter (₹2000) (prices include GST). The main item reference price is ₹250.'
+      answer: '<strong>Tembo-H</strong> is available in multiple pack sizes: <strong>250 ml </strong>, <strong>500 ml </strong>, <strong>1 liter </strong>, and <strong>5 liter </strong>. The main item reference price is <strong>₹250</strong>.',
+      answerPlain: 'Tembo-H is available in multiple pack sizes: 250 ml, 500 ml, 1 liter, and 5 liter.'
     },
     {
       question: 'How does Tembotrione 34.4% w/w SC work?',
@@ -224,7 +224,7 @@ export class Tembotrione344WwScComponent implements OnInit, OnDestroy, AfterView
     this.title.setTitle('Tembotrione 34.4% w/w SC | Tembo-H Herbicide | Harishree Crop Science');
 
     const desc =
-      'Buy Tembotrione 34.4% w/w SC (Tembo-H) selective herbicide for advanced broadleaf and grassy weed control in maize. Dose 20 ml/pump, packs 250ml to 5L with GST pricing. Harishree Crop Science.';
+      'Buy Tembotrione 34.4% w/w SC (Tembo-H) selective herbicide for advanced broadleaf and grassy weed control in maize. Dose 20 ml/pump, packs 250ml to 5L. Harishree Crop Science.';
 
     const metaTags: MetaDefinition[] = [
       { name: 'description', content: desc },

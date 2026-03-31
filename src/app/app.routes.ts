@@ -28,6 +28,8 @@ export const routes: Routes = [
   { path: 'product/emamectin-benzoate-1-9-ec', loadComponent: () => import('./pages/all-products/emamectin-benzoate-1-9-ec/emamectin-benzoate-1-9-ec.component').then(m => m.EmamectinBenzoate19EcComponent) },
   { path: 'product/abamectin-1-9-ec', loadComponent: () => import('./pages/all-products/abamectin-1-9-ec/abamectin-1-9-ec.component').then(m => m.Abamectin19EcComponent) },
   { path: 'product/chlorpyriphos-20-ec', loadComponent: () => import('./pages/all-products/chlorpyriphos-20-ec/chlorpyriphos-20-ec.component').then(m => m.Chlorpyriphos20EcComponent) },
+  { path: 'product/chlorpyriphos-50-cypermethrin-5-ec', loadComponent: () => import('./pages/all-products/chlorpyriphos-50-cypermethrin-5-ec/chlorpyriphos-50-cypermethrin-5-ec.component').then(m => m.Chlorpyriphos50Cypermethrin5EcComponent) },
+  { path: 'product/combi-505', redirectTo: 'product/chlorpyriphos-50-cypermethrin-5-ec', pathMatch: 'full' },
   { path: 'product/dr-supreme', redirectTo: 'product/abamectin-1-9-ec', pathMatch: 'full' },
   { path: 'product/round', redirectTo: 'product/glyphosate-41-sl', pathMatch: 'full' },
 ];

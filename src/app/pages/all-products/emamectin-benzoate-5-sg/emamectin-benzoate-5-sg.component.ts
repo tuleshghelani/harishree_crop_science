@@ -163,11 +163,6 @@ export class EmamectinBenzoate5SgComponent implements OnInit, OnDestroy, AfterVi
       answerPlain: 'The recommended dose is 5 gm per pump (15-20 liters water). Adjust as per crop stage and local recommendations.'
     },
     {
-      question: 'What is the price of Emamectin Benzoate 5% SG?',
-      answer: 'Available pack sizes with GST are: 50gm (₹77), 100gm (₹142), 250gm (₹325), and 500gm (₹625). Main reference price is <strong>₹250</strong>.',
-      answerPlain: 'Available pack sizes with GST are: 50gm (₹77), 100gm (₹142), 250gm (₹325), and 500gm (₹625). Main reference price is ₹250.'
-    },
-    {
       question: 'Is it safe for beneficial insects?',
       answer: 'Yes, <strong>Proceed</strong> is known for its excellent profile on beneficial arthropods and predators once the spray deposit has dried.',
       answerPlain: 'Yes, Proceed is known for its excellent profile on beneficial arthropods and predators once the spray deposit has dried.'

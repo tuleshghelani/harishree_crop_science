@@ -558,8 +558,6 @@ export class Chlorpyriphos20EcComponent implements OnInit, OnDestroy {
           value: row.value
         })),
         { '@type': 'PropertyValue', name: 'Main item price (all taxes)', value: `INR ${INDICATIVE_LIST_PRICE_INR}` },
-        { '@type': 'PropertyValue', name: '500 ml price with GST', value: 'INR 177' },
-        { '@type': 'PropertyValue', name: '1 Ltr price with GST', value: 'INR 330' },
         { '@type': 'PropertyValue', name: 'Dose', value: '50 ml/pump' }
       ],
       manufacturer: {
@@ -624,7 +622,6 @@ export class Chlorpyriphos20EcComponent implements OnInit, OnDestroy {
             { '@type': 'PropertyValue', name: 'Active ingredient', value: 'Chlorpyriphos 20% EC' },
             { '@type': 'PropertyValue', name: 'Pack size', value: p.volume },
             { '@type': 'PropertyValue', name: 'Dose', value: '50 ml/pump' },
-            { '@type': 'PropertyValue', name: 'Price including GST (INR)', value: String(p.price) }
           ],
           offers: {
             '@type': 'Offer',

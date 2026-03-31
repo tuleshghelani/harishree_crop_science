@@ -155,8 +155,8 @@ export class Pendimethalin30EcComponent implements OnInit, OnDestroy, AfterViewI
     },
     {
       question: 'What are the pack sizes and prices for Pendimethalin 30% EC?',
-      answer: '<strong>Paddy (Pendimethalin 30% EC)</strong> is available in multiple pack sizes: <strong>500 ml (₹177)</strong>, <strong>1 liter (₹330)</strong>, and <strong>5 liter (₹1617)</strong> (prices include GST). The main item reference price is <strong>₹250</strong>.',
-      answerPlain: 'Paddy (Pendimethalin 30% EC) is available in multiple pack sizes: 500 ml (₹177), 1 liter (₹330), and 5 liter (₹1617) (prices include GST). The main item reference price is ₹250.'
+      answer: '<strong>Paddy (Pendimethalin 30% EC)</strong> is available in multiple pack sizes: <strong>500 ml </strong>, <strong>1 liter </strong>, and <strong>5 liter </strong>. The main item reference price is <strong>₹250</strong>.',
+      answerPlain: 'Paddy (Pendimethalin 30% EC) is available in multiple pack sizes: 500 ml, 1 liter, and 5 liter. The main item reference price is ₹250.'
     },
     {
       question: 'How does Pendimethalin 30% EC work?',

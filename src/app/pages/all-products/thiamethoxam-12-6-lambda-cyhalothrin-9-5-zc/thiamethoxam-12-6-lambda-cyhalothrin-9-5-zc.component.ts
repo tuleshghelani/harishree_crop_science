@@ -21,7 +21,7 @@ const ITEMLIST_SCHEMA_KEY = makeStateKey<string>('MISSION_ZC_ITEMLIST_SCHEMA');
 const FAQ_SCHEMA_KEY = makeStateKey<string>('MISSION_ZC_FAQ_SCHEMA');
 const HOWTO_SCHEMA_KEY = makeStateKey<string>('MISSION_ZC_HOWTO_SCHEMA');
 
-/** Indicative list price for schema only; pack-wise offers use GST-inclusive packPrices. */
+/** Indicative list price for schema only; pack-wise offers. */
 const INDICATIVE_LIST_PRICE_INR = 250;
 
 @Component({
@@ -741,7 +741,7 @@ export class Thiamethoxam12_6LambdaCyhalothrin9_5ZcComponent implements OnInit, 
       '@context': 'https://schema.org',
       '@type': 'ItemList',
       name: `Mission (${this.productTitle}) - pack sizes`,
-      description: 'Harishree Crop Science Mission insecticide pack sizes with schema-only GST-inclusive prices.',
+      description: 'Harishree Crop Science Mission insecticide pack sizes with schema-only.',
       numberOfItems: this.packSizes.length,
       itemListElement: this.packSizes.map((p, i) => ({
         '@type': 'ListItem',
@@ -774,7 +774,6 @@ export class Thiamethoxam12_6LambdaCyhalothrin9_5ZcComponent implements OnInit, 
             { '@type': 'PropertyValue', name: 'Recommended dose', value: '20 ml/pump' },
             { '@type': 'PropertyValue', name: 'Water volume', value: '150-200 litres/acre' },
             { '@type': 'PropertyValue', name: 'Application method', value: 'Foliar spray using knapsack/power sprayer' },
-            { '@type': 'PropertyValue', name: 'Price including GST (INR)', value: String(p.price) }
           ],
           offers: {
             '@type': 'Offer',

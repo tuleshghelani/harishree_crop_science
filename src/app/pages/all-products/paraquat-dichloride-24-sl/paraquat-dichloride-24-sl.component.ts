@@ -160,8 +160,8 @@ export class ParaquatDichloride24SlComponent implements OnInit, OnDestroy, After
     },
     {
       question: 'What pack sizes are available for Pendi Pro?',
-      answer: '<strong>Pendi Pro (Paraquat Dichloride 24% SL)</strong> is available in convenient <strong>500 ml (₹148)</strong>, <strong>1 liter (₹271)</strong>, and <strong>5 liter (₹1322)</strong> packs (prices include GST). The main item index reference price is <strong>₹250</strong>.',
-      answerPlain: 'Pendi Pro (Paraquat Dichloride 24% SL) is available in convenient 500 ml (₹148), 1 liter (₹271), and 5 liter (₹1322) packs (prices include GST). The main item index reference price is ₹250.'
+      answer: '<strong>Pendi Pro (Paraquat Dichloride 24% SL)</strong> is available in convenient <strong>500 ml</strong>, <strong>1 liter</strong>, and <strong>5 liter</strong> packs. The main item index reference price is <strong>₹250</strong>.',
+      answerPlain: 'Pendi Pro (Paraquat Dichloride 24% SL) is available in convenient 500 ml, 1 liter, and 5 liter packs. The main item index reference price is ₹250.'
     },
     {
       question: 'How fast does Paraquat Dichloride 24% SL work?',

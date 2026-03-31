@@ -175,8 +175,8 @@ export class QuizalofopEthyl10EcComponent implements OnInit, OnDestroy, AfterVie
     },
     {
       question: 'What are T-10 Quizalofop Ethyl 10% EC prices and pack sizes?',
-      answer: 'Available packs include <strong>250 ml (₹230 with GST)</strong>, <strong>500 ml (₹443 with GST)</strong>, and <strong>1 liter (₹861 with GST)</strong>. Main item reference price: <strong>₹250</strong>.',
-      answerPlain: 'Available packs include 250 ml (₹230 with GST), 500 ml (₹443 with GST), and 1 liter (₹861 with GST). Main item reference price: ₹250.'
+      answer: 'Available packs include <strong>250 ml </strong>, <strong>500 ml </strong>, and <strong>1 liter </strong>. Main item reference price: <strong>₹250</strong>.',
+      answerPlain: 'Available packs include 250 ml, 500 ml, and 1 liter.'
     },
     {
       question: 'Is T-10 safe for all crops?',
@@ -248,7 +248,7 @@ export class QuizalofopEthyl10EcComponent implements OnInit, OnDestroy, AfterVie
     this.title.setTitle('Quizalofop Ethyl 10% EC Herbicide | T-10 | Harishree Crop Science');
 
     const desc =
-      'Buy Quizalofop Ethyl 10% EC (T-10) selective herbicide for grassy weed control. Dose 20-25 ml per pump, packs 250ml-1L with GST pricing. Harishree Crop Science India.';
+      'Buy Quizalofop Ethyl 10% EC (T-10) selective herbicide for grassy weed control. Dose 20-25 ml per pump, packs 250ml-1L. Harishree Crop Science India.';
 
     const metaTags: MetaDefinition[] = [
       { name: 'description', content: desc },

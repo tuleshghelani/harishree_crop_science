@@ -128,11 +128,6 @@ export class GlufosinateAmmonium135SlComponent implements OnInit, OnDestroy {
       answerPlain: 'The standard field guideline on this page is 100 ml per pump. Always confirm crop-stage and local label recommendations before application.'
     },
     {
-      question: 'What are GLUFO 13 prices and pack sizes?',
-      answer: 'Available packs include <strong>500 ml (Rs. 236 with GST)</strong> and <strong>1 liter (Rs. 448 with GST)</strong>. Main item reference price: <strong>Rs. 250</strong>.',
-      answerPlain: 'Available packs include 500 ml (Rs. 236 with GST) and 1 liter (Rs. 448 with GST). Main item reference price: Rs. 250.'
-    },
-    {
       question: 'Can GLUFO 13 help in resistance management?',
       answer: 'Yes. It is often used as an alternative herbicide chemistry in integrated weed management programs to reduce overdependence on a single mode of action.',
       answerPlain: 'Yes. It is often used as an alternative herbicide chemistry in integrated weed management programs to reduce overdependence on a single mode of action.'
@@ -194,7 +189,7 @@ export class GlufosinateAmmonium135SlComponent implements OnInit, OnDestroy {
 
     this.title.setTitle('Glufosinate ammonium 13.5% SL Herbicide | GLUFO 13 | Harishree Crop Science');
     const desc =
-      'Buy Glufosinate ammonium 13.5% SL (GLUFO 13) herbicide. Broad-spectrum non-selective weed control, dose 100 ml per pump, packs 500 ml and 1 liter with GST pricing.';
+      'Buy Glufosinate ammonium 13.5% SL (GLUFO 13) herbicide. Broad-spectrum non-selective weed control, dose 100 ml per pump, packs 500 ml and 1 liter.';
 
     const metaTags: MetaDefinition[] = [
       { name: 'description', content: desc },

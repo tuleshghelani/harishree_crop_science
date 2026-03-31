@@ -219,11 +219,6 @@ export class EmamectinBenzoate19EcComponent implements OnInit, OnDestroy, AfterV
       answerPlain: 'The standard recommended dose for Buldozer is 10 ml per 15-litre knapsack pump. Refer to the product label and local agronomist advice for specific crop adjustments.'
     },
     {
-      question: 'What is the price of Buldozer Emamectin Benzoate 1.9% EC?',
-      answer: 'Buldozer is available in four pack sizes: 100 ml (₹118 with GST), 250 ml (₹277 with GST), 500 ml (₹543 with GST), and 1 Ltr (₹1,062 with GST). Contact your nearest <strong>Harishree Crop Science</strong> dealer for exact pricing and availability.',
-      answerPlain: 'Buldozer is available in four pack sizes: 100 ml (₹118 with GST), 250 ml (₹277 with GST), 500 ml (₹543 with GST), and 1 Ltr (₹1,062 with GST). Contact your nearest Harishree Crop Science dealer for exact pricing and availability.'
-    },
-    {
       question: 'How is Emamectin Benzoate 1.9% EC different from 5% SG?',
       answer: 'The <strong>1.9% EC formulation</strong> is an emulsifiable concentrate — it mixes easily in water, penetrates leaf surfaces fast, and is well-suited for use in areas with harder water. The 5% SG (soluble granules) formulation is water-soluble and preferred for better handling ease. Both share the same mode of action but differ in active ingredient concentration and formulation base.',
       answerPlain: 'The 1.9% EC formulation is an emulsifiable concentrate that mixes easily in water, penetrates leaf surfaces fast, and is well-suited for use in areas with harder water. The 5% SG formulation is water-soluble and preferred for better handling ease. Both share the same mode of action but differ in active ingredient concentration and formulation base.'
@@ -608,7 +603,7 @@ export class EmamectinBenzoate19EcComponent implements OnInit, OnDestroy, AfterV
           name: `Buldozer Emamectin Benzoate 1.9% EC — ${p.volume} pack`,
           image: `${this.baseUrl}/assets/products/Buldozer.png`,
           sku: p.sku,
-          description: `Buldozer (Emamectin Benzoate 1.9% EC) ${p.volume} pack from Harishree Crop Science — ₹${p.price} with GST. Powerful EC insecticide for caterpillars, leaf miners and borers.`,
+          description: `Buldozer (Emamectin Benzoate 1.9% EC) ${p.volume} pack from Harishree Crop Science — Powerful EC insecticide for caterpillars, leaf miners and borers.`,
           brand: { '@type': 'Brand', name: 'Harishree Crop Science' },
           manufacturer: {
             '@type': 'Organization',
@@ -628,7 +623,6 @@ export class EmamectinBenzoate19EcComponent implements OnInit, OnDestroy, AfterV
           additionalProperty: [
             { '@type': 'PropertyValue', name: 'Active Ingredient', value: 'Emamectin Benzoate 1.9% EC' },
             { '@type': 'PropertyValue', name: 'Pack Size', value: p.volume },
-            { '@type': 'PropertyValue', name: 'Price Including GST', value: `₹${p.price}` }
           ],
           aggregateRating: {
             '@type': 'AggregateRating',

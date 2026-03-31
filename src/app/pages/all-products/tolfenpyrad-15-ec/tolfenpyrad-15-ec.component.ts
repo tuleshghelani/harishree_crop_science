@@ -719,7 +719,7 @@ export class Tolfenpyrad15EcComponent implements OnInit, OnDestroy, AfterViewIni
       '@type': 'ItemList',
       name: 'Tolfenpyrad 15% EC — pack sizes',
       description:
-        'Harishree Crop Science Tolfenpyrad 15% EC — bottle sizes with indicative GST-inclusive offer prices for schema.',
+        'Harishree Crop Science Tolfenpyrad 15% EC — bottle sizes with indicative offer prices for schema.',
       numberOfItems: this.packSizes.length,
       itemListElement: this.packSizes.map((p, i) => ({
         '@type': 'ListItem',
@@ -749,7 +749,6 @@ export class Tolfenpyrad15EcComponent implements OnInit, OnDestroy, AfterViewIni
           additionalProperty: [
             { '@type': 'PropertyValue', name: 'Active ingredient', value: 'Tolfenpyrad 15% EC' },
             { '@type': 'PropertyValue', name: 'Pack size', value: p.volume },
-            { '@type': 'PropertyValue', name: 'Price including GST (INR)', value: String(p.price) }
           ],
           aggregateRating: {
             '@type': 'AggregateRating',
