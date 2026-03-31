@@ -73,10 +73,10 @@ export class ProductService {
             fullDescription: 'Buldozer (Emamectin Benzoate 1.9% EC) is a powerful emulsifiable concentrate insecticide designed for fast knockdown and translaminar control of caterpillars, leaf miners, borers and thrips. Its unique chloride-channel-activating mode of action (IRAC Group 6) ensures reliable efficacy even against resistant pest populations on cotton, vegetables, chilli, paddy and more.',
             url: 'product/emamectin-benzoate-1-9-ec'
           },
-          { name: 'Combi 505', 
+          { name: 'Chlorpyriphos 50% + Cypermethrin 5% EC (Combi 505)', 
             image: 'assets/products/chlorpyriphos-50-cypermethrin-5-ec.png', 
             description: 'Chlorpyriphos 50% + Cypermethrin 5% EC broad-spectrum combination',
-            fullDescription: 'Combi 505 (Chlorpyriphos 50% + Cypermethrin 5% EC) is Harishree Crop Science\'s combination insecticide for practical field control of mixed pest pressure. The EC formulation supports fast knockdown and dependable follow-through with contact, stomach and fumigant action when used at 25 ml per pump as per crop label and local advisory.',
+            fullDescription: 'Chlorpyriphos 50% + Cypermethrin 5% EC (Combi 505) is Harishree Crop Science\'s combination insecticide for practical field control of mixed pest pressure. The EC formulation supports fast knockdown and dependable follow-through with contact, stomach and fumigant action when used at 25 ml per pump as per crop label and local advisory.',
             url: 'product/chlorpyriphos-50-cypermethrin-5-ec'
           },
           { name: 'Cora-5', 
@@ -84,10 +84,10 @@ export class ProductService {
             description: 'Comprehensive protection',
             fullDescription: 'Cora-5 provides comprehensive protection through its advanced formulation technology. This versatile product offers excellent control over multiple pest species while being safe for crops. Its unique composition ensures better coverage and longer-lasting protection.'
           },
-          { name: 'FI 40', 
+          { name: 'Fipronil 40% + Imidacloprid 40% WG (FI 40)', 
             image: 'assets/products/insecticide/fipronil-40-imidacloprid-40-wg.jpg', 
             description: 'Fipronil 40% + Imidacloprid 40% WG dual-action',
-            fullDescription: 'FI 40 (Fipronil 40% + Imidacloprid 40% WG) combines two proven actives to deliver both contact and systemic action against tough pest complexes. The water-dispersible granule ensures quick dispersion, uniform spray coverage and strong residual control on key crops. Designed for professional growers, FI 40 provides rapid knockdown of chewing and sucking insects while promoting excellent crop safety and resistance-management value.',
+            fullDescription: 'Fipronil 40% + Imidacloprid 40% WG (FI 40) combines two proven actives to deliver both contact and systemic action against tough pest complexes. The water-dispersible granule ensures quick dispersion, uniform spray coverage and strong residual control on key crops. Designed for professional growers, FI 40 provides rapid knockdown of chewing and sucking insects while promoting excellent crop safety and resistance-management value.',
             url: 'product/fipronil-40-imidacloprid-40-wg'
           },
           { name: 'Hilthene', 
