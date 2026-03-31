@@ -513,7 +513,6 @@ export class Thiamethoxam30FsComponent implements OnInit, OnDestroy {
           name: row.label,
           value: row.value
         })),
-        { '@type': 'PropertyValue', name: 'Main item price (all taxes)', value: `INR ${INDICATIVE_LIST_PRICE_INR}` },
         { '@type': 'PropertyValue', name: 'Dose', value: '15 ml/pump' }
       ],
       manufacturer: {

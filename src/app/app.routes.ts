@@ -30,6 +30,8 @@ export const routes: Routes = [
   { path: 'product/chlorpyriphos-20-ec', loadComponent: () => import('./pages/all-products/chlorpyriphos-20-ec/chlorpyriphos-20-ec.component').then(m => m.Chlorpyriphos20EcComponent) },
   { path: 'product/chlorpyriphos-50-cypermethrin-5-ec', loadComponent: () => import('./pages/all-products/chlorpyriphos-50-cypermethrin-5-ec/chlorpyriphos-50-cypermethrin-5-ec.component').then(m => m.Chlorpyriphos50Cypermethrin5EcComponent) },
   { path: 'product/combi-505', redirectTo: 'product/chlorpyriphos-50-cypermethrin-5-ec', pathMatch: 'full' },
+  { path: 'product/fipronil-40-imidacloprid-40-wg', loadComponent: () => import('./pages/all-products/fipronil-40-imidacloprid-40-wg/fipronil-40-imidacloprid-40-wg.component').then(m => m.Fipronil40Imidacloprid40WgComponent) },
+  { path: 'product/fi-40', redirectTo: 'product/fipronil-40-imidacloprid-40-wg', pathMatch: 'full' },
   { path: 'product/dr-supreme', redirectTo: 'product/abamectin-1-9-ec', pathMatch: 'full' },
   { path: 'product/round', redirectTo: 'product/glyphosate-41-sl', pathMatch: 'full' },
 ];

@@ -48,7 +48,7 @@ export class Chlorpyriphos20EcComponent implements OnInit, OnDestroy {
     {
       title: 'Reliable broad-spectrum control in one bottle',
       description:
-        'Chloro Shield 20 supports practical management of common field pests where growers need contact, stomach and fumigant support in one programme.',
+        'Chlorpyriphos 20% EC supports practical management of common field pests where growers need contact, stomach and fumigant support in one programme.',
       icon: 'fas fa-shield-alt'
     },
     {
@@ -238,7 +238,7 @@ export class Chlorpyriphos20EcComponent implements OnInit, OnDestroy {
   performanceHighlights = [
     {
       label: 'Consistent knockdown in practical farm settings',
-      value: 'Growers use Chloro Shield 20 where dependable broad-spectrum action is needed under active pest pressure.'
+      value: 'Growers use Chlorpyriphos 20% EC where dependable broad-spectrum action is needed under active pest pressure.'
     },
     {
       label: 'Field-friendly EC formulation',
@@ -557,7 +557,6 @@ export class Chlorpyriphos20EcComponent implements OnInit, OnDestroy {
           name: row.label,
           value: row.value
         })),
-        { '@type': 'PropertyValue', name: 'Main item price (all taxes)', value: `INR ${INDICATIVE_LIST_PRICE_INR}` },
         { '@type': 'PropertyValue', name: 'Dose', value: '50 ml/pump' }
       ],
       manufacturer: {
@@ -604,7 +603,7 @@ export class Chlorpyriphos20EcComponent implements OnInit, OnDestroy {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      name: `${this.productName} (${this.productTitle}) - pack sizes`,
+      name: `${this.productTitle} - pack sizes`,
       description: `${this.productTitle} pack size list with schema-only GST-inclusive prices.`,
       numberOfItems: this.packSizes.length,
       itemListElement: this.packSizes.map((p, i) => ({
@@ -612,10 +611,10 @@ export class Chlorpyriphos20EcComponent implements OnInit, OnDestroy {
         position: i + 1,
         item: {
           '@type': 'Product',
-          name: `${this.productName} (${this.productTitle}) - ${p.volume}`,
+          name: `${this.productTitle} - ${p.volume}`,
           image: this.bottleImageUrl,
           sku: p.sku,
-          description: `${this.productName} ${this.productTitle} ${p.volume} pack by Harishree Crop Science.`,
+          description: `${this.productTitle} ${p.volume} pack by Harishree Crop Science.`,
           brand: { '@type': 'Brand', name: 'Harishree Crop Science' },
           category: 'Insecticide',
           additionalProperty: [
@@ -657,7 +656,7 @@ export class Chlorpyriphos20EcComponent implements OnInit, OnDestroy {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: `How to apply ${this.productName} (${this.productTitle})`,
+      name: `How to apply ${this.productTitle}`,
       description: `Step-by-step field guidance for safe and effective spray preparation of ${this.productTitle}.`,
       image: this.bottleImageUrl,
       totalTime: 'PT20M',
@@ -667,7 +666,7 @@ export class Chlorpyriphos20EcComponent implements OnInit, OnDestroy {
         value: String(INDICATIVE_LIST_PRICE_INR)
       },
       supply: [
-        { '@type': 'HowToSupply', name: this.productName },
+        { '@type': 'HowToSupply', name: this.productTitle },
         { '@type': 'HowToSupply', name: 'Clean water' }
       ],
       tool: [

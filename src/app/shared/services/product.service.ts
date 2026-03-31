@@ -85,9 +85,10 @@ export class ProductService {
             fullDescription: 'Cora-5 provides comprehensive protection through its advanced formulation technology. This versatile product offers excellent control over multiple pest species while being safe for crops. Its unique composition ensures better coverage and longer-lasting protection.'
           },
           { name: 'FI 40', 
-            image: 'assets/products/insecticide/FI-40.jpg', 
+            image: 'assets/products/insecticide/fipronil-40-imidacloprid-40-wg.jpg', 
             description: 'Fipronil 40% + Imidacloprid 40% WG dual-action',
-            fullDescription: 'FI 40 (Fipronil 40% + Imidacloprid 40% WG) combines two proven actives to deliver both contact and systemic action against tough pest complexes. The water-dispersible granule ensures quick dispersion, uniform spray coverage and strong residual control on key crops. Designed for professional growers, FI 40 provides rapid knockdown of chewing and sucking insects while promoting excellent crop safety and resistance-management value.'
+            fullDescription: 'FI 40 (Fipronil 40% + Imidacloprid 40% WG) combines two proven actives to deliver both contact and systemic action against tough pest complexes. The water-dispersible granule ensures quick dispersion, uniform spray coverage and strong residual control on key crops. Designed for professional growers, FI 40 provides rapid knockdown of chewing and sucking insects while promoting excellent crop safety and resistance-management value.',
+            url: 'product/fipronil-40-imidacloprid-40-wg'
           },
           { name: 'Hilthene', 
             image: 'assets/products/insecticide/hilthene.jpg', 

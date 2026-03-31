@@ -48,7 +48,7 @@ export class Chlorpyriphos50Cypermethrin5EcComponent implements OnInit, OnDestro
     {
       title: 'Dual chemistry for practical field pressure',
       description:
-        'Combi 505 combines organophosphate and pyrethroid action to support broad-spectrum control in mixed pest situations.',
+        'Chlorpyriphos 50% + Cypermethrin 5% EC combines organophosphate and pyrethroid action to support broad-spectrum control in mixed pest situations.',
       icon: 'fas fa-layer-group'
     },
     {
@@ -174,7 +174,7 @@ export class Chlorpyriphos50Cypermethrin5EcComponent implements OnInit, OnDestro
   ];
 
   performanceHighlights = [
-    { label: 'Consistent knockdown in mixed pest windows', value: 'Growers use Combi 505 where broad-spectrum action is needed across varied pest pressure.' },
+    { label: 'Consistent knockdown in mixed pest windows', value: 'Growers use Chlorpyriphos 50% + Cypermethrin 5% EC where broad-spectrum action is needed across varied pest pressure.' },
     { label: 'Practical fit for commercial crops', value: 'Applied across cotton, paddy, sugarcane, vegetable and pulse programs with ETL discipline.' },
     { label: 'Operational simplicity in field teams', value: 'The 25 ml/pump guidance and EC handling make routine spray planning straightforward.' },
     { label: 'Strong support in rotation plans', value: 'Performs best when integrated with scouting-based decisions and chemistry rotation.' }
@@ -182,14 +182,14 @@ export class Chlorpyriphos50Cypermethrin5EcComponent implements OnInit, OnDestro
 
   faqs = [
     {
-      question: 'What is Combi 505 (Chlorpyriphos 50% + Cypermethrin 5% EC) used for?',
+      question: 'What is Chlorpyriphos 50% + Cypermethrin 5% EC used for?',
       answer:
-        '<strong>Combi 505</strong> is a combination insecticide used for broad-spectrum management of chewing and sucking pests in key crops.',
+        '<strong>Chlorpyriphos 50% + Cypermethrin 5% EC</strong> is a combination insecticide used for broad-spectrum management of chewing and sucking pests in key crops.',
       answerPlain:
-        'Combi 505 is a combination insecticide used for broad-spectrum management of chewing and sucking pests in key crops.'
+        'Chlorpyriphos 50% + Cypermethrin 5% EC is a combination insecticide used for broad-spectrum management of chewing and sucking pests in key crops.'
     },
     {
-      question: 'What is the recommended dose for Combi 505?',
+      question: 'What is the recommended dose for Chlorpyriphos 50% + Cypermethrin 5% EC?',
       answer: 'Recommended field guidance is <strong>25 ml per pump</strong>. Always follow crop label and local advisory.',
       answerPlain: 'Recommended field guidance is 25 ml per pump. Always follow crop label and local advisory.'
     },
@@ -201,14 +201,14 @@ export class Chlorpyriphos50Cypermethrin5EcComponent implements OnInit, OnDestro
         'Common use includes cotton, paddy, groundnut, sugarcane, vegetables and pulses based on infestation stage and ETL.'
     },
     {
-      question: 'Can Combi 505 be mixed with other products?',
+      question: 'Can Chlorpyriphos 50% + Cypermethrin 5% EC be mixed with other products?',
       answer:
         'It is generally compatible with many fungicides and micronutrients, but <strong>avoid strong alkali products</strong> and run a jar test first.',
       answerPlain:
         'It is generally compatible with many fungicides and micronutrients, but avoid strong alkali products and run a jar test first.'
     },
     {
-      question: 'How soon is Combi 505 rainfast after spraying?',
+      question: 'How soon is Chlorpyriphos 50% + Cypermethrin 5% EC rainfast after spraying?',
       answer: 'Typical rainfastness is around <strong>2-3 hours after application</strong> under normal field conditions.',
       answerPlain: 'Typical rainfastness is around 2-3 hours after application under normal field conditions.'
     },
@@ -225,7 +225,7 @@ export class Chlorpyriphos50Cypermethrin5EcComponent implements OnInit, OnDestro
     {
       name: 'Dharmesh',
       location: 'Rajkot district',
-      text: 'We used Combi 505 at early pest appearance in cotton. Knockdown was fast and follow-up spray pressure reduced.',
+      text: 'We used Chlorpyriphos 50% + Cypermethrin 5% EC at early pest appearance in cotton. Knockdown was fast and follow-up spray pressure reduced.',
       rating: 5
     },
     {
@@ -237,7 +237,7 @@ export class Chlorpyriphos50Cypermethrin5EcComponent implements OnInit, OnDestro
     {
       name: 'Kalpesh',
       location: 'Surendranagar region',
-      text: 'In vegetable plots with mixed infestation, Combi 505 gave reliable control when we followed ETL and interval discipline.',
+      text: 'In vegetable plots with mixed infestation, Chlorpyriphos 50% + Cypermethrin 5% EC gave reliable control when we followed ETL and interval discipline.',
       rating: 5
     }
   ];
@@ -295,7 +295,7 @@ export class Chlorpyriphos50Cypermethrin5EcComponent implements OnInit, OnDestro
       {
         name: 'keywords',
         content:
-          'Chlorpyriphos 50% + Cypermethrin 5% EC, Combi 505, chlorpyrifos cypermethrin insecticide, combination insecticide, Combi 505 dose, 25 ml pump dose, cotton pest control, paddy pest control, Harishree Crop Science'
+          'Chlorpyriphos 50% + Cypermethrin 5% EC, Chlorpyriphos 50% + Cypermethrin 5% EC, chlorpyrifos cypermethrin insecticide, combination insecticide, Chlorpyriphos 50% + Cypermethrin 5% EC dose, 25 ml pump dose, cotton pest control, paddy pest control, Harishree Crop Science'
       },
       { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' },
       { name: 'author', content: environment.metaDefaults.author },
@@ -520,7 +520,7 @@ export class Chlorpyriphos50Cypermethrin5EcComponent implements OnInit, OnDestro
     const data = {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      name: `${this.productName} (${this.productTitle}) - pack sizes`,
+      name: `${this.productTitle} - pack sizes`,
       description: `${this.productTitle} pack size list with schema-only.`,
       numberOfItems: this.packSizes.length,
       itemListElement: this.packSizes.map((p, i) => ({
@@ -528,10 +528,10 @@ export class Chlorpyriphos50Cypermethrin5EcComponent implements OnInit, OnDestro
         position: i + 1,
         item: {
           '@type': 'Product',
-          name: `${this.productName} (${this.productTitle}) - ${p.volume}`,
+          name: `${this.productTitle} - ${p.volume}`,
           image: this.bottleImageUrl,
           sku: p.sku,
-          description: `${this.productName} ${this.productTitle} ${p.volume} pack by Harishree Crop Science.`,
+          description: `${this.productTitle} ${p.volume} pack by Harishree Crop Science.`,
           brand: { '@type': 'Brand', name: 'Harishree Crop Science' },
           category: 'Insecticide',
           additionalProperty: [
@@ -573,7 +573,7 @@ export class Chlorpyriphos50Cypermethrin5EcComponent implements OnInit, OnDestro
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: `How to apply ${this.productName} (${this.productTitle})`,
+      name: `How to apply ${this.productTitle}`,
       description: `Step-by-step field guidance for safe and effective spray preparation of ${this.productTitle}.`,
       image: this.bottleImageUrl,
       totalTime: 'PT20M',
@@ -583,7 +583,7 @@ export class Chlorpyriphos50Cypermethrin5EcComponent implements OnInit, OnDestro
         value: String(INDICATIVE_LIST_PRICE_INR)
       },
       supply: [
-        { '@type': 'HowToSupply', name: this.productName },
+        { '@type': 'HowToSupply', name: this.productTitle },
         { '@type': 'HowToSupply', name: 'Clean water' }
       ],
       tool: [
