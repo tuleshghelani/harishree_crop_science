@@ -34,12 +34,14 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.unlockBodyScroll();
   }
 
-  toggleMenu() {
+  toggleMenu(event?: Event) {
+    event?.preventDefault();
     this.isMenuOpen = !this.isMenuOpen;
     this.setBodyScrollState();
   }
 
-  closeMenu() {
+  closeMenu(event?: Event) {
+    event?.preventDefault();
     this.isMenuOpen = false;
     this.setBodyScrollState();
   }
@@ -53,6 +55,18 @@ export class HeaderComponent implements OnInit, OnDestroy {
     const clickedInside = this.elRef.nativeElement.contains(event.target as Node);
     if (!clickedInside) {
       this.closeMenu();
+    }
+  }
+
+  @HostListener('document:touchstart', ['$event'])
+  onDocumentTouchStart(event: TouchEvent): void {
+    if (!this.isMenuOpen) {
+      return;
+    }
+
+    const touchedInside = this.elRef.nativeElement.contains(event.target as Node);
+    if (!touchedInside) {
+      this.closeMenu(event);
     }
   }
 

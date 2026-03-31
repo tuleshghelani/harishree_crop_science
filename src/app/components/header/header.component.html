@@ -8,7 +8,7 @@
       <button
         class="navbar-toggler"
         type="button"
-        (click)="toggleMenu()"
+        (click)="toggleMenu($event)"
         [attr.aria-expanded]="isMenuOpen"
         aria-label="Toggle menu"
         touch-action="manipulation"
@@ -16,30 +16,30 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="nav-overlay" [class.show]="isMenuOpen" (click)="closeMenu()" (touchstart)="closeMenu()" role="presentation" aria-hidden="true"></div>
+      <div class="nav-overlay" [class.show]="isMenuOpen" (click)="closeMenu($event)" (touchstart)="closeMenu($event)" role="presentation" aria-hidden="true"></div>
 
       <div class="collapse navbar-collapse" [class.show]="isMenuOpen" id="navbarMenu">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Home</a>
+            <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu($event)">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/products" routerLinkActive="active" (click)="closeMenu()">Products</a>
+            <a class="nav-link" routerLink="/products" routerLinkActive="active" (click)="closeMenu($event)">Products</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/research" routerLinkActive="active" (click)="closeMenu()">Research</a>
+            <a class="nav-link" routerLink="/research" routerLinkActive="active" (click)="closeMenu($event)">Research</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/quality-assurance" routerLinkActive="active" (click)="closeMenu()">Quality Assurance</a>
+            <a class="nav-link" routerLink="/quality-assurance" routerLinkActive="active" (click)="closeMenu($event)">Quality Assurance</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/catalogue" routerLinkActive="active" (click)="closeMenu()">Catalogue</a>
+            <a class="nav-link" routerLink="/catalogue" routerLinkActive="active" (click)="closeMenu($event)">Catalogue</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/about-us" routerLinkActive="active" (click)="closeMenu()">About Us</a>
+            <a class="nav-link" routerLink="/about-us" routerLinkActive="active" (click)="closeMenu($event)">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/contact-us" routerLinkActive="active" (click)="closeMenu()">Contact Us</a>
+            <a class="nav-link" routerLink="/contact-us" routerLinkActive="active" (click)="closeMenu($event)">Contact Us</a>
           </li>
         </ul>
       </div>

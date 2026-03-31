@@ -28,6 +28,12 @@ export class ProductService {
             fullDescription: 'Mpire 404 delivers comprehensive pest management through its innovative dual-action formula. This professional-grade solution provides both contact and systemic activity, ensuring thorough pest elimination at all life stages. Its unique composition offers excellent crop safety while maintaining high efficacy against resistant pest populations.',
             url: 'product/mpire-404'
          },
+        { name: 'Profenofos 40% + Cypermethrin 4% EC (Mpire 404)',
+            image: 'assets/products/MPIRE-404.png',
+            description: 'Profenofos 40% + Cypermethrin 4% EC broad-spectrum insecticide',
+            fullDescription: 'Profenofos 40% + Cypermethrin 4% EC (Mpire 404) is Harishree Crop Science\'s EC combination insecticide for practical control of mixed chewing and sucking pest pressure. Recommended field guidance is 30 ml per pump, with usage based on crop stage, ETL and local advisory for consistent performance.',
+            url: 'product/profenofos-40-cypermethrin-4-ec'
+         },
          { name: 'Tolfenpyrad 15% EC (H Fun)', 
             image: 'assets/products/tolfenpyrad-15-ec.png', 
             description: 'EC insecticide for aphids, whiteflies, thrips, mites and young caterpillars',
