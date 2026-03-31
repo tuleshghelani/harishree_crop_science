@@ -165,9 +165,6 @@ export class Chlorpyriphos20EcComponent implements OnInit, OnDestroy {
       { label: 'Recommended dose', value: '50 ml/pump' },
       { label: 'Application method', value: 'Foliar spray or crop-stage based directed application' },
       { label: 'Pack sizes in schema', value: '500 ml, 1 Ltr' },
-      { label: 'Main list price (schema only)', value: 'INR 250 all taxes' },
-      { label: '500 ml price (schema only)', value: 'INR 177 with GST' },
-      { label: '1 Ltr price (schema only)', value: 'INR 330 with GST' },
       { label: 'Pesticide class', value: 'Organophosphate insecticide' },
       { label: 'Country of origin', value: 'Made in India' }
     ]

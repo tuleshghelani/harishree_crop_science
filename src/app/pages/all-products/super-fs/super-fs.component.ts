@@ -298,7 +298,7 @@ export class SuperFsComponent implements OnInit, OnDestroy, AfterViewInit {
       { property: 'og:title', content: 'Super FS - Professional-Grade Agricultural Insecticide' },
       { property: 'og:description', content: 'Advanced triple-action insecticide formulation for comprehensive pest management in agriculture. Features ultra-fast knockdown and extended 25-day residual protection.' },
       { property: 'og:type', content: 'product' },
-      { property: 'og:image', content: `${this.baseUrl}/assets/products/SUPER FS.png` },
+      { property: 'og:image', content: `${this.baseUrl}/assets/products/thiamethoxam-30-fs.png` },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' },
       { name: 'author', content: environment.metaDefaults.author }
@@ -315,7 +315,7 @@ export class SuperFsComponent implements OnInit, OnDestroy, AfterViewInit {
       "@context": "https://schema.org/",
       "@type": "Product",
       "name": "Super FS",
-      "image": `${this.baseUrl}/assets/products/SUPER FS.png`,
+      "image": `${this.baseUrl}/assets/products/thiamethoxam-30-fs.png`,
       "description": "Professional-grade agricultural insecticide with triple-action formula offering ultra-fast knockdown and 25-day residual protection against a comprehensive range of crop pests.",
       "brand": {
         "@type": "Brand",

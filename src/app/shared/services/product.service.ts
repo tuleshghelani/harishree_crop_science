@@ -20,9 +20,9 @@ export class ProductService {
             fullDescription: 'Thio-h represents the latest in systemic insecticide technology. This powerful formulation penetrates plant tissues to provide protection from within, effectively controlling both sucking and chewing pests. Its balanced composition ensures crop safety while delivering outstanding pest control performance across various agricultural applications.',
             url: 'product/thiamethoxam-75-sg'
          },
-        { name: 'Super FS', image: 'assets/products/SUPER FS.png', description: 'Premium insect protection',
-            fullDescription: 'Super FS is our premium grade insecticide offering superior protection against multiple pest species. Its advanced formula combines fast action with extended protection periods, making it an excellent choice for high-value crops. The product features enhanced stability under various weather conditions and minimal impact on beneficial insects.',
-            url: 'product/super-fs'
+        { name: 'Super FS', image: 'assets/products/thiamethoxam-30-fs.png', description: 'Thiamethoxam 30% FS seed treatment',
+            fullDescription: 'Super FS (Thiamethoxam 30% FS) is our professional seed-treatment insecticide for early-stage crop protection. It supports cleaner crop establishment with practical dose guidance and broad compatibility in integrated farm advisory programs.',
+            url: 'all-products/thiamethoxam-30-fs'
          },
         { name: 'Mpire 404', image: 'assets/products/MPIRE-404.png', description: 'Complete pest control',
             fullDescription: 'Mpire 404 delivers comprehensive pest management through its innovative dual-action formula. This professional-grade solution provides both contact and systemic activity, ensuring thorough pest elimination at all life stages. Its unique composition offers excellent crop safety while maintaining high efficacy against resistant pest populations.',
