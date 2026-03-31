@@ -101,7 +101,8 @@ export class ProductService {
           { name: 'Chloro Shield 20', 
             image: 'assets/products/insecticide/chloro-shield-20.jpg', 
             description: 'Chlorpyriphos 20% EC reliable broad-spectrum',
-            fullDescription: 'Chloro Shield 20 (Chlorpyriphos 20% EC) is a robust organophosphate insecticide offering dependable contact, stomach and fumigant action. Ideal for soil and foliar insect management, it effectively controls termites, borers and sucking pests across multiple crops. The optimized EC formulation ensures strong knockdown, lasting field performance and flexible application options for professional programs.'
+            fullDescription: 'Chloro Shield 20 (Chlorpyriphos 20% EC) is a robust organophosphate insecticide offering dependable contact, stomach and fumigant action. Ideal for soil and foliar insect management, it effectively controls termites, borers and sucking pests across multiple crops. The optimized EC formulation ensures strong knockdown, lasting field performance and flexible application options for professional programs.',
+            url: 'product/chlorpyriphos-20-ec'
           },
           { name: 'Cloro GR', 
             image: 'assets/products/insecticide/cloro-gr.jpg', 
