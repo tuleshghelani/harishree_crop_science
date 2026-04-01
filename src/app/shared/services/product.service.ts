@@ -138,10 +138,11 @@ export class ProductService {
             description: 'Profenophos 50% EC contact and stomach poison',
             fullDescription: 'Extra Profex (Profenophos 50% EC) is a trusted broad-spectrum insecticide providing strong contact and stomach action against bollworms, mites and other persistent pests. Its optimized EC technology ensures deep canopy reach, superior coverage and dependable field performance while fitting well into rotation strategies.'
           },
-          { name: 'H Cyper 25', 
-            image: 'assets/products/insecticide/h-cyper-25.jpg', 
-            description: 'Cypermethrin 25% EC versatile pyrethroid',
-            fullDescription: 'H Cyper 25 (Cypermethrin 25% EC) offers rapid knockdown and residual control of a wide spectrum of chewing and sucking insects. The robust pyrethroid formulation delivers reliable performance under varied field conditions, making it a practical, economical choice for vegetables, pulses and fiber crops.'
+          { name: 'H-Cyper 25 (Cypermethrin 25% EC)', 
+            image: 'assets/products/insecticide/cypermethrin-25-ec.jpg', 
+            description: 'Cypermethrin 25% EC contact and stomach insecticide',
+            fullDescription: 'H-Cyper 25 (Cypermethrin 25% EC) is Harishree Crop Science\'s practical EC insecticide for rapid knockdown and disciplined field control of bollworms, aphids, jassids, thrips and other major crop pests. With clear guidance of 25 ml per pump and broad crop fit, it supports dependable on-farm pest management when used at early infestation stage as per label and local advisory.',
+            url: 'product/cypermethrin-25-ec'
           },
           // { name: 'Kavach Plus',
           //   image: 'assets/products/insecticide/kavach-plus.jpg',

@@ -29,6 +29,8 @@ export const routes: Routes = [
   { path: 'product/chlorpyriphos-20-ec', loadComponent: () => import('./pages/all-products/chlorpyriphos-20-ec/chlorpyriphos-20-ec.component').then(m => m.Chlorpyriphos20EcComponent) },
   { path: 'product/chlorpyriphos-50-cypermethrin-5-ec', loadComponent: () => import('./pages/all-products/chlorpyriphos-50-cypermethrin-5-ec/chlorpyriphos-50-cypermethrin-5-ec.component').then(m => m.Chlorpyriphos50Cypermethrin5EcComponent) },
   { path: 'product/combi-505', redirectTo: 'product/chlorpyriphos-50-cypermethrin-5-ec', pathMatch: 'full' },
+  { path: 'product/cypermethrin-25-ec', loadComponent: () => import('./pages/all-products/cypermethrin-25-ec/cypermethrin-25-ec.component').then(m => m.Cypermethrin25EcComponent) },
+  { path: 'product/h-cyper-25', redirectTo: 'product/cypermethrin-25-ec', pathMatch: 'full' },
   { path: 'product/fipronil-40-imidacloprid-40-wg', loadComponent: () => import('./pages/all-products/fipronil-40-imidacloprid-40-wg/fipronil-40-imidacloprid-40-wg.component').then(m => m.Fipronil40Imidacloprid40WgComponent) },
   { path: 'product/fi-40', redirectTo: 'product/fipronil-40-imidacloprid-40-wg', pathMatch: 'full' },
   { path: 'product/chlorantraniliprole-18-5-sc', loadComponent: () => import('./pages/all-products/chlorantraniliprole-18-5-sc/chlorantraniliprole-18-5-sc.component').then(m => m.Chlorantraniliprole185ScComponent) },
