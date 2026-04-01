@@ -1,6 +1,6 @@
 import { CommonModule, DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { Component, Inject, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core';
-import { Meta, MetaDefinition, Title, TransferState, makeStateKey } from '@angular/platform-browser';
+import { Meta, Title, TransferState, makeStateKey } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import Aos from 'aos';
 import { environment } from '../../../../environments/environment';
@@ -10,9 +10,7 @@ import {
   offerShippingDetailsSchema
 } from '../../../shared/schema/product-offer-jsonld';
 
-const META_KEY = makeStateKey<boolean>('HCYPER25_META');
-const ORG_SCHEMA_KEY = makeStateKey<string>('HCYPER25_ORG_SCHEMA');
-const LOCALBUSINESS_SCHEMA_KEY = makeStateKey<string>('HCYPER25_LB_SCHEMA');
+const BUSINESS_SCHEMA_KEY = makeStateKey<string>('HCYPER25_BUSINESS_SCHEMA');
 const WEBPAGE_SCHEMA_KEY = makeStateKey<string>('HCYPER25_WEBPAGE_SCHEMA');
 const BREADCRUMB_SCHEMA_KEY = makeStateKey<string>('HCYPER25_BREADCRUMB_SCHEMA');
 const PRODUCT_SCHEMA_KEY = makeStateKey<string>('HCYPER25_PRODUCT_SCHEMA');
@@ -338,17 +336,21 @@ export class Cypermethrin25EcComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
-    this.setMetaData();
-    this.injectStructuredData();
+    this.updateSeo();
+    this.setProductStructuredData();
+    this.setBusinessStructuredData();
+    this.setFaqStructuredData();
+    this.setBreadcrumbStructuredData();
+    this.setHowToStructuredData();
+    this.setItemListStructuredData();
+    this.setWebPageStructuredData();
     if (isPlatformBrowser(this.platformId)) {
       Aos.init({ duration: 800, easing: 'ease-in-out', once: true });
     }
   }
 
   ngOnDestroy(): void {
-    this.transferState.remove(META_KEY);
-    this.transferState.remove(ORG_SCHEMA_KEY);
-    this.transferState.remove(LOCALBUSINESS_SCHEMA_KEY);
+    this.transferState.remove(BUSINESS_SCHEMA_KEY);
     this.transferState.remove(WEBPAGE_SCHEMA_KEY);
     this.transferState.remove(BREADCRUMB_SCHEMA_KEY);
     this.transferState.remove(PRODUCT_SCHEMA_KEY);
@@ -357,18 +359,14 @@ export class Cypermethrin25EcComponent implements OnInit, OnDestroy {
     this.transferState.remove(HOWTO_SCHEMA_KEY);
   }
 
-  private setMetaData(): void {
-    if (this.transferState.hasKey(META_KEY)) {
-      return;
-    }
-
+  private updateSeo() {
     const titleText = `${this.productTitle} | ${this.productName} Insecticide | Harishree Crop Science`;
     this.title.setTitle(titleText);
 
     const desc =
       `${this.productName} by Harishree Crop Science is a professional ${this.productTitle} insecticide with 25 ml/pump guidance. Explore benefits, pests, crops, technical specifications, usage safety and FAQs.`;
 
-    const metaTags: MetaDefinition[] = [
+    this.meta.addTags([
       { name: 'description', content: desc },
       {
         name: 'keywords',
@@ -384,313 +382,393 @@ export class Cypermethrin25EcComponent implements OnInit, OnDestroy {
       { property: 'og:url', content: this.pageUrl },
       { property: 'og:image', content: this.bottleImageUrl },
       { property: 'og:locale', content: 'en_IN' },
+      { property: 'og:site_name', content: 'Harishree Crop Science' },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: titleText },
       { name: 'twitter:description', content: desc },
       { name: 'twitter:image', content: this.bottleImageUrl }
-    ];
-
-    metaTags.forEach((tag) => this.meta.updateTag(tag));
-    this.transferState.set(META_KEY, true);
+    ]);
   }
 
-  private injectStructuredData(): void {
-    if (!isPlatformBrowser(this.platformId)) {
+  private setProductStructuredData() {
+    if (this.transferState.hasKey(PRODUCT_SCHEMA_KEY)) {
+      this.addJsonLd(this.transferState.get(PRODUCT_SCHEMA_KEY, ''));
       return;
     }
-    this.setOrganizationSchema();
-    this.setLocalBusinessSchema();
-    this.setWebPageSchema();
-    this.setBreadcrumbSchema();
-    this.setProductSchema();
-    this.setItemListSchema();
-    this.setFaqSchema();
-    this.setHowToSchema();
-  }
 
-  private addJsonLd(json: object, key: ReturnType<typeof makeStateKey<string>>): void {
-    const str = JSON.stringify(json);
-    if (this.transferState.hasKey(key)) {
-      this.appendScript(this.transferState.get(key, ''));
-      return;
-    }
-    this.transferState.set(key, str);
-    this.appendScript(str);
-  }
-
-  private appendScript(text: string): void {
-    const script = this.document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = text;
-    this.document.head.appendChild(script);
-  }
-
-  private setOrganizationSchema(): void {
-    const data = {
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      '@id': `${this.baseUrl}/#organization`,
-      name: 'Harishree Crop Science',
-      url: this.baseUrl,
-      logo: `${this.baseUrl}/assets/logo/HARISHREE.png`,
-      email: 'harishreecropscience@gmail.com',
-      telephone: '+919898197196',
-      sameAs: [
-        'https://twitter.com/harishreecrop',
-        'https://www.facebook.com/profile.php?id=61573857659074',
-        'https://instagram.com/harishree_crop_science',
-        'https://linkedin.com/company/harishree-crop-science'
-      ],
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Plot No.57, survey no. 751 Palki 2, harsiddhi park - 1',
-        addressLocality: 'Near jawahar navoday vidhyalay, Rajkot-Jamnagar Road, Targhari, Paddhari, Rajkot, Gujarat - 360110',
-        addressRegion: 'Gujarat',
-        postalCode: '360110',
-        addressCountry: 'IN'
-      }
-    };
-    this.addJsonLd(data, ORG_SCHEMA_KEY);
-  }
-
-  private setLocalBusinessSchema(): void {
-    const data = {
-      '@context': 'https://schema.org',
-      '@type': 'LocalBusiness',
-      name: 'Harishree Crop Science',
-      image: `${this.baseUrl}/assets/logo/HARISHREE.png`,
-      url: this.baseUrl,
-      telephone: '+919898197196',
-      email: 'harishreecropscience@gmail.com',
-      priceRange: 'INR',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Plot No.57, survey no. 751, Palki 2, harsiddhi park - 1',
-        addressLocality: 'Near jawahar navoday vidhyalay, Rajkot-Jamnagar Road, Targhari, Paddhari, Rajkot, Gujarat - 360110',
-        addressRegion: 'Gujarat',
-        postalCode: '360110',
-        addressCountry: 'IN'
-      },
-      areaServed: [{ '@type': 'State', name: 'Gujarat' }, { '@type': 'Country', name: 'India' }],
-      department: [
-        {
-          '@type': 'LocalBusiness',
-          name: `${this.productName} (${this.productTitle})`,
-          description: `${this.productName} is Harishree Crop Science ${this.productTitle} solution for practical crop pest management.`
-        }
-      ],
-      sameAs: [
-        'https://www.linkedin.com/company/harishree-crop-science',
-        'https://www.instagram.com/harishree_crop_science',
-        'https://www.facebook.com/harishreecropscience'
-      ],
-      openingHoursSpecification: {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-        opens: '09:00',
-        closes: '19:00'
-      }
-    };
-    this.addJsonLd(data, LOCALBUSINESS_SCHEMA_KEY);
-  }
-
-  private setWebPageSchema(): void {
-    const data = {
-      '@context': 'https://schema.org',
-      '@type': 'WebPage',
-      '@id': `${this.pageUrl}#webpage`,
-      url: this.pageUrl,
-      name: `${this.productTitle} - ${this.productName} by Harishree Crop Science`,
-      description:
-        `${this.productTitle} (${this.productName}) product page with technical specifications, mode of action, usage guidance, FAQs and crop application support.`,
-      inLanguage: 'en-IN',
-      isPartOf: {
-        '@type': 'WebSite',
-        '@id': `${this.baseUrl}/#website`,
-        url: this.baseUrl,
-        name: 'Harishree Crop Science',
-        publisher: { '@id': `${this.baseUrl}/#organization` }
-      },
-      primaryImageOfPage: {
-        '@type': 'ImageObject',
-        url: this.bottleImageUrl,
-        caption: `${this.productName} ${this.productTitle} bottle`
-      },
-      breadcrumb: { '@id': `${this.pageUrl}#breadcrumb` }
-    };
-    this.addJsonLd(data, WEBPAGE_SCHEMA_KEY);
-  }
-
-  private setBreadcrumbSchema(): void {
-    const data = {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      '@id': `${this.pageUrl}#breadcrumb`,
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: this.baseUrl },
-        { '@type': 'ListItem', position: 2, name: 'Products', item: `${this.baseUrl}/products` },
-        { '@type': 'ListItem', position: 3, name: 'Insecticides', item: `${this.baseUrl}/products` },
-        { '@type': 'ListItem', position: 4, name: `${this.productName} (${this.productTitle})`, item: this.pageUrl }
-      ]
-    };
-    this.addJsonLd(data, BREADCRUMB_SCHEMA_KEY);
-  }
-
-  private setProductSchema(): void {
     const prices = this.packSizes.map((p) => p.price);
-    const data = {
-      '@context': 'https://schema.org',
-      '@type': 'Product',
-      name: this.productTitle,
-      alternateName: [
+    const schema = {
+      "@context": "https://schema.org/",
+      "@type": "ProductGroup",
+      "productGroupID": "HCYPER-25",
+      "variesBy": [
+        "https://schema.org/size"
+      ],
+      "category": "Insecticide, Cypermethrin 25 EC, Crop Protection",
+      "name": this.productTitle,
+      "url": this.pageUrl,
+      "image": [this.bottleImageUrl],
+      "description": `${this.productName} (${this.productTitle}) is a contact and stomach insecticide for practical management of major crop pests in field programs.`,
+      "keywords": "Cypermethrin 25% EC, H-Cyper 25, cypermethrin insecticide, cypermethrin 25 ec dose, 25 ml per pump cypermethrin, synthetic pyrethroid insecticide, bollworm control, aphid jassid thrips control, Harishree Crop Science",
+      "sku": "HCYPER-25",
+      "brand": {
+        "@type": "Brand",
+        "name": "Harishree Crop Science"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "Harishree Crop Science",
+        "url": this.baseUrl,
+        "logo": `${this.baseUrl}/assets/logo/HARISHREE.png`,
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Plot No.57, survey no. 751, Palki 2, harsiddhi park - 1",
+          "addressLocality": "Near jawahar navoday vidhyalay, Rajkot-Jamnagar Road, Targhari, Paddhari, Rajkot, Gujarat - 360110",
+          "addressRegion": "Gujarat",
+          "postalCode": "360110",
+          "addressCountry": "IN"
+        }
+      },
+      "alternateName": [
         this.productName,
-        'H Cyper 25',
-        'Cypermethrin 25 EC',
-        'Cypermethrin 25% EC insecticide'
+        "H Cyper 25",
+        "Cypermethrin 25 EC",
+        "Cypermethrin 25% EC insecticide"
       ],
-      description:
-        `${this.productName} (${this.productTitle}) is a contact and stomach insecticide for practical management of major crop pests in field programs.`,
-      image: [this.bottleImageUrl],
-      brand: { '@type': 'Brand', name: 'Harishree Crop Science' },
-      model: this.productName,
-      category: 'Insecticide',
-      sku: 'HCYPER-25',
-      material: 'EC (Emulsifiable Concentrate)',
-      additionalProperty: [
-        ...this.officialProductDetails.map((row) => ({
-          '@type': 'PropertyValue',
-          name: row.label,
-          value: row.value
-        })),
-        { '@type': 'PropertyValue', name: 'Dose', value: '25 ml/pump' },
-        { '@type': 'PropertyValue', name: 'Company product name', value: this.productName },
-        { '@type': 'PropertyValue', name: 'Primary keyword', value: this.productTitle },
-        { '@type': 'PropertyValue', name: 'Secondary keyword', value: this.productName }
-      ],
-      manufacturer: {
-        '@type': 'Organization',
-        name: 'Harishree Crop Science',
-        url: this.baseUrl,
-        logo: `${this.baseUrl}/assets/logo/HARISHREE.png`
+      "material": "EC (Emulsifiable Concentrate)",
+      "offers": {
+        "@type": "AggregateOffer",
+        "url": this.pageUrl,
+        "priceCurrency": "INR",
+        "lowPrice": Math.min(...prices).toString(),
+        "highPrice": Math.max(...prices).toString(),
+        "offerCount": this.packSizes.length.toString(),
+        "price": Math.min(...prices).toString(),
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "priceValidUntil": getOfferPriceValidUntil(),
+        "hasMerchantReturnPolicy": merchantReturnPolicySchema(),
+        "shippingDetails": offerShippingDetailsSchema(),
+        "seller": {
+          "@type": "Organization",
+          "name": "Harishree Crop Science"
+        },
+        "areaServed": [
+          { "@type": "Country", "name": "India" },
+          { "@type": "State", "name": "Gujarat" },
+          { "@type": "AdministrativeArea", "name": "Worldwide" }
+        ],
+        "deliveryLeadTime": {
+          "@type": "QuantitativeValue",
+          "minValue": "2",
+          "maxValue": "7",
+          "unitCode": "DAY"
+        },
+        "eligibleQuantity": {
+          "@type": "QuantitativeValue",
+          "unitCode": "FTK",
+          "value": "1"
+        }
       },
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.8',
-        reviewCount: '34',
-        bestRating: '5',
-        worstRating: '1'
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "34",
+        "bestRating": "5",
+        "worstRating": "1"
       },
-      review: this.testimonials.map((item) => ({
-        '@type': 'Review',
-        author: { '@type': 'Person', name: item.name },
-        reviewBody: item.text,
-        reviewRating: {
-          '@type': 'Rating',
-          ratingValue: item.rating.toString(),
-          bestRating: '5'
+      "review": this.testimonials.map((item) => ({
+        "@type": "Review",
+        "author": { "@type": "Person", "name": item.name },
+        "reviewBody": item.text,
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": item.rating.toString(),
+          "bestRating": "5"
         }
       })),
-      offers: {
-        '@type': 'AggregateOffer',
-        offerCount: this.packSizes.length,
-        lowPrice: Math.min(...prices).toString(),
-        highPrice: Math.max(...prices).toString(),
-        priceCurrency: 'INR',
-        availability: 'https://schema.org/InStock',
-        url: this.pageUrl,
-        priceValidUntil: getOfferPriceValidUntil(),
-        hasMerchantReturnPolicy: merchantReturnPolicySchema(),
-        shippingDetails: offerShippingDetailsSchema(),
-        seller: { '@id': `${this.baseUrl}/#organization` }
-      }
+      "additionalProperty": [
+        ...this.officialProductDetails.map((row) => ({
+          "@type": "PropertyValue",
+          "name": row.label,
+          "value": row.value
+        })),
+        { "@type": "PropertyValue", "name": "Dose", "value": "25 ml/pump" },
+        { "@type": "PropertyValue", "name": "Company product name", "value": this.productName },
+        { "@type": "PropertyValue", "name": "Primary keyword", "value": this.productTitle },
+        { "@type": "PropertyValue", "name": "Secondary keyword", "value": this.productName }
+      ],
+      "hasVariant": this.packSizes.map((p) => ({
+        "@type": "Product",
+        "name": `${this.productTitle} - ${p.volume}`,
+        "sku": p.sku,
+        "image": this.bottleImageUrl,
+        "description": `${this.productTitle} ${p.volume} pack by Harishree Crop Science.`,
+        "brand": {
+          "@type": "Brand",
+          "name": "Harishree Crop Science"
+        },
+        "size": p.volume,
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "INR",
+          "price": p.price.toString(),
+          "priceValidUntil": getOfferPriceValidUntil(),
+          "hasMerchantReturnPolicy": merchantReturnPolicySchema(),
+          "shippingDetails": offerShippingDetailsSchema(),
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition"
+        }
+      }))
     };
-    this.addJsonLd(data, PRODUCT_SCHEMA_KEY);
+
+    const schemaString = JSON.stringify(schema);
+    this.transferState.set(PRODUCT_SCHEMA_KEY, schemaString);
+    this.addJsonLd(schemaString);
   }
 
-  private setItemListSchema(): void {
-    const data = {
-      '@context': 'https://schema.org',
-      '@type': 'ItemList',
-      name: `${this.productTitle} - pack sizes`,
-      description: `${this.productTitle} pack size list with schema-only GST-inclusive prices.`,
-      numberOfItems: this.packSizes.length,
-      itemListElement: this.packSizes.map((p, i) => ({
-        '@type': 'ListItem',
-        position: i + 1,
-        item: {
-          '@type': 'Product',
-          name: `${this.productTitle} - ${p.volume}`,
-          image: this.bottleImageUrl,
-          sku: p.sku,
-          description: `${this.productTitle} ${p.volume} pack by Harishree Crop Science.`,
-          brand: { '@type': 'Brand', name: 'Harishree Crop Science' },
-          category: 'Insecticide',
-          additionalProperty: [
-            { '@type': 'PropertyValue', name: 'Technical composition', value: this.productTitle },
-            { '@type': 'PropertyValue', name: 'Pack size', value: p.volume },
-            { '@type': 'PropertyValue', name: 'Dose', value: '25 ml/pump' },
-            { '@type': 'PropertyValue', name: 'Company product name', value: this.productName }
+  private setBusinessStructuredData(): void {
+    if (this.transferState.hasKey(BUSINESS_SCHEMA_KEY)) {
+      this.addJsonLd(this.transferState.get(BUSINESS_SCHEMA_KEY, ''));
+      return;
+    }
+
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Harishree Crop Science",
+      "image": `${this.baseUrl}/assets/logo/HARISHREE.png`,
+      "url": this.baseUrl,
+      "telephone": "+91 9898197196",
+      "email": "harishreecropscience@gmail.com",
+      "priceRange": "INR",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Plot No.57, survey no. 751, Palki 2, harsiddhi park - 1",
+        "addressLocality": "Near jawahar navoday vidhyalay, Rajkot-Jamnagar Road, Targhari, Paddhari, Rajkot, Gujarat - 360110",
+        "addressRegion": "Gujarat",
+        "postalCode": "360110",
+        "addressCountry": "IN"
+      },
+      "department": [
+        {
+          "@type": "LocalBusiness",
+          "name": `${this.productName} (${this.productTitle})`,
+          "description": `${this.productName} is Harishree Crop Science ${this.productTitle} solution for practical crop pest management.`
+        }
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "09:00",
+        "closes": "19:00"
+      },
+      "areaServed": [
+        { "@type": "State", "name": "Gujarat" },
+        { "@type": "Country", "name": "India" }
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/harishree-crop-science",
+        "https://www.instagram.com/harishree_crop_science",
+        "https://www.facebook.com/harishreecropscience"
+      ]
+    };
+
+    const schemaString = JSON.stringify(schema);
+    this.transferState.set(BUSINESS_SCHEMA_KEY, schemaString);
+    this.addJsonLd(schemaString);
+  }
+
+  private setFaqStructuredData(): void {
+    if (this.transferState.hasKey(FAQ_SCHEMA_KEY)) {
+      this.addJsonLd(this.transferState.get(FAQ_SCHEMA_KEY, ''));
+      return;
+    }
+
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": this.faqs.map((faq) => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answerPlain
+        }
+      }))
+    };
+
+    const schemaString = JSON.stringify(schema);
+    this.transferState.set(FAQ_SCHEMA_KEY, schemaString);
+    this.addJsonLd(schemaString);
+  }
+
+  private setBreadcrumbStructuredData() {
+    if (this.transferState.hasKey(BREADCRUMB_SCHEMA_KEY)) {
+      this.addJsonLd(this.transferState.get(BREADCRUMB_SCHEMA_KEY, ''));
+      return;
+    }
+
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": this.baseUrl },
+        { "@type": "ListItem", "position": 2, "name": "Products", "item": `${this.baseUrl}/products` },
+        { "@type": "ListItem", "position": 3, "name": "Insecticides", "item": `${this.baseUrl}/products` },
+        { "@type": "ListItem", "position": 4, "name": `${this.productName} (${this.productTitle})`, "item": this.pageUrl }
+      ]
+    };
+
+    const schemaString = JSON.stringify(schema);
+    this.transferState.set(BREADCRUMB_SCHEMA_KEY, schemaString);
+    this.addJsonLd(schemaString);
+  }
+
+  private setHowToStructuredData() {
+    if (this.transferState.hasKey(HOWTO_SCHEMA_KEY)) {
+      this.addJsonLd(this.transferState.get(HOWTO_SCHEMA_KEY, ''));
+      return;
+    }
+
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": `How to apply ${this.productTitle}`,
+      "description": `Step-by-step field guidance for safe and effective spray preparation of ${this.productTitle}.`,
+      "image": this.bottleImageUrl,
+      "totalTime": "PT20M",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "INR",
+        "value": String(INDICATIVE_LIST_PRICE_INR)
+      },
+      "supply": [
+        { "@type": "HowToSupply", "name": this.productTitle },
+        { "@type": "HowToSupply", "name": "Clean water" }
+      ],
+      "tool": [
+        { "@type": "HowToTool", "name": "Knapsack sprayer / power sprayer" },
+        { "@type": "HowToTool", "name": "Measuring cup (ml)" },
+        { "@type": "HowToTool", "name": "Personal protective equipment (PPE)" }
+      ],
+      "step": this.howToSteps.map((step, index) => ({
+        "@type": "HowToStep",
+        "position": index + 1,
+        "name": step.name,
+        "text": step.text,
+        "image": this.bottleImageUrl,
+        "url": `${this.pageUrl}#step-${index + 1}`
+      }))
+    };
+
+    const schemaString = JSON.stringify(schema);
+    this.transferState.set(HOWTO_SCHEMA_KEY, schemaString);
+    this.addJsonLd(schemaString);
+  }
+
+  private setItemListStructuredData() {
+    if (this.transferState.hasKey(ITEMLIST_SCHEMA_KEY)) {
+      this.addJsonLd(this.transferState.get(ITEMLIST_SCHEMA_KEY, ''));
+      return;
+    }
+
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": `${this.productTitle} - pack sizes`,
+      "description": `${this.productTitle} pack size list with schema-only GST-inclusive prices.`,
+      "numberOfItems": this.packSizes.length,
+      "itemListElement": this.packSizes.map((pack, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": {
+          "@type": "Product",
+          "name": `${this.productTitle} - ${pack.volume}`,
+          "image": this.bottleImageUrl,
+          "sku": pack.sku,
+          "description": `${this.productTitle} ${pack.volume} pack by Harishree Crop Science.`,
+          "brand": {
+            "@type": "Brand",
+            "name": "Harishree Crop Science"
+          },
+          "category": "Insecticide",
+          "additionalProperty": [
+            { "@type": "PropertyValue", "name": "Technical composition", "value": this.productTitle },
+            { "@type": "PropertyValue", "name": "Pack size", "value": pack.volume },
+            { "@type": "PropertyValue", "name": "Dose", "value": "25 ml/pump" },
+            { "@type": "PropertyValue", "name": "Company product name", "value": this.productName }
           ],
-          offers: {
-            '@type': 'Offer',
-            price: p.price.toString(),
-            priceCurrency: 'INR',
-            availability: 'https://schema.org/InStock',
-            url: this.pageUrl,
-            priceValidUntil: getOfferPriceValidUntil(),
-            hasMerchantReturnPolicy: merchantReturnPolicySchema(),
-            shippingDetails: offerShippingDetailsSchema(),
-            seller: { '@id': `${this.baseUrl}/#organization` }
+          "offers": {
+            "@type": "Offer",
+            "price": pack.price.toString(),
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock",
+            "url": this.pageUrl,
+            "itemCondition": "https://schema.org/NewCondition",
+            "priceValidUntil": getOfferPriceValidUntil(),
+            "hasMerchantReturnPolicy": merchantReturnPolicySchema(),
+            "shippingDetails": offerShippingDetailsSchema()
           }
         }
       }))
     };
-    this.addJsonLd(data, ITEMLIST_SCHEMA_KEY);
+
+    const schemaString = JSON.stringify(schema);
+    this.transferState.set(ITEMLIST_SCHEMA_KEY, schemaString);
+    this.addJsonLd(schemaString);
   }
 
-  private setFaqSchema(): void {
-    const data = {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: this.faqs.map((f) => ({
-        '@type': 'Question',
-        name: f.question,
-        acceptedAnswer: { '@type': 'Answer', text: f.answerPlain }
-      }))
-    };
-    this.addJsonLd(data, FAQ_SCHEMA_KEY);
-  }
+  private setWebPageStructuredData() {
+    if (this.transferState.hasKey(WEBPAGE_SCHEMA_KEY)) {
+      this.addJsonLd(this.transferState.get(WEBPAGE_SCHEMA_KEY, ''));
+      return;
+    }
 
-  private setHowToSchema(): void {
-    const data = {
-      '@context': 'https://schema.org',
-      '@type': 'HowTo',
-      name: `How to apply ${this.productTitle}`,
-      description: `Step-by-step field guidance for safe and effective spray preparation of ${this.productTitle}.`,
-      image: this.bottleImageUrl,
-      totalTime: 'PT20M',
-      estimatedCost: {
-        '@type': 'MonetaryAmount',
-        currency: 'INR',
-        value: String(INDICATIVE_LIST_PRICE_INR)
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": `${this.pageUrl}#webpage`,
+      "url": this.pageUrl,
+      "name": `${this.productTitle} - ${this.productName} by Harishree Crop Science`,
+      "description": `${this.productTitle} (${this.productName}) product page with technical specifications, mode of action, usage guidance, FAQs and crop application support.`,
+      "inLanguage": "en-IN",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": `${this.baseUrl}/#website`,
+        "url": this.baseUrl,
+        "name": "Harishree Crop Science",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Harishree Crop Science"
+        }
       },
-      supply: [
-        { '@type': 'HowToSupply', name: this.productTitle },
-        { '@type': 'HowToSupply', name: 'Clean water' }
-      ],
-      tool: [
-        { '@type': 'HowToTool', name: 'Knapsack sprayer / power sprayer' },
-        { '@type': 'HowToTool', name: 'Measuring cup (ml)' },
-        { '@type': 'HowToTool', name: 'Personal protective equipment (PPE)' }
-      ],
-      step: this.howToSteps.map((s, i) => ({
-        '@type': 'HowToStep',
-        position: i + 1,
-        name: s.name,
-        text: s.text,
-        image: this.bottleImageUrl
-      }))
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".hero", ".section-title", ".hero-content h1"]
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Harishree Crop Science"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": this.bottleImageUrl,
+        "caption": `${this.productName} ${this.productTitle} bottle`
+      }
     };
-    this.addJsonLd(data, HOWTO_SCHEMA_KEY);
+
+    const schemaString = JSON.stringify(schema);
+    this.transferState.set(WEBPAGE_SCHEMA_KEY, schemaString);
+    this.addJsonLd(schemaString);
+  }
+
+  private addJsonLd(schema: string) {
+    if (!isPlatformBrowser(this.platformId)) return;
+
+    const script = this.document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = schema;
+    this.document.head.appendChild(script);
   }
 }
