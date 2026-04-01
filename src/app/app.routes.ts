@@ -31,6 +31,8 @@ export const routes: Routes = [
   { path: 'product/combi-505', redirectTo: 'product/chlorpyriphos-50-cypermethrin-5-ec', pathMatch: 'full' },
   { path: 'product/fipronil-40-imidacloprid-40-wg', loadComponent: () => import('./pages/all-products/fipronil-40-imidacloprid-40-wg/fipronil-40-imidacloprid-40-wg.component').then(m => m.Fipronil40Imidacloprid40WgComponent) },
   { path: 'product/fi-40', redirectTo: 'product/fipronil-40-imidacloprid-40-wg', pathMatch: 'full' },
+  { path: 'product/chlorantraniliprole-18-5-sc', loadComponent: () => import('./pages/all-products/chlorantraniliprole-18-5-sc/chlorantraniliprole-18-5-sc.component').then(m => m.Chlorantraniliprole185ScComponent) },
+  { path: 'product/cora-5', redirectTo: 'product/chlorantraniliprole-18-5-sc', pathMatch: 'full' },
   { path: 'product/profenofos-40-cypermethrin-4-ec', loadComponent: () => import('./pages/all-products/profenofos-40-cypermethrin-4-ec/profenofos-40-cypermethrin-4-ec.component').then(m => m.Profenofos40Cypermethrin4EcComponent) }, //mpire-404
   { path: 'product/mpire-404', loadComponent: () => import('./pages/all-products/mpire-404/mpire-404.component').then(m => m.Mpire404Component) }, //profenofos-40-cypermethrin-4-ec
   { path: 'product/dr-supreme', redirectTo: 'product/abamectin-1-9-ec', pathMatch: 'full' },

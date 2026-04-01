@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit, inject, PLATFORM_ID, Inject, TransferState, makeStateKey } from '@angular/core';
 import { CommonModule, isPlatformBrowser, DOCUMENT } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { Meta, Title } from '@angular/platform-browser';
 import * as Aos from 'aos';
 
@@ -63,6 +63,7 @@ export class UPVCMetalClampComponent implements OnInit, AfterViewInit {
   private platformId = inject(PLATFORM_ID);
   
   showEnquiryForm: boolean = false;
+  isSubmitting: boolean = false;
   expandedFaqs: boolean[] = [];
 
   enquiryData = {
@@ -422,10 +423,21 @@ export class UPVCMetalClampComponent implements OnInit, AfterViewInit {
     }
   }
 
-  submitEnquiry() {
+  submitEnquiry(form?: NgForm, event?: Event) {
+    event?.preventDefault();
+    if (this.isSubmitting) {
+      return;
+    }
+    if (form?.invalid) {
+      form.control.markAllAsTouched();
+      return;
+    }
+
+    this.isSubmitting = true;
     console.log('Enquiry submitted:', this.enquiryData);
     alert('Thank you for your enquiry about UPVC Metal Clamps, UPVC Clamps, and Metal Clamps. We will contact you shortly.');
     this.showEnquiryForm = false;
+    this.isSubmitting = false;
     this.enquiryData = { name: '', email: '', phone: '', company: '', quantity: null, message: '' };
     if (isPlatformBrowser(this.platformId)) {
       this.document.body.style.overflow = 'auto';

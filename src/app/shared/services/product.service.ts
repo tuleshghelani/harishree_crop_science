@@ -85,10 +85,11 @@ export class ProductService {
             fullDescription: 'Chlorpyriphos 50% + Cypermethrin 5% EC (Combi 505) is Harishree Crop Science\'s combination insecticide for practical field control of mixed pest pressure. The EC formulation supports fast knockdown and dependable follow-through with contact, stomach and fumigant action when used at 25 ml per pump as per crop label and local advisory.',
             url: 'product/chlorpyriphos-50-cypermethrin-5-ec'
           },
-          { name: 'Cora-5', 
-            image: 'assets/products/CORA-5.jpg', 
-            description: 'Comprehensive protection',
-            fullDescription: 'Cora-5 provides comprehensive protection through its advanced formulation technology. This versatile product offers excellent control over multiple pest species while being safe for crops. Its unique composition ensures better coverage and longer-lasting protection.'
+          { name: 'Chlorantraniliprole 18.5% SC (Cora-5)',
+            image: 'assets/products/chlorantraniliprole-18-5-sc.png',
+            description: 'Chlorantraniliprole 18.5% SC for top borers, stem borers and FAW support',
+            fullDescription: 'Cora-5 (Chlorantraniliprole 18.5% SC) is Harishree Crop Science\'s professional insecticide for borer and larval pest management in crops such as groundnut, maize, paddy, cotton, chilli and vegetables. It supports systemic and contact action with practical guidance of 5 ml per pump when used as per crop label and local advisory.',
+            url: 'product/chlorantraniliprole-18-5-sc'
           },
           { name: 'Fipronil 40% + Imidacloprid 40% WG (FI 40)', 
             image: 'assets/products/insecticide/fipronil-40-imidacloprid-40-wg.jpg', 

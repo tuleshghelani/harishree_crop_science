@@ -16,9 +16,9 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="nav-overlay" [class.show]="isMenuOpen" (click)="closeMenu($event)" (touchstart)="closeMenu($event)" role="presentation" aria-hidden="true"></div>
+      <div class="nav-overlay" [class.show]="isMenuOpen" (pointerdown)="closeMenu($event)" (click)="closeMenu($event)" role="presentation" aria-hidden="true"></div>
 
-      <div class="collapse navbar-collapse" [class.show]="isMenuOpen" id="navbarMenu">
+      <div class="collapse navbar-collapse" [class.show]="isMenuOpen" [style.top.px]="mobileMenuTop" id="navbarMenu">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
             <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu($event)">Home</a>

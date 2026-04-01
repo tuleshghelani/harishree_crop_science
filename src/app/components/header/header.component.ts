@@ -14,6 +14,7 @@ import { filter } from 'rxjs/operators';
 })
 export class HeaderComponent implements OnInit, OnDestroy {
   isMenuOpen = false;
+  mobileMenuTop: number | null = null;
   private navSub?: Subscription;
 
   constructor(
@@ -37,12 +38,16 @@ export class HeaderComponent implements OnInit, OnDestroy {
   toggleMenu(event?: Event) {
     event?.preventDefault();
     this.isMenuOpen = !this.isMenuOpen;
+    if (this.isMenuOpen) {
+      this.updateMobileMenuLayout();
+    }
     this.setBodyScrollState();
   }
 
   closeMenu(event?: Event) {
     event?.preventDefault();
     this.isMenuOpen = false;
+    this.mobileMenuTop = null;
     this.setBodyScrollState();
   }
 
@@ -58,8 +63,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
     }
   }
 
-  @HostListener('document:touchstart', ['$event'])
-  onDocumentTouchStart(event: TouchEvent): void {
+  @HostListener('document:pointerdown', ['$event'])
+  onDocumentPointerDown(event: PointerEvent): void {
     if (!this.isMenuOpen) {
       return;
     }
@@ -79,6 +84,25 @@ export class HeaderComponent implements OnInit, OnDestroy {
   onResize(): void {
     if (window.innerWidth >= 992 && this.isMenuOpen) {
       this.closeMenu();
+      return;
+    }
+    if (this.isMenuOpen) {
+      this.updateMobileMenuLayout();
+    }
+  }
+
+  @HostListener('window:orientationchange')
+  onOrientationChange(): void {
+    if (!this.isMenuOpen) {
+      return;
+    }
+    setTimeout(() => this.updateMobileMenuLayout(), 150);
+  }
+
+  @HostListener('window:scroll')
+  onScroll(): void {
+    if (this.isMenuOpen && window.innerWidth < 992) {
+      this.updateMobileMenuLayout();
     }
   }
 
@@ -97,5 +121,21 @@ export class HeaderComponent implements OnInit, OnDestroy {
     if (this.document?.body) {
       this.renderer.removeClass(this.document.body, 'mobile-menu-open');
     }
+  }
+
+  private updateMobileMenuLayout(): void {
+    if (window.innerWidth >= 992) {
+      this.mobileMenuTop = null;
+      return;
+    }
+
+    const navElement = this.elRef.nativeElement.querySelector('.navbar') as HTMLElement | null;
+    if (!navElement) {
+      this.mobileMenuTop = 88;
+      return;
+    }
+
+    const navRect = navElement.getBoundingClientRect();
+    this.mobileMenuTop = Math.round(Math.max(navRect.bottom + 8, 60));
   }
 } 
